@@ -1,5 +1,7 @@
 {
   "scripts": {
+    "set": "npm i && cd frontend && npm i",
+    "set--ci": "npm ci && cd frontend && npm ci",
     "lint": "eslint .",
     "format": "prettier ./**/* --check",
     "format--write": "prettier ./**/* --write",
