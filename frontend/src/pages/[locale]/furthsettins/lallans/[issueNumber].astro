@@ -1,0 +1,32 @@
+---
+import Layout from '../../../../layouts/Layout.astro';
+import localeStaticPaths from '../../staticPaths';
+import translate from '../../../../i18n/translate';
+import tFurthsettins from '../../../../i18n/translations/pages/furthsettins';
+import tSite from '../../../../i18n/translations/site';
+import type Locale from '../../../../types/Locale';
+import LallansIssuesGallery from '../../../../components/LallansIssuesGallery.astro';
+import { getLallansIssue } from '../../../../data/lallans';
+import type LallansIssueNumber from '../../../../types/LallansIssueNumber';
+
+export async function getStaticPaths() {
+  const lallansIssueNumbers = Object.keys(getLallansIssue) as `${LallansIssueNumber}`[];
+  return lallansIssueNumbers.flatMap(n => (
+    localeStaticPaths.map(p => (
+      { ...p, params: { ...p.params, issueNumber: n } }
+    ))
+  ));
+}
+
+const locale = Astro.params.locale as Locale;
+const t = translate(locale);
+const issueNumber = new Number(Astro.params.issueNumber).valueOf() as LallansIssueNumber;
+const issue = await getLallansIssue[issueNumber]();
+---
+
+<Layout locale={locale} title={ t(tFurthsettins, 'title') }>
+  <main id="main">
+    <h1>{ t(tSite, 'lallans') } { issueNumber }</h1>
+    <p>{ issue.description[locale] }</p>
+  </main>
+</Layout>

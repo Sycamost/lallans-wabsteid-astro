@@ -313,3 +313,49 @@ footer {
     margin-inline-end: 0;
   }
 }
+
+.publications-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.publications-gallery__image {
+  margin-inline: auto;
+  width: 3rem;
+  height: auto;
+  min-width: 1.5rem;
+  border-radius: 50%;
+}
+
+.lallans-issues-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding-block: 1.5rem;
+}
+
+.lallans-issues-gallery__issue-container {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  height: 12rem;
+}
+
+.lallans-issues-gallery__issue-cover-image {
+  align-self: start;
+  width: 100%;
+  max-width: 6rem;
+  height: auto;
+}
+
+.lallans-issues-gallery__issue-title {
+  justify-self: end;
+  max-width: 6rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  text-align: center;
+}

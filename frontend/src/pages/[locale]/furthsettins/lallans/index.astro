@@ -1,0 +1,22 @@
+---
+import Layout from '../../../../layouts/Layout.astro';
+import staticPaths from '../../staticPaths';
+import translate from '../../../../i18n/translate';
+import tFurthsettins from '../../../../i18n/translations/pages/furthsettins';
+import tSite from '../../../../i18n/translations/site';
+import type Locale from '../../../../types/Locale';
+import LallansIssuesGallery from '../../../../components/LallansIssuesGallery.astro';
+
+export async function getStaticPaths() { return staticPaths; }
+
+const locale = Astro.params.locale as Locale;
+const t = translate(locale);
+---
+
+<Layout locale={locale} title={ t(tFurthsettins, 'title') }>
+  <main id="main">
+    <h1>Lallans</h1>
+
+    <LallansIssuesGallery />
+  </main>
+</Layout>
