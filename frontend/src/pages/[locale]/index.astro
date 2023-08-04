@@ -12,7 +12,7 @@ const locale = Astro.params.locale as Locale;
 const t = translate(locale);
 ---
 
-<Layout title={ t(home, 'title') }>
+<Layout locale={locale} title={ t(home, 'title') }>
   <main id="main">
     <section>
       <h1 class="title">{ t(site, 'title') }</h1>

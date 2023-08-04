@@ -5,6 +5,10 @@ const siteTranslations = {
     'sco': 'Scots Leid Associe',
     'en-GB': 'Scots Language Society',
   },
+  'description': {
+    'sco': 'The wabsteid o the Scots Leid Associe',
+    'en-GB': 'The website of the Scots Language Society',
+  }
 };
 
 type Keys = keyof typeof siteTranslations;

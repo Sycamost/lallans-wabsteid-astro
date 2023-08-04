@@ -1,24 +1,29 @@
 ---
 import Footer from '../components/Footer.astro';
+import translate from '../i18n/translate';
+import site from '../i18n/translations/site';
+import type Locale from '../types/Locale';
 
 interface Props {
+  locale: Locale;
   title: string;
 }
 
-const { title } = Astro.props;
+const { locale, title } = Astro.props;
+const t = translate(locale);
 ---
 
 <!DOCTYPE html>
 <html lang="sco">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="The wabsteid o the Scots Leid Associe" />
+    <meta name="description" content={ t(site, 'description') } />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/public/normalize.css" />
     <link rel="stylesheet" href="/public/main.css" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title} | Scots Leid Associe</title>
+    <title>{ title } | { t(site, 'title') }</title>
   </head>
   <body>
     <slot />
