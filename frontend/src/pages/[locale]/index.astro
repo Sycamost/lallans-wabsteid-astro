@@ -1,14 +1,21 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import staticPaths from './staticPaths';
+import translate from '../../i18n/translate';
+import site from '../../i18n/translations/site';
+import home from '../../i18n/translations/pages/home';
+import type Locale from '../../types/Locale';
 
 export async function getStaticPaths() { return staticPaths; }
+
+const locale = Astro.params.locale as Locale;
+const t = translate(locale);
 ---
 
-<Layout title="Hame">
+<Layout title={ t(home, 'title') }>
   <main id="main">
     <section>
-      <h1 class="title">Scots Leid Associe</h1>
+      <h1 class="title">{ t(site, 'title') }</h1>
       <h1>Tap-level heidin</h1>
       <h2>Seicont-level heidin</h2>
       <h3>Third-level heidin</h3>
