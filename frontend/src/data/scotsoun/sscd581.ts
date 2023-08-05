@@ -1,0 +1,26 @@
+import type Scotsoun from '../../types/Scotsoun';
+
+const cd: Scotsoun = {
+  title: 'Fiddle Heichlichts',
+  'long-name': 'Fiddle Heichlichts',
+  author: 'Karen Hannah, Yla Steven, Hugh MacGilp and Ian Powrie',
+  'cd-count': 1,
+  price: '11.00',
+  'scotsoun-id': '518',
+  description: {
+    sco: `
+      Scotsoun haes on mony occasions uised fiddle muisic waein its recordins. Noo, fur the first
+      time, some o thae recordins haes been pit thegither in ane disc. Sae sit beck an lug in til
+      muisic baith tradeitional an by some o Scotland’s finest composers, an pleyed by some o
+      Scotland’s finest muisicians: Karen Hannah, Yla Steven, Hugh MacGilp an Ian Powrie.
+      `,
+    'en-GB': `
+      Scotsoun has on many occasions used fiddle music within its recordings. Now, for the first
+      time, some of those recordings have been compiled into one disc. So sit back and listen to
+      music both traditional and by some of Scotland’s finest composers, and played by some of
+      Scotland’s finest musicians: Karen Hannah, Yla Steven, Hugh MacGilp and Ian Powrie.
+      `,
+  },
+};
+
+export default cd;

@@ -1,0 +1,42 @@
+import type Scotsoun from '../../types/Scotsoun';
+
+const cd: Scotsoun = {
+  title: 'George Campbell Hay',
+  subtitle: 'Scotsoun Makars Series',
+  'long-name': 'Scotsoun Makars Series – George Campell Hay',
+  author: 'George Campbell Hay',
+  'cd-count': 1,
+  price: '11.00',
+  'scotsoun-id': '147',
+  'track-list': [
+    'Bisearta',
+    'Bizerta',
+    'An t-Oigear',
+    'Tilleadh Uilìseis',
+    'Still Gyte, Man?',
+    'Truaighe na h-Eòrpa',
+    'An t-Iasgair',
+    'The Fisherman',
+    'Scots Arcadia',
+    'Ardlamont',
+    'The Smoky Smirr o Rain',
+    'An Ciùran Ceòban Ceò',
+    'Na Trèig Do Thalamh Dùthchais',
+    'Do not Forsake your Native Land',
+    'Flooer o the Gean',
+    'Eun Maidne',
+    'Bratach am Bràigh a’ Bhaile',
+    'A Banner at the Tounheid',
+    'Aria',
+    'Aria',
+    'Skotland',
+    'Scotland',
+    'An Nàiseantach',
+    'Advice to the Nationalist',
+    'The Twa Capitals',
+    'A Nor-Sea Day',
+    'Eftirspiel',
+  ],
+};
+
+export default cd;
