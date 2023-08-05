@@ -1,12 +1,12 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import staticPaths from './staticPaths';
+import localeStaticPaths from '../../lib/localeStaticPaths';
 import translate from '../../i18n/translate';
 import site from '../../i18n/translations/site';
 import home from '../../i18n/translations/pages/home';
 import type Locale from '../../types/Locale';
 
-export async function getStaticPaths() { return staticPaths; }
+export async function getStaticPaths() { return localeStaticPaths; }
 
 const locale = Astro.params.locale as Locale;
 const t = translate(locale);
