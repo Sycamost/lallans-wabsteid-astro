@@ -1,0 +1,30 @@
+import type Scotsoun from '../../types/Scotsoun';
+
+const cd: Scotsoun = {
+  title: 'Ravines',
+  subtitle: 'Poems and Songs',
+  'long-name': 'Ravines – Poems and Songs',
+  author: 'David Purdie',
+  'cd-count': 1,
+  price: '11.00',
+  'scotsoun-id': '812',
+  'track-list': [
+    'Leddy Stair’s Closse',
+    'Ode til Lord Monboddo',
+    'Lowdie’s Sang',
+    'Hou They Brocht Guid Wittins frae Ghent til Aix',
+    'The Fiddlers',
+    'The Braw Deem Athoot Rue',
+    'The Tam O Shanter Quintet',
+    'Paradykes and Never Met',
+    'In Praise o Standart Habbie',
+    'Le Vin De Mon Pays',
+    'Yirdsang',
+    'Ravines',
+    'Cranreugh Cauld Crambo',
+    'A Jyner’s Loun',
+    'The Daith-tree',
+  ],
+};
+
+export default cd;
