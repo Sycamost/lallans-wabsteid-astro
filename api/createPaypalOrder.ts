@@ -6,7 +6,7 @@ export default async function handler(request: VercelRequest, response: VercelRe
   const { productDescription, shortDescription, totalPrice }: Partial<Order> = request.body;
 
   if (request.method !== 'POST') {
-    response.status(400);
+    response.status(404);
     return;
   }
 
@@ -17,12 +17,18 @@ export default async function handler(request: VercelRequest, response: VercelRe
   } else if (!totalPrice) {
     response.status(400).send('Expected body to contain totalPrice, but none provided.');
   } else {
-    const paypalResponse = await paypalCreateOrder({ productDescription, shortDescription, totalPrice });
+    try {
+      const paypalResponse = await paypalCreateOrder({ productDescription, shortDescription, totalPrice });
 
-    if (paypalResponse.ok) {
-      response.status(200).json({
-        orderId: paypalResponse.id,
-      });
+      if (paypalResponse.ok) {
+        response.status(200).json({
+          orderId: paypalResponse.id,
+        });
+      } else {
+        throw new Error(`PayPal returned ${paypalResponse.statusCode} ${paypalResponse.statusMessage}`);
+      }
+    } catch (err) {
+      response.status(500).send(`Internal server error. ${err}`);
     }
   }
 }
