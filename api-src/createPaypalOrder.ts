@@ -9,12 +9,6 @@ export default async function handler(request: VercelRequest, response: VercelRe
   console.info('shortDescription: ' + shortDescription);
   console.info('totalPrice: ' + totalPrice);
 
-  if (request.method !== 'POST') {
-    console.warn('Method was not POST. Method was ' + request.method);
-    response.status(404);
-    return;
-  }
-
   if (!productDescription) {
     response.status(400).send('Expected body to contain productDescription, but none provided.');
   } else if (!shortDescription) {
