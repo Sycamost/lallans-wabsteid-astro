@@ -8,6 +8,10 @@ const siteTranslations = {
   'description': {
     'sco': 'The wabsteid o the Scots Leid Associe',
     'en-GB': 'The website of the Scots Language Society',
+  },
+  'lallans': {
+    'sco': 'Lallans',
+    'en-GB': 'Lallans',
   }
 };
 
