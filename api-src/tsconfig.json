@@ -1,0 +1,15 @@
+{
+  "strict": true,
+  "compilerOptions": {
+    "target": "ES5",
+    "module": "CommonJS",
+    "sourceMap": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "baseUrl": ".",
+    "outDir": "../api",
+    "lib": ["ESNext", "DOM"]
+  },
+  "include": ["."],
+  "exclude": ["./node_modules"]
+}
