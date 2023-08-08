@@ -1,5 +1,5 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
-import type Order from './Order';
+import type Order from './_Order';
 import { paypalCreateOrder } from './_paypal';
 
 export default async function handler(request: VercelRequest, response: VercelResponse) {

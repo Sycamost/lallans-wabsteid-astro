@@ -44,6 +44,11 @@ function handler(request, response) {
             switch (_b.label) {
                 case 0:
                     _a = request.body, productDescription = _a.productDescription, shortDescription = _a.shortDescription, totalPrice = _a.totalPrice;
+                    if (request.method !== 'POST') {
+                        console.warn('Method was not POST. Method was ' + request.method);
+                        response.status(404);
+                        return [2 /*return*/];
+                    }
                     if (!!productDescription) return [3 /*break*/, 1];
                     response.status(400).send('Expected body to contain productDescription, but none provided.');
                     return [3 /*break*/, 6];
@@ -74,4 +79,4 @@ function handler(request, response) {
     });
 }
 exports.default = handler;
-//# sourceMappingURL=createPaypalOrder.js.map
+//# sourceMappingURL=order.js.map
