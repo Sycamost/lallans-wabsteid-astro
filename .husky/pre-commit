@@ -1,4 +1,4 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-npx lint-staged && cd api-src && npx tsc && git add ../api
+npx lint-staged && rm -rdf api && cd api-src && npx tsc && git add ../api
