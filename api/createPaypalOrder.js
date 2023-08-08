@@ -64,7 +64,7 @@ function handler(request, response) {
                     return [4 /*yield*/, (0, _paypal_1.paypalCreateOrder)({ productDescription: productDescription, shortDescription: shortDescription, totalPrice: totalPrice })];
                 case 4:
                     paypalResponse = _b.sent();
-                    response.status(200).json({
+                    response.status(201).json({
                         orderId: paypalResponse.id,
                     });
                     return [3 /*break*/, 6];
