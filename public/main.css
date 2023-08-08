@@ -15,6 +15,7 @@
   --breakpoint-sm: 640px;
   --breakpoint-lg: 1280px;
 
+  --spacing-block-xl: 4rem;
   --spacing-block-lg: 2rem;
   --spacing-block-md: 1.25rem;
   --spacing-block-sm: 0.375rem;
@@ -63,7 +64,7 @@
 }
 
 :is(main, article) :is(section, header):not(:is(section, header) :is(section, header)) {
-  padding-block: var(--spacing-block-lg) var(--spacing-inline-lg);
+  padding-block: var(--spacing-block-lg) var(--spacing-block-xl);
 }
 
 :is(main, article) section:nth-child(even):not(:is(section, header) :is(section, header)) {
@@ -232,28 +233,6 @@ ol li {
   }
 }
 
-@container main (min-width: 20rem) {
-  .lallans-issue__primary-info {
-    display: grid;
-    grid-template-columns: 1fr min-content;
-    grid-template-rows: min-content min-content;
-    grid-gap: 1rem;
-  }
-
-  .lallans-issue__primary-info header {
-    grid-row: 1 / 3;
-  }
-
-  .lallans-issue__img {
-    min-width: 10rem;
-  }
-}
-
-.lallans-issue__img {
-  height: auto;
-  max-width: 10rem;
-}
-
 .news-post {
   margin-block: 1.5rem;
   margin-inline: 0.5rem;
@@ -342,6 +321,26 @@ footer {
   height: 12rem;
 }
 
+.lallans-issue__header-block {
+  display: flex;
+  justify-content: space-evenly;
+  gap: var(--spacing-inline-sm);
+  padding-block: var(--spacing-block-lg) var(--spacing-block-xl);
+}
+
+.lallans-issue__header-block-end {
+  display: flex;
+  flex-direction: column;
+  margin-inline: auto;
+  width: fit-content;
+}
+
+.lallans-issue__header-block-end img {
+  max-width: 12rem;
+  width: 100%;
+  height: auto;
+}
+
 .lallans-issues-gallery__issue-cover-image {
   align-self: start;
   width: 100%;
@@ -358,4 +357,13 @@ footer {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
   text-align: center;
+}
+
+.italic {
+  font-style: italic;
+}
+
+:is(.lallans-issue__contributions, .lallans-issue__contributors) ul {
+  font-size: var(--font-size-sm);
+  padding-block-end: var(--spacing-block-md);
 }

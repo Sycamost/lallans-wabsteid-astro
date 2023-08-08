@@ -17,7 +17,7 @@ type LallansIssue = {
   Record<string, never>
 );
 
-type Contributor = string;
-type Contribution = { author?: string, title: string };
+export type Contributor = string;
+export type Contribution = { author?: string, title: string };
 
 export default LallansIssue;

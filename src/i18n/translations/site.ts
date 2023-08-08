@@ -12,7 +12,11 @@ const siteTranslations = {
   'lallans': {
     'sco': 'Lallans',
     'en-GB': 'Lallans',
-  }
+  },
+  'by': {
+    'sco': 'bi',
+    'en-GB': 'by',
+  },
 };
 
 type Keys = keyof typeof siteTranslations;

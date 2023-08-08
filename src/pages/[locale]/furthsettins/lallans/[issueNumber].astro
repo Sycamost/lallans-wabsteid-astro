@@ -3,10 +3,10 @@ import Page from '../../../../layouts/Page.astro';
 import localeStaticPaths from '../../../../lib/localeStaticPaths';
 import translate from '../../../../i18n/translate';
 import tFurthsettins from '../../../../i18n/translations/pages/furthsettins';
-import tSite from '../../../../i18n/translations/site';
 import type Locale from '../../../../types/Locale';
 import { getLallansIssue } from '../../../../data/lallans';
 import type LallansIssueNumber from '../../../../types/LallansIssueNumber';
+import LallansIssue from '../../../../components/LallansIssue.astro';
 
 export async function getStaticPaths() {
   const lallansIssueNumbers = Object.keys(getLallansIssue) as `${LallansIssueNumber}`[];
@@ -24,6 +24,5 @@ const issue = await getLallansIssue[issueNumber]();
 ---
 
 <Page locale={locale} title={ t(tFurthsettins, 'title') }>
-  <h1>{ t(tSite, 'lallans') } { issueNumber }</h1>
-  <p>{ issue.description[locale] }</p>
+  <LallansIssue issue={issue} locale={locale} />
 </Page>

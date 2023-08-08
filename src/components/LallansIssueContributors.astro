@@ -1,0 +1,18 @@
+---
+import type { Contributor } from '../types/LallansIssue';
+
+interface Props {
+  contributors: Contributor[];
+}
+
+const { contributors } = Astro.props;
+---
+
+<section class="lallans-contributors">
+  <h2>Contributors</h2>
+  <ul>
+    { contributors.map(contributor => (
+        <li>{ contributor }</li>
+    ))}
+  </ul>
+</section>

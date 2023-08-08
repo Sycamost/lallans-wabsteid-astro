@@ -1,0 +1,29 @@
+---
+import translate from "../i18n/translate";
+import tSite from '../i18n/translations/site';
+import type { Contribution } from '../types/LallansIssue';
+import type Locale from '../types/Locale';
+
+interface Props {
+  contributions: Contribution[];
+  locale: Locale;
+}
+
+const { contributions, locale } = Astro.props;
+const t = translate(locale);
+---
+
+<section>
+  <h2>Contributions</h2>
+  <ul class="lallans-issue__contributions">
+    { contributions.map(contribution => (
+      <li>
+        <span class="italic">{ contribution.title }</span>
+        { 'author' in contribution ? (
+          <span> { t(tSite, 'by') } { contribution.author }</span>
+          ) : (<></>)
+        }
+      </li>
+    ))}
+  </ul>
+</section>

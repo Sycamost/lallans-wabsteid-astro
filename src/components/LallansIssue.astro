@@ -1,0 +1,37 @@
+---
+import translate from "../i18n/translate";
+import tSite from '../i18n/translations/site';
+import type LallansIssue from "../types/LallansIssue";
+import type Locale from "../types/Locale";
+import LallansIssueContributions from "./LallansIssueContributions.astro";
+import LallansIssueContributors from "./LallansIssueContributors.astro";
+
+interface Props {
+  issue: LallansIssue;
+  locale: Locale;
+}
+
+const { issue, locale } = Astro.props;
+const t = translate(locale);
+---
+
+<div class="lallans-issue__header-block">
+  <header>
+    <h1>{ t(tSite, 'lallans') } { issue.issueNumber }</h1>
+    <p class="italic">{ issue.description[locale] }</p>
+  </header>
+
+  <div class="lallans-issue__header-block-end">
+    <img alt="" src={`/images/lallans/issue${issue.issueNumber}.jpg`} />
+    <!-- TODO: payment buttons -->
+  </div>
+</div>
+
+{ 'contributions' in issue ? (
+  <LallansIssueContributions contributions={issue.contributions} locale={locale} />
+  ) : (
+    'contributors' in issue ? (
+      <LallansIssueContributors contributors={issue.contributors} />
+    ) : (<></>)
+  )
+}
