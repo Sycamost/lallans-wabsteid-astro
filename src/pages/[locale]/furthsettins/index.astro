@@ -1,5 +1,5 @@
 ---
-import Layout from '../../../layouts/Layout.astro';
+import Page from '../../../layouts/Page.astro';
 import localeStaticPaths from '../../../lib/localeStaticPaths';
 import translate from '../../../i18n/translate';
 import tFurthsettins from '../../../i18n/translations/pages/furthsettins';
@@ -12,17 +12,15 @@ const locale = Astro.params.locale as Locale;
 const t = translate(locale);
 ---
 
-<Layout locale={locale} title={ t(tFurthsettins, 'title') }>
-  <main id="main">
-    <h1>Furthsettins</h1>
+<Page locale={locale} title={ t(tFurthsettins, 'title') }>
+  <h1>Furthsettins</h1>
 
-    <ul class="publications-gallery">
-      <li>
-        <a href="furthsettins/lallans" class="link">
-          <img src="/public/images/furthsettins/lallans.png" class="publications-gallery__image" />
-          <p class="publications-gallery__title">{ t(tSite, 'lallans') }</p>
-        </a>
-      </li>
-    </ul>
-  </main>
-</Layout>
+  <ul class="publications-gallery">
+    <li>
+      <a href="furthsettins/lallans" class="link">
+        <img src="/public/images/furthsettins/lallans.png" class="publications-gallery__image" />
+        <p class="publications-gallery__title">{ t(tSite, 'lallans') }</p>
+      </a>
+    </li>
+  </ul>
+</Page>
