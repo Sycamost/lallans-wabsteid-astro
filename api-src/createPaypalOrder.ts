@@ -18,14 +18,9 @@ export default async function handler(request: VercelRequest, response: VercelRe
   } else {
     try {
       const paypalResponse = await paypalCreateOrder({ productDescription, shortDescription, totalPrice });
-
-      if (paypalResponse.ok) {
-        response.status(200).json({
-          orderId: paypalResponse.id,
-        });
-      } else {
-        throw new Error(`PayPal returned ${paypalResponse.statusCode} ${paypalResponse.statusMessage}`);
-      }
+      response.status(200).json({
+        orderId: paypalResponse.id,
+      });
     } catch (err) {
       response.status(500).send(`Internal server error. ${err}`);
     }
