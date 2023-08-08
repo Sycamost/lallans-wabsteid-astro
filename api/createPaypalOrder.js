@@ -44,10 +44,6 @@ function handler(request, response) {
             switch (_b.label) {
                 case 0:
                     _a = request.body, productDescription = _a.productDescription, shortDescription = _a.shortDescription, totalPrice = _a.totalPrice;
-                    console.info('api/createPaypalOrder: Received body: ');
-                    console.info('productDescription: ' + productDescription);
-                    console.info('shortDescription: ' + shortDescription);
-                    console.info('totalPrice: ' + totalPrice);
                     if (!!productDescription) return [3 /*break*/, 1];
                     response.status(400).send('Expected body to contain productDescription, but none provided.');
                     return [3 /*break*/, 6];
