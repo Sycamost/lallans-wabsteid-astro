@@ -1,10 +1,12 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import type Order from './_Order';
-import { paypalCreateOrder } from './_paypal';
+import { paypalCaptureOrder, paypalCreateOrder } from './_paypal';
 
 export default async function handler(request: VercelRequest, response: VercelResponse) {
   if (request.method === 'POST') {
     await handlePost(request, response);
+  } else if (request.method === 'PATCH') {
+    await handlePatch(request, response);
   } else {
     console.warn('Method was not POST. Method was ' + request.method);
     response.status(404);
@@ -32,3 +34,28 @@ async function handlePost(request: VercelRequest, response: VercelResponse) {
     }
   }
 }
+
+async function handlePatch(request: VercelRequest, response: VercelResponse) {
+  const { id, isApproved }: Partial<PatchRequestBody> = request.body;
+  
+  if (!id) {
+    response.status(400).send('Expected body to contain id, but none provided.');
+  } else if (!isApproved) {
+    response.status(400).send('Expected body to contain isApproved, but none provided.');
+  } else {
+    try {
+      const paypalResponse = await paypalCaptureOrder(id);
+      response.status(201).json({
+        orderId: paypalResponse.id,
+        paypalStatus: paypalResponse.status,
+      });
+    } catch (err) {
+      response.status(500).send(`Internal server error. ${err}`);
+    }
+  }
+}
+
+type PatchRequestBody = {
+  id: string;
+  isApproved: boolean;
+};
