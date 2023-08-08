@@ -53,21 +53,18 @@
   container-type: inline-size;
 }
 
-:is(main, article) :is(section, header):not(:is(section, header) :is(section, header)) {
+:is(main, article) > :is(section, header):not(:is(section, header) :is(section, header)) {
   padding-inline: max(10%, calc((100% - var(--max-width-prose-content)) / 2));
+  padding-block: var(--spacing-block-lg) var(--spacing-block-xl);
 }
 
-:is(main, article)
+:is(main, article) >
   :is(section, header):not(.section--full-width):not(:is(section, header) :is(section, header))
   > p {
   max-width: var(--max-width-prose-content);
 }
 
-:is(main, article) :is(section, header):not(:is(section, header) :is(section, header)) {
-  padding-block: var(--spacing-block-lg) var(--spacing-block-xl);
-}
-
-:is(main, article) section:nth-child(even):not(:is(section, header) :is(section, header)) {
+:is(main, article) > section:nth-child(even):not(:is(section, header) :is(section, header)) {
   background-color: var(--color-primary-100);
 }
 
@@ -323,8 +320,10 @@ footer {
 
 .lallans-issue__header-block {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   gap: var(--spacing-inline-sm);
+  padding-inline: var(--spacing-inline-md);
   padding-block: var(--spacing-block-lg) var(--spacing-block-xl);
 }
 
