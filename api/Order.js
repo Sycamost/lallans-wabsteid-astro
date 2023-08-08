@@ -39,16 +39,31 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var _paypal_1 = require("./_paypal");
 function handler(request, response) {
     return __awaiter(this, void 0, void 0, function () {
+        return __generator(this, function (_a) {
+            switch (_a.label) {
+                case 0:
+                    if (!(request.method === 'POST')) return [3 /*break*/, 2];
+                    return [4 /*yield*/, handlePost(request, response)];
+                case 1:
+                    _a.sent();
+                    return [3 /*break*/, 3];
+                case 2:
+                    console.warn('Method was not POST. Method was ' + request.method);
+                    response.status(404);
+                    return [2 /*return*/];
+                case 3: return [2 /*return*/];
+            }
+        });
+    });
+}
+exports.default = handler;
+function handlePost(request, response) {
+    return __awaiter(this, void 0, void 0, function () {
         var _a, productDescription, shortDescription, totalPrice, paypalResponse, err_1;
         return __generator(this, function (_b) {
             switch (_b.label) {
                 case 0:
                     _a = request.body, productDescription = _a.productDescription, shortDescription = _a.shortDescription, totalPrice = _a.totalPrice;
-                    if (request.method !== 'POST') {
-                        console.warn('Method was not POST. Method was ' + request.method);
-                        response.status(404);
-                        return [2 /*return*/];
-                    }
                     if (!!productDescription) return [3 /*break*/, 1];
                     response.status(400).send('Expected body to contain productDescription, but none provided.');
                     return [3 /*break*/, 6];
@@ -78,5 +93,4 @@ function handler(request, response) {
         });
     });
 }
-exports.default = handler;
 //# sourceMappingURL=order.js.map
