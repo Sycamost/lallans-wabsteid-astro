@@ -30,8 +30,8 @@ const t = translate(locale);
 { 'contributions' in issue ? (
   <LallansIssueContributions contributions={issue.contributions} locale={locale} />
   ) : (
-    'contributors' in issue ? (
+    'contributors' in issue && (
       <LallansIssueContributors contributors={issue.contributors} />
-    ) : (<></>)
+    )
   )
 }
