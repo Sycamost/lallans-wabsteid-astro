@@ -1,14 +1,24 @@
 :root {
-  --color-primary-50: #fdd3fd;
-  --color-primary-100: #f49ff4;
-  --color-primary-200: #e372e3;
-  /* --color-primary-300: #e372e3;
-  --color-primary-400: #ba40ba; */
-  --color-primary-500: #8f3d8f;
-  /* --color-primary-600: #6c356c;
-  --color-primary-700: #5b335b; */
-  --color-primary-800: #442c44;
-  --color-primary-900: #251d25;
+  --color-primary-50: #eeecff;
+  --color-primary-50: oklch(95% 0.02 290);
+  --color-primary-100: #cec5ff;
+  --color-primary-100: oklch(85% 0.07 290);
+  --color-primary-200: #b19cff;
+  --color-primary-200: oklch(75% 0.13 290);
+  /* --color-primary-300: #937be3;
+  --color-primary-300: oklch(65% 0.15 290);
+  --color-primary-400: #765cc1;
+  --color-primary-400: oklch(55% 0.15 290); */
+  --color-primary-500: #5a3ea1;
+  --color-primary-500: oklch(45% 0.15 290);
+  /* --color-primary-600: #401f81;
+  --color-primary-600: oklch(35% 0.15 290);
+  --color-primary-700: #28005c;
+  --color-primary-700: oklch(25% 0.14 290); */
+  --color-primary-800: #0f002a;
+  --color-primary-800: oklch(15% 0.08 290);
+  --color-primary-900: #010003;
+  --color-primary-900: oklch(5% 0.02 290);
 
   --text-color: var(--color-primary-900);
   --text-highlight-color: var(--color-primary-800);
@@ -46,6 +56,9 @@
   --text-highlight-color: var(--color-primary-100);
   --background-color: var(--color-primary-900);
   --background-highlight-color: var(--color-primary-800);
+
+  color: var(--text-color);
+  background-color: var(--background-color);
 }
 
 @media screen and (min-width: var(--breakpoint-sm)) {
@@ -282,7 +295,7 @@ ol li {
 footer {
   padding-block-start: var(--spacing-block-md);
   padding-bottom: 8rem;
-  margin-inline: 10%;
+  padding-inline: 10%;
 }
 
 .back-to-top-link {
@@ -374,8 +387,6 @@ footer {
 }
 
 nav {
-  background-color: var(--color-primary-900);
-  color: var(--color-primary-50);
   display: flex;
   justify-content: space-evenly;
   padding-block-start: var(--spacing-block-sm);

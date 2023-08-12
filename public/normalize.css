@@ -351,7 +351,7 @@ template {
 }
 
 :visited {
-  color: inherit;
+  color: currentColor;
 }
 
 li {
