@@ -55,6 +55,7 @@ function paypalCreateOrderRequestHeaders(accessToken: string) {
 
 function paypalCaptureOrderRequestHeaders(accessToken: string) {
   return {
+    'Content-Type': 'application/json',
     Authorization: `Bearer ${accessToken}`,
   };
 }
