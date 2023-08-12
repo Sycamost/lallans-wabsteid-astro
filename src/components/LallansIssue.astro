@@ -5,6 +5,7 @@ import type LallansIssue from "../types/LallansIssue";
 import type Locale from "../types/Locale";
 import LallansIssueContributions from "./LallansIssueContributions.astro";
 import LallansIssueContributors from "./LallansIssueContributors.astro";
+import PayPalButtons from "./PayPalButtons.astro";
 
 interface Props {
   issue: LallansIssue;
@@ -23,7 +24,7 @@ const t = translate(locale);
 
   <div class="lallans-issue__header-block-end">
     <img alt="" src={`/images/lallans/issue${issue.issueNumber}.jpg`} />
-    <!-- TODO: payment buttons -->
+    <PayPalButtons />
   </div>
 </div>
 
