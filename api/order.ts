@@ -26,8 +26,32 @@ async function handlePost(request: VercelRequest, response: VercelResponse) {
   } else {
     try {
       const paypalResponse = await paypalCreateOrder({ productDescription, shortDescription, totalPrice });
+
+      const { id, links } = paypalResponse;
+      const isApprovalLink = (o: object) => (
+        'rel' in o &&
+        o.rel === 'approve' &&
+        'href' in o &&
+        typeof(o.href) === 'string' &&
+        o.href.length > 0
+      );
+
+      if (!id || typeof(id) !== 'string' || id.length === 0) {
+        throw new Error(`
+          PayPal did not return the created order ID
+          in an expected format. PayPal returned: ${paypalResponse}
+        `);
+      }
+      if (!links || !('length' in links) || !links.some(isApprovalLink)) {
+        throw new Error(`
+          PayPal did not return the order approval link in
+          an expected format. PayPal returned: ${paypalResponse}
+        `);
+      }
+
       response.status(201).json({
-        orderId: paypalResponse.id,
+        orderId: id,
+        approvalLink: links.find(isApprovalLink).href,
       });
     } catch (err) {
       response.status(500).send(`Internal server error. ${err}`);
