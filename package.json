@@ -2,8 +2,10 @@
   "type": "module",
   "private": "true",
   "scripts": {
-    "dev": "npm run build-api && astro dev",
-    "start": "npm run build-api && astro dev",
+    "predev": "npm run build-api",
+    "dev": "astro dev",
+    "prestart": "npm run build-api",
+    "start": "astro dev",
     "build": "npm run build-api && astro build",
     "build-api": "cd api-src && npx tsc",
     "preview": "astro preview",
