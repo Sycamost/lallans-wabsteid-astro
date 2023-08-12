@@ -1,0 +1,121 @@
+---
+import env from '../lib/env';
+
+const PAYPAL_CLIENT_ID = env.ENVIRONMENT === 'prod'
+  ? env.PAYPAL_LIVE_CLIENT_ID
+  : env.PAYPAL_SANDBOX_CLIENT_ID;
+---
+
+<paypal-buttons data-paypal-client-id={PAYPAL_CLIENT_ID}>
+  <div id="paypal-button-container"></div>
+</paypal-buttons>
+
+<script>
+  import { PayPalNamespace, loadScript } from '@paypal/paypal-js';
+
+  const backendUrl = '/api';
+
+  class PayPalButtons extends HTMLElement {
+    constructor() {
+      super();
+
+      const paypalClientId = this.dataset['paypalClientId'];
+      if (!paypalClientId || typeof(paypalClientId) !== 'string') {
+        throw new Error('PayPal Client ID not provided to PayPalButtons component.');
+      }
+
+      const paypalOptions = {
+        clientId: paypalClientId,
+        locale: 'en_GB',
+        commit: false,
+        currency: 'GBP',
+        intent: 'capture',
+      };
+
+      loadScript(paypalOptions).catch((err) => {
+        throw new Error('Failed to load the PayPal JS SDK script. ', err);
+      }).then(paypal => {
+        const constructButtons = paypal?.Buttons;
+        if (paypal && constructButtons) {
+          this.makePaypalButtons(constructButtons).render('#paypal-button-container');
+        }
+      });
+    }
+
+    makePaypalButtons(constructButtons: Required<PayPalNamespace>['Buttons']) {
+      return constructButtons({
+        // This function is called to set up the transaction details without actually carrying it out
+        async createOrder() {
+          const body = JSON.stringify({
+            productDescription: "my product description",
+            shortDescription: "my product",
+            totalPrice: 15.5,
+          });
+          const headers = {
+            'Content-Type': 'application/json'
+          };
+
+          let response;
+          try {
+            response = await fetch(
+              `${backendUrl}/order`, 
+              { method: "POST", body, headers }
+            );
+          } catch (err) {
+            throw new Error(`Failed to create order. ${err}`);
+          }
+
+          if (!response.ok) {
+            throw new Error(`
+              Failed to create order. Backend response was
+              ${response.status} ${response.statusText}. ${await response.text()}
+            `);
+          }
+
+          const { orderId, approvalLink } = await response.json();
+          console.info(`
+            Successfully created order with ID
+            ${orderId}. Approval link: ${approvalLink}
+          `);
+          return orderId;
+        },
+
+        // This function is called after payment is confirmed
+        async onApprove(data) {
+          const body = JSON.stringify({
+            id: data.orderID,
+            isApproved: true
+          });
+          const headers = {
+            'Content-Type': 'application/json',
+          };
+
+          let response;
+          try {
+            response = await fetch(
+              `${backendUrl}/order`,
+              { method: 'PATCH', body, headers }
+            );
+          } catch (err) {
+            throw new Error(`Failed to capture order. ${err}`);
+          }
+
+          if (!response.ok) {
+            throw new Error(`
+              Failed to capture order. Backend response was ${response.status}
+              ${response.statusText}. ${await response.text()}
+            `);
+          }
+
+          const { orderId, requestStatus } = await response.json();
+          console.info(`
+            Successfully captured order with ID ${orderId},
+            request status is ${requestStatus}.
+          `);
+        }
+      });
+    }
+  }
+
+  customElements.define('paypal-buttons', PayPalButtons);
+</script>
