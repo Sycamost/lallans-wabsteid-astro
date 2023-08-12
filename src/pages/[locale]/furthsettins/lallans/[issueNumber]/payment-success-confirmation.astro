@@ -1,0 +1,30 @@
+---
+import Page from '../../../../../layouts/Page.astro';
+import localeStaticPaths from '../../../../../lib/localeStaticPaths';
+import translate from '../../../../../i18n/translate';
+import tPage from '../../../../../i18n/translations/pages/lallansIssuePaymentSuccessConfirmation';
+import type Locale from '../../../../../types/Locale';
+import { getLallansIssue } from '../../../../../data/lallans';
+import type LallansIssueNumber from '../../../../../types/LallansIssueNumber';
+
+export async function getStaticPaths() {
+  const lallansIssueNumbers = Object.keys(getLallansIssue) as `${LallansIssueNumber}`[];
+  return lallansIssueNumbers.flatMap((n) =>
+    localeStaticPaths.map((p) => ({ ...p, params: { ...p.params, issueNumber: n } }))
+  );
+}
+
+const locale = Astro.params.locale as Locale;
+const t = translate(locale);
+const issueNumber = new Number(Astro.params.issueNumber).valueOf() as LallansIssueNumber;
+---
+
+<Page locale={locale} title={t(tPage, { key: 'title' })}>
+  <section>
+    <h1>{t(tPage, { key: 'title' })}</h1>
+    <p>{t(tPage, { key: 'payment-confirmation-message', issueNumber: `${issueNumber}` })}</p>
+    <a class="link" href="./">
+      {t(tPage, { key: 'back-button-text', issueNumber: `${issueNumber}` })}
+    </a>
+  </section>
+</Page>

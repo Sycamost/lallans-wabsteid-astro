@@ -1,12 +1,17 @@
 ---
 import env from '../lib/env';
 
-const PAYPAL_CLIENT_ID = env.ENVIRONMENT === 'prod'
-  ? env.PAYPAL_LIVE_CLIENT_ID
-  : env.PAYPAL_SANDBOX_CLIENT_ID;
+interface Props {
+  successPageUrl: string;
+}
+
+const { successPageUrl } = Astro.props;
+
+const PAYPAL_CLIENT_ID =
+  env.ENVIRONMENT === 'prod' ? env.PAYPAL_LIVE_CLIENT_ID : env.PAYPAL_SANDBOX_CLIENT_ID;
 ---
 
-<paypal-buttons data-paypal-client-id={PAYPAL_CLIENT_ID}>
+<paypal-buttons data-paypal-client-id={PAYPAL_CLIENT_ID} data-success-page-url={successPageUrl}>
   <div id="paypal-button-container"></div>
 </paypal-buttons>
 
@@ -20,7 +25,7 @@ const PAYPAL_CLIENT_ID = env.ENVIRONMENT === 'prod'
       super();
 
       const paypalClientId = this.dataset['paypalClientId'];
-      if (!paypalClientId || typeof(paypalClientId) !== 'string') {
+      if (!paypalClientId || typeof paypalClientId !== 'string') {
         throw new Error('PayPal Client ID not provided to PayPalButtons component.');
       }
 
@@ -32,35 +37,40 @@ const PAYPAL_CLIENT_ID = env.ENVIRONMENT === 'prod'
         intent: 'capture',
       };
 
-      loadScript(paypalOptions).catch((err) => {
-        throw new Error('Failed to load the PayPal JS SDK script. ', err);
-      }).then(paypal => {
-        const constructButtons = paypal?.Buttons;
-        if (paypal && constructButtons) {
-          this.makePaypalButtons(constructButtons).render('#paypal-button-container');
-        }
-      });
+      loadScript(paypalOptions)
+        .catch((err) => {
+          throw new Error('Failed to load the PayPal JS SDK script. ', err);
+        })
+        .then((paypal) => {
+          const constructButtons = paypal?.Buttons;
+          if (paypal && constructButtons) {
+            const successPageUrl = this.dataset['successPageUrl'] ?? '.';
+            this.makePaypalButtons(constructButtons, successPageUrl).render(
+              '#paypal-button-container'
+            );
+          }
+        });
     }
 
-    makePaypalButtons(constructButtons: Required<PayPalNamespace>['Buttons']) {
+    makePaypalButtons(
+      constructButtons: Required<PayPalNamespace>['Buttons'],
+      successPageUrl: string
+    ) {
       return constructButtons({
         // This function is called to set up the transaction details without actually carrying it out
         async createOrder() {
           const body = JSON.stringify({
-            productDescription: "my product description",
-            shortDescription: "my product",
+            productDescription: 'my product description',
+            shortDescription: 'my product',
             totalPrice: 15.5,
           });
           const headers = {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
           };
 
           let response;
           try {
-            response = await fetch(
-              `${backendUrl}/order`, 
-              { method: "POST", body, headers }
-            );
+            response = await fetch(`${backendUrl}/order`, { method: 'POST', body, headers });
           } catch (err) {
             throw new Error(`Failed to create order. ${err}`);
           }
@@ -84,7 +94,7 @@ const PAYPAL_CLIENT_ID = env.ENVIRONMENT === 'prod'
         async onApprove(data) {
           const body = JSON.stringify({
             id: data.orderID,
-            isApproved: true
+            isApproved: true,
           });
           const headers = {
             'Content-Type': 'application/json',
@@ -92,10 +102,7 @@ const PAYPAL_CLIENT_ID = env.ENVIRONMENT === 'prod'
 
           let response;
           try {
-            response = await fetch(
-              `${backendUrl}/order`,
-              { method: 'PATCH', body, headers }
-            );
+            response = await fetch(`${backendUrl}/order`, { method: 'PATCH', body, headers });
           } catch (err) {
             throw new Error(`Failed to capture order. ${err}`);
           }
@@ -112,7 +119,10 @@ const PAYPAL_CLIENT_ID = env.ENVIRONMENT === 'prod'
             Successfully captured order with ID ${orderId},
             request status is ${requestStatus}.
           `);
-        }
+
+          console.info('Redirecting to confirmation page...');
+          window.location.href = successPageUrl;
+        },
       });
     }
   }
