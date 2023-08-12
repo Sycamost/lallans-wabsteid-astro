@@ -1,3 +1,4 @@
+import type Locale from '../../types/Locale';
 import type { TranslationsDictionary } from '../../types/TranslationsDictionary';
 
 const siteTranslations = {
@@ -16,6 +17,24 @@ const siteTranslations = {
   by: {
     sco: () => 'bi',
     'en-GB': () => 'by',
+  },
+  locale: {
+    sco: ({ locale }: { locale: Locale }) => {
+      switch (locale) {
+        case 'sco':
+          return 'Scots';
+        case 'en-GB':
+          return 'Inglis';
+      }
+    },
+    'en-GB': ({ locale }: { locale: Locale }) => {
+      switch (locale) {
+        case 'sco':
+          return 'Scots';
+        case 'en-GB':
+          return 'English';
+      }
+    },
   },
 };
 
