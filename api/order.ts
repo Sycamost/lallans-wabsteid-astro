@@ -45,7 +45,7 @@ async function handlePatch(request: VercelRequest, response: VercelResponse) {
   } else {
     try {
       const paypalResponse = await paypalCaptureOrder(id);
-      response.status(201).json({
+      response.status(200).json({
         orderId: paypalResponse.id,
         paypalStatus: paypalResponse.status,
       });
