@@ -1,5 +1,6 @@
 ---
 import Footer from '../components/Footer.astro';
+import Navbar from '../components/Navbar.astro';
 import translate from '../i18n/translate';
 import site from '../i18n/translations/site';
 import type Locale from '../types/Locale';
@@ -26,6 +27,7 @@ const t = translate(locale);
     <title>{title} | {t(site, { key: 'title' })}</title>
   </head>
   <body>
+    <Navbar locale={locale} />
     <slot />
     <Footer />
   </body>

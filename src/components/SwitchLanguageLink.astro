@@ -1,0 +1,28 @@
+---
+import tPage from '../i18n/translations/components/languageLinks';
+import tSite from '../i18n/translations/site';
+import translate from '../i18n/translate';
+import type Locale from '../types/Locale';
+
+interface Props {
+  currentLocale: Locale;
+}
+
+// This logic assumes that there are exactly two locales.
+const { currentLocale } = Astro.props;
+const otherLocale: Locale = currentLocale === 'sco' ? 'en-GB' : 'sco';
+const currentPath = Astro.url.pathname;
+const currentLocaleInPath = new RegExp(`(?<=^/)(${currentLocale}/)?`);
+const otherLocalePath = currentPath.replace(currentLocaleInPath, `${otherLocale}/`);
+
+const t = translate(currentLocale);
+---
+
+<a class="link" href={otherLocalePath}>
+  {
+    t(tPage, {
+      key: 'language-link-text',
+      language: t(tSite, { key: 'locale', locale: otherLocale }),
+    })
+  }
+</a>

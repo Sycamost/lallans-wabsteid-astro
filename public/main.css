@@ -10,6 +10,11 @@
   --color-primary-800: #442c44;
   --color-primary-900: #251d25;
 
+  --text-color: var(--color-primary-900);
+  --text-highlight-color: var(--color-primary-800);
+  --background-color: var(--color-primary-50);
+  --background-highlight-color: var(--color-primary-200);
+
   --max-width-prose-content: 35rem;
 
   --breakpoint-sm: 640px;
@@ -32,8 +37,15 @@
   font-family: 'Alegreya Sans', Lato, Calibri, 'sans-serif';
   font-size: var(--base-font-size-min);
   font-weight: 300;
-  color: var(--color-primary-50);
-  background-color: var(--color-primary-900);
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+.dark {
+  --text-color: var(--color-primary-50);
+  --text-highlight-color: var(--color-primary-100);
+  --background-color: var(--color-primary-900);
+  --background-highlight-color: var(--color-primary-800);
 }
 
 @media screen and (min-width: var(--breakpoint-sm)) {
@@ -47,8 +59,6 @@
 }
 
 :is(main, article) {
-  background-color: var(--color-primary-50);
-  color: var(--color-primary-900);
   container-name: main;
   container-type: inline-size;
 }
@@ -65,7 +75,7 @@
 }
 
 :is(main, article) > section:nth-child(even):not(:is(section, header) :is(section, header)) {
-  background-color: var(--color-primary-100);
+  --background-color: var(--color-primary-100);
 }
 
 .title,
@@ -122,9 +132,13 @@ p:not(:first) {
   padding-block-start: var(--spacing-block-md);
 }
 
+a {
+  color: var(--text-color);
+}
+
 .link {
   text-decoration: underline;
-  text-decoration-color: var(--color-primary-900);
+  text-decoration-color: var(--text-color);
   border: dotted transparent 2px;
   border-radius: 0.375rem;
   transition:
@@ -144,11 +158,11 @@ p:not(:first) {
 
 .link:active {
   font-weight: 700;
-  color: var(--color-primary-100);
+  color: var(--color-primary-500);
 }
 
 .btn {
-  border: solid 2px var(--color-primary-900);
+  border: solid 2px var(--text-color);
   font-weight: 500;
   text-decoration: underline;
   padding-inline: 0.5rem;
@@ -161,20 +175,12 @@ p:not(:first) {
 }
 
 .btn:hover {
-  background-color: var(--color-primary-200);
+  background-color: var(--background-highlight-color);
   text-decoration-color: transparent;
 }
 
 .btn:active {
   transform: scale(1.1, 1.1);
-}
-
-.btn--dark {
-  border-color: var(--color-primary-50);
-}
-
-.btn--dark:hover {
-  background-color: var(--color-primary-800);
 }
 
 td {
@@ -234,8 +240,8 @@ ol li {
   margin-block: 1.5rem;
   margin-inline: 0.5rem;
   width: 30%;
-  border: solid 2px var(--color-primary-800);
-  color: var(--color-primary-800);
+  border: solid 2px var(--text-color);
+  color: var(--text-color);
   overflow: hidden;
   text-overflow: ellipsis;
   padding-inline: var(--spacing-inline-sm);
@@ -247,8 +253,8 @@ ol li {
 }
 
 .news-post:hover {
-  background-color: var(--color-primary-50);
-  color: var(--color-primary-900);
+  background-color: var(--background-highlight-color);
+  color: var(--text-highlight-color);
 }
 
 .news-post:active {
@@ -364,5 +370,14 @@ footer {
 
 :is(.lallans-issue__contributions, .lallans-issue__contributors) ul {
   font-size: var(--font-size-sm);
+  padding-block-end: var(--spacing-block-md);
+}
+
+nav {
+  background-color: var(--color-primary-900);
+  color: var(--color-primary-50);
+  display: flex;
+  justify-content: space-evenly;
+  padding-block-start: var(--spacing-block-sm);
   padding-block-end: var(--spacing-block-md);
 }

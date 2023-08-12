@@ -1,0 +1,14 @@
+---
+import type Locale from '../types/Locale';
+import SwitchLanguageLink from './SwitchLanguageLink.astro';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+---
+
+<nav class="dark">
+  <SwitchLanguageLink currentLocale={locale} />
+</nav>
