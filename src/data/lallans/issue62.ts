@@ -1,13 +1,14 @@
 import type LallansIssue from '../../types/LallansIssue';
 
 const issue: LallansIssue = {
-  'issueNumber': 62,
-  'issueName': 'Ware 203',
-  'price': '7.50',
-  'description': {
-    'sco': 'The saxty-saicont issue o the Lallans magazine.',
+  issueNumber: 62,
+  issueName: 'Ware 203',
+  price: '7.50',
+  description: {
+    sco: 'The saxty-saicont issue o the Lallans magazine.',
     'en-GB': 'The sixty-second issue of the Lallans magazine.',
-  }, 'contributors': [
+  },
+  contributors: [
     'Sheila Douglas',
     'Elaine Morton',
     'John Drosten',
@@ -32,7 +33,7 @@ const issue: LallansIssue = {
     'Rab Wilson',
     'Alistair McDonald',
     'Tom Wilson',
-  ]
+  ],
 };
 
 export default issue;

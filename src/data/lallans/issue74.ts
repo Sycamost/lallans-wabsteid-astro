@@ -1,13 +1,14 @@
 import type LallansIssue from '../../types/LallansIssue';
 
 const issue: LallansIssue = {
-  'issueNumber': 74,
-  'issueName': 'Simmer 209',
-  'price': '8.50',
-  'description': {
-    'sco': 'The seiventy-fowerth issue o the Lallans magazine.',
+  issueNumber: 74,
+  issueName: 'Simmer 209',
+  price: '8.50',
+  description: {
+    sco: 'The seiventy-fowerth issue o the Lallans magazine.',
     'en-GB': 'The seventy-fourth issue of the Lallans magazine.',
-  }, 'contributors': [
+  },
+  contributors: [
     'James A Begg',
     'John McPartlin',
     'Sheena Blackhall',
@@ -43,7 +44,7 @@ const issue: LallansIssue = {
     'Ann Matheson',
     'Rab Wilson',
     'Joe McGibbon',
-  ]
+  ],
 };
 
 export default issue;

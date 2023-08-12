@@ -1,8 +1,8 @@
-import type { TranslationsDictionary } from "../../../types/TranslationsDictionary";
+import type { TranslationsDictionary } from '../../../types/TranslationsDictionary';
 
 const furthsettinsTranslations = {
-  'title': {
-    'sco': 'Furthsettins',
+  title: {
+    sco: 'Furthsettins',
     'en-GB': 'Publications',
   },
 };

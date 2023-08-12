@@ -82,5 +82,5 @@ export const getLallansIssue: LallansIssueGetterTable = {
 export type LallansIssueGetterTable = { [key in LallansIssueNumber]: () => Promise<LallansIssue> };
 
 export async function getAllLallansIssues(): Promise<LallansIssue[]> {
-  return Promise.all(Object.values(getLallansIssue).map(f => f()));
+  return Promise.all(Object.values(getLallansIssue).map((f) => f()));
 }

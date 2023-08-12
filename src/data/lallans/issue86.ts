@@ -1,13 +1,14 @@
 import type LallansIssue from '../../types/LallansIssue';
 
 const issue: LallansIssue = {
-  'issueNumber': 86,
-  'issueName': 'Simmer 215',
-  'price': '9.00',
-  'description': {
-    'sco': 'The echty-saxth issue o the Lallans magazine.',
+  issueNumber: 86,
+  issueName: 'Simmer 215',
+  price: '9.00',
+  description: {
+    sco: 'The echty-saxth issue o the Lallans magazine.',
     'en-GB': 'The eighty-sixth issue of the Lallans magazine.',
-  }, 'contributors': [
+  },
+  contributors: [
     'Tony Beekman',
     'Iain McGregor',
     'Sheena Blackhall',
@@ -42,7 +43,7 @@ const issue: LallansIssue = {
     'Ian Nimmo White',
     'J Derrick McClure',
     'Rab Wilson',
-  ]
+  ],
 };
 
 export default issue;

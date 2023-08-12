@@ -1,13 +1,14 @@
 import type LallansIssue from '../../types/LallansIssue';
 
 const issue: LallansIssue = {
-  'issueNumber': 67,
-  'issueName': 'Hairst 205',
-  'price': '8.50',
-  'description': {
-    'sco': 'The saxty-seiventh issue o the Lallans magazine.',
+  issueNumber: 67,
+  issueName: 'Hairst 205',
+  price: '8.50',
+  description: {
+    sco: 'The saxty-seiventh issue o the Lallans magazine.',
     'en-GB': 'The sixty-seventh issue of the Lallans magazine.',
-  }, 'contributors': [
+  },
+  contributors: [
     'Lilian Andersen',
     'Douglas Kynoch',
     'Sheena Blackhall',
@@ -44,7 +45,7 @@ const issue: LallansIssue = {
     'Colin Will',
     'Robert A Jamieson',
     'Rab Wilson',
-  ]
+  ],
 };
 
 export default issue;

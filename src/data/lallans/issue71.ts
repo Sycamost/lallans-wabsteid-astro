@@ -1,13 +1,14 @@
 import type LallansIssue from '../../types/LallansIssue';
 
 const issue: LallansIssue = {
-  'issueNumber': 71,
-  'issueName': 'Wunter 208',
-  'price': '8.50',
-  'description': {
-    'sco': 'The seiventy-first issue o the Lallans magazine.',
+  issueNumber: 71,
+  issueName: 'Wunter 208',
+  price: '8.50',
+  description: {
+    sco: 'The seiventy-first issue o the Lallans magazine.',
     'en-GB': 'The seventy-first issue of the Lallans magazine.',
-  }, 'contributors': [
+  },
+  contributors: [
     'John Bellany',
     'Caroline Macafee',
     'Sheena Blackhall',
@@ -47,7 +48,7 @@ const issue: LallansIssue = {
     'Jean Storrie Lewis',
     'Rab Wilson',
     'Federico Garcia Lorca',
-  ]
+  ],
 };
 
 export default issue;

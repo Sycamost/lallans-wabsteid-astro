@@ -1,13 +1,14 @@
 import type LallansIssue from '../../types/LallansIssue';
 
 const issue: LallansIssue = {
-  'issueNumber': 41,
-  'issueName': 'Mairtinmas 1993',
-  'price': '2.50',
-  'description': {
-    'sco': 'The forty-first issue o the Lallans magazine.',
+  issueNumber: 41,
+  issueName: 'Mairtinmas 1993',
+  price: '2.50',
+  description: {
+    sco: 'The forty-first issue o the Lallans magazine.',
     'en-GB': 'The forty-first issue of the Lallans magazine.',
-  }, 'contributors': [
+  },
+  contributors: [
     'Gavin Sprott',
     'Kahlil Gibran',
     'Mary Strathie',
@@ -30,7 +31,7 @@ const issue: LallansIssue = {
     'Sir Gilbert Hay',
     'WL Wilson',
     'Margaret Rose Harris',
-  ]
+  ],
 };
 
 export default issue;

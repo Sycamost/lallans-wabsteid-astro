@@ -1,13 +1,14 @@
 import type LallansIssue from '../../types/LallansIssue';
 
 const issue: LallansIssue = {
-  'issueNumber': 64,
-  'issueName': 'Ware 204',
-  'price': '7.50',
-  'description': {
-    'sco': 'The saxty-fowerth issue o the Lallans magazine.',
+  issueNumber: 64,
+  issueName: 'Ware 204',
+  price: '7.50',
+  description: {
+    sco: 'The saxty-fowerth issue o the Lallans magazine.',
     'en-GB': 'The sixty-fourth issue of the Lallans magazine.',
-  }, 'contributors': [
+  },
+  contributors: [
     'Lillian Anderson',
     'Ann Matheson',
     'Robert R Calder',
@@ -32,7 +33,7 @@ const issue: LallansIssue = {
     'Rab Wilson',
     'Caroline Macafee',
     'Tom Wilson',
-  ]
+  ],
 };
 
 export default issue;

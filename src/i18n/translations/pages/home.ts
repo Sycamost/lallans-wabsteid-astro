@@ -1,8 +1,8 @@
-import type { TranslationsDictionary } from "../../../types/TranslationsDictionary";
+import type { TranslationsDictionary } from '../../../types/TranslationsDictionary';
 
 const homeTranslations = {
-  'title': {
-    'sco': 'Hame',
+  title: {
+    sco: 'Hame',
     'en-GB': 'Home',
   },
 };

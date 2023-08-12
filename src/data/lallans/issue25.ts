@@ -1,13 +1,14 @@
 import type LallansIssue from '../../types/LallansIssue';
 
 const issue: LallansIssue = {
-'issueNumber': 25,
-  'issueName': 'Mairtinmas 1985',
-  'price': '0.75',
-  'description': {
-    'sco': 'The twanty-fift issue o the Lallans magazine.',
+  issueNumber: 25,
+  issueName: 'Mairtinmas 1985',
+  price: '0.75',
+  description: {
+    sco: 'The twanty-fift issue o the Lallans magazine.',
     'en-GB': 'The twenty-fifth issue of the Lallans magazine.',
-  }, 'contributors': [
+  },
+  contributors: [
     'Robert McLellan',
     'JK Annand',
     'Peter Fortune',
@@ -22,7 +23,7 @@ const issue: LallansIssue = {
     'John S Phillips',
     'David Purves',
     'Raymond Vettese',
-  ]
+  ],
 };
 
 export default issue;

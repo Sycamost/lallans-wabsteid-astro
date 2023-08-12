@@ -1,13 +1,14 @@
 import type LallansIssue from '../../types/LallansIssue';
 
 const issue: LallansIssue = {
-  'issueNumber': 84,
-  'issueName': 'Simmer 214',
-  'price': '9.00',
-  'description': {
-    'sco': 'The echty-fowerth issue o the Lallans magazine.',
+  issueNumber: 84,
+  issueName: 'Simmer 214',
+  price: '9.00',
+  description: {
+    sco: 'The echty-fowerth issue o the Lallans magazine.',
     'en-GB': 'The eighty-fourth issue of the Lallans magazine.',
-  }, 'contributors': [
+  },
+  contributors: [
     'Frank Adam',
     'Tony Beekman',
     'Peter Cameron',
@@ -38,7 +39,7 @@ const issue: LallansIssue = {
     'Raymond Vettese',
     'George T Watt',
     'Rab Wilson',
-  ]
+  ],
 };
 
 export default issue;

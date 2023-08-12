@@ -1,13 +1,14 @@
 import type LallansIssue from '../../types/LallansIssue';
 
 const issue: LallansIssue = {
-  'issueNumber': 82,
-  'issueName': 'Simmer 213',
-  'price': '9.00',
-  'description': {
-    'sco': 'The echty-saicont issue o the Lallans magazine.',
+  issueNumber: 82,
+  issueName: 'Simmer 213',
+  price: '9.00',
+  description: {
+    sco: 'The echty-saicont issue o the Lallans magazine.',
     'en-GB': 'The eighty-second issue of the Lallans magazine.',
-  }, 'contributors': [
+  },
+  contributors: [
     'Mavis Beckett',
     'Ann Matheson',
     'Robert R Calder',
@@ -42,7 +43,7 @@ const issue: LallansIssue = {
     'George T Watt',
     'Caroline Macafee',
     'Rob Wilson',
-  ]
+  ],
 };
 
 export default issue;

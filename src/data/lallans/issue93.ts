@@ -1,13 +1,14 @@
 import type LallansIssue from '../../types/LallansIssue';
 
 const issue: LallansIssue = {
-  'issueNumber': 93,
-  'issueName': 'Yuil 218',
-  'price': '9.00',
-  'description': {
-    'sco': 'The ninety-third issue o the Lallans magazine.',
+  issueNumber: 93,
+  issueName: 'Yuil 218',
+  price: '9.00',
+  description: {
+    sco: 'The ninety-third issue o the Lallans magazine.',
     'en-GB': 'The ninety-third issue of the Lallans magazine.',
-  }, 'contributors': [
+  },
+  contributors: [
     'Michael Stephenson',
     'Donald Adamson',
     'David Malcolm',
@@ -53,7 +54,7 @@ const issue: LallansIssue = {
     'Hazel Campbell',
     'Hilke Macintyre',
     'Kenneth Farrow',
-  ]
+  ],
 };
 
 export default issue;

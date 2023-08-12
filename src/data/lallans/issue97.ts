@@ -1,13 +1,14 @@
 import type LallansIssue from '../../types/LallansIssue';
 
 const issue: LallansIssue = {
-  'issueNumber': 97,
-  'issueName': 'Yuil 220',
-  'price': '9.00',
-  'description': {
-    'sco': 'The ninety-seiventh issue o the Lallans magazine.',
+  issueNumber: 97,
+  issueName: 'Yuil 220',
+  price: '9.00',
+  description: {
+    sco: 'The ninety-seiventh issue o the Lallans magazine.',
     'en-GB': 'The ninety-seventh issue of the Lallans magazine.',
-  }, 'contributors': [
+  },
+  contributors: [
     'Donald Adamson',
     'Tony Beekman',
     'Stuart McHardy',
@@ -46,7 +47,7 @@ const issue: LallansIssue = {
     'J Derrick McClure',
     'Greta Yorke',
     'J Walter McGinty',
-  ]
+  ],
 };
 
 export default issue;

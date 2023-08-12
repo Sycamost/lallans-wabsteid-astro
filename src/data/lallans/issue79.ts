@@ -1,13 +1,14 @@
 import type LallansIssue from '../../types/LallansIssue';
 
 const issue: LallansIssue = {
-  'issueNumber': 79,
-  'issueName': 'Yuil 211',
-  'price': '9.00',
-  'description': {
-    'sco': 'The seiventy-ninth issue o the Lallans magazine.',
+  issueNumber: 79,
+  issueName: 'Yuil 211',
+  price: '9.00',
+  description: {
+    sco: 'The seiventy-ninth issue o the Lallans magazine.',
     'en-GB': 'The seventy-ninth issue of the Lallans magazine.',
-  }, 'contributors': [
+  },
+  contributors: [
     'Peter Cameron',
     'John McPartlin',
     'Charles P Connor',
@@ -38,7 +39,7 @@ const issue: LallansIssue = {
     'George T Watt',
     'Stuart McHardy',
     'Rab Wilson',
-  ]
+  ],
 };
 
 export default issue;

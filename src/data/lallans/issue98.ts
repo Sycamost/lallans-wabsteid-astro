@@ -1,13 +1,14 @@
 import type LallansIssue from '../../types/LallansIssue';
 
 const issue: LallansIssue = {
-  'issueNumber': 98,
-  'issueName': 'Simmer 221',
-  'price': '9.00',
-  'description': {
-    'sco': 'The ninety-echtth issue o the Lallans magazine.',
+  issueNumber: 98,
+  issueName: 'Simmer 221',
+  price: '9.00',
+  description: {
+    sco: 'The ninety-echtth issue o the Lallans magazine.',
     'en-GB': 'The ninety-eighth issue of the Lallans magazine.',
-  }, 'contributors': [
+  },
+  contributors: [
     'John Aberdein',
     'Walter J McGinty',
     'Donald Adamson',
@@ -66,7 +67,7 @@ const issue: LallansIssue = {
     'Alun Robert Woods ',
     'Barbara Mathie (aka Rosa Alba Macdonald)',
     'J Derrick McClure',
-  ]
+  ],
 };
 
 export default issue;

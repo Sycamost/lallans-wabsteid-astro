@@ -1,4 +1,4 @@
-import type Digit from "./Digit";
+import type Digit from './Digit';
 
 type Price = `${bigint | ''}.${Digit}${Digit}`;
 

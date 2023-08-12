@@ -1,13 +1,14 @@
 import type LallansIssue from '../../types/LallansIssue';
 
 const issue: LallansIssue = {
-  'issueNumber': 42,
-  'issueName': 'Whitsuntid 1994',
-  'price': '2.50',
-  'description': {
-    'sco': 'The forty-saicont issue o the Lallans magazine.',
+  issueNumber: 42,
+  issueName: 'Whitsuntid 1994',
+  price: '2.50',
+  description: {
+    sco: 'The forty-saicont issue o the Lallans magazine.',
     'en-GB': 'The forty-second issue of the Lallans magazine.',
-  }, 'contributors': [
+  },
+  contributors: [
     'John Burns',
     'Margaret Rose Harris',
     'Mavis Beckett',
@@ -22,7 +23,7 @@ const issue: LallansIssue = {
     'Aitken Fyall',
     'Lionel Hawes',
     'Robert Louis Stevenson',
-  ]
+  ],
 };
 
 export default issue;

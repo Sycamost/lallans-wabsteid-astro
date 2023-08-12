@@ -1,13 +1,14 @@
 import type LallansIssue from '../../types/LallansIssue';
 
 const issue: LallansIssue = {
-  'issueNumber': 83,
-  'issueName': 'Yuil 213',
-  'price': '9.00',
-  'description': {
-    'sco': 'The echty-third issue o the Lallans magazine.',
+  issueNumber: 83,
+  issueName: 'Yuil 213',
+  price: '9.00',
+  description: {
+    sco: 'The echty-third issue o the Lallans magazine.',
     'en-GB': 'The eighty-third issue of the Lallans magazine.',
-  }, 'contributors': [
+  },
+  contributors: [
     'Tony Beekman',
     'Rowena M Love',
     'Sheena Blackhall',
@@ -42,7 +43,7 @@ const issue: LallansIssue = {
     'Ian Nimmo White',
     'Douglas Kynoch',
     'Rab Wilson',
-  ]
+  ],
 };
 
 export default issue;

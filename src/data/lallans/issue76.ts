@@ -1,13 +1,14 @@
 import type LallansIssue from '../../types/LallansIssue';
 
 const issue: LallansIssue = {
-  'issueNumber': 76,
-  'issueName': 'Simmer 210',
-  'price': '8.50',
-  'description': {
-    'sco': 'The seiventy-saxth issue o the Lallans magazine.',
+  issueNumber: 76,
+  issueName: 'Simmer 210',
+  price: '8.50',
+  description: {
+    sco: 'The seiventy-saxth issue o the Lallans magazine.',
     'en-GB': 'The seventy-sixth issue of the Lallans magazine.',
-  }, 'contributors': [
+  },
+  contributors: [
     'Robert R Calder',
     'Margaret Marenich',
     'Peter Cameron',
@@ -44,7 +45,7 @@ const issue: LallansIssue = {
     'Alastair White',
     'John McPartlin',
     'Rab Wilson',
-  ]
+  ],
 };
 
 export default issue;

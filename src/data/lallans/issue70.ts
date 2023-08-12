@@ -1,13 +1,14 @@
 import type LallansIssue from '../../types/LallansIssue';
 
 const issue: LallansIssue = {
-  'issueNumber': 70,
-  'issueName': 'Ware 207',
-  'price': '8.50',
-  'description': {
-    'sco': 'The seiventieth issue o the Lallans magazine.',
+  issueNumber: 70,
+  issueName: 'Ware 207',
+  price: '8.50',
+  description: {
+    sco: 'The seiventieth issue o the Lallans magazine.',
     'en-GB': 'The seventieth issue of the Lallans magazine.',
-  }, 'contributors': [
+  },
+  contributors: [
     'Sheena Blackhall',
     'Douglas Kynoch',
     'Ian Brown',
@@ -34,7 +35,7 @@ const issue: LallansIssue = {
     'George T Watt',
     'Louise Johnstone',
     'Rab Wilson',
-  ]
+  ],
 };
 
 export default issue;

@@ -1,13 +1,14 @@
 import type LallansIssue from '../../types/LallansIssue';
 
 const issue: LallansIssue = {
-  'issueNumber': 88,
-  'issueName': 'Simmer 216',
-  'price': '9.00',
-  'description': {
-    'sco': 'The echty-echtth issue o the Lallans magazine.',
+  issueNumber: 88,
+  issueName: 'Simmer 216',
+  price: '9.00',
+  description: {
+    sco: 'The echty-echtth issue o the Lallans magazine.',
     'en-GB': 'The eighty-eighth issue of the Lallans magazine.',
-  }, 'contributors': [
+  },
+  contributors: [
     'Ade Adesina',
     'Colin Moore',
     'Donald Adamson',
@@ -46,7 +47,7 @@ const issue: LallansIssue = {
     'David Wilson',
     'WS Milne',
     'Tony Beekman',
-  ]
+  ],
 };
 
 export default issue;

@@ -1,13 +1,14 @@
 import type LallansIssue from '../../types/LallansIssue';
 
 const issue: LallansIssue = {
-  'issueNumber': 89,
-  'issueName': 'Yuil 216',
-  'price': '9.00',
-  'description': {
-    'sco': 'The echty-ninth issue o the Lallans magazine.',
+  issueNumber: 89,
+  issueName: 'Yuil 216',
+  price: '9.00',
+  description: {
+    sco: 'The echty-ninth issue o the Lallans magazine.',
     'en-GB': 'The eighty-ninth issue of the Lallans magazine.',
-  }, 'contributors': [
+  },
+  contributors: [
     'Donald Adamson',
     'Ann Matheson',
     'Fran Baillie',
@@ -52,7 +53,7 @@ const issue: LallansIssue = {
     'Ian Nimmo White',
     'Catherine MacDonald',
     'Rab Wilson',
-  ]
+  ],
 };
 
 export default issue;

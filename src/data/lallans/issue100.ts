@@ -1,13 +1,14 @@
 import type LallansIssue from '../../types/LallansIssue';
 
 const issue: LallansIssue = {
-  'issueNumber': 100,
-  'issueName': 'Simmer 222',
-  'price': '10.00',
-  'description': {
+  issueNumber: 100,
+  issueName: 'Simmer 222',
+  price: '10.00',
+  description: {
     'en-GB': 'The hundredth issue of the Lallans magazine.',
-    'sco': 'The hunnreth issue o the Lallans magazine.',
-  }, 'contributors': [
+    sco: 'The hunnreth issue o the Lallans magazine.',
+  },
+  contributors: [
     'Jeanette Abendstern',
     'Colin Mackenzie',
     'Donald Adamson',

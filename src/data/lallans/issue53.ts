@@ -1,13 +1,14 @@
 import type LallansIssue from '../../types/LallansIssue';
 
 const issue: LallansIssue = {
-  'issueNumber': 53,
-  'issueName': 'Mairtinmas 1998',
-  'price': '3.00',
-  'description': {
-    'sco': 'The fifty-third issue o the Lallans magazine.',
+  issueNumber: 53,
+  issueName: 'Mairtinmas 1998',
+  price: '3.00',
+  description: {
+    sco: 'The fifty-third issue o the Lallans magazine.',
     'en-GB': 'The fifty-third issue of the Lallans magazine.',
-  }, 'contributors': [
+  },
+  contributors: [
     'Ken Angus',
     'Mavis Beckett',
     'Prior Adam Blackadder o Coldingham',
@@ -36,7 +37,7 @@ const issue: LallansIssue = {
     'Anne Smith',
     'James Hall Thomson',
     'Raymond Vettese',
-  ]
+  ],
 };
 
 export default issue;

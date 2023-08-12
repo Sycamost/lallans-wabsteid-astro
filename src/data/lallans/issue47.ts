@@ -1,13 +1,14 @@
 import type LallansIssue from '../../types/LallansIssue';
 
 const issue: LallansIssue = {
-  'issueNumber': 47,
-  'issueName': 'Mairtinmas 1996',
-  'price': '3.00',
-  'description': {
-    'sco': 'The forty-seiventh issue o the Lallans magazine.',
+  issueNumber: 47,
+  issueName: 'Mairtinmas 1996',
+  price: '3.00',
+  description: {
+    sco: 'The forty-seiventh issue o the Lallans magazine.',
     'en-GB': 'The forty-seventh issue of the Lallans magazine.',
-  }, 'contributors': [
+  },
+  contributors: [
     'Lilian Anderson',
     'Mavis Beckett',
     'Soutar Davie',
@@ -30,7 +31,7 @@ const issue: LallansIssue = {
     'Elliot Cowan Smith',
     'Gavin Sprott',
     'Robert Tannahill',
-  ]
+  ],
 };
 
 export default issue;

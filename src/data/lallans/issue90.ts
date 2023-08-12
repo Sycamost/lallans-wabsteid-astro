@@ -1,13 +1,14 @@
 import type LallansIssue from '../../types/LallansIssue';
 
 const issue: LallansIssue = {
-  'issueNumber': 90,
-  'issueName': 'Simmer 217',
-  'price': '9.00',
-  'description': {
-    'sco': 'The ninetieth issue o the Lallans magazine.',
+  issueNumber: 90,
+  issueName: 'Simmer 217',
+  price: '9.00',
+  description: {
+    sco: 'The ninetieth issue o the Lallans magazine.',
     'en-GB': 'The ninetieth issue of the Lallans magazine.',
-  }, 'contributors': [
+  },
+  contributors: [
     'Donald Adamson',
     'Ann Matheson',
     'Fran Baillie',
@@ -40,7 +41,7 @@ const issue: LallansIssue = {
     'Bill Watt',
     'Douglas Kynoch',
     'George T Watt',
-  ]
+  ],
 };
 
 export default issue;

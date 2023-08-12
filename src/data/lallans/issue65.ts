@@ -1,13 +1,14 @@
 import type LallansIssue from '../../types/LallansIssue';
 
 const issue: LallansIssue = {
-  'issueNumber': 65,
-  'issueName': 'Hairst 204',
-  'price': '8.50',
-  'description': {
-    'sco': 'The saxty-fifth issue o the Lallans magazine.',
+  issueNumber: 65,
+  issueName: 'Hairst 204',
+  price: '8.50',
+  description: {
+    sco: 'The saxty-fifth issue o the Lallans magazine.',
     'en-GB': 'The sixty-fifth issue of the Lallans magazine.',
-  }, 'contributors': [
+  },
+  contributors: [
     'Lillian Anderson',
     'Ann Matheson',
     'Irene Brown',
@@ -36,7 +37,7 @@ const issue: LallansIssue = {
     'Les Wheeler',
     'Caroline Macafee',
     'Rab Wilson',
-  ]
+  ],
 };
 
 export default issue;

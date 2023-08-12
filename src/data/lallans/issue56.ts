@@ -1,13 +1,14 @@
 import type LallansIssue from '../../types/LallansIssue';
 
 const issue: LallansIssue = {
-  'issueNumber': 56,
-  'issueName': 'Voar 200',
-  'price': '7.50',
-  'description': {
-    'sco': 'The fifty-saxth issue o the Lallans magazine.',
+  issueNumber: 56,
+  issueName: 'Voar 200',
+  price: '7.50',
+  description: {
+    sco: 'The fifty-saxth issue o the Lallans magazine.',
     'en-GB': 'The fifty-sixth issue of the Lallans magazine.',
-  }, 'contributors': [
+  },
+  contributors: [
     'Sheena Blackhall',
     'Dauvit Horsbroch',
     'Robert Burns',
@@ -30,7 +31,7 @@ const issue: LallansIssue = {
     'Scots Spellin Comatee',
     'Willie Hershaw',
     'John M Tait',
-  ]
+  ],
 };
 
 export default issue;

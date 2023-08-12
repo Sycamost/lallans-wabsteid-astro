@@ -1,13 +1,14 @@
 import type LallansIssue from '../../types/LallansIssue';
 
 const issue: LallansIssue = {
-  'issueNumber': 49,
-  'issueName': 'Whitsuntid 1997',
-  'price': '3.00',
-  'description': {
-    'sco': 'The forty-ninth issue o the Lallans magazine.',
+  issueNumber: 49,
+  issueName: 'Whitsuntid 1997',
+  price: '3.00',
+  description: {
+    sco: 'The forty-ninth issue o the Lallans magazine.',
     'en-GB': 'The forty-ninth issue of the Lallans magazine.',
-  }, 'contributors': [
+  },
+  contributors: [
     'Abbot Richard Abercromby',
     'AJ Aitken',
     'Peter Cameron',

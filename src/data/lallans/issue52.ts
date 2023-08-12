@@ -1,13 +1,14 @@
 import type LallansIssue from '../../types/LallansIssue';
 
 const issue: LallansIssue = {
-  'issueNumber': 52,
-  'issueName': 'Whitsuntid 1998',
-  'price': '3.00',
-  'description': {
-    'sco': 'The fifty-saicont issue o the Lallans magazine.',
+  issueNumber: 52,
+  issueName: 'Whitsuntid 1998',
+  price: '3.00',
+  description: {
+    sco: 'The fifty-saicont issue o the Lallans magazine.',
     'en-GB': 'The fifty-second issue of the Lallans magazine.',
-  }, 'contributors': [
+  },
+  contributors: [
     'Hugh Barclay o Ladyland',
     'Peter Cameron',
     'Donald Farquhar',
@@ -26,7 +27,7 @@ const issue: LallansIssue = {
     'David Purves',
     'Raymond Vettese',
     'Peter D Wright',
-  ]
+  ],
 };
 
 export default issue;

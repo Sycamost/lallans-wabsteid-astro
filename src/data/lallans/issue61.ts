@@ -1,13 +1,14 @@
 import type LallansIssue from '../../types/LallansIssue';
 
 const issue: LallansIssue = {
-  'issueNumber': 61,
-  'issueName': 'Hairst 202',
-  'price': '7.50',
-  'description': {
-    'sco': 'The saxty-first issue o the Lallans magazine.',
+  issueNumber: 61,
+  issueName: 'Hairst 202',
+  price: '7.50',
+  description: {
+    sco: 'The saxty-first issue o the Lallans magazine.',
     'en-GB': 'The sixty-first issue of the Lallans magazine.',
-  }, 'contributors': [
+  },
+  contributors: [
     'Sheena Blackhall',
     'J Derrick McClure',
     'Robert R Calder',
@@ -37,7 +38,7 @@ const issue: LallansIssue = {
     'John Manson',
     'Raymond Vettese',
     'Ann Matheson',
-  ]
+  ],
 };
 
 export default issue;

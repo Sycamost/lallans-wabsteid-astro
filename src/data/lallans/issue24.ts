@@ -1,13 +1,14 @@
 import type LallansIssue from '../../types/LallansIssue';
 
 const issue: LallansIssue = {
-'issueNumber': 24,
-  'issueName': 'Whitsuntid 1985',
-  'price': '0.75',
-  'description': {
-    'sco': 'The twanty-fowerth issue o the Lallans magazine.',
+  issueNumber: 24,
+  issueName: 'Whitsuntid 1985',
+  price: '0.75',
+  description: {
+    sco: 'The twanty-fowerth issue o the Lallans magazine.',
     'en-GB': 'The twenty-fourth issue of the Lallans magazine.',
-  }, 'contributors': [
+  },
+  contributors: [
     'James Begg',
     'Sheena Blackhall',
     'Margaret Ferguson',

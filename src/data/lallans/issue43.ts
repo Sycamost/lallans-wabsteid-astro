@@ -1,13 +1,14 @@
 import type LallansIssue from '../../types/LallansIssue';
 
 const issue: LallansIssue = {
-  'issueNumber': 43,
-  'issueName': 'Mairtinmas 1994',
-  'price': '2.50',
-  'description': {
-    'sco': 'The forty-fowerth issue o the Lallans magazine.',
+  issueNumber: 43,
+  issueName: 'Mairtinmas 1994',
+  price: '2.50',
+  description: {
+    sco: 'The forty-fowerth issue o the Lallans magazine.',
     'en-GB': 'The forty-fourth issue of the Lallans magazine.',
-  }, 'contributors': [
+  },
+  contributors: [
     'Betty Whutson',
     'James Hall Thomson',
     'George Hardie',
@@ -26,7 +27,7 @@ const issue: LallansIssue = {
     'Bill McCoubrey',
     'Andrew Kerr',
     'David Lindsay',
-  ]
+  ],
 };
 
 export default issue;

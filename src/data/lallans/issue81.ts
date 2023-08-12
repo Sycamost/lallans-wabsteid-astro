@@ -1,13 +1,14 @@
 import type LallansIssue from '../../types/LallansIssue';
 
 const issue: LallansIssue = {
-  'issueNumber': 81,
-  'issueName': 'Yuil 212',
-  'price': '9.00',
-  'description': {
-    'sco': 'The echty-first issue o the Lallans magazine.',
+  issueNumber: 81,
+  issueName: 'Yuil 212',
+  price: '9.00',
+  description: {
+    sco: 'The echty-first issue o the Lallans magazine.',
     'en-GB': 'The eighty-first issue of the Lallans magazine.',
-  }, 'contributors': [
+  },
+  contributors: [
     'Sheena Blackhall',
     'John McPartlin',
     'Peter Camaron',
@@ -38,7 +39,7 @@ const issue: LallansIssue = {
     'Rab Wilson',
     'Stuart McHardy',
     'Jon Zarecki',
-  ]
+  ],
 };
 
 export default issue;

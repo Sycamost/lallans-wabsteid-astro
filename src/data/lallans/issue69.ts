@@ -1,13 +1,14 @@
 import type LallansIssue from '../../types/LallansIssue';
 
 const issue: LallansIssue = {
-  'issueNumber': 69,
-  'issueName': 'Wunter 206',
-  'price': '8.50',
-  'description': {
-    'sco': 'The saxty-ninth issue o the Lallans magazine.',
+  issueNumber: 69,
+  issueName: 'Wunter 206',
+  price: '8.50',
+  description: {
+    sco: 'The saxty-ninth issue o the Lallans magazine.',
     'en-GB': 'The sixty-ninth issue of the Lallans magazine.',
-  }, 'contributors': [
+  },
+  contributors: [
     'Irene Brown',
     'J Derrick McClure',
     'Robert R Calder',
@@ -43,7 +44,7 @@ const issue: LallansIssue = {
     'Alan McCabe',
     'Rab Wilson',
     'Mary McCabe',
-  ]
+  ],
 };
 
 export default issue;

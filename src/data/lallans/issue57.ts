@@ -1,13 +1,14 @@
 import type LallansIssue from '../../types/LallansIssue';
 
 const issue: LallansIssue = {
-  'issueNumber': 57,
-  'issueName': 'Hairst 200',
-  'price': '7.50',
-  'description': {
-    'sco': 'The fifty-seiventh issue o the Lallans magazine.',
+  issueNumber: 57,
+  issueName: 'Hairst 200',
+  price: '7.50',
+  description: {
+    sco: 'The fifty-seiventh issue o the Lallans magazine.',
     'en-GB': 'The fifty-seventh issue of the Lallans magazine.',
-  }, 'contributors': [
+  },
+  contributors: [
     'Sheena Blackhall',
     'Pat McCrory',
     'Robert Calder',
@@ -49,7 +50,7 @@ const issue: LallansIssue = {
     'Caroline Macafee',
     'Tom Wilson',
     'Neil MacCallum',
-  ]
+  ],
 };
 
 export default issue;

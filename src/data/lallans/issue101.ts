@@ -1,14 +1,14 @@
 import type LallansIssue from '../../types/LallansIssue';
 
 const issue: LallansIssue = {
-  'issueNumber': 101,
-  'issueName': 'Yuil 222',
-  'price': '10.00',
-  'description': {
+  issueNumber: 101,
+  issueName: 'Yuil 222',
+  price: '10.00',
+  description: {
     'en-GB': 'The hundred-and-first issue of the Lallans magazine.',
-    'sco': 'The hunner-an-first issue o the Lallans magazine.',
+    sco: 'The hunner-an-first issue o the Lallans magazine.',
   },
-  'contributors': [
+  contributors: [
     'JK Annand',
     'George T Watt',
     'Stuart McHardy',
@@ -36,7 +36,7 @@ const issue: LallansIssue = {
     'Kevin Connelly',
     'Hamish Wallochie',
     'Sheena Blackhall',
-  ]
+  ],
 };
 
 export default issue;
