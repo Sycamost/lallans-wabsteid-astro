@@ -1,4 +1,9 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-npx lint-staged && rm -rdf api && cd api-src && npx tsc && git add ../api
+npx lint-staged \
+  && cd api \
+  && fd "(.js|.js.map)$" | xargs rm \
+  && cd ../api-src \
+  && npx tsc \
+  && git add ../api
