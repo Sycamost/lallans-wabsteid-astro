@@ -6,13 +6,15 @@ import tFurthsettins from '../../../../i18n/translations/pages/furthsettins';
 import type Locale from '../../../../types/Locale';
 import LallansIssuesGallery from '../../../../components/LallansIssuesGallery.astro';
 
-export async function getStaticPaths() { return localeStaticPaths; }
+export async function getStaticPaths() {
+  return localeStaticPaths;
+}
 
 const locale = Astro.params.locale as Locale;
 const t = translate(locale);
 ---
 
-<Page locale={locale} title={ t(tFurthsettins, 'title') }>
+<Page locale={locale} title={t(tFurthsettins, { key: 'title' })}>
   <h1>Lallans</h1>
 
   <LallansIssuesGallery />

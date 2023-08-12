@@ -17,13 +17,13 @@ const t = translate(locale);
 <html lang="sco">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content={ t(site, 'description') } />
+    <meta name="description" content={t(site, { key: 'description' })} />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/normalize.css" />
     <link rel="stylesheet" href="/main.css" />
     <meta name="generator" content={Astro.generator} />
-    <title>{ title } | { t(site, 'title') }</title>
+    <title>{title} | {t(site, { key: 'title' })}</title>
   </head>
   <body>
     <slot />

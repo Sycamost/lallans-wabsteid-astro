@@ -6,15 +6,17 @@ import site from '../../i18n/translations/site';
 import home from '../../i18n/translations/pages/home';
 import type Locale from '../../types/Locale';
 
-export async function getStaticPaths() { return localeStaticPaths; }
+export async function getStaticPaths() {
+  return localeStaticPaths;
+}
 
 const locale = Astro.params.locale as Locale;
 const t = translate(locale);
 ---
 
-<Page locale={locale} title={ t(home, 'title') }>
+<Page locale={locale} title={t(home, { key: 'title' })}>
   <section>
-    <h1 class="title">{ t(site, 'title') }</h1>
+    <h1 class="title">{t(site, { key: 'title' })}</h1>
     <h1>Tap-level heidin</h1>
     <h2>Seicont-level heidin</h2>
     <h3>Third-level heidin</h3>

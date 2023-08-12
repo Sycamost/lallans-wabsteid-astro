@@ -2,10 +2,10 @@ import type { TranslationsDictionary } from '../../../types/TranslationsDictiona
 
 const furthsettinsTranslations = {
   title: {
-    sco: 'Furthsettins',
-    'en-GB': 'Publications',
+    sco: () => 'Furthsettins',
+    'en-GB': () => 'Publications',
   },
 };
 
-type Keys = keyof typeof furthsettinsTranslations;
-export default furthsettinsTranslations as TranslationsDictionary<Keys>;
+type Raw = typeof furthsettinsTranslations;
+export default furthsettinsTranslations as TranslationsDictionary<Raw>;

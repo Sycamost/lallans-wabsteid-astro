@@ -10,11 +10,9 @@ import LallansIssue from '../../../../../components/LallansIssue.astro';
 
 export async function getStaticPaths() {
   const lallansIssueNumbers = Object.keys(getLallansIssue) as `${LallansIssueNumber}`[];
-  return lallansIssueNumbers.flatMap(n => (
-    localeStaticPaths.map(p => (
-      { ...p, params: { ...p.params, issueNumber: n } }
-    ))
-  ));
+  return lallansIssueNumbers.flatMap((n) =>
+    localeStaticPaths.map((p) => ({ ...p, params: { ...p.params, issueNumber: n } }))
+  );
 }
 
 const locale = Astro.params.locale as Locale;
@@ -23,6 +21,6 @@ const issueNumber = new Number(Astro.params.issueNumber).valueOf() as LallansIss
 const issue = await getLallansIssue[issueNumber]();
 ---
 
-<Page locale={locale} title={ t(tFurthsettins, 'title') }>
+<Page locale={locale} title={t(tFurthsettins, { key: 'title' })}>
   <LallansIssue issue={issue} locale={locale} />
 </Page>

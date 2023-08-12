@@ -2,10 +2,10 @@ import type { TranslationsDictionary } from '../../../types/TranslationsDictiona
 
 const homeTranslations = {
   title: {
-    sco: 'Hame',
-    'en-GB': 'Home',
+    sco: () => 'Hame',
+    'en-GB': () => 'Home',
   },
 };
 
-type Keys = keyof typeof homeTranslations;
-export default homeTranslations as TranslationsDictionary<Keys>;
+type Raw = typeof homeTranslations;
+export default homeTranslations as TranslationsDictionary<Raw>;
