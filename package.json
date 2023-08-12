@@ -8,6 +8,7 @@
     "start": "astro dev",
     "build": "npm run build-api && astro build",
     "build-api": "cd api-src && npx tsc",
+    "prebuild-api": "cd api && fd \"(.js|.js.map)$\" | xargs rm",
     "preview": "astro preview",
     "astro": "astro",
     "lint": "eslint .",

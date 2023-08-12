@@ -2,8 +2,5 @@
 . "$(dirname "$0")/_/husky.sh"
 
 npx lint-staged \
-  && cd api \
-  && fd "(.js|.js.map)$" | xargs rm \
-  && cd ../api-src \
-  && npx tsc \
-  && git add ../api
+  && npm run build-api \
+  && git add api
