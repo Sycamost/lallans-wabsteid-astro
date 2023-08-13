@@ -37,6 +37,7 @@
   --spacing-inline-lg: 5rem;
   --spacing-inline-md: 3rem;
   --spacing-inline-sm: 1.5rem;
+  --spacing-inline-xs: 0.5rem;
 
   --base-font-size-min: 16px;
   --base-font-size-max: 30px;
@@ -61,7 +62,7 @@
   background-color: var(--background-color);
 }
 
-@media screen and (min-width: var(--breakpoint-sm)) {
+@media (min-width: 40rem) {
   :root {
     --sm-to-lg: calc(var(--breakpoint-lg) - var(--breakpoint-sm));
     --this-to-lg: calc(100vw - var(--base-font-size-min));
@@ -303,7 +304,7 @@ footer {
   margin-inline: auto;
 }
 
-@media (min-width: var(--breakpoint-sm)) {
+@media (min-width: 40rem) {
   .back-to-top-link {
     margin-inline-end: 0;
   }
@@ -388,7 +389,34 @@ footer {
 
 nav {
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
   padding-block-start: var(--spacing-block-sm);
   padding-block-end: var(--spacing-block-md);
+}
+
+@media (min-width: 40rem) {
+  nav {
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-inline: 0;
+  }
+}
+
+.breadcrumbs li {
+  list-style-type: none;
+}
+  
+.breadcrumbs li::before {
+  content: '/'
+}
+
+@media (min-width: 40rem) {
+  .breadcrumbs {
+    display: flex;
+  }
+  
+  .breadcrumbs li {
+    margin-inline: var(--spacing-inline-xs);
+  }
 }

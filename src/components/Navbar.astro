@@ -1,5 +1,6 @@
 ---
 import type Locale from '../types/Locale';
+import Breadcrumbs from './Breadcrumbs.astro';
 import SwitchLanguageLink from './SwitchLanguageLink.astro';
 
 interface Props {
@@ -11,4 +12,5 @@ const { locale } = Astro.props;
 
 <nav class="dark">
   <SwitchLanguageLink currentLocale={locale} />
+  <Breadcrumbs />
 </nav>

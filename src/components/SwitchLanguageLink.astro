@@ -18,7 +18,7 @@ const otherLocalePath = currentPath.replace(currentLocaleInPath, `${otherLocale}
 const t = translate(currentLocale);
 ---
 
-<a class="link" href={otherLocalePath}>
+<a class="link switch-language-link" href={otherLocalePath}>
   {
     t(tPage, {
       key: 'language-link-text',
