@@ -26,6 +26,7 @@
   --background-highlight-color: var(--color-primary-200);
 
   --max-width-prose-content: 35rem;
+  --max-width-all-content: 56.6rem; /* golden ratio * prose content width */
 
   --breakpoint-sm: 640px;
   --breakpoint-lg: 1280px;
@@ -296,7 +297,7 @@ ol li {
 footer {
   padding-block-start: var(--spacing-block-md);
   padding-bottom: 8rem;
-  padding-inline: 10%;
+  padding-inline: max(10%, calc((100% - var(--max-width-all-content)) / 2));;
 }
 
 .back-to-top-link {
@@ -399,9 +400,9 @@ nav {
 @media (min-width: 40rem) {
   nav {
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: baseline;
-    padding-inline: 0;
+    padding-inline: max(10%, calc((100% - var(--max-width-all-content)) / 2));
   }
 
   .breadcrumbs {
