@@ -351,6 +351,7 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  gap: var(--spacing-inline-md);
 }
 
 .publications-gallery a {
