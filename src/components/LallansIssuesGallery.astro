@@ -1,26 +1,26 @@
 ---
-import type LallansIssue from '../types/LallansIssue';
-import type Locale from '../types/Locale';
 import { getAllLallansIssues } from '../data/lallans';
 
 const issues = await getAllLallansIssues();
 ---
 
 <ul class="lallans-issues-gallery">
-  { issues.map(issue => (
-    <li>
-      <a
-        class="link lallans-issues-gallery__issue-container"
-        href={ `lallans/${issue.issueNumber}` }
-      >
-        <img
-          class="lallans-issues-gallery__issue-cover-image"
-          src={ `/public/images/lallans/issue${issue.issueNumber}.jpg` }
-        />
-        <p class="lallans-issues-gallery__issue-title">
-          Lallans { issue.issueNumber } | { issue.issueName }
-        </p>
-      </a>
-    </li>
-  ))}
+  {
+    issues.map((issue) => (
+      <li>
+        <a
+          class="link lallans-issues-gallery__issue-container"
+          href={`lallans/${issue.issueNumber}`}
+        >
+          <img
+            class="lallans-issues-gallery__issue-cover-image"
+            src={`/images/lallans/issue${issue.issueNumber}.jpg`}
+          />
+          <p class="lallans-issues-gallery__issue-title">
+            Lallans {issue.issueNumber} | {issue.issueName}
+          </p>
+        </a>
+      </li>
+    ))
+  }
 </ul>
