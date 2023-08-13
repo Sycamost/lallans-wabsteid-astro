@@ -23,7 +23,7 @@ const t = translate(locale);
   <section>
     <h1>{t(tPage, { key: 'title' })}</h1>
     <p>{t(tPage, { key: 'payment-confirmation-message', scotsounId })}</p>
-    <a class="link" href="./">
+    <a class="link" href={`/${locale}/furthsettins/scotsoun/${scotsounId}`}>
       {t(tPage, { key: 'back-button-text', scotsounId })}
     </a>
   </section>

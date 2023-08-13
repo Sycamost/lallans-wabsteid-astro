@@ -1,5 +1,12 @@
 ---
 import { getAllScotsoun } from '$data/scotsoun';
+import type Locale from '$types/Locale';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
 
 const scotsoun = await getAllScotsoun();
 ---
@@ -8,7 +15,10 @@ const scotsoun = await getAllScotsoun();
   {
     scotsoun.map((scotsounItem) => (
       <li>
-        <a class="link link-gallery__container" href={`scotsoun/${scotsounItem.scotsounId}`}>
+        <a
+          class="link link-gallery__container"
+          href={`/${locale}/furthsettins/scotsoun/${scotsounItem.scotsounId}`}
+        >
           <div class="link-gallery__image">
             <img src={`/images/scotsoun/sscd${scotsounItem.scotsounId}.jpg`} />
           </div>

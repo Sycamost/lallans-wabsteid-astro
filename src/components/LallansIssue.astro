@@ -1,6 +1,7 @@
 ---
 import translate from '$i18n/translate';
 import tSite from '$i18n/translations/site';
+import relativePath from '$lib/relativePath';
 import type LallansIssue from '$types/LallansIssue';
 import type Locale from '$types/Locale';
 import LallansIssueContributions from './LallansIssueContributions.astro';
@@ -25,7 +26,9 @@ const t = translate(locale);
 
     <div class="product__action-block">
       <img alt="" src={`/images/lallans/issue${issue.issueNumber}.jpg`} />
-      <PayPalButtons successPageUrl={`./${issue.issueNumber}/payment-success-confirmation`} />
+      <PayPalButtons
+        successPageUrl={relativePath(Astro.url.pathname, `payment-success-confirmation`)}
+      />
     </div>
   </div>
 </section>

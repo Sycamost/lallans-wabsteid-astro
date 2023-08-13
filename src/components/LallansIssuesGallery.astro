@@ -1,5 +1,12 @@
 ---
 import { getAllLallansIssues } from '$data/lallans';
+import type Locale from '$types/Locale';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
 
 const issues = await getAllLallansIssues();
 ---
@@ -8,7 +15,10 @@ const issues = await getAllLallansIssues();
   {
     issues.map((issue) => (
       <li>
-        <a class="link link-gallery__container" href={`lallans/${issue.issueNumber}`}>
+        <a
+          class="link link-gallery__container"
+          href={`/${locale}/furthsettins/lallans/${issue.issueNumber}`}
+        >
           <div class="link-gallery__image">
             <img src={`/images/lallans/issue${issue.issueNumber}.jpg`} />
           </div>
