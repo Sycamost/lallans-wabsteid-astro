@@ -20,10 +20,10 @@
   --color-primary-900: #010003;
   --color-primary-900: oklch(5% 0.02 290);
 
-  --text-color: var(--color-primary-900);
-  --text-highlight-color: var(--color-primary-800);
-  --background-color: var(--color-primary-50);
-  --background-highlight-color: var(--color-primary-200);
+  --text-color: var(--color-primary-50);
+  --text-highlight-color: var(--color-primary-100);
+  --background-color: var(--color-primary-900);
+  --background-highlight-color: var(--color-primary-800);
 
   --max-width-prose-content: 35rem;
   --max-width-all-content: 56.6rem; /* golden ratio * prose content width */
@@ -53,16 +53,6 @@
   background-color: var(--background-color);
 }
 
-.dark {
-  --text-color: var(--color-primary-50);
-  --text-highlight-color: var(--color-primary-100);
-  --background-color: var(--color-primary-900);
-  --background-highlight-color: var(--color-primary-800);
-
-  color: var(--text-color);
-  background-color: var(--background-color);
-}
-
 @media (min-width: 40rem) {
   :root {
     --sm-to-lg: calc(var(--breakpoint-lg) - var(--breakpoint-sm));
@@ -76,6 +66,13 @@
 :is(main, article) {
   container-name: main;
   container-type: inline-size;
+
+  --text-color: var(--color-primary-900);
+  --text-highlight-color: var(--color-primary-800);
+  --background-color: var(--color-primary-50);
+  --background-highlight-color: var(--color-primary-200);
+  color: var(--text-color);
+  background-color: var(--background-color);
 }
 
 :is(main, article) > :is(section, header):not(:is(section, header) :is(section, header)) {
