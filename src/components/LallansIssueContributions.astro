@@ -1,15 +1,15 @@
 ---
 import translate from '$i18n/translate';
 import tSite from '$i18n/translations/site';
+import getLocaleFromPath from '$lib/getLocaleFromPath';
 import type { Contribution } from '$types/LallansIssue';
-import type Locale from '$types/Locale';
 
 interface Props {
   contributions: Contribution[];
-  locale: Locale;
 }
 
-const { contributions, locale } = Astro.props;
+const { contributions } = Astro.props;
+const locale = getLocaleFromPath(Astro.url.pathname);
 const t = translate(locale);
 ---
 

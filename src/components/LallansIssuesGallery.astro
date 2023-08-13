@@ -1,13 +1,8 @@
 ---
 import { getAllLallansIssues } from '$data/lallans';
-import type Locale from '$types/Locale';
+import getLocaleFromPath from '$lib/getLocaleFromPath';
 
-interface Props {
-  locale: Locale;
-}
-
-const { locale } = Astro.props;
-
+const locale = getLocaleFromPath(Astro.url.pathname);
 const issues = await getAllLallansIssues();
 ---
 

@@ -14,9 +14,9 @@ const locale = Astro.params.locale as Locale;
 const t = translate(locale);
 ---
 
-<Page locale={locale} title={t(tPage, { key: 'title' })}>
+<Page title={t(tPage, { key: 'title' })}>
   <section class="section--full-width">
     <h1>Scotsoun</h1>
-    <ScotsounCdGallery locale={locale} />
+    <ScotsounCdGallery />
   </section>
 </Page>

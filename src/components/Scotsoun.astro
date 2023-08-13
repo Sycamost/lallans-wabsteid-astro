@@ -2,17 +2,17 @@
 import translate from '$i18n/translate';
 import tSite from '$i18n/translations/site';
 import tComponent from '$i18n/translations/components/scotsoun';
-import type Locale from '$types/Locale';
 import type Scotsoun from '$types/Scotsoun';
 import PayPalButtons from './PayPalButtons.astro';
 import relativePath from '$lib/relativePath';
+import getLocaleFromPath from '$lib/getLocaleFromPath';
 
 interface Props {
-  locale: Locale;
   scotsoun: Scotsoun;
 }
 
-const { locale, scotsoun } = Astro.props;
+const { scotsoun } = Astro.props;
+const locale = getLocaleFromPath(Astro.url.pathname);
 const t = translate(locale);
 ---
 

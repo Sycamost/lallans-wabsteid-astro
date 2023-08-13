@@ -19,7 +19,7 @@ const scotsounId = Astro.params.scotsounId as ScotsounId;
 const t = translate(locale);
 ---
 
-<Page locale={locale} title={t(tPage, { key: 'title' })}>
+<Page title={t(tPage, { key: 'title' })}>
   <section>
     <h1>{t(tPage, { key: 'title' })}</h1>
     <p>{t(tPage, { key: 'payment-confirmation-message', scotsounId })}</p>

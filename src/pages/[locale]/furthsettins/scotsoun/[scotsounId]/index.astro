@@ -22,6 +22,6 @@ const t = translate(locale);
 const scotsoun = await getScotsoun[scotsounId]();
 ---
 
-<Page locale={locale} title={t(tPage, { key: 'title' })}>
-  <Scotsoun scotsoun={scotsoun} locale={locale} />
+<Page title={t(tPage, { key: 'title' })}>
+  <Scotsoun scotsoun={scotsoun} />
 </Page>

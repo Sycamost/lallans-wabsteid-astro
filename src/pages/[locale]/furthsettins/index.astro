@@ -15,7 +15,7 @@ const locale = Astro.params.locale as Locale;
 const t = translate(locale);
 ---
 
-<Page locale={locale} title={t(tFurthsettins, { key: 'title' })}>
+<Page title={t(tFurthsettins, { key: 'title' })}>
   <section>
     <h1>Furthsettins</h1>
 

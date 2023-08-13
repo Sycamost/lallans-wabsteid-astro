@@ -14,7 +14,7 @@ const locale = Astro.params.locale as Locale;
 const t = translate(locale);
 ---
 
-<Page locale={locale} title={t(home, { key: 'title' })}>
+<Page title={t(home, { key: 'title' })}>
   <section>
     <h1 class="title">{t(site, { key: 'title' })}</h1>
     <h1>Tap-level heidin</h1>

@@ -1,16 +1,11 @@
 ---
-import type Locale from '$types/Locale';
 import Breadcrumbs from './Breadcrumbs.astro';
 import SwitchLanguageLink from './SwitchLanguageLink.astro';
 import tSite from '$i18n/translations/site';
 import translate from '$i18n/translate';
+import getLocaleFromPath from '$lib/getLocaleFromPath';
 
-interface Props {
-  locale: Locale;
-}
-
-const { locale } = Astro.props;
-
+const locale = getLocaleFromPath(Astro.url.pathname);
 const t = translate(locale);
 ---
 
@@ -20,6 +15,6 @@ const t = translate(locale);
       {t(tSite, { key: 'scots-leid-associe' })}
     </a>
   </p>
-  <SwitchLanguageLink currentLocale={locale} />
+  <SwitchLanguageLink />
   <Breadcrumbs />
 </nav>

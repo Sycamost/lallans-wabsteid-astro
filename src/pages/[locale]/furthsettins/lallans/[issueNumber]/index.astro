@@ -21,6 +21,6 @@ const issueNumber = new Number(Astro.params.issueNumber).valueOf() as LallansIss
 const issue = await getLallansIssue[issueNumber]();
 ---
 
-<Page locale={locale} title={t(tFurthsettins, { key: 'title' })}>
-  <LallansIssue issue={issue} locale={locale} />
+<Page title={t(tFurthsettins, { key: 'title' })}>
+  <LallansIssue issue={issue} />
 </Page>

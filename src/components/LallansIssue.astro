@@ -1,19 +1,19 @@
 ---
 import translate from '$i18n/translate';
 import tSite from '$i18n/translations/site';
+import getLocaleFromPath from '$lib/getLocaleFromPath';
 import relativePath from '$lib/relativePath';
 import type LallansIssue from '$types/LallansIssue';
-import type Locale from '$types/Locale';
 import LallansIssueContributions from './LallansIssueContributions.astro';
 import LallansIssueContributors from './LallansIssueContributors.astro';
 import PayPalButtons from './PayPalButtons.astro';
 
 interface Props {
   issue: LallansIssue;
-  locale: Locale;
 }
 
-const { issue, locale } = Astro.props;
+const { issue } = Astro.props;
+const locale = getLocaleFromPath(Astro.url.pathname);
 const t = translate(locale);
 ---
 
@@ -36,7 +36,7 @@ const t = translate(locale);
 <section>
   {
     'contributions' in issue ? (
-      <LallansIssueContributions contributions={issue.contributions} locale={locale} />
+      <LallansIssueContributions contributions={issue.contributions} />
     ) : (
       'contributors' in issue && <LallansIssueContributors contributors={issue.contributors} />
     )

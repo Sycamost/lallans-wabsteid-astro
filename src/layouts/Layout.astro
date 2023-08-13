@@ -3,14 +3,14 @@ import Footer from '$components/Footer.astro';
 import Navbar from '$components/Navbar.astro';
 import translate from '$i18n/translate';
 import site from '$i18n/translations/site';
-import type Locale from '$types/Locale';
+import getLocaleFromPath from '$lib/getLocaleFromPath';
 
 interface Props {
-  locale: Locale;
   title: string;
 }
 
-const { locale, title } = Astro.props;
+const { title } = Astro.props;
+const locale = getLocaleFromPath(Astro.url.pathname);
 const t = translate(locale);
 ---
 
@@ -27,7 +27,7 @@ const t = translate(locale);
     <title>{title} | {t(site, { key: 'title' })}</title>
   </head>
   <body>
-    <Navbar locale={locale} />
+    <Navbar />
     <slot />
     <Footer />
   </body>
