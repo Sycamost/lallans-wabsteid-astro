@@ -5,25 +5,22 @@ import tBreadcrumbs from '../i18n/translations/components/breadcrumbs';
 import type Locale from '../types/Locale';
 import locales from '../i18n/locales';
 
-const path = Astro.url.pathname.replace(/(?!\/)$/, '/');
+const path = Astro.url.pathname.replace(/(?<!\/)$/, '/');
 const localeInPath = new RegExp(`/(?<=^/)(${locales.join('|')})`);
 const locale = path.match(localeInPath)?.[1] as Locale;
 if (!locale) {
   return;
 }
 const pathWithoutLocale = path.replace(new RegExp(`^/${locale}`), '');
-console.log('Path without locale: %s', pathWithoutLocale);
 const slashIndices = findAllIndicesOf('/', pathWithoutLocale);
-console.log('Indices: (%s)', slashIndices.join(','));
 const parentRoutes = slashIndices.map((n) => pathWithoutLocale.slice(0, n + 1)).slice(0, -1);
-console.log('Parent routes: (%s)', parentRoutes.join(','));
 
 const t = translate(locale);
 ---
 
 <ol class="breadcrumbs">
   {
-    /* parentRoutes.length > 1 && */ parentRoutes.map((route) => {
+    parentRoutes.map((route) => {
       return (
         <li>
           <a class="link" href={`/${locale}${route}`}>
