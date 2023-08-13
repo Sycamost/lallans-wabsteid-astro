@@ -1,0 +1,27 @@
+---
+import Page from '$layouts/Page.astro';
+import localeStaticPaths from '$lib/localeStaticPaths';
+import tPage from '$i18n/translations/pages/scotsounGallery';
+import translate from '$i18n/translate';
+import type Locale from '$types/Locale';
+import { getScotsoun } from '$data/scotsoun';
+import type ScotsounId from '$types/ScotsounId';
+import Scotsoun from '$components/Scotsoun.astro';
+
+export async function getStaticPaths() {
+  const scotsounIds = Object.keys(getScotsoun) as `${ScotsounId}`[];
+  return scotsounIds.flatMap((n) =>
+    localeStaticPaths.map((p) => ({ ...p, params: { ...p.params, scotsounId: n } }))
+  );
+}
+
+const locale = Astro.params.locale as Locale;
+const scotsounId = Astro.params.scotsounId as ScotsounId;
+const t = translate(locale);
+
+const scotsoun = await getScotsoun[scotsounId]();
+---
+
+<Page locale={locale} title={t(tPage, { key: 'title' })}>
+  <Scotsoun scotsoun={scotsoun} locale={locale} />
+</Page>

@@ -395,6 +395,11 @@ footer {
   --gallery-item-height: auto;
 }
 
+.link-gallery--scotsoun {
+  --gallery-item-width: 8rem;
+  --gallery-item-height: 8rem;
+}
+
 .link-gallery__image {
   align-self: start;
   max-width: var(--gallery-item-width);

@@ -1,0 +1,20 @@
+---
+import { getAllScotsoun } from '$data/scotsoun';
+
+const scotsoun = await getAllScotsoun();
+---
+
+<ul class="link-gallery link-gallery--scotsoun">
+  {
+    scotsoun.map((scotsounItem) => (
+      <li>
+        <a class="link link-gallery__container" href={`scotsoun/${scotsounItem.scotsounId}`}>
+          <div class="link-gallery__image">
+            <img src={`/images/scotsoun/sscd${scotsounItem.scotsounId}.jpg`} />
+          </div>
+          <p class="link-gallery__title">{scotsounItem.title}</p>
+        </a>
+      </li>
+    ))
+  }
+</ul>

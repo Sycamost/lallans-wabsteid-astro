@@ -1,0 +1,22 @@
+---
+import Page from '$layouts/Page.astro';
+import localeStaticPaths from '$lib/localeStaticPaths';
+import translate from '$i18n/translate';
+import tPage from '$i18n/translations/pages/scotsounGallery';
+import type Locale from '$types/Locale';
+import ScotsounCdGallery from '$components/ScotsounCdGallery.astro';
+
+export async function getStaticPaths() {
+  return localeStaticPaths;
+}
+
+const locale = Astro.params.locale as Locale;
+const t = translate(locale);
+---
+
+<Page locale={locale} title={t(tPage, { key: 'title' })}>
+  <section class="section--full-width">
+    <h1>Scotsoun</h1>
+    <ScotsounCdGallery />
+  </section>
+</Page>

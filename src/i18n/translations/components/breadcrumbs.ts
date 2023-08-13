@@ -18,6 +18,10 @@ const breadcrumbsTranslations = {
     sco: () => 'Lallans',
     'en-GB': () => 'Lallans',
   },
+  '/furthsettins/scotsoun/': {
+    sco: () => 'Scotsoun',
+    'en-GB': () => 'Scotsoun',
+  },
   ...Object.fromEntries(
     Object.keys(getLallansIssue).map((lallansIssueNumber) => [
       `/furthsettins/lallans/${lallansIssueNumber}/`,

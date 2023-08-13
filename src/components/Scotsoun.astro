@@ -1,0 +1,65 @@
+---
+import translate from '$i18n/translate';
+import tSite from '$i18n/translations/site';
+import tComponent from '$i18n/translations/components/scotsoun';
+import type Locale from '$types/Locale';
+import type Scotsoun from '$types/Scotsoun';
+import PayPalButtons from './PayPalButtons.astro';
+
+interface Props {
+  locale: Locale;
+  scotsoun: Scotsoun;
+}
+
+const { locale, scotsoun } = Astro.props;
+const t = translate(locale);
+---
+
+<section class="section--full-width">
+  <div class="product__header-block">
+    <header>
+      <h1>{scotsoun.title}</h1>
+      {scotsoun?.subtitle && <p class="italic">{scotsoun.subtitle}</p>}
+      {
+        scotsoun?.author && (
+          <p>
+            {t(tSite, { key: 'by' })} {scotsoun.author}
+          </p>
+        )
+      }
+    </header>
+    <div class="product__action-block">
+      <img src={`/images/scotsoun/sscd${scotsoun.scotsounId}.jpg`} />
+      <PayPalButtons successPageUrl={`./${scotsoun.scotsounId}/payment-success-confirmation`} />
+    </div>
+  </div>
+
+  <section>
+    {scotsoun?.description && <p>{scotsoun.description[locale]}</p>}
+
+    {
+      scotsoun?.coverArtist && (
+        <p>{t(tComponent, { key: 'cover-artist', coverArtist: scotsoun.coverArtist })}</p>
+      )
+    }
+
+    {
+      scotsoun?.releaseDate && (
+        <p>{t(tComponent, { key: 'release-date', releaseDate: scotsoun.releaseDate })}</p>
+      )
+    }
+
+    {
+      scotsoun?.trackList && scotsoun.trackList.length > 1 && (
+        <>
+          <h2>Track list</h2>
+          <ol>
+            {scotsoun.trackList.map((track) => (
+              <li>{track}</li>
+            ))}
+          </ol>
+        </>
+      )
+    }
+  </section>
+</section>
