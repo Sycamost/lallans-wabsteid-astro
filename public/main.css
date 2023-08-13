@@ -352,6 +352,10 @@ footer {
   justify-content: space-evenly;
 }
 
+.publications-gallery a {
+  display: block;
+}
+
 .publications-gallery__image {
   margin-inline: auto;
   width: 3rem;
