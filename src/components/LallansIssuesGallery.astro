@@ -4,19 +4,15 @@ import { getAllLallansIssues } from '$data/lallans';
 const issues = await getAllLallansIssues();
 ---
 
-<ul class="lallans-issues-gallery">
+<ul class="link-gallery link-gallery--lallans">
   {
     issues.map((issue) => (
       <li>
-        <a
-          class="link lallans-issues-gallery__issue-container"
-          href={`lallans/${issue.issueNumber}`}
-        >
-          <img
-            class="lallans-issues-gallery__issue-cover-image"
-            src={`/images/lallans/issue${issue.issueNumber}.jpg`}
-          />
-          <p class="lallans-issues-gallery__issue-title">
+        <a class="link link-gallery__container" href={`lallans/${issue.issueNumber}`}>
+          <div class="link-gallery__image">
+            <img src={`/images/lallans/issue${issue.issueNumber}.jpg`} />
+          </div>
+          <p class="link-gallery__title">
             Lallans {issue.issueNumber} | {issue.issueName}
           </p>
         </a>
