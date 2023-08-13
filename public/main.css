@@ -352,6 +352,7 @@ footer {
   flex-direction: column;
   margin-inline: auto;
   width: fit-content;
+  gap: var(--spacing-block-sm);
 }
 
 .lallans-issue__header-block-end img {
