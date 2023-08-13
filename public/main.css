@@ -83,6 +83,10 @@
   padding-block: var(--spacing-block-lg) var(--spacing-block-xl);
 }
 
+:is(main, article) > :is(section, header):not(:is(section, header) :is(section, header)).section--full-width {
+  padding-inline: max(10%, calc((100% - var(--max-width-all-content)) / 2));
+}
+
 :is(main, article)
   > :is(section, header):not(.section--full-width):not(:is(section, header) :is(section, header))
   > p {

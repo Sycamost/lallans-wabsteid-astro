@@ -15,14 +15,16 @@ const t = translate(locale);
 ---
 
 <Page locale={locale} title={t(tFurthsettins, { key: 'title' })}>
-  <h1>Furthsettins</h1>
+  <section>
+    <h1>Furthsettins</h1>
 
-  <ul class="publications-gallery">
-    <li>
-      <a href="lallans" class="link">
-        <img src="/images/furthsettins/lallans.jpg" class="publications-gallery__image" />
-        <p class="publications-gallery__title">{t(tSite, { key: 'lallans' })}</p>
-      </a>
-    </li>
-  </ul>
+    <ul class="publications-gallery">
+      <li>
+        <a href="lallans" class="link">
+          <img src="/images/furthsettins/lallans.jpg" class="publications-gallery__image" />
+          <p class="publications-gallery__title">{t(tSite, { key: 'lallans' })}</p>
+        </a>
+      </li>
+    </ul>
+  </section>
 </Page>
