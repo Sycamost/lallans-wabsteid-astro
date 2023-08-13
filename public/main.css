@@ -400,8 +400,25 @@ nav {
   nav {
     flex-direction: row;
     justify-content: space-evenly;
+    align-items: baseline;
     padding-inline: 0;
   }
+
+  .breadcrumbs {
+    order: 0;
+  }
+
+  .logo {
+    order: 1;
+  }
+
+  .switch-language-link {
+    order: 2;
+  }
+}
+
+.logo a {
+  text-decoration: none;
 }
 
 .breadcrumbs li {

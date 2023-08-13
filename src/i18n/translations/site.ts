@@ -14,6 +14,10 @@ const siteTranslations = {
     sco: () => 'Lallans',
     'en-GB': () => 'Lallans',
   },
+  'scots-leid-associe': {
+    sco: () => 'Scots Leid Associe',
+    'en-GB': () => 'Scots Language Society',
+  },
   by: {
     sco: () => 'bi',
     'en-GB': () => 'by',
