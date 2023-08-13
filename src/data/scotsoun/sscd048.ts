@@ -1,13 +1,13 @@
-import type Scotsoun from '../../types/Scotsoun';
+import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
   title: 'Poems in Scots',
-  'long-name': 'Jean Taylor Smith reading from her own collection',
+  longName: 'Jean Taylor Smith reading from her own collection',
   author: 'Jean Taylor Smith',
-  'cd-count': 1,
+  cdCount: 1,
   price: '11.00',
-  'scotsoun-id': '048',
-  'track-list': [
+  scotsounId: '048',
+  trackList: [
     'To SR Crockett',
     'Alas, Poor Queen',
     'Last May a Braw Wooer',

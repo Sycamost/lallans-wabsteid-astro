@@ -1,14 +1,14 @@
-import type Scotsoun from '../../types/Scotsoun';
+import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
   title: 'Piper in the Nave',
   subtitle: 'of Dunfermline Abbey, vol 1',
-  'long-name': 'Piper in the Nave of Dunfermline Abbey, vol 1',
+  longName: 'Piper in the Nave of Dunfermline Abbey, vol 1',
   author: 'Pipe Major Donald MacLeod',
-  'cd-count': 1,
+  cdCount: 1,
   price: '11.00',
-  'scotsoun-id': '034',
-  'track-list': [
+  scotsounId: '034',
+  trackList: [
     'Introduction to track 21',
     'Stumpie Three Dance Tunes / Devil in the Kitchen / The Reel of Bogie',
     'Introduction to track 23',

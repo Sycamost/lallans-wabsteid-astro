@@ -1,14 +1,14 @@
-import type Scotsoun from '../../types/Scotsoun';
+import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
   title: 'William Neil',
   subtitle: 'Scotsoun Makars Series',
-  'long-name': 'Scotsoun Makars Series – William Neil',
+  longName: 'Scotsoun Makars Series – William Neil',
   author: 'William Neil',
-  'cd-count': 8,
+  cdCount: 8,
   price: '18.00',
-  'scotsoun-id': '089',
-  'track-list': [
+  scotsounId: '089',
+  trackList: [
     'Wild Hairst Making Tracks',
     'Mr &amp; Mrs Absentee Landlord Despatches Home',
     'Fhir Tha ’D Sheasamh air mo Lic Despatches Home',

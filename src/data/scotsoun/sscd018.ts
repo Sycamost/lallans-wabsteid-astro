@@ -1,14 +1,14 @@
-import type Scotsoun from '../../types/Scotsoun';
+import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
   title: 'Robert Henryson',
   subtitle: 'Scotsoun Makars Series',
-  'long-name': 'Scotsoun Makars Series – Robert Henryson',
+  longName: 'Scotsoun Makars Series – Robert Henryson',
   author: 'Robert Henryson',
-  'cd-count': 3,
+  cdCount: 3,
   price: '25.00',
-  'scotsoun-id': '018',
-  'track-list': [
+  scotsounId: '018',
+  trackList: [
     'The Taill of the Uponlandis Mous and the Burges Mous',
     'The Taill of the Paddok and the Mous',
   ],

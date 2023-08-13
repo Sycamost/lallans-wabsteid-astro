@@ -1,13 +1,13 @@
-import type Scotsoun from '../../types/Scotsoun';
+import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
   title: 'A Child’s Garden of Verses',
   subtitle: 'read by children',
-  'long-name': 'A Child’s Garden of Verses – read by children',
+  longName: 'A Child’s Garden of Verses – read by children',
   author: 'Robert Louis Stevenson',
-  'cd-count': 1,
+  cdCount: 1,
   price: '11.00',
-  'scotsoun-id': '117',
+  scotsounId: '117',
   description: {
     sco: `
       Recordit at Linlithgow Primary Schuil i Novemmer
@@ -18,7 +18,7 @@ const cd: Scotsoun = {
       1994 and released in Edinburgh on 3rd December 1994.
       `,
   },
-  'track-list': [
+  trackList: [
     'My Shadow',
     'System',
     'A Good Boy',

@@ -1,14 +1,14 @@
-import type Scotsoun from '../../types/Scotsoun';
+import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
   title: 'Poems of Robert Burns volumes 1 &amp; 2',
   subtitle: 'Scotsoun Makars Series',
-  'long-name': 'Scotsoun Makars Series – Robert Burns',
+  longName: 'Scotsoun Makars Series – Robert Burns',
   author: 'Robert Burns',
-  'cd-count': 3,
+  cdCount: 3,
   price: '25.00',
-  'scotsoun-id': '035',
-  'track-list': [
+  scotsounId: '035',
+  trackList: [
     'The Holy Fair',
     'Death and Doctor Hornbook',
     'Group 5 intro',

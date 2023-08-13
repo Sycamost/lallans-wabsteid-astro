@@ -1,13 +1,13 @@
-import type Scotsoun from '../../types/Scotsoun';
+import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
   title: 'Neil Munro',
   subtitle: '1863-1930',
-  'long-name': 'Scotsoun Makars Series – George Campell Hay',
+  longName: 'Scotsoun Makars Series – George Campell Hay',
   author: 'Neil Munro',
-  'cd-count': 1,
+  cdCount: 1,
   price: '11.00',
-  'scotsoun-id': '121',
+  scotsounId: '121',
   description: {
     sco: `
       In Mey 1977, Renni McOwan arranged fur the Stirlin an Glesga memmers o the National Trust
@@ -22,7 +22,7 @@ const cd: Scotsoun = {
       here captured as a poignant minding – but the talent of Neil Munro lives on.
       `,
   },
-  'track-list': ['Crodh Chailein sung', 'Extract from Fancy Farm'],
+  trackList: ['Crodh Chailein sung', 'Extract from Fancy Farm'],
 };
 
 export default cd;

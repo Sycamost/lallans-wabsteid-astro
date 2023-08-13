@@ -1,14 +1,14 @@
-import type Scotsoun from '../../types/Scotsoun';
+import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
   title: 'Ravines',
   subtitle: 'a richer tocher',
-  'long-name': 'Ravines – A Richer Tocher',
+  longName: 'Ravines – A Richer Tocher',
   author: 'Sheila Templeton',
-  'cd-count': 1,
+  cdCount: 1,
   price: '11.00',
-  'scotsoun-id': '809',
-  'track-list': [
+  scotsounId: '809',
+  trackList: [
     'Mixin Mustard',
     'Grunnie',
     'Screivin a Great Grunnie',

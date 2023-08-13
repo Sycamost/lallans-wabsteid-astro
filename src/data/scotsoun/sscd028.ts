@@ -1,14 +1,14 @@
-import type Scotsoun from '../../types/Scotsoun';
+import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
   title: 'Hugh MacDiarmaid',
   subtitle: 'Scotsoun Makars Series',
-  'long-name': 'Scotsoun Makars Series – Hugh MacDiarmaid',
+  longName: 'Scotsoun Makars Series – Hugh MacDiarmaid',
   author: 'Hugh MacDiarmaid',
-  'cd-count': 2,
+  cdCount: 2,
   price: '18.00',
-  'scotsoun-id': '028',
-  'track-list': [
+  scotsounId: '028',
+  trackList: [
     'Water of Life',
     'Excelsior',
     'Prayer for a Second Flood',

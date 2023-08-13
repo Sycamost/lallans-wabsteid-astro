@@ -1,15 +1,15 @@
-import type Scotsoun from '../../types/Scotsoun';
+import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
   title: 'Peewits',
-  'long-name': 'Peewits',
+  longName: 'Peewits',
   author: 'The Bowhill Players',
-  'cd-count': 2,
+  cdCount: 2,
   price: '18.00',
-  'scotsoun-id': '815',
-  'cover-artist': 'Mary an David Hershaw',
-  'release-date': '2020-06-24',
-  'track-list': ['Daft Laddie in the Wuids', 'Daftboy Suite (Instrumental)'],
+  scotsounId: '815',
+  coverArtist: 'Mary an David Hershaw',
+  releaseDate: '2020-06-24',
+  trackList: ['Daft Laddie in the Wuids', 'Daftboy Suite (Instrumental)'],
   description: {
     'en-GB': `
       Music inspired by the Scots poem _The Daft Boy – for John Hershaw: 11th Februar, 1941_ by Willie Hershaw, published by Neepheid Publications, 2019.

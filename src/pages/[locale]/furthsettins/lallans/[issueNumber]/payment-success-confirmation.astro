@@ -1,11 +1,11 @@
 ---
-import Page from '../../../../../layouts/Page.astro';
-import localeStaticPaths from '../../../../../lib/localeStaticPaths';
-import translate from '../../../../../i18n/translate';
-import tPage from '../../../../../i18n/translations/pages/lallansIssuePaymentSuccessConfirmation';
-import type Locale from '../../../../../types/Locale';
-import { getLallansIssue } from '../../../../../data/lallans';
-import type LallansIssueNumber from '../../../../../types/LallansIssueNumber';
+import Page from '$layouts/Page.astro';
+import localeStaticPaths from '$lib/localeStaticPaths';
+import translate from '$i18n/translate';
+import tPage from '$i18n/translations/pages/lallansIssuePaymentSuccessConfirmation';
+import type Locale from '$types/Locale';
+import { getLallansIssue } from '$data/lallans';
+import type LallansIssueNumber from '$types/LallansIssueNumber';
 
 export async function getStaticPaths() {
   const lallansIssueNumbers = Object.keys(getLallansIssue) as `${LallansIssueNumber}`[];

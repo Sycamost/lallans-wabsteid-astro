@@ -1,14 +1,14 @@
-import type Scotsoun from '../../types/Scotsoun';
+import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
   title: 'Allan Ramsay',
   subtitle: 'Scotsoun Makars Series',
-  'long-name': 'Scotsoun Makars Series – Allan Ramsay',
+  longName: 'Scotsoun Makars Series – Allan Ramsay',
   author: 'Allan Ramsay',
-  'cd-count': 2,
+  cdCount: 2,
   price: '18.00',
-  'scotsoun-id': '051',
-  'track-list': [
+  scotsounId: '051',
+  trackList: [
     'Intro to The Marrow Ballad',
     'The Marrow Ballad',
     'Intro to My Peggy is a Young Thing',

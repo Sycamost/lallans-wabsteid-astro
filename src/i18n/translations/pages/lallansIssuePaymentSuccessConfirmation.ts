@@ -1,4 +1,4 @@
-import type { TranslationsDictionary } from '../../../types/TranslationsDictionary';
+import type { TranslationsDictionary } from '$types/TranslationsDictionary';
 
 const lallansIssuePaymentSuccessConfirmation = {
   title: {

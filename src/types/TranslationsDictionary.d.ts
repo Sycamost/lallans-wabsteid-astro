@@ -1,4 +1,4 @@
-import type { defaultLocale } from '../i18n/locales';
+import type { defaultLocale } from '$i18n/locales';
 import type Locale from './Locale';
 
 export type Translation<Params> = (params: { [key in keyof Params]: string }) => string;

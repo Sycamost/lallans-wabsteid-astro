@@ -1,12 +1,12 @@
-import type Scotsoun from '../../types/Scotsoun';
+import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
   title: 'Minnie',
-  'long-name': 'Minnie',
+  longName: 'Minnie',
   author: 'Sheena Blackhall',
-  'cd-count': 3,
+  cdCount: 3,
   price: '25.00',
-  'scotsoun-id': 'M150',
+  scotsounId: 'M150',
 };
 
 export default cd;

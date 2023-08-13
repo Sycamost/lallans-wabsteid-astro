@@ -1,14 +1,14 @@
-import type Scotsoun from '../../types/Scotsoun';
+import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
   title: 'Sheena Blackhall',
   subtitle: 'Scotsoun Makars Series',
-  'long-name': 'Scotsoun Makars Series – Sheena Blackhall',
+  longName: 'Scotsoun Makars Series – Sheena Blackhall',
   author: 'Sheena Blackhall',
-  'cd-count': 1,
+  cdCount: 1,
   price: '11.00',
-  'scotsoun-id': '105',
-  'track-list': [
+  scotsounId: '105',
+  trackList: [
     'Au Clair de la Lune',
     'Hairst Heirskip',
     'Autumn',

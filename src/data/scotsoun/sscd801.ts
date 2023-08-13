@@ -1,14 +1,14 @@
-import type Scotsoun from '../../types/Scotsoun';
+import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
   title: 'Violet Jacob',
   subtitle: 'Scotsoun Makars Series',
-  'long-name': 'Scotsoun Makars Series – Violet Jacob',
+  longName: 'Scotsoun Makars Series – Violet Jacob',
   author: 'Violet Jacob',
-  'cd-count': 1,
+  cdCount: 1,
   price: '11.00',
-  'scotsoun-id': '801',
-  'track-list': [
+  scotsounId: '801',
+  trackList: [
     'The Rowan',
     'The Tramp to the Tattie-doolie',
     'The Lost Licht – A Perthshire Legend',

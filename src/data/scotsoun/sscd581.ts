@@ -1,12 +1,12 @@
-import type Scotsoun from '../../types/Scotsoun';
+import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
   title: 'Fiddle Heichlichts',
-  'long-name': 'Fiddle Heichlichts',
+  longName: 'Fiddle Heichlichts',
   author: 'Karen Hannah, Yla Steven, Hugh MacGilp and Ian Powrie',
-  'cd-count': 1,
+  cdCount: 1,
   price: '11.00',
-  'scotsoun-id': '518',
+  scotsounId: '518',
   description: {
     sco: `
       Scotsoun haes on mony occasions uised fiddle muisic waein its recordins. Noo, fur the first

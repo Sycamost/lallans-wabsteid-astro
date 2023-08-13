@@ -1,14 +1,14 @@
-import type Scotsoun from '../../types/Scotsoun';
+import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
   title: 'Virgil, Dante et al',
   subtitle: 'Scotsoun Euro-Makars Series',
-  'long-name': 'Scotsoun Euro-Makars Series – Virgil, Dante et al',
+  longName: 'Scotsoun Euro-Makars Series – Virgil, Dante et al',
   author: 'various',
-  'cd-count': 8,
+  cdCount: 8,
   price: '25.00',
-  'scotsoun-id': '087',
-  'track-list': [
+  scotsounId: '087',
+  trackList: [
     'after Ode 9, Book 1',
     'Ode 11, Book 1',
     'Ode 11, Book 1',

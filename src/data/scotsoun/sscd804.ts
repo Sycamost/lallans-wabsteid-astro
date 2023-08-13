@@ -1,14 +1,14 @@
-import type Scotsoun from '../../types/Scotsoun';
+import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
   title: 'Whaleback City',
   subtitle: 'The Poetry of Dundee and Its Hinterland',
-  'long-name': 'Whaleback City – The Poetry of Dundee and Its Hinterland',
+  longName: 'Whaleback City – The Poetry of Dundee and Its Hinterland',
   author: 'various',
-  'cd-count': 1,
+  cdCount: 1,
   price: '11.00',
-  'scotsoun-id': '804',
-  'track-list': [
+  scotsounId: '804',
+  trackList: [
     'Dundee Day Tripper',
     'Excerpt from ‘The Wallace’',
     'Textile Toun',

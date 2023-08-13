@@ -1,13 +1,13 @@
-import type Scotsoun from '../../types/Scotsoun';
+import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
   title: 'Sangschaw and Penny Wheep',
-  'long-name': 'Sangschaw and Penny Wheep',
+  longName: 'Sangschaw and Penny Wheep',
   author: 'Hugh MacDiarmaid',
-  'cd-count': 2,
+  cdCount: 2,
   price: '18.00',
-  'scotsoun-id': '095',
-  'track-list': [
+  scotsounId: '095',
+  trackList: [
     'Wheelrig',
     'Country Life',
     'O Jesu Parvule',

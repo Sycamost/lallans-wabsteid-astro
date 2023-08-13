@@ -1,13 +1,13 @@
-import type Scotsoun from '../../types/Scotsoun';
+import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
   title: 'Brockit, the fermtoon cat',
-  'long-name': 'Brockit, the fermtoon cat',
+  longName: 'Brockit, the fermtoon cat',
   author: 'Les Wheeler',
-  'cd-count': 1,
+  cdCount: 1,
   price: '11.00',
-  'scotsoun-id': '111',
-  'track-list': ['Brockit an The Berries', 'Brockit The Hero'],
+  scotsounId: '111',
+  trackList: ['Brockit an The Berries', 'Brockit The Hero'],
   description: {
     sco: `
       Eleiven aventurs o Brockit, the fermtoon cat. Read bi George Philp,
@@ -18,7 +18,7 @@ const cd: Scotsoun = {
       Sheena Blackhall, Alastair Taylor and Leslie Wheeler.
       `,
   },
-  'cover-artist': 'Rosemary Taylor',
+  coverArtist: 'Rosemary Taylor',
 };
 
 export default cd;

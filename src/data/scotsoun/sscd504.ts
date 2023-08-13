@@ -1,13 +1,13 @@
-import type Scotsoun from '../../types/Scotsoun';
+import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
   title: 'James Scott Skinner',
   subtitle: 'His Life and Achievement',
-  'long-name': 'James Scott Skinner – His Life and Achievement',
+  longName: 'James Scott Skinner – His Life and Achievement',
   author: 'Hebbie Gray',
-  'cd-count': 1,
+  cdCount: 1,
   price: '11.00',
-  'scotsoun-id': '504',
+  scotsounId: '504',
   description: {
     sco: `
       A walin frae the fiddle compositions o James Scott Skinner,
@@ -18,7 +18,7 @@ const cd: Scotsoun = {
       Skinner, played by Hebbie Gray with accompanying commentary.
       `,
   },
-  'track-list': [
+  trackList: [
     'Mrs Scott Skinner – Bonny Banchory',
     'Narrative continued',
     'John MacFadyen o Melfort',

@@ -1,14 +1,14 @@
-import type Scotsoun from '../../types/Scotsoun';
+import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
   title: 'Marion Angus',
   subtitle: 'Scotsoun Makars Series',
-  'long-name': 'Scotsoun Makars Series – Marion Angus',
+  longName: 'Scotsoun Makars Series – Marion Angus',
   author: 'Marion Angus',
-  'cd-count': 1,
+  cdCount: 1,
   price: '11.00',
-  'scotsoun-id': '803',
-  'track-list': [
+  scotsounId: '803',
+  trackList: [
     'The Wee Sma Glen',
     'Hogmany',
     'Barbara',

@@ -1,4 +1,4 @@
-import type Locale from '../types/Locale';
+import type Locale from '$types/Locale';
 
 // Use the magic of TypeScript to guarantee completeness
 const localesHash: { [key in Locale]: 1 } = {

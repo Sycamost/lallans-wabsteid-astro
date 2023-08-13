@@ -1,4 +1,4 @@
-import type LallansIssue from '../../types/LallansIssue';
+import type LallansIssue from '$types/LallansIssue';
 
 const issue: LallansIssue = {
   issueNumber: 42,

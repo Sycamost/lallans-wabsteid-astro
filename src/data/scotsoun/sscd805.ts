@@ -1,13 +1,13 @@
-import type Scotsoun from '../../types/Scotsoun';
+import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
   title: 'Oot o the Kist',
-  'long-name': 'Oot o the Kist',
+  longName: 'Oot o the Kist',
   author: 'Sheena Blackhall',
-  'cd-count': 2,
+  cdCount: 2,
   price: '18.00',
-  'scotsoun-id': '805',
-  'track-list': [
+  scotsounId: '805',
+  trackList: [
     'Corn Dolly&#58; Stagwyse',
     'Corachree',
     'A Gweed New Year&#58; Cyard’s Kist',

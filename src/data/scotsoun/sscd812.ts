@@ -1,14 +1,14 @@
-import type Scotsoun from '../../types/Scotsoun';
+import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
   title: 'Ravines',
   subtitle: 'Poems and Songs',
-  'long-name': 'Ravines – Poems and Songs',
+  longName: 'Ravines – Poems and Songs',
   author: 'David Purdie',
-  'cd-count': 1,
+  cdCount: 1,
   price: '11.00',
-  'scotsoun-id': '812',
-  'track-list': [
+  scotsounId: '812',
+  trackList: [
     'Leddy Stair’s Closse',
     'Ode til Lord Monboddo',
     'Lowdie’s Sang',

@@ -1,14 +1,14 @@
-import type Scotsoun from '../../types/Scotsoun';
+import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
   title: 'Hamewith',
   subtitle: 'and other poems',
-  'long-name': 'Hamewith and other poems',
+  longName: 'Hamewith and other poems',
   author: 'Charles Murray',
-  'cd-count': 2,
+  cdCount: 2,
   price: '18.00',
-  'scotsoun-id': '056',
-  'track-list': [
+  scotsounId: '056',
+  trackList: [
     'The Three Craws',
     'It wasna his Wyte',
     'A Cheery Guid-Nicht',

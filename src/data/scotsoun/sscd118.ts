@@ -1,12 +1,12 @@
-import type Scotsoun from '../../types/Scotsoun';
+import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
   title: 'Lowland Souch',
-  'long-name': 'Lowland Souch',
+  longName: 'Lowland Souch',
   author: 'Davie Robertson',
-  'cd-count': 1,
+  cdCount: 1,
   price: '11.00',
-  'scotsoun-id': '118',
+  scotsounId: '118',
   description: {
     sco: `
       This recordin haes been inspired bi the recent revival o the Scottish cauldwind or bellows pipes.
@@ -26,7 +26,7 @@ const cd: Scotsoun = {
       Ward (small pipes and harmonium).
       `,
   },
-  'track-list': ['The Piper’s Cave and Aiken Drum', 'A Drinkin Man Robertson'],
+  trackList: ['The Piper’s Cave and Aiken Drum', 'A Drinkin Man Robertson'],
 };
 
 export default cd;

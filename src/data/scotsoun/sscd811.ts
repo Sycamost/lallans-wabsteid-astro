@@ -1,14 +1,14 @@
-import type Scotsoun from '../../types/Scotsoun';
+import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
   title: 'Stuart A Paterson',
   subtitle: 'mind noo has some swearie wurds!',
-  'long-name': 'Stuart A Paterson',
+  longName: 'Stuart A Paterson',
   author: 'Stuart A Paterson',
-  'cd-count': 1,
+  cdCount: 1,
   price: '11.00',
-  'scotsoun-id': '811',
-  'track-list': [
+  scotsounId: '811',
+  trackList: [
     'Craw',
     'Blate',
     'Aye',

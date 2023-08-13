@@ -1,14 +1,14 @@
-import type Scotsoun from '../../types/Scotsoun';
+import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
   title: 'Auld Leids, New Vyces',
-  'long-name': 'Auld Leids, New Vyces',
+  longName: 'Auld Leids, New Vyces',
   author:
     'Fran Baillie, Karen Hannah, Dorothy Lawrenson, John Quinn, Marcas Mac an Tuairneir and George T Watt',
-  'cd-count': 1,
+  cdCount: 1,
   price: '11.00',
-  'scotsoun-id': '814',
-  'track-list': [
+  scotsounId: '814',
+  trackList: [
     'Uisge',
     'Teine',
     'Àile',

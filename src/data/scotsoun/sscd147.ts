@@ -1,14 +1,14 @@
-import type Scotsoun from '../../types/Scotsoun';
+import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
   title: 'George Campbell Hay',
   subtitle: 'Scotsoun Makars Series',
-  'long-name': 'Scotsoun Makars Series – George Campell Hay',
+  longName: 'Scotsoun Makars Series – George Campell Hay',
   author: 'George Campbell Hay',
-  'cd-count': 1,
+  cdCount: 1,
   price: '11.00',
-  'scotsoun-id': '147',
-  'track-list': [
+  scotsounId: '147',
+  trackList: [
     'Bisearta',
     'Bizerta',
     'An t-Oigear',

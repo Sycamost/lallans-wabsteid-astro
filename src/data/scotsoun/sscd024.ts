@@ -1,13 +1,13 @@
-import type Scotsoun from '../../types/Scotsoun';
+import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
   title: 'Under the Eildon Tree',
-  'long-name': 'Under the Eildon Tree',
+  longName: 'Under the Eildon Tree',
   author: 'Sydney Goodsir Smith',
-  'cd-count': 2,
+  cdCount: 2,
   price: '18.00',
-  'scotsoun-id': '024',
-  'track-list': [
+  scotsounId: '024',
+  trackList: [
     'Nicht lowers fast',
     'Tristram',
     'I heard a lassie',

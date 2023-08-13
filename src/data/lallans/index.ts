@@ -1,5 +1,5 @@
-import type LallansIssue from '../../types/LallansIssue';
-import type LallansIssueNumber from '../../types/LallansIssueNumber';
+import type LallansIssue from '$types/LallansIssue';
+import type LallansIssueNumber from '$types/LallansIssueNumber';
 
 /**
  * This might seem like an odd syntax, but this is so

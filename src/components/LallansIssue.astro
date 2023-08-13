@@ -1,8 +1,8 @@
 ---
-import translate from '../i18n/translate';
-import tSite from '../i18n/translations/site';
-import type LallansIssue from '../types/LallansIssue';
-import type Locale from '../types/Locale';
+import translate from '$i18n/translate';
+import tSite from '$i18n/translations/site';
+import type LallansIssue from '$types/LallansIssue';
+import type Locale from '$types/Locale';
 import LallansIssueContributions from './LallansIssueContributions.astro';
 import LallansIssueContributors from './LallansIssueContributors.astro';
 import PayPalButtons from './PayPalButtons.astro';
@@ -17,18 +17,20 @@ const t = translate(locale);
 ---
 
 <section class="section--full-width">
-  <div class="lallans-issue__header-block">
+  <div class="product__header-block">
     <header>
       <h1>{t(tSite, { key: 'lallans' })} {issue.issueNumber}</h1>
       <p class="italic">{issue.description[locale]}</p>
     </header>
 
-    <div class="lallans-issue__header-block-end">
+    <div class="product__action-block">
       <img alt="" src={`/images/lallans/issue${issue.issueNumber}.jpg`} />
       <PayPalButtons successPageUrl={`./${issue.issueNumber}/payment-success-confirmation`} />
     </div>
   </div>
+</section>
 
+<section>
   {
     'contributions' in issue ? (
       <LallansIssueContributions contributions={issue.contributions} locale={locale} />

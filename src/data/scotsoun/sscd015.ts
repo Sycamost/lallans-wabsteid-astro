@@ -1,13 +1,13 @@
-import type Scotsoun from '../../types/Scotsoun';
+import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
   title: 'Psaums, Hymns, Sangs',
-  'long-name': 'Psaums, Hymns, Sangs',
+  longName: 'Psaums, Hymns, Sangs',
   author: 'Clydebank Lyric Choir',
-  'cd-count': 1,
+  cdCount: 1,
   price: '11.00',
-  'scotsoun-id': '015',
-  'track-list': [
+  scotsounId: '015',
+  trackList: [
     'Intro to O Ye who Taste',
     'O Ye who Taste',
     'Intro to Ye Gates',

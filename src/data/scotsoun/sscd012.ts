@@ -1,13 +1,13 @@
-import type Scotsoun from '../../types/Scotsoun';
+import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
   title: 'Fiddle Favourites',
-  'long-name': 'Fiddle Favourites',
+  longName: 'Fiddle Favourites',
   author: 'Glasgow Caledonian Strathspey and Reel Society',
-  'cd-count': 2,
+  cdCount: 2,
   price: '18.00',
-  'scotsoun-id': '012',
-  'track-list': [
+  scotsounId: '012',
+  trackList: [
     'The Music of the Spey / The Gay Gordons / Glenlivit / The Laird o Drumblair / MacKenzie Hay / MacKenzie Fraser / Angus Campbell',
     'Bonawe Highlanders / Angus McKinnon / The 10th HLI Crossing the Rhine',
   ],

@@ -1,4 +1,4 @@
-import type { defaultLocale } from '../i18n/locales';
+import type { defaultLocale } from '$i18n/locales';
 import type Date from './Date';
 import type Locale from './Locale';
 import type Price from './Price';
@@ -6,15 +6,15 @@ import type Price from './Price';
 type Scotsoun = {
   title: string;
   subtitle?: string;
-  'long-name': string;
+  longName: string;
   author?: string;
-  'cd-count': number;
+  cdCount: number;
   price: Price;
-  'scotsoun-id': string;
+  scotsounId: string;
   description?: { [key in Locale]?: string } & { [key in typeof defaultLocale]: string };
-  'cover-artist'?: string;
-  'track-list'?: string[];
-  'release-date'?: Date;
+  coverArtist?: string;
+  trackList?: string[];
+  releaseDate?: Date;
 };
 
 export default Scotsoun;

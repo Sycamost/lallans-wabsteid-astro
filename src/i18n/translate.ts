@@ -1,5 +1,5 @@
-import type Locale from '../types/Locale';
-import type { TranslationsDictionary, Translation } from '../types/TranslationsDictionary';
+import type Locale from '$types/Locale';
+import type { TranslationsDictionary, Translation } from '$types/TranslationsDictionary';
 import { defaultLocale } from './locales';
 
 type TranslationsDictionaryWith<Key extends string, Params> = TranslationsDictionary<{

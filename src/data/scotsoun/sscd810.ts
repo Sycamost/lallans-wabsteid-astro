@@ -1,12 +1,12 @@
-import type Scotsoun from '../../types/Scotsoun';
+import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
   title: 'Doric and Doric – German ti Doric',
-  'long-name': 'Doric and Doric – German ti Doric',
+  longName: 'Doric and Doric – German ti Doric',
   author: 'Mary Johnston',
-  'cd-count': 2,
+  cdCount: 2,
   price: '18.00',
-  'scotsoun-id': '810',
+  scotsounId: '810',
   description: {
     sco: `
       Scotsoun wad fain say their thanks til Doug Ring that made the oreiginal recordins, an til
@@ -17,7 +17,7 @@ const cd: Scotsoun = {
       Malcolm Macgregor of MacTrak Duplicating who pressed the original CDs.
       `,
   },
-  'track-list': [
+  trackList: [
     'First Grandchild',
     'Lullaby',
     'Born ti dance',

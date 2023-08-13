@@ -1,13 +1,13 @@
-import type Scotsoun from '../../types/Scotsoun';
+import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
   title: 'Pipe Tunes',
-  'long-name': 'Pipe Tunes',
+  longName: 'Pipe Tunes',
   author: 'Duncan Johnstone',
-  'cd-count': 1,
+  cdCount: 1,
   price: '11.00',
-  'scotsoun-id': '063',
-  'track-list': ['Guido Margiotta / Tony Lightfoot / Romany Jig', 'Farewell to Barra'],
+  scotsounId: '063',
+  trackList: ['Guido Margiotta / Tony Lightfoot / Romany Jig', 'Farewell to Barra'],
 };
 
 export default cd;

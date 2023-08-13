@@ -1,13 +1,13 @@
-import type Scotsoun from '../../types/Scotsoun';
+import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
   title: 'Michael',
   subtitle: 'A Ballad Play in Scots',
-  'long-name': '"Michael: A Ballad Play in Scots"',
+  longName: '"Michael: A Ballad Play in Scots"',
   author: 'William Hershaw',
-  'cd-count': 2,
+  cdCount: 2,
   price: '18.00',
-  'scotsoun-id': '816',
+  scotsounId: '816',
   description: {
     'en-GB': `
       _Michael: A Ballad Play in Scots_ by William Hershaw is based on the character of Michael Scot of Balwearie, the 12th-century philosopher, translator, polymath, alchemist and reputed wizard. Hershaw has combined the historical and folk myth aspects of the Michael Scot legend to create a gripping portrayal of a troubled soul who attempts to destroy the universe in order to prove the existence of God.<br>

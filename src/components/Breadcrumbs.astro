@@ -1,9 +1,9 @@
 ---
-import findAllIndicesOf from '../lib/findAllIndicesOf';
-import translate from '../i18n/translate';
-import tBreadcrumbs from '../i18n/translations/components/breadcrumbs';
-import type Locale from '../types/Locale';
-import locales from '../i18n/locales';
+import findAllIndicesOf from '$lib/findAllIndicesOf';
+import translate from '$i18n/translate';
+import tBreadcrumbs from '$i18n/translations/components/breadcrumbs';
+import type Locale from '$types/Locale';
+import locales from '$i18n/locales';
 
 const path = Astro.url.pathname.replace(/(?<!\/)$/, '/');
 const localeInPath = new RegExp(`/(?<=^/)(${locales.join('|')})`);

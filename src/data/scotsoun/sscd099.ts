@@ -1,14 +1,14 @@
-import type Scotsoun from '../../types/Scotsoun';
+import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
   title: 'Douglas Young',
   subtitle: 'Scotsoun Makars Series',
-  'long-name': 'Scotsoun Makars Series – Douglas Young',
+  longName: 'Scotsoun Makars Series – Douglas Young',
   author: 'Douglas Young',
-  'cd-count': 2,
+  cdCount: 2,
   price: '18.00',
-  'scotsoun-id': '099',
-  'track-list': [
+  scotsounId: '099',
+  trackList: [
     'Guestless Howff',
     'Dain do Eimhir XLIII&#58; Were ’t no for Ye',
     'Dain do Eimhir LI&#58; I the Connachan Time',

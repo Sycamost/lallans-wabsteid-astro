@@ -1,13 +1,13 @@
-import type Scotsoun from '../../types/Scotsoun';
+import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
   title: 'Into the White World',
-  'long-name': 'Into the White World',
+  longName: 'Into the White World',
   author: 'Kenneth White',
-  'cd-count': 2,
+  cdCount: 2,
   price: '18.00',
-  'scotsoun-id': '092',
-  'track-list': [
+  scotsounId: '092',
+  trackList: [
     'Report to Erigena',
     'Morning walk',
     'Chant',

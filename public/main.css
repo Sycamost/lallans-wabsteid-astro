@@ -379,7 +379,7 @@ footer {
   height: 12rem;
 }
 
-.lallans-issue__header-block {
+.product__header-block {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -388,7 +388,7 @@ footer {
   padding-block: var(--spacing-block-lg) var(--spacing-block-xl);
 }
 
-.lallans-issue__header-block-end {
+.product__action-block {
   display: flex;
   flex-direction: column;
   margin-inline: auto;
@@ -396,7 +396,7 @@ footer {
   gap: var(--spacing-block-sm);
 }
 
-.lallans-issue__header-block-end img {
+.product__action-block img {
   max-width: 12rem;
   width: 100%;
   height: auto;

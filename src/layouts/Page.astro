@@ -1,5 +1,5 @@
 ---
-import type Locale from '../types/Locale';
+import type Locale from '$types/Locale';
 import Layout from './Layout.astro';
 
 interface Props {
@@ -10,7 +10,7 @@ interface Props {
 const { locale, title } = Astro.props;
 ---
 
-<Layout locale={locale} title={title} >
+<Layout locale={locale} title={title}>
   <main id="main">
     <slot />
   </main>

@@ -1,14 +1,14 @@
-import type Scotsoun from '../../types/Scotsoun';
+import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
   title: '18 Burns Sangs',
   subtitle: 'and thair stories',
-  'long-name': '18 Burns Sangs and Thair Stories',
+  longName: '18 Burns Sangs and Thair Stories',
   author: 'Robert Burns',
-  'cd-count': 2,
+  cdCount: 2,
   price: '18.00',
-  'scotsoun-id': '039',
-  'track-list': [
+  scotsounId: '039',
+  trackList: [
     'Introduction to track 2',
     'Last May a Braw Wooer',
     'Introduction to track 23',

@@ -1,13 +1,13 @@
-import type Scotsoun from '../../types/Scotsoun';
+import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
   title: 'The Lost Pibroch',
-  'long-name': 'The Lost Pibroch',
+  longName: 'The Lost Pibroch',
   author: 'William McCallum and P/M Donald MacLeod',
-  'cd-count': 1,
+  cdCount: 1,
   price: '11.00',
-  'scotsoun-id': '146',
-  'track-list': [
+  scotsounId: '146',
+  trackList: [
     'Beloved Scotland (The Lost Pibroch)',
     'Structure of the Pibroch&#58; illustrated on the chanter by W McCallum',
     'Introduction to Strathspeys',

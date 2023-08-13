@@ -1,14 +1,14 @@
-import type Scotsoun from '../../types/Scotsoun';
+import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
   title: 'TS Law',
   subtitle: 'Scotsoun Makars Series',
-  'long-name': 'Scotsoun Makars Series – TS Law',
+  longName: 'Scotsoun Makars Series – TS Law',
   author: 'TS Law',
-  'cd-count': 4,
+  cdCount: 4,
   price: '28.00',
-  'scotsoun-id': '137-8',
-  'track-list': [
+  scotsounId: '137-8',
+  trackList: [
     'Skinheads at Auschwitz, Easter 1996',
     'Ban Polaris, Halleluia',
     'Seam',
