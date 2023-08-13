@@ -131,6 +131,7 @@
 }
 
 .title,
+.title--small,
 h1,
 h2,
 h3,
@@ -340,7 +341,7 @@ footer {
   margin-inline: auto;
 }
 
-@media (min-width: 60rem) {
+@media (min-width: 50rem) {
   .back-to-top-link {
     margin-inline-end: 0;
   }
@@ -437,7 +438,7 @@ nav {
   padding-inline: var(--spacing-inline-sm);
 }
 
-@media (min-width: 60rem) {
+@media (min-width: 50rem) {
   nav {
     flex-direction: row;
     justify-content: space-between;
@@ -476,7 +477,7 @@ nav {
   content: '/'
 }
 
-@media (min-width: 60rem) {
+@media (min-width: 50rem) {
   .breadcrumbs {
     display: flex;
   }
