@@ -10,7 +10,7 @@ import type ScotsounId from '$types/ScotsounId';
 export async function getStaticPaths() {
   const scotsounIds = Object.keys(getScotsoun) as `${ScotsounId}`[];
   return scotsounIds.flatMap((n) =>
-    localeStaticPaths.map((p) => ({ ...p, params: { ...p.params, issueNumber: n } }))
+    localeStaticPaths.map((p) => ({ ...p, params: { ...p.params, scotsounId: n } }))
   );
 }
 
