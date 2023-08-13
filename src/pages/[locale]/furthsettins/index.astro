@@ -18,11 +18,13 @@ const t = translate(locale);
   <section>
     <h1>Furthsettins</h1>
 
-    <ul class="publications-gallery">
+    <ul class="link-gallery link-gallery--furthsettins">
       <li>
-        <a href="lallans" class="link">
-          <img src="/images/furthsettins/lallans.jpg" class="publications-gallery__image" />
-          <p class="publications-gallery__title">{t(tSite, { key: 'lallans' })}</p>
+        <a href="lallans" class="link link-gallery__container">
+          <div class="link-gallery__image">
+            <img src="/images/furthsettins/lallans.jpg" />
+          </div>
+          <p class="link-gallery__title">{t(tSite, { key: 'lallans' })}</p>
         </a>
       </li>
     </ul>
