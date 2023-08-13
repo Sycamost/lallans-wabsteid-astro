@@ -6,7 +6,7 @@ const cd: Scotsoun = {
   author: 'Karen Hannah, Yla Steven, Hugh MacGilp and Ian Powrie',
   cdCount: 1,
   price: '11.00',
-  scotsounId: '518',
+  scotsounId: '581',
   description: {
     sco: `
       Scotsoun haes on mony occasions uised fiddle muisic waein its recordins. Noo, fur the first
