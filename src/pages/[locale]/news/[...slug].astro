@@ -1,0 +1,44 @@
+---
+import locales from '$i18n/locales';
+import Article from '$layouts/Article.astro';
+import type Locale from '$types/Locale';
+import { CollectionEntry, getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  function localeFromSlug(slug: CollectionEntry<'news'>['slug']): Locale | undefined {
+    const lowerCaseLocale = new RegExp(`^(${locales.map((l) => l.toLocaleLowerCase()).join('|')})`);
+    const matchedLowerCaseLocale = slug.match(lowerCaseLocale)?.[1];
+    switch (matchedLowerCaseLocale) {
+      case 'sco':
+        return 'sco';
+      case 'en-gb':
+        return 'en-GB';
+      default:
+        console.warn('Could not find locale in slug %s', slug);
+        return undefined;
+    }
+  }
+
+  const paths = (await getCollection('news')).map((entry) => ({
+    params: {
+      slug: entry.slug.replace('/', '-'),
+      locale: localeFromSlug(entry.slug),
+    },
+    props: { entry },
+  }));
+
+  console.info('Paths: %s', JSON.stringify(paths));
+
+  return paths;
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+
+<Article title={entry.data.title}>
+  <section>
+    <h1>{entry.data.title}</h1>
+    <Content />
+  </section>
+</Article>
