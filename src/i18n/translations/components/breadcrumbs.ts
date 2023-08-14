@@ -22,6 +22,10 @@ const tBreadcrumbs = {
     sco: () => 'Scotsoun',
     'en-GB': () => 'Scotsoun',
   },
+  '/news/': {
+    sco: () => 'News',
+    'en-GB': () => 'News',
+  },
   ...Object.fromEntries(
     Object.keys(getLallansIssue).map((lallansIssueNumber) => [
       `/furthsettins/lallans/${lallansIssueNumber}/`,
