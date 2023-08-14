@@ -1,0 +1,18 @@
+---
+interface Props {
+  entries: { time: string; description: string }[];
+}
+
+const { entries } = Astro.props;
+---
+
+<dl class="schedule">
+  {
+    entries.map((entry) => (
+      <>
+        <dt>{entry.time}</dt>
+        <dd>{entry.description}</dd>
+      </>
+    ))
+  }
+</dl>
