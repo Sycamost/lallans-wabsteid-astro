@@ -350,8 +350,19 @@ template {
   display: none;
 }
 
+a {
+  color: currentColor;
+  text-decoration: none;
+}
+
+:link {
+  color: currentColor;
+  text-decoration: none;
+}
+
 :visited {
   color: currentColor;
+  text-decoration: none;
 }
 
 ol {
