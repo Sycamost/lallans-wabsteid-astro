@@ -1,11 +1,11 @@
 import type { TranslationsDictionary } from '$types/TranslationsDictionary';
 
-const homeTranslations = {
+const tPage = {
   title: {
     sco: () => 'Hame',
     'en-GB': () => 'Home',
   },
 };
 
-type Raw = typeof homeTranslations;
-export default homeTranslations as TranslationsDictionary<Raw>;
+type Raw = typeof tPage;
+export default tPage as TranslationsDictionary<Raw>;

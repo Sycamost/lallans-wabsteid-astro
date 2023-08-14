@@ -5,7 +5,7 @@ import type { TranslationsDictionary } from '$types/TranslationsDictionary';
 // This maun be kept up til date bi haund. There is
 // nae compile-time check that aw routes hae been
 // translatit.
-const breadcrumbsTranslations = {
+const tBreadcrumbs = {
   '/': {
     sco: () => 'Hame',
     'en-GB': () => 'Home',
@@ -42,5 +42,5 @@ const breadcrumbsTranslations = {
   ),
 };
 
-type Raw = typeof breadcrumbsTranslations;
-export default breadcrumbsTranslations as TranslationsDictionary<Raw>;
+type Raw = typeof tBreadcrumbs;
+export default tBreadcrumbs as TranslationsDictionary<Raw>;

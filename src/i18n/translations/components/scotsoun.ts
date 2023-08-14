@@ -3,7 +3,7 @@ import type { TranslationsDictionary } from '$types/TranslationsDictionary';
 import type Date from '$types/Date';
 import { defaultLocale } from '$i18n/locales';
 
-const scotsounTranslations = {
+const tScotsoun = {
   'cover-artist': {
     sco: ({ coverArtist }: { coverArtist: string }) => `Cover airtist: ${coverArtist}.`,
     'en-GB': ({ coverArtist }: { coverArtist: string }) => `Cover airtist: ${coverArtist}.`,
@@ -20,5 +20,5 @@ const scotsounTranslations = {
   },
 };
 
-type Raw = typeof scotsounTranslations;
-export default scotsounTranslations as TranslationsDictionary<Raw>;
+type Raw = typeof tScotsoun;
+export default tScotsoun as TranslationsDictionary<Raw>;

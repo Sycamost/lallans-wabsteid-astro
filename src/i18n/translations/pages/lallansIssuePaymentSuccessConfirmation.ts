@@ -1,6 +1,6 @@
 import type { TranslationsDictionary } from '$types/TranslationsDictionary';
 
-const lallansIssuePaymentSuccessConfirmation = {
+const tPage = {
   title: {
     sco: () => 'Payment Success',
     'en-GB': () => 'Payment Success',
@@ -22,5 +22,5 @@ const lallansIssuePaymentSuccessConfirmation = {
   },
 };
 
-type Raw = typeof lallansIssuePaymentSuccessConfirmation;
-export default lallansIssuePaymentSuccessConfirmation as TranslationsDictionary<Raw>;
+type Raw = typeof tPage;
+export default tPage as TranslationsDictionary<Raw>;

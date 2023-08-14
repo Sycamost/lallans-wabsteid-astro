@@ -1,7 +1,7 @@
 import type ScotsounId from '$types/ScotsounId';
 import type { TranslationsDictionary } from '$types/TranslationsDictionary';
 
-const scotsounPaymentSuccessConfirmation = {
+const tPage = {
   title: {
     sco: () => 'Payment Success',
     'en-GB': () => 'Payment Success',
@@ -23,5 +23,5 @@ const scotsounPaymentSuccessConfirmation = {
   },
 };
 
-type Raw = typeof scotsounPaymentSuccessConfirmation;
-export default scotsounPaymentSuccessConfirmation as TranslationsDictionary<Raw>;
+type Raw = typeof tPage;
+export default tPage as TranslationsDictionary<Raw>;

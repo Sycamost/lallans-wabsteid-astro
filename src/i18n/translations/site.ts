@@ -4,7 +4,7 @@ import type Locale from '$types/Locale';
 import type { TranslationsDictionary } from '$types/TranslationsDictionary';
 import locales from '../locales';
 
-const siteTranslations = {
+const tSite = {
   title: {
     sco: () => 'Scots Leid Associe',
     'en-GB': () => 'Scots Language Society',
@@ -52,8 +52,8 @@ const siteTranslations = {
       return [
         locale,
         ({ date }: { date: Date }) => `
-          ${siteTranslations['ordinal'][locale]({ n: date.slice(8) })}
-          ${siteTranslations['month'][locale]({ month: date.slice(5, 7) as Month })}
+          ${tSite['ordinal'][locale]({ n: date.slice(8) })}
+          ${tSite['month'][locale]({ month: date.slice(5, 7) as Month })}
           ${date.slice(0, 4)}
         `,
       ];
@@ -171,5 +171,5 @@ const siteTranslations = {
   },
 };
 
-type Raw = typeof siteTranslations;
-export default siteTranslations as TranslationsDictionary<Raw>;
+type Raw = typeof tSite;
+export default tSite as TranslationsDictionary<Raw>;

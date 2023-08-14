@@ -1,11 +1,11 @@
 import type { TranslationsDictionary } from '$types/TranslationsDictionary';
 
-const languageLinksTranslations = {
+const tLanguageLinks = {
   'language-link-text': {
     sco: ({ language }: { language: string }) => `Get this page i ${language}`,
     'en-GB': ({ language }: { language: string }) => `Get this page in ${language}`,
   },
 };
 
-type Raw = typeof languageLinksTranslations;
-export default languageLinksTranslations as TranslationsDictionary<Raw>;
+type Raw = typeof tLanguageLinks;
+export default tLanguageLinks as TranslationsDictionary<Raw>;
