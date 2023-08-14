@@ -10,7 +10,10 @@ const currentLocale = getLocaleFromPath(Astro.url.pathname);
 const otherLocale: Locale = currentLocale === 'sco' ? 'en-GB' : 'sco';
 const currentPath = Astro.url.pathname;
 const currentLocaleInPath = new RegExp(`(?<=^/)(${currentLocale}/)?`);
-const otherLocalePath = currentPath.replace(currentLocaleInPath, `${otherLocale}/`);
+const newsCurrentLocaleInPath = new RegExp(`(?<=/news/)(${currentLocale.toLocaleLowerCase()})`);
+const otherLocalePath = currentPath
+  .replace(currentLocaleInPath, `${otherLocale}/`)
+  .replace(newsCurrentLocaleInPath, `${otherLocale.toLocaleLowerCase()}`);
 
 const t = translate(currentLocale);
 ---
