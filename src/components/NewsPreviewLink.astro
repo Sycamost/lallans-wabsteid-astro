@@ -5,16 +5,21 @@ import getLocaleFromPath from '$lib/getLocaleFromPath';
 import type { CollectionEntry } from 'astro:content';
 
 interface Props {
+  headingLevel: 'h1' | 'h2' | 'h3' | 'h4';
   newsItem: CollectionEntry<'news'>;
 }
 
-const { newsItem } = Astro.props;
+const { headingLevel, newsItem } = Astro.props;
 const locale = getLocaleFromPath(Astro.url.pathname);
 const t = translate(locale);
 ---
 
 <a class="news-index__item" href={`/${locale}/news/${newsItem.slug.replace('/', '-')}`}>
-  <h2>{newsItem.data.title}</h2>
+  <Fragment
+    set:html={`
+    <${headingLevel}>${newsItem.data.title}</${headingLevel}>
+  `}
+  />
   <p>{newsItem.data.summary}</p>
   <p class="link">{t(tNewsPreviewLink, { key: 'read-article' })}</p>
 </a>
