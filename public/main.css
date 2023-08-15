@@ -360,7 +360,8 @@ footer {
   display: flex;
   flex-direction: column;
   width: fit-content;
-  height: 12rem;
+  align-items: center;
+  height: fit-content;
 }
 
 .link-gallery--furthsettins {
@@ -380,7 +381,6 @@ footer {
 }
 
 .link-gallery__image {
-  align-self: start;
   max-width: var(--gallery-item-width);
   max-height: var(--gallery-item-height);
 }
@@ -397,13 +397,15 @@ footer {
 .link-gallery__title {
   justify-self: end;
   max-width: var(--gallery-item-width);
-  min-height: 4.7ex;
+  min-height: 7ex;
+  min-height: 2lh;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-align: center;
+  margin-inline: var(--spacing-inline-xs);
 }
 
 .italic {
