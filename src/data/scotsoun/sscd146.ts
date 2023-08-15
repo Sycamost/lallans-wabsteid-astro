@@ -9,7 +9,7 @@ const cd: Scotsoun = {
   scotsounId: '146',
   trackList: [
     'Beloved Scotland (The Lost Pibroch)',
-    'Structure of the Pibroch&#58; illustrated on the chanter by W McCallum',
+    'Structure of the Pibroch: illustrated on the chanter by W McCallum',
     'Introduction to Strathspeys',
     'Inveraray Castle (Strathspey)',
     'The Caledonian Society of London (Strathspey)',

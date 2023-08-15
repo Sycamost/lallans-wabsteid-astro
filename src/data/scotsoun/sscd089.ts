@@ -10,7 +10,7 @@ const cd: Scotsoun = {
   scotsounId: '089',
   trackList: [
     'Wild Hairst Making Tracks',
-    'Mr &amp; Mrs Absentee Landlord Despatches Home',
+    'Mr & Mrs Absentee Landlord Despatches Home',
     'Fhir Tha ’D Sheasamh air mo Lic Despatches Home',
     'A Celtic History Four points of a Saltire',
     'New Farrant Weys Making Tracks',

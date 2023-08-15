@@ -2,8 +2,8 @@ import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
   title: 'Ceol na Gàidhlig',
-  subtitle: 'Gaelic Music &amp; Poetry',
-  longName: 'Ceol na Gàidhlig – Gaelic Music &amp; Poetry',
+  subtitle: 'Gaelic Music & Poetry',
+  longName: 'Ceol na Gàidhlig – Gaelic Music & Poetry',
   author: 'Derick Thomson',
   cdCount: 1,
   price: '11.00',

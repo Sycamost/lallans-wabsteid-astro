@@ -68,7 +68,7 @@ const cd: Scotsoun = {
     'To Minnie',
     'To My Name-Child',
     'To Any Reader',
-    'Reprise&#58; From a Railway Carriage',
+    'Reprise: From a Railway Carriage',
   ],
 };
 

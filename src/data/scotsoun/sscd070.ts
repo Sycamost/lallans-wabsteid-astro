@@ -8,8 +8,8 @@ const cd: Scotsoun = {
   price: '11.00',
   scotsounId: '070',
   trackList: [
-    'Revelation, 9&#58;1-21, read by David Stephen',
-    'Revelation, 22&#58;7-17, read by David Stephen',
+    'Revelation, 9:1-21, read by David Stephen',
+    'Revelation, 22:7-17, read by David Stephen',
   ],
 };
 

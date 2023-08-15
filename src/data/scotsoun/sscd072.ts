@@ -1,9 +1,9 @@
 import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
-  title: '"Poems in Scots &amp; Gaelic"',
+  title: '"Poems in Scots & Gaelic"',
   subtitle: '"from ‘17 Poems for 6d’"',
-  longName: '"Poems in Scots &amp; Gaelic – from ‘17 Poems for 6d’"',
+  longName: '"Poems in Scots & Gaelic – from ‘17 Poems for 6d’"',
   author: 'Robert Garioch and Somhairle MacGill-Eain',
   cdCount: 1,
   price: '11.00',
