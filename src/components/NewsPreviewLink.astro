@@ -1,0 +1,20 @@
+---
+import translate from '$i18n/translate';
+import tNewsPreviewLink from '$i18n/translations/components/newsPreviewLink';
+import type Locale from '$types/Locale';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  locale: Locale;
+  newsItem: CollectionEntry<'news'>;
+}
+
+const { locale, newsItem } = Astro.props;
+const t = translate(locale);
+---
+
+<a class="news-index__item" href={`/${locale}/news/${newsItem.slug.replace('/', '-')}`}>
+  <h2>{newsItem.data.title}</h2>
+  <p>{newsItem.data.summary}</p>
+  <p class="link">{t(tNewsPreviewLink, { key: 'read-article' })}</p>
+</a>
