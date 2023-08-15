@@ -1,7 +1,7 @@
 import dotenv from 'dotenv';
 
 // Parsing the env file.
-dotenv.config({ path: '../../.env' });
+dotenv.config({ path: './.env' });
 
 type Env = {
   PAYPAL_LIVE_CLIENT_ID: string;
