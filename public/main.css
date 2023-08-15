@@ -305,6 +305,10 @@ ol li {
   transition-duration: 300ms;
 }
 
+.news-index__item:hover .link {
+  text-decoration-color: transparent;
+}
+
 .news-index__item :first-child {
   margin-block-start: 0;
 }
