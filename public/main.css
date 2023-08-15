@@ -371,7 +371,7 @@ footer {
 }
 
 .link-gallery--lallans {
-  --gallery-item-width: 6rem;
+  --gallery-item-width: 9rem;
   --gallery-item-height: auto;
 }
 
@@ -397,11 +397,11 @@ footer {
 .link-gallery__title {
   justify-self: end;
   max-width: var(--gallery-item-width);
-  min-height: 7ex;
-  min-height: 2lh;
+  min-height: 11ex;
+  min-height: 3lh;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-align: center;
