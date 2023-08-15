@@ -60,7 +60,9 @@
   --max-width-all-content: 56.6rem; /* golden ratio * prose content width */
 
   --breakpoint-sm: 640px;
+  --breakpoint-sm-mag: 640;
   --breakpoint-lg: 1280px;
+  --breakpoint-lg-mag: 1280;
 
   --spacing-block-xl: 4rem;
   --spacing-block-lg: 2rem;
@@ -71,27 +73,16 @@
   --spacing-inline-sm: 1.5rem;
   --spacing-inline-xs: 0.5rem;
 
-  --base-font-size-min: 16px;
-  --base-font-size-max: 30px;
-
   --font-size-sm: 0.875rem;
 
   scroll-behavior: smooth;
   font-family: 'Alegreya Sans', Lato, Calibri, 'sans-serif';
-  font-size: var(--base-font-size-min);
-  font-weight: 300;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.03rem;
+  line-height: 1.5;
   color: var(--text-color);
   background-color: var(--background-color);
-}
-
-@media (min-width: 40rem) {
-  :root {
-    --sm-to-lg: calc(var(--breakpoint-lg) - var(--breakpoint-sm));
-    --this-to-lg: calc(100vw - var(--base-font-size-min));
-    --base-font-size-range: calc(var(--base-font-size-max) - var(--base-font-size-min));
-    --font-size-to-add: calc(var(--base-font-size-range) * (var(--sm-to-lg) / var(--this-to-lg)));
-    font-size: calc(var(--base-font-size-min) + var(--font-size-to-add));
-  }
 }
 
 :is(main, article) {
