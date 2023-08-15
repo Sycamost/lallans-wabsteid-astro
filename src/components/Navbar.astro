@@ -4,17 +4,21 @@ import SwitchLanguageLink from './SwitchLanguageLink.astro';
 import tSite from '$i18n/translations/site';
 import translate from '$i18n/translate';
 import getLocaleFromPath from '$lib/getLocaleFromPath';
+import NavLinks from './NavLinks.astro';
 
 const locale = getLocaleFromPath(Astro.url.pathname);
 const t = translate(locale);
 ---
 
 <nav>
-  <p class="title--small logo">
-    <a href="/">
-      {t(tSite, { key: 'scots-leid-associe' })}
-    </a>
-  </p>
-  <SwitchLanguageLink />
-  <Breadcrumbs />
+  <div class="nav__top-banner">
+    <p class="title--small logo">
+      <a href="/">
+        {t(tSite, { key: 'scots-leid-associe' })}
+      </a>
+    </p>
+    <SwitchLanguageLink />
+    <Breadcrumbs />
+  </div>
+  <NavLinks />
 </nav>

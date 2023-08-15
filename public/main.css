@@ -418,21 +418,50 @@ footer {
 }
 
 nav {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   padding-block-start: var(--spacing-block-sm);
   padding-block-end: var(--spacing-block-md);
   padding-inline: var(--spacing-inline-sm);
 }
 
+.nav__top-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block-end: var(--spacing-block-sm);
+}
+
+.nav__nav-links {
+  padding: 0;
+}
+
+.nav__nav-links li {
+  margin-inline: auto;
+  width: max-content;
+}
+
+.nav__nav-links li {
+  margin-block-end: var(--spacing-block-md);
+}
+
+.nav__nav-links li:last-of-type {
+  margin-block-end: 0;
+}
+
 @media (min-width: 50rem) {
-  nav {
+  .nav__top-banner {
     flex-direction: row;
     justify-content: space-between;
     align-items: baseline;
     padding-inline: max(10%, calc((100% - var(--max-width-all-content)) / 2));
     gap: var(--spacing-inline-xs);
+  }
+
+  .nav__nav-links {
+    padding-inline: max(10%, calc((100% - var(--max-width-all-content)) / 2));
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: var(--spacing-inline-md);
   }
 
   .breadcrumbs {

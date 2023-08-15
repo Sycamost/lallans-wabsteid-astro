@@ -1,0 +1,25 @@
+---
+import getLocaleFromPath from '$lib/getLocaleFromPath';
+import translate from '$i18n/translate';
+import tNews from '$i18n/translations/pages/news';
+import tFurthsettins from '$i18n/translations/pages/furthsettins';
+import tHame from '$i18n/translations/pages/home';
+
+const locale = getLocaleFromPath(Astro.url.pathname);
+const t = translate(locale);
+---
+
+<ul class="nav__nav-links">
+  <li>
+    <a class="btn" href={`/${locale}/news`}>{t(tNews, { key: 'title' })}</a>
+  </li>
+  <li>
+    <a class="btn" href={`/${locale}/furthsettins`}>{t(tFurthsettins, { key: 'title' })}</a>
+  </li>
+  <li>
+    <a class="btn" href={`/${locale}/#jyne`}>{t(tHame, { key: 'jyne' })}</a>
+  </li>
+  <li>
+    <a class="btn" href={`/${locale}/#contact`}>{t(tHame, { key: 'contact' })}</a>
+  </li>
+</ul>
