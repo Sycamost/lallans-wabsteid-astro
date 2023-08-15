@@ -19,17 +19,13 @@ export async function getStaticPaths() {
     }
   }
 
-  const paths = (await getCollection('news')).map((entry) => ({
+  return (await getCollection('news')).map((entry) => ({
     params: {
       slug: entry.slug.replace('/', '-'),
       locale: localeFromSlug(entry.slug),
     },
     props: { entry },
   }));
-
-  console.info('Paths: %s', JSON.stringify(paths));
-
-  return paths;
 }
 
 const { entry } = Astro.props;
