@@ -1,15 +1,15 @@
 ---
 import translate from '$i18n/translate';
 import tNewsPreviewLink from '$i18n/translations/components/newsPreviewLink';
-import type Locale from '$types/Locale';
+import getLocaleFromPath from '$lib/getLocaleFromPath';
 import type { CollectionEntry } from 'astro:content';
 
 interface Props {
-  locale: Locale;
   newsItem: CollectionEntry<'news'>;
 }
 
-const { locale, newsItem } = Astro.props;
+const { newsItem } = Astro.props;
+const locale = getLocaleFromPath(Astro.url.pathname);
 const t = translate(locale);
 ---
 

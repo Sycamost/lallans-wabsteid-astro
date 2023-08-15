@@ -29,7 +29,7 @@ export async function getStaticPaths() {
     <div class="news-index">
       {
         allNewsInLocale.length > 0 ? (
-          allNewsInLocale.map((item) => <NewsPreviewLink locale={locale} newsItem={item} />)
+          allNewsInLocale.map((item) => <NewsPreviewLink newsItem={item} />)
         ) : (
           <p>{t(tPage, { key: 'no-news' })}</p>
         )
