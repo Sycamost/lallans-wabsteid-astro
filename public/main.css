@@ -298,6 +298,7 @@ ol li {
   transition: background 100ms;
   padding-block: var(--spacing-block-md);
   padding-inline: var(--spacing-inline-sm);
+  margin-block: var(--spacing-block-sm);
 }
 
 .news-index__item:hover {
@@ -479,4 +480,14 @@ nav {
   .breadcrumbs li {
     margin-inline: var(--spacing-inline-xs);
   }
+}
+
+.align-end {
+  display: block;
+  margin-inline-start: auto;
+  width: fit-content;
+}
+
+.margin-block-start-md {
+  margin-block-start: var(--spacing-block-md);
 }

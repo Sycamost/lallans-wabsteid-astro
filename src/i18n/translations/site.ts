@@ -29,6 +29,10 @@ const tSite = {
     sco: () => 'bi',
     'en-GB': () => 'by',
   },
+  and: {
+    sco: () => 'an',
+    'en-GB': () => 'and',
+  },
   locale: {
     sco: ({ locale }: { locale: Locale }) => {
       switch (locale) {

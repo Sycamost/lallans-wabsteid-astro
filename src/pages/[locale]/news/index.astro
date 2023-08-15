@@ -6,17 +6,12 @@ import getLocaleFromPath from '$lib/getLocaleFromPath';
 import localeStaticPaths from '$lib/localeStaticPaths';
 import { getCollection } from 'astro:content';
 import NewsPreviewLink from '$components/NewsPreviewLink.astro';
+import { isNewsItemInLocale } from '$lib/newsUtils';
 
 const allNews = await getCollection('news');
 const locale = getLocaleFromPath(Astro.url.pathname);
-const allNewsInLocale = allNews.filter(isInLocale);
+const allNewsInLocale = allNews.filter((item) => isNewsItemInLocale(item, locale));
 const t = translate(locale);
-
-function isInLocale(newsItem: (typeof allNews)[number]) {
-  const srcPath = newsItem.id;
-  const newsItemLocale = srcPath.slice(0, srcPath.indexOf('/'));
-  return newsItemLocale === locale;
-}
 
 export async function getStaticPaths() {
   return localeStaticPaths;
