@@ -295,13 +295,14 @@ ol li {
 
 .news-index__item {
   display: block;
-  transition: background 300ms;
+  transition: background 100ms;
   padding-block: var(--spacing-block-md);
   padding-inline: var(--spacing-inline-sm);
 }
 
 .news-index__item:hover {
   background: var(--background-highlight-color);
+  transition-duration: 300ms;
 }
 
 .news-index__item :first-child {
