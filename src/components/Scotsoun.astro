@@ -33,6 +33,9 @@ const t = translate(locale);
       <img src={`/images/scotsoun/sscd${scotsoun.scotsounId}.jpg`} />
       <PayPalButtons
         successPageUrl={relativePath(Astro.url.pathname, `payment-success-confirmation`)}
+        productDescription={scotsoun.longName}
+        shortDescription={scotsoun.title}
+        totalPrice={scotsoun.price}
       />
     </div>
   </div>

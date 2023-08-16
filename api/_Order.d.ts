@@ -1,7 +1,7 @@
 type Order = {
   productDescription: string;
   shortDescription: string;
-  totalPrice: number;
+  totalPrice: string;
 };
 
 export default Order;

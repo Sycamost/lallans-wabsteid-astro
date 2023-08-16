@@ -28,6 +28,9 @@ const t = translate(locale);
       <img alt="" src={`/images/lallans/issue${issue.issueNumber}.jpg`} />
       <PayPalButtons
         successPageUrl={relativePath(Astro.url.pathname, `payment-success-confirmation`)}
+        productDescription={`Lallans ${issue.issueNumber} | ${issue.issueName}`}
+        shortDescription={`Lallans ${issue.issueNumber}`}
+        totalPrice={issue.price}
       />
     </div>
   </div>

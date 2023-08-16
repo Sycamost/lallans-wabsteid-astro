@@ -38,7 +38,7 @@ function paypalCreateOrderRequestBody(order: Order) {
         soft_descriptor: order.shortDescription,
         amount: {
           currency_code: 'GBP',
-          value: order.totalPrice.toFixed(2),
+          value: order.totalPrice,
         },
       },
     ],
