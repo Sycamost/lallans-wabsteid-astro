@@ -458,9 +458,9 @@ nav {
 
   .nav__nav-links {
     padding-inline: max(10%, calc((100% - var(--max-width-all-content)) / 2));
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-auto-flow: column;
     gap: var(--spacing-inline-md);
   }
 
