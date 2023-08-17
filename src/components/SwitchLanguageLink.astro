@@ -15,7 +15,9 @@ const otherLocalePath = currentPath
   .replace(currentLocaleInPath, `${otherLocale}/`)
   .replace(newsCurrentLocaleInPath, `${otherLocale.toLocaleLowerCase()}`);
 
-const t = translate(currentLocale);
+// The language link should be in the language it
+// points to, not the language of the current page
+const t = translate(otherLocale);
 ---
 
 <a class="link switch-language-link" href={otherLocalePath}>
