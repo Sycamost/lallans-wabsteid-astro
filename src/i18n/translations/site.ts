@@ -2,7 +2,6 @@ import type Date from '$types/Date';
 import type Month from '$types/Month';
 import type Locale from '$types/Locale';
 import type { TranslationsDictionary } from '$types/TranslationsDictionary';
-import locales from '../locales';
 
 const tSite = {
   title: {
@@ -55,18 +54,10 @@ const tSite = {
       }
     },
   },
-  'long-date': Object.fromEntries(
-    locales.map((locale) => {
-      return [
-        locale,
-        ({ date }: { date: Date }) => `
-          ${tSite['ordinal'][locale]({ n: date.slice(8) })}
-          ${tSite['month'][locale]({ month: date.slice(5, 7) as Month })}
-          ${date.slice(0, 4)}
-        `,
-      ];
-    })
-  ),
+  'long-date': {
+    sco: longDate('sco'),
+    'en-GB': longDate('en-GB'),
+  },
   ordinal: {
     sco: ({ n }: { n: string }) => {
       const m = n.replace(/^0+/, '');
@@ -178,6 +169,14 @@ const tSite = {
     },
   },
 };
+
+function longDate(locale: Locale) {
+  return ({ date }: { date: Date }) => `
+    ${tSite['ordinal'][locale]({ n: date.slice(8) })}
+    ${tSite['month'][locale]({ month: date.slice(5, 7) as Month })}
+    ${date.slice(0, 4)}
+  `;
+}
 
 type Raw = typeof tSite;
 export default tSite as TranslationsDictionary<Raw>;
