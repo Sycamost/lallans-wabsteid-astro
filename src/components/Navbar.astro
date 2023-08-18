@@ -11,14 +11,14 @@ const t = translate(locale);
 ---
 
 <nav>
-  <div class="nav__top-banner">
-    <p class="title--small logo">
-      <a href="/">
-        {t(tSite, { key: 'scots-leid-associe' })}
-      </a>
-    </p>
+  <p class="title--small nav__logo">
+    <a href="/">
+      {t(tSite, { key: 'scots-leid-associe' })}
+    </a>
+  </p>
+  <NavLinks />
+  <div class="nav__bottom-row">
     <SwitchLanguageLink />
     <Breadcrumbs />
   </div>
-  <NavLinks />
 </nav>
