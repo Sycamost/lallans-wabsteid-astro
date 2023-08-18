@@ -60,9 +60,7 @@
   --max-width-all-content: 56.6rem; /* golden ratio * prose content width */
 
   --breakpoint-sm: 640px;
-  --breakpoint-sm-mag: 640;
   --breakpoint-lg: 1280px;
-  --breakpoint-lg-mag: 1280;
 
   --spacing-block-xl: 4rem;
   --spacing-block-lg: 2rem;
@@ -73,11 +71,17 @@
   --spacing-inline-sm: 1.5rem;
   --spacing-inline-xs: 0.5rem;
 
-  --font-size-sm: 0.875rem;
+  --font-size-0: 14px;
+  --font-size-1: 18px;
+  --font-size-2: 24px;
+  --font-size-3: 32px;
+  --font-size-4: 44px;
+  --font-size-5: 54px;
+  --font-size-6: 72px;
 
   scroll-behavior: smooth;
   font-family: 'Alegreya Sans', Lato, Calibri, 'sans-serif';
-  font-size: 18px;
+  font-size: var(--font-size-1);
   font-weight: 400;
   letter-spacing: 0.03rem;
   line-height: 1.5;
@@ -131,13 +135,13 @@ h4 {
 }
 
 .title {
-  font-size: 3.75rem;
+  font-size: var(--font-size-6);
   font-weight: 700;
   margin-block-start: var(--spacing-block-sm);
 }
 
 .title--small {
-  font-size: 1.25rem;
+  font-size: var(--font-size-2);
   margin-block-start: 0;
 }
 
@@ -153,22 +157,22 @@ h1:first {
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: var(--font-size-5);
   font-weight: 600;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: var(--font-size-4);
   font-weight: 500;
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: var(--font-size-3);
   font-weight: 400;
 }
 
 h4 {
-  font-size: 1.125rem;
+  font-size: var(--font-size-2);
   font-weight: 400;
 }
 
@@ -413,7 +417,7 @@ footer {
 }
 
 :is(.lallans-issue__contributions, .lallans-issue__contributors) ul {
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-0);
   padding-block-end: var(--spacing-block-md);
 }
 
