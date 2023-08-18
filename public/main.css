@@ -8,16 +8,8 @@
   --breakpoint-sm: 640px;
   --breakpoint-lg: 1280px;
 
-  --font-size-0: 14px;
-  --font-size-1: 18px;
-  --font-size-2: 24px;
-  --font-size-3: 32px;
-  --font-size-4: 44px;
-  --font-size-5: 54px;
-  --font-size-6: 72px;
-
   scroll-behavior: smooth;
-  font-family: 'Alegreya Sans', Lato, Calibri, 'sans-serif';
+  font-family: var(--font-sans-serif);
   font-size: var(--font-size-1);
   font-weight: 400;
   letter-spacing: 0.03rem;
@@ -59,7 +51,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: Alegreya, 'Goudy Old Style', Garamond, serif;
+  font-family: var(--font-serif);
 }
 
 .title {

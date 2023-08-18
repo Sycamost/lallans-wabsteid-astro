@@ -1,0 +1,12 @@
+:root {
+  --font-size-0: 14px;
+  --font-size-1: 18px;
+  --font-size-2: 24px;
+  --font-size-3: 32px;
+  --font-size-4: 44px;
+  --font-size-5: 54px;
+  --font-size-6: 72px;
+
+  --font-serif: Alegreya, 'Goudy Old Style', Garamond, serif;
+  --font-sans-serif: 'Alegreya Sans', Lato, Calibri, 'sans-serif';
+}
