@@ -54,10 +54,6 @@ p:not(:first) {
   margin-block-start: var(--spacing-block-md);
 }
 
-td {
-  padding-block-start: var(--spacing-block-sm);
-}
-
 hr {
   width: 33%;
   margin-block: auto;
