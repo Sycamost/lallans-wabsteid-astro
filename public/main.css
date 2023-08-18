@@ -1,4 +1,5 @@
 @import 'css/variables/index.css';
+@import 'css/base/index.css';
 @import 'css/modules/index.css';
 
 :root {
