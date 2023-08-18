@@ -2,6 +2,7 @@
 @import 'css/base/index.css';
 @import 'css/layout/index.css';
 @import 'css/modules/index.css';
+@import 'css/utils.css';
 
 :root {
   scroll-behavior: smooth;
@@ -41,10 +42,6 @@ footer {
   padding-block: var(--spacing-block-md);
 }
 
-.italic {
-  font-style: italic;
-}
-
 :is(.lallans-issue__contributions, .lallans-issue__contributors) ul {
   font-size: var(--font-size-0);
   padding-block-end: var(--spacing-block-md);
@@ -54,14 +51,4 @@ nav {
   padding-block-start: var(--spacing-block-sm);
   padding-block-end: var(--spacing-block-md);
   padding-inline: var(--spacing-inline-sm);
-}
-
-.align-end {
-  display: block;
-  margin-inline-start: auto;
-  width: fit-content;
-}
-
-.margin-block-start-md {
-  margin-block-start: var(--spacing-block-md);
 }

@@ -1,0 +1,13 @@
+.italic {
+  font-style: italic;
+}
+
+.align-end {
+  display: block;
+  margin-inline-start: auto;
+  width: fit-content;
+}
+
+.margin-block-start-md {
+  margin-block-start: var(--spacing-block-md);
+}
