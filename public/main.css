@@ -31,29 +31,6 @@
   background-color: var(--background-color);
 }
 
-.title {
-  margin-block-start: var(--spacing-block-sm);
-}
-
-.title--small {
-  margin-block-start: 0;
-}
-
-h1,
-h2,
-h3,
-h4 {
-  margin-block-start: var(--spacing-block-lg);
-}
-
-h1:first {
-  margin-block-start: var(--spacing-block-sm);
-}
-
-p:not(:first) {
-  margin-block-start: var(--spacing-block-md);
-}
-
 footer {
   padding-block-start: var(--spacing-block-md);
   padding-bottom: 8rem;
