@@ -35,7 +35,7 @@
 footer {
   padding-block-start: var(--spacing-block-md);
   padding-bottom: 8rem;
-  padding-inline: max(10%, calc((100% - var(--max-width-all-content)) / 2));;
+  padding-inline: max(10%, calc((100% - var(--max-width-all-content)) / 2));
 }
 
 .link-gallery {
