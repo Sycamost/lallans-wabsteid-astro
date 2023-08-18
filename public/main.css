@@ -4,16 +4,11 @@
 
 :root {
   scroll-behavior: smooth;
-  color: var(--text-color);
-  background-color: var(--background-color);
 }
 
 :is(main, article) {
   container-name: main;
   container-type: inline-size;
-
-  color: var(--text-color);
-  background-color: var(--background-color);
 }
 
 :is(main, article) > :is(section, header):not(:is(section, header) :is(section, header)) {
