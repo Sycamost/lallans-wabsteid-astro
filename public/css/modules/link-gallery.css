@@ -1,0 +1,58 @@
+.link-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-inline-sm);
+  padding-block: var(--spacing-block-md);
+}
+
+.link-gallery__container {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  align-items: center;
+  height: fit-content;
+}
+
+.link-gallery--furthsettins {
+  --gallery-item-width: 6rem;
+  --gallery-item-height: 6rem;
+  justify-content: space-evenly;
+}
+
+.link-gallery--lallans {
+  --gallery-item-width: 9rem;
+  --gallery-item-height: auto;
+}
+
+.link-gallery--scotsoun {
+  --gallery-item-width: 8rem;
+  --gallery-item-height: 8rem;
+}
+
+.link-gallery__image {
+  max-width: var(--gallery-item-width);
+  max-height: var(--gallery-item-height);
+}
+
+.link-gallery--furthsettins img {
+  border-radius: 50%;
+}
+
+.link-gallery__image img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.link-gallery__title {
+  justify-self: end;
+  max-width: var(--gallery-item-width);
+  min-height: 11ex;
+  min-height: 3lh;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-align: center;
+  margin-inline: var(--spacing-inline-xs);
+}
