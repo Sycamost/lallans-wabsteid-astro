@@ -3,3 +3,5 @@
 @import './news-index.css';
 @import './back-to-top.css';
 @import './product.css';
+@import './schedule.css';
+@import './schedule.lg.css' (min-width: 35rem);

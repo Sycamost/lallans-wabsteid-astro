@@ -1,0 +1,21 @@
+.schedule {
+  display: grid;
+  grid-template-columns: fit-content(5rem) 1fr;
+  grid-column-gap: var(--spacing-inline-sm);
+  grid-row-gap: var(--spacing-block-sm);
+}
+
+.schedule dt {
+  grid-column-start: 1;
+  margin: 0;
+  text-align: end;
+}
+
+.schedule dd {
+  grid-column-start: 2;
+  text-align: start;
+}
+
+.schedule dd:last-child {
+  margin-block-end: 0;
+}

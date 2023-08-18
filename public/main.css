@@ -69,44 +69,6 @@ ol li {
   margin-inline-start: --spacing-inline-md;
 }
 
-.schedule dt {
-  font-weight: 500;
-  margin-block-start: var(--spacing-block-md);
-  text-align: center;
-}
-
-.schedule dd {
-  text-align: center;
-}
-
-.schedule dd:last-child {
-  margin-block-end: var(--spacing-block-md);
-}
-
-@container main (min-width: 20rem) {
-  .schedule {
-    display: grid;
-    grid-template-columns: fit-content(5rem) 1fr;
-    grid-column-gap: var(--spacing-inline-sm);
-    grid-row-gap: var(--spacing-block-sm);
-  }
-
-  .schedule dt {
-    grid-column-start: 1;
-    margin: 0;
-    text-align: end;
-  }
-
-  .schedule dd {
-    grid-column-start: 2;
-    text-align: start;
-  }
-
-  .schedule dd:last-child {
-    margin-block-end: 0;
-  }
-}
-
 footer {
   padding-block-start: var(--spacing-block-md);
   padding-bottom: 8rem;

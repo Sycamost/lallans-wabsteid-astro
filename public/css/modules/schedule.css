@@ -1,0 +1,13 @@
+.schedule dt {
+  font-weight: 700;
+  margin-block-start: var(--spacing-block-md);
+  text-align: center;
+}
+
+.schedule dd {
+  text-align: center;
+}
+
+.schedule dd:last-child {
+  margin-block-end: var(--spacing-block-md);
+}

@@ -372,3 +372,7 @@ ol {
 li {
   list-style: none;
 }
+
+dd {
+  margin: 0;
+}
