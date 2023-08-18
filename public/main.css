@@ -54,12 +54,6 @@ p:not(:first) {
   margin-block-start: var(--spacing-block-md);
 }
 
-hr {
-  width: 33%;
-  margin-block: auto;
-  margin-inline: --spacing-inline-sm;
-}
-
 ol li {
   list-style-type: decimal;
   margin-inline-start: --spacing-inline-md;
