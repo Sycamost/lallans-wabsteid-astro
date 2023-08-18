@@ -1,9 +1,14 @@
 ---
+import translate from '$i18n/translate';
+import tSite from '$i18n/translations/site';
+import getLocaleFromPath from '$lib/getLocaleFromPath';
 
+const locale = getLocaleFromPath(Astro.url.pathname);
+const t = translate(locale);
 ---
 
 <footer>
   <p class="back-to-top-link">
-    <a class="btn" href="#top">▴ Back til tap</a>
+    <a class="btn" href="#top">▴ {t(tSite, { key: 'back-to-top' })}</a>
   </p>
 </footer>

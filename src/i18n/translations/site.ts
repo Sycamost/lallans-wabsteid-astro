@@ -33,6 +33,10 @@ const tSite = {
     sco: () => 'an',
     'en-GB': () => 'and',
   },
+  'back-to-top': {
+    sco: () => 'Back til tap',
+    'en-GB': () => 'Back to top',
+  },
   locale: {
     sco: ({ locale }: { locale: Locale }) => {
       switch (locale) {
