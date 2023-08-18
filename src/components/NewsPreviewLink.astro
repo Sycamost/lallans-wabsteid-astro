@@ -14,7 +14,7 @@ const locale = getLocaleFromPath(Astro.url.pathname);
 const t = translate(locale);
 ---
 
-<a class="news-index__item" href={`/${locale}/news/${newsItem.slug.replace('/', '-')}`}>
+<a class="news-index__item group-hover" href={`/${locale}/news/${newsItem.slug.replace('/', '-')}`}>
   <Fragment
     set:html={`
     <${headingLevel}>${newsItem.data.title}</${headingLevel}>
