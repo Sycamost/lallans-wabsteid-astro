@@ -6,3 +6,6 @@
 @import './schedule.css';
 @import './schedule.lg.css' (min-width: 35rem);
 @import './link-gallery.css';
+@import './nav.css';
+@import './nav.md.css' (min-width: 35rem);
+@import './nav.lg.css' (min-width: 55rem);
