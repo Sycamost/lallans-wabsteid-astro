@@ -26,7 +26,7 @@ const t = translate(locale);
     <meta name="generator" content={Astro.generator} />
     <title>{title} | {t(site, { key: 'title' })}</title>
   </head>
-  <body>
+  <body id="top">
     <Navbar />
     <slot />
     <Footer />
