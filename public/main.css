@@ -112,17 +112,6 @@ footer {
   padding-inline: max(10%, calc((100% - var(--max-width-all-content)) / 2));;
 }
 
-.back-to-top-link {
-  width: fit-content;
-  margin-inline: auto;
-}
-
-@media (min-width: 50rem) {
-  .back-to-top-link {
-    margin-inline-end: 0;
-  }
-}
-
 .product__header-block {
   display: flex;
   flex-wrap: wrap;
