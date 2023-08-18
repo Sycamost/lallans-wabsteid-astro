@@ -1,0 +1,28 @@
+@import 'palette-hex.css';
+@import 'palette-oklch.css' supports(color: oklch(55% 0.15 290));
+
+:root {
+  --text-color: var(--color-primary-50);
+  --text-highlight-color: var(--color-primary-100);
+  --background-color: var(--color-primary-800);
+  --background-highlight-color: var(--color-primary-700);
+  --special-text-color: var(--color-secondary-200);
+  --special-text-highlight-color: var(--color-secondary-300);
+  --special-background-color: var(--color-secondary-900);
+  --special-background-highlight-color: var(--color-secondary-800);
+}
+
+:is(main, article) {
+  --text-color: var(--color-primary-900);
+  --text-highlight-color: var(--color-primary-800);
+  --background-color: var(--color-primary-50);
+  --background-highlight-color: var(--color-primary-200);
+  --special-text-color: var(--color-secondary-700);
+  --special-text-highlight-color: var(--color-secondary-600);
+  --special-background-color: var(--color-secondary-50);
+  --special-background-highlight-color: var(--color-secondary-100);
+}
+
+:is(main, article) > section:nth-child(even):not(:is(section, header) :is(section, header)) {
+    --background-color: var(--color-primary-100);
+}

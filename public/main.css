@@ -1,17 +1,7 @@
+@import 'css/colours.css';
 @import 'css/btn.css';
-@import 'css/palette-hex.css';
-@import 'css/palette-oklch.css' supports(color: oklch(55% 0.15 290));
 
-:root {  
-  --text-color: var(--color-primary-50);
-  --text-highlight-color: var(--color-primary-100);
-  --background-color: var(--color-primary-800);
-  --background-highlight-color: var(--color-primary-700);
-  --special-text-color: var(--color-secondary-200);
-  --special-text-highlight-color: var(--color-secondary-300);
-  --special-background-color: var(--color-secondary-900);
-  --special-background-highlight-color: var(--color-secondary-800);
-
+:root {
   --max-width-prose-content: 35rem;
   --max-width-all-content: 56.6rem; /* golden ratio * prose content width */
 
@@ -49,14 +39,6 @@
   container-name: main;
   container-type: inline-size;
 
-  --text-color: var(--color-primary-900);
-  --text-highlight-color: var(--color-primary-800);
-  --background-color: var(--color-primary-50);
-  --background-highlight-color: var(--color-primary-200);
-  --special-text-color: var(--color-secondary-700);
-  --special-text-highlight-color: var(--color-secondary-600);
-  --special-background-color: var(--color-secondary-50);
-  --special-background-highlight-color: var(--color-secondary-100);
   color: var(--text-color);
   background-color: var(--background-color);
 }
@@ -77,7 +59,6 @@
 }
 
 :is(main, article) > section:nth-child(even):not(:is(section, header) :is(section, header)) {
-  --background-color: var(--color-primary-100);
   background-color: var(--background-color);
 }
 
