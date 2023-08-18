@@ -54,11 +54,6 @@ p:not(:first) {
   margin-block-start: var(--spacing-block-md);
 }
 
-ol li {
-  list-style-type: decimal;
-  margin-inline-start: --spacing-inline-md;
-}
-
 footer {
   padding-block-start: var(--spacing-block-md);
   padding-bottom: 8rem;

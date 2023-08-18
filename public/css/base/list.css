@@ -1,0 +1,4 @@
+ol li {
+  list-style-type: decimal;
+  margin-inline-start: --spacing-inline-md;
+}
