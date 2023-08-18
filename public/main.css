@@ -2,12 +2,6 @@
 @import 'css/btn.css';
 
 :root {
-  --max-width-prose-content: 35rem;
-  --max-width-all-content: 56.6rem; /* golden ratio * prose content width */
-
-  --breakpoint-sm: 640px;
-  --breakpoint-lg: 1280px;
-
   scroll-behavior: smooth;
   font-family: var(--font-sans-serif);
   font-size: var(--font-size-1);
