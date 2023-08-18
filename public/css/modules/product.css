@@ -1,0 +1,22 @@
+.product__header-block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: var(--spacing-inline-sm);
+  padding-inline: var(--spacing-inline-md);
+  padding-block: var(--spacing-block-lg) var(--spacing-block-xl);
+}
+
+.product__action-block {
+  display: flex;
+  flex-direction: column;
+  margin-inline: auto;
+  width: fit-content;
+  gap: var(--spacing-block-sm);
+}
+
+.product__action-block img {
+  max-width: 12rem;
+  width: 100%;
+  height: auto;
+}
