@@ -14,8 +14,10 @@
 }
 
 .nav__logo {
-  text-align: center;
   margin-block-end: var(--margin-block-sm);
+  font-family: var(--font-serif);
+  font-size: var(--font-size-5);
+  font-weight: 700;
 }
 
 .nav__logo a {
