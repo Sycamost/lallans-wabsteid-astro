@@ -1,8 +1,10 @@
+.nav > :not(:last-child) {
+  margin-block-end: var(--margin-block-sm);
+}
+
 .nav__bottom-row {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin-block-start: var(--margin-block-sm);
 }
 
 .nav__nav-links li {
@@ -14,7 +16,6 @@
 }
 
 .nav__logo {
-  margin-block-end: var(--margin-block-sm);
   font-family: var(--font-serif);
   font-size: var(--font-size-5);
   font-weight: 700;
@@ -30,11 +31,14 @@
 }
 
 .nav__breadcrumbs li {
-  margin-inline: var(--spacing-inline-xs);
   list-style-type: none;
   min-width: max-content;
 }
 
 .nav__breadcrumbs li::before {
   content: '/'
+}
+
+.nav__switch-language-link {
+  text-align: right;
 }

@@ -30,5 +30,4 @@ footer {
 nav {
   padding-block-start: var(--margin-block-sm);
   padding-block-end: var(--margin-block-md);
-  padding-inline: var(--spacing-inline-sm);
 }
