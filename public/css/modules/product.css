@@ -3,8 +3,6 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
   gap: var(--spacing-inline-sm);
-  padding-inline: var(--spacing-inline-md);
-  padding-block: var(--spacing-block-lg) var(--spacing-block-xl);
 }
 
 .product__action-block {
@@ -12,7 +10,7 @@
   flex-direction: column;
   margin-inline: auto;
   width: fit-content;
-  gap: var(--spacing-block-sm);
+  gap: var(--margin-block-sm);
 }
 
 .product__action-block img {

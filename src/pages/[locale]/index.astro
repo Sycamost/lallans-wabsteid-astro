@@ -21,7 +21,7 @@ const mostRecentNewsItem = await getMostRecentNewsItem(locale);
   <section>
     <h2 set:html={t(tPage, { key: 'news' })} />
     {mostRecentNewsItem && <NewsPreviewLink headingLevel="h3" newsItem={mostRecentNewsItem} />}
-    <div class="align-end margin-block-start-md">
+    <div class="align-end margin-block-start-sm">
       <a href={`/${locale}/news`} class="btn">
         {t(tPage, { key: 'aw-news' })} ▷
       </a>
@@ -31,7 +31,7 @@ const mostRecentNewsItem = await getMostRecentNewsItem(locale);
   <section>
     <h2 set:html={t(tPage, { key: 'furthsettins' })} />
     <p set:html={t(tPage, { key: 'furthsettins-para' })} />
-    <div class="align-end">
+    <div class="align-end margin-block-start-sm">
       <a href={`/${locale}/furthsettins`} class="btn">
         {t(tPage, { key: 'aw-furthsettins' })} ▷
       </a>

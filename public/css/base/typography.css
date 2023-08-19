@@ -10,16 +10,32 @@ h1 {
   font-size: var(--font-size-5);
 }
 
+h1:not(:first-child) {
+  margin-block-start: var(--margin-block-lg);
+}
+
 h2 {
   font-size: var(--font-size-4);
+}
+
+h2:not(:first-child) {
+  margin-block-start: var(--margin-block-lg);
 }
 
 h3 {
   font-size: var(--font-size-3);
 }
 
+h3:not(:first-child) {
+  margin-block-start: var(--margin-block-md);
+}
+
 h4 {
   font-size: var(--font-size-2);
+}
+
+h4:not(:first-child) {
+  margin-block-start: var(--margin-block-sm);
 }
 
 h1,
@@ -28,14 +44,13 @@ h3,
 h4 {
   font-family: var(--font-serif);
   font-weight: 700;
-  margin-block-start: var(--spacing-block-lg);
 }
 
 .title {
   font-family: var(--font-serif);
   font-size: var(--font-size-6);
   font-weight: 700;
-  margin-block-start: var(--spacing-block-sm);
+  margin-block-start: var(--margin-block-sm);
 }
 
 .title--small {
@@ -43,6 +58,6 @@ h4 {
   margin-block-start: 0;
 }
 
-p:not(:first) {
-  margin-block-start: var(--spacing-block-md);
+p:not(:first-child) {
+  margin-block-start: var(--margin-block-sm);
 }

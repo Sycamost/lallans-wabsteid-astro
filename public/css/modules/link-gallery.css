@@ -2,7 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: var(--spacing-inline-sm);
-  padding-block: var(--spacing-block-md);
+  padding-block: var(--margin-block-md);
 }
 
 .link-gallery__container {

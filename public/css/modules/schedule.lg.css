@@ -2,7 +2,6 @@
   display: grid;
   grid-template-columns: fit-content(5rem) 1fr;
   grid-column-gap: var(--spacing-inline-sm);
-  grid-row-gap: var(--spacing-block-sm);
 }
 
 .schedule dt {
@@ -14,8 +13,4 @@
 .schedule dd {
   grid-column-start: 2;
   text-align: start;
-}
-
-.schedule dd:last-child {
-  margin-block-end: 0;
 }

@@ -1,13 +1,13 @@
+.schedule:not(:first-child) {
+  margin-block-start: var(--margin-block-sm);
+}
+
 .schedule dt {
   font-weight: 700;
-  margin-block-start: var(--spacing-block-md);
+  margin-block-start: var(--margin-block-sm);
   text-align: center;
 }
 
 .schedule dd {
   text-align: center;
-}
-
-.schedule dd:last-child {
-  margin-block-end: var(--spacing-block-md);
 }

@@ -14,18 +14,8 @@
 }
 
 :is(main, article) > :is(section, header):not(:is(section, header) :is(section, header)) {
-  padding-inline: max(10%, calc((100% - var(--max-width-prose-content)) / 2));
-  padding-block: var(--spacing-block-lg) var(--spacing-block-xl);
-}
-
-:is(main, article) > :is(section, header):not(:is(section, header) :is(section, header)).section--full-width {
-  padding-inline: max(10%, calc((100% - var(--max-width-all-content)) / 2));
-}
-
-:is(main, article)
-  > :is(section, header):not(.section--full-width):not(:is(section, header) :is(section, header))
-  > p {
-  max-width: var(--max-width-prose-content);
+  padding-block-start: var(--margin-block-lg);
+  padding-block-end: var(--margin-block-md);
 }
 
 :is(main, article) > section:nth-child(even):not(:is(section, header) :is(section, header)) {
@@ -33,22 +23,12 @@
 }
 
 footer {
-  padding-block-start: var(--spacing-block-md);
-  padding-bottom: 8rem;
-  padding-inline: max(10%, calc((100% - var(--max-width-all-content)) / 2));
-}
-
-.link-gallery {
-  padding-block: var(--spacing-block-md);
-}
-
-:is(.lallans-issue__contributions, .lallans-issue__contributors) ul {
-  font-size: var(--font-size-0);
-  padding-block-end: var(--spacing-block-md);
+  padding-block-start: var(--margin-block-md);
+  padding-block-end: var(--margin-block-lg);
 }
 
 nav {
-  padding-block-start: var(--spacing-block-sm);
-  padding-block-end: var(--spacing-block-md);
+  padding-block-start: var(--margin-block-sm);
+  padding-block-end: var(--margin-block-md);
   padding-inline: var(--spacing-inline-sm);
 }

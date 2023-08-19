@@ -8,6 +8,6 @@
   width: fit-content;
 }
 
-.margin-block-start-md {
-  margin-block-start: var(--spacing-block-md);
+.margin-block-start-sm {
+  margin-block-start: var(--margin-block-sm);
 }

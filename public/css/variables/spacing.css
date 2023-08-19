@@ -1,8 +1,8 @@
 :root {
-  --spacing-block-xl: 4rem;
-  --spacing-block-lg: 2rem;
-  --spacing-block-md: 1.25rem;
-  --spacing-block-sm: 0.375rem;
+  --margin-block-lg: 3rem;
+  --margin-block-md: 2rem;
+  --margin-block-sm: 1rem;
+
   --spacing-inline-lg: 5rem;
   --spacing-inline-md: 3rem;
   --spacing-inline-sm: 1.5rem;
