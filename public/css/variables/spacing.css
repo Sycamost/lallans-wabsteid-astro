@@ -7,4 +7,9 @@
   --spacing-inline-md: 3rem;
   --spacing-inline-sm: 1.5rem;
   --spacing-inline-xs: 0.5rem;
+
+  --grid-padding-start: 2.25rem;
+  --grid-column-width: 6rem;
+  --grid-gutter-width: 0.5rem;
+  --grid-column-count: 4;
 }

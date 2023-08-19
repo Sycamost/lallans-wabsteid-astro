@@ -1,0 +1,5 @@
+:root {
+  --grid-column-count: 9;
+  --grid-column-width: 5.5rem;
+  --grid-padding-start: 5.25rem;
+}
