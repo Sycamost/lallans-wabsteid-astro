@@ -1,12 +1,15 @@
 :root {
+  --margin-inline-md: 1.5rem;
   --margin-block-lg: 3rem;
   --margin-block-md: 2rem;
   --margin-block-sm: 1rem;
 
-  --spacing-inline-lg: 5rem;
-  --spacing-inline-md: 3rem;
-  --spacing-inline-sm: 1.5rem;
-  --spacing-inline-xs: 0.5rem;
+  --padding-inline-lg: 4.25rem;
+  --padding-inline-md: 2.25rem;
+  --padding-inline-sm: 0.5rem;
+  --padding-block-lg: 2.5rem;
+  --padding-block-md: 1.5rem;
+  --padding-block-sm: 0.25rem;
 
   --grid-padding-start: 2.25rem;
   --grid-column-width: 6rem;
