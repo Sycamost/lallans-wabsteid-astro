@@ -19,9 +19,9 @@ const mostRecentNewsItem = await getMostRecentNewsItem(locale);
 
 <Page title={t(tPage, { key: 'title' })}>
   <section>
-    <h2 set:html={t(tPage, { key: 'news' })} />
+    <h2 class="grid-span-6" set:html={t(tPage, { key: 'news' })} />
     {mostRecentNewsItem && <NewsPreviewLink headingLevel="h3" newsItem={mostRecentNewsItem} />}
-    <div class="align-end margin-block-start-sm">
+    <div class="grid-end margin-block-start-sm">
       <a href={`/${locale}/news`} class="btn">
         {t(tPage, { key: 'aw-news' })} ▷
       </a>

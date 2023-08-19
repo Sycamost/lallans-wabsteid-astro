@@ -1,22 +1,24 @@
 .btn {
-    color: var(--text-color);
-    border: solid 2px var(--text-color);
-    font-weight: 500;
-    text-decoration: underline;
-    padding-inline: 0.5rem;
-    padding-block: 0.25rem;
-    background-color: transparent;
-    transition:
-      background-color 300ms,
-      text-decoration-color 300ms,
-      transform 50ms;
-  }
-  
-  .btn:hover {
-    background-color: var(--background-highlight-color);
-    text-decoration-color: transparent;
-  }
-  
-  .btn:active {
-    transform: scale(1.1, 1.1);
-  }
+  display: block;
+  box-sizing: border-box;
+  color: var(--text-color);
+  border: solid 2px var(--text-color);
+  font-weight: 500;
+  text-align: center;
+  padding-inline: var(--padding-inline-md);
+  padding-block: var(--padding-block-sm);
+  background-color: transparent;
+  transition:
+    background-color 300ms,
+    text-decoration-color 300ms,
+    transform 50ms;
+}
+
+.btn:hover {
+  background-color: var(--background-highlight-color);
+  text-decoration-color: transparent;
+}
+
+.btn:active {
+  transform: scale(1.1, 1.1);
+}

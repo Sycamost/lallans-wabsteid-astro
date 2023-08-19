@@ -2,13 +2,14 @@
 import translate from '$i18n/translate';
 import tSite from '$i18n/translations/site';
 import getLocaleFromPath from '$lib/getLocaleFromPath';
+import Button from './Button.astro';
 
 const locale = getLocaleFromPath(Astro.url.pathname);
 const t = translate(locale);
 ---
 
 <footer>
-  <p class="back-to-top">
-    <a class="btn" href="#top">▴ {t(tSite, { key: 'back-to-top' })}</a>
-  </p>
+  <Button layoutClasses="grid-span-3 grid-end" href="#top">
+    ▴ {t(tSite, { key: 'back-to-top' })}
+  </Button>
 </footer>
