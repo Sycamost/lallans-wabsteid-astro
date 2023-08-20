@@ -1,2 +1,3 @@
 @import './grid.css';
+@import './grid.md.css' (min-width: 48rem);
 @import './section-margins.css';

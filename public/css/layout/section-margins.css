@@ -1,14 +1,14 @@
 :is(main, article) > :is(section, header):not(:is(section, header) :is(section, header)) {
-    padding-block-start: var(--margin-block-lg);
-    padding-block-end: var(--margin-block-md);
-  }
-  
-  footer {
-    padding-block-start: var(--margin-block-md);
-    padding-block-end: var(--margin-block-lg);
-  }
-  
-  nav {
-    padding-block-start: var(--margin-block-sm);
-    padding-block-end: var(--margin-block-md);
-  }
+  padding-block-start: var(--margin-block-lg);
+  padding-block-end: var(--margin-block-md);
+}
+
+footer {
+  padding-block-start: var(--margin-block-md);
+  padding-block-end: var(--margin-block-lg);
+}
+
+nav {
+  padding-block-start: var(--margin-block-sm);
+  padding-block-end: var(--margin-block-md);
+}
