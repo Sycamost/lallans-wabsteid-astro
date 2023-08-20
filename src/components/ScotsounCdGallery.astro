@@ -1,9 +1,14 @@
 ---
 import { getAllScotsoun } from '$data/scotsoun';
 import getLocaleFromPath from '$lib/getLocaleFromPath';
+import type Scotsoun from '$types/Scotsoun';
 
 const locale = getLocaleFromPath(Astro.url.pathname);
-const scotsoun = await getAllScotsoun();
+const scotsoun = (await getAllScotsoun()).sort(scotsounIdDescending);
+
+function scotsounIdDescending(scotsoun1: Scotsoun, scotsoun2: Scotsoun) {
+  return scotsoun2.scotsounId.localeCompare(scotsoun1.scotsounId);
+}
 ---
 
 <ul class="link-gallery link-gallery--scotsoun">
