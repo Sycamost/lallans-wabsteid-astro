@@ -1,0 +1,25 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import NewsPreviewLink from './NewsPreviewLink.astro';
+import getLocaleFromPath from '$lib/getLocaleFromPath';
+import translate from '$i18n/translate';
+import tComponent from '$i18n/translations/components/newsIndex';
+interface Props {
+  headingLevel: 'h2' | 'h3' | 'h4';
+  newsItems: CollectionEntry<'news'>[];
+}
+
+const { headingLevel, newsItems } = Astro.props;
+const locale = getLocaleFromPath(Astro.url.pathname);
+const t = translate(locale);
+---
+
+<div class="news-index">
+  {
+    newsItems.length > 0 ? (
+      newsItems.map((item) => <NewsPreviewLink headingLevel={headingLevel} newsItem={item} />)
+    ) : (
+      <p>{t(tComponent, { key: 'no-news' })}</p>
+    )
+  }
+</div>

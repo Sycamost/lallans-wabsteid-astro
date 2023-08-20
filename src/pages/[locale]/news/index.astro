@@ -5,8 +5,8 @@ import Page from '$layouts/Page.astro';
 import getLocaleFromPath from '$lib/getLocaleFromPath';
 import localeStaticPaths from '$lib/localeStaticPaths';
 import { getCollection } from 'astro:content';
-import NewsPreviewLink from '$components/NewsPreviewLink.astro';
 import { isNewsItemInLocale } from '$lib/newsUtils';
+import NewsIndex from '$components/NewsIndex/NewsIndex.astro';
 
 const allNews = await getCollection('news');
 const locale = getLocaleFromPath(Astro.url.pathname);
@@ -21,14 +21,6 @@ export async function getStaticPaths() {
 <Page title={t(tPage, { key: 'title' })}>
   <section>
     <h1>{t(tPage, { key: 'title' })}</h1>
-    <div class="news-index">
-      {
-        allNewsInLocale.length > 0 ? (
-          allNewsInLocale.map((item) => <NewsPreviewLink headingLevel="h2" newsItem={item} />)
-        ) : (
-          <p>{t(tPage, { key: 'no-news' })}</p>
-        )
-      }
-    </div>
+    <NewsIndex newsItems={allNewsInLocale} headingLevel="h2" />
   </section>
 </Page>

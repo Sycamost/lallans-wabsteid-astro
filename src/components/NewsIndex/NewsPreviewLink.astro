@@ -1,6 +1,6 @@
 ---
 import translate from '$i18n/translate';
-import tNewsPreviewLink from '$i18n/translations/components/newsPreviewLink';
+import tComponent from '$i18n/translations/components/newsIndex';
 import getLocaleFromPath from '$lib/getLocaleFromPath';
 import type { CollectionEntry } from 'astro:content';
 
@@ -21,5 +21,5 @@ const t = translate(locale);
   `}
   />
   <p>{newsItem.data.summary}</p>
-  <p class="link">{t(tNewsPreviewLink, { key: 'read-article' })}</p>
+  <p class="link">{t(tComponent, { key: 'read-article' })}</p>
 </a>

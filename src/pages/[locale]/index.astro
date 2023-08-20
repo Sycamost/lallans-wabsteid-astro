@@ -5,8 +5,8 @@ import translate from '$i18n/translate';
 import tPage from '$i18n/translations/pages/home';
 import type Locale from '$types/Locale';
 import { getMostRecentNewsItem } from '$lib/newsUtils';
-import NewsPreviewLink from '$components/NewsPreviewLink.astro';
 import contactDetails from '$data/contactDetails';
+import NewsIndex from '$components/NewsIndex/NewsIndex.astro';
 
 export async function getStaticPaths() {
   return localeStaticPaths;
@@ -20,12 +20,16 @@ const mostRecentNewsItem = await getMostRecentNewsItem(locale);
 <Page title={t(tPage, { key: 'title' })}>
   <section>
     <h2 class="grid-span-6" set:html={t(tPage, { key: 'news' })} />
-    {mostRecentNewsItem && <NewsPreviewLink headingLevel="h3" newsItem={mostRecentNewsItem} />}
-    <div class="grid-end margin-block-start-sm">
-      <a href={`/${locale}/news`} class="btn">
-        {t(tPage, { key: 'aw-news' })} ▷
-      </a>
-    </div>
+    <NewsIndex newsItems={mostRecentNewsItem ? [mostRecentNewsItem] : []} headingLevel="h3" />
+    {
+      mostRecentNewsItem && (
+        <div class="grid-span-2 grid-end margin-block-start-sm">
+          <a href={`/${locale}/news`} class="btn">
+            {t(tPage, { key: 'aw-news' })} ▷
+          </a>
+        </div>
+      )
+    }
   </section>
 
   <section>
