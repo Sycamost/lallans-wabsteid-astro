@@ -1,8 +1,14 @@
 .news-index__item {
   display: block;
+  box-sizing: border-box;
+  border: 2px solid var(--text-color);
   transition: background 100ms;
   padding-block: var(--margin-block-md);
-  padding-inline: var(--spacing-inline-sm);
+  padding-inline: var(--padding-inline-sm);
+}
+
+.news-index__item:not(:first-child) {
+  border-top-width: 0;
 }
 
 .news-index__item:hover {
