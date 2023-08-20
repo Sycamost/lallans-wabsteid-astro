@@ -18,10 +18,6 @@
   padding-block-end: var(--margin-block-md);
 }
 
-:is(main, article) > section:nth-child(even):not(:is(section, header) :is(section, header)) {
-  background-color: var(--background-color);
-}
-
 footer {
   padding-block-start: var(--margin-block-md);
   padding-block-end: var(--margin-block-lg);
