@@ -1,0 +1,13 @@
+.skip-to-content {
+  position: absolute;
+  left: var(--grid-padding-start);
+  top: -10rem;
+  opacity: 0;
+  transition: top 300ms, opacity 300ms;
+}
+
+.skip-to-content:is(:focus, :focus-visible, :focus-within) {
+  top: var(--margin-block-md);
+  opacity: 1;
+  transition: top 100ms;
+}
