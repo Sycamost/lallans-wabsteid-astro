@@ -1,53 +1,44 @@
 .link-gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--spacing-inline-sm);
+  display: grid;
+  grid-template-columns: repeat(var(--grid-column-count), var(--grid-column-width));
+  grid-auto-rows: calc(
+    var(--gallery-row-image-height) +
+    var(--margin-block-sm) +
+    var(--gallery-row-title-height)
+  );
+  gap: var(--grid-gutter-width);
   padding-block: var(--margin-block-md);
+  --gallery-item-column-span: 2;
+  --gallery-row-image-height: 12rem;
+  --gallery-row-title-height: 11ex;
+  text-align: center;
+}
+
+.link-gallery li {
+  grid-column: span var(--gallery-item-column-span);
 }
 
 .link-gallery__container {
-  display: flex;
-  flex-direction: column;
-  width: fit-content;
-  align-items: center;
-  height: fit-content;
-}
-
-.link-gallery--furthsettins {
-  --gallery-item-width: 6rem;
-  --gallery-item-height: 6rem;
-  justify-content: space-evenly;
-}
-
-.link-gallery--lallans {
-  --gallery-item-width: 9rem;
-  --gallery-item-height: auto;
-}
-
-.link-gallery--scotsoun {
-  --gallery-item-width: 8rem;
-  --gallery-item-height: 8rem;
-}
-
-.link-gallery__image {
-  max-width: var(--gallery-item-width);
-  max-height: var(--gallery-item-height);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: var(--gallery-row-image-height) var(--gallery-row-title-height);
+  row-gap: var(--margin-block-sm);
 }
 
 .link-gallery--furthsettins img {
   border-radius: 50%;
 }
 
-.link-gallery__image img {
+.link-gallery img {
   max-width: 100%;
   max-height: 100%;
+  margin: auto;
 }
 
 .link-gallery__title {
-  justify-self: end;
-  max-width: var(--gallery-item-width);
-  min-height: 11ex;
-  min-height: 3lh;
+  width: 100%;
+  height: min-content;
+  max-height: 100%;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 3;

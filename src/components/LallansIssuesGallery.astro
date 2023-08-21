@@ -11,7 +11,7 @@ function issueNumberDescending(issue1: LallansIssue, issue2: LallansIssue) {
 }
 ---
 
-<ul class="link-gallery link-gallery--lallans">
+<ul class="link-gallery">
   {
     issues.map((issue) => (
       <li>
@@ -19,9 +19,7 @@ function issueNumberDescending(issue1: LallansIssue, issue2: LallansIssue) {
           class="link link-gallery__container"
           href={`/${locale}/furthsettins/lallans/${issue.issueNumber}`}
         >
-          <div class="link-gallery__image">
-            <img src={`/images/lallans/issue${issue.issueNumber}.jpg`} />
-          </div>
+          <img src={`/images/lallans/issue${issue.issueNumber}.jpg`} />
           <p class="link-gallery__title">
             Lallans {issue.issueNumber} | {issue.issueName}
           </p>

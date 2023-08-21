@@ -11,7 +11,7 @@ function scotsounIdDescending(scotsoun1: Scotsoun, scotsoun2: Scotsoun) {
 }
 ---
 
-<ul class="link-gallery link-gallery--scotsoun">
+<ul class="link-gallery">
   {
     scotsoun.map((scotsounItem) => (
       <li>
@@ -19,9 +19,7 @@ function scotsounIdDescending(scotsoun1: Scotsoun, scotsoun2: Scotsoun) {
           class="link link-gallery__container"
           href={`/${locale}/furthsettins/scotsoun/${scotsounItem.scotsounId}`}
         >
-          <div class="link-gallery__image">
-            <img src={`/images/scotsoun/sscd${scotsounItem.scotsounId}.jpg`} />
-          </div>
+          <img src={`/images/scotsoun/sscd${scotsounItem.scotsounId}.jpg`} />
           <p class="link-gallery__title">{scotsounItem.title}</p>
         </a>
       </li>
