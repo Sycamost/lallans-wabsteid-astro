@@ -13,7 +13,7 @@
     text-underline-offset 100ms,
     border-color 100ms,
     font-weight 100ms,
-    font-size 300ms;
+    font-size 100ms;
 }
 
 .link:hover, .group-hover:hover .link, .link:focus, .link:active {
