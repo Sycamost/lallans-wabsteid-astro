@@ -23,6 +23,15 @@
 
 .nav__logo a {
   text-decoration: none;
+  border: 2px dotted transparent;
+  transition: border-color 100ms;
+}
+
+.nav__logo a:is(:focus, :focus-visible, :focus-within) {
+  box-shadow: none;
+  outline: none;
+  border-color: var(--special-text-color);
+  transition: border-color 300ms;
 }
 
 .nav__breadcrumbs {
