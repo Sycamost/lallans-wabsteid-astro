@@ -14,7 +14,9 @@
     transform 100ms;
 }
 
-.btn:hover, .btn:active {
+.btn:is(:hover, :focus, :focus-visible, :focus-within, :active) {
+  box-shadow: none;
+  outline: none;
   color: var(--text-highlight-color);
   border-color: var(--background-highlight-color);
   background-color: var(--background-highlight-color);
@@ -23,6 +25,11 @@
     background-color 300ms,
     font-weight 300ms,
     transform 300ms;
+}
+
+.btn:is(:focus, :focus-visible, :focus-within) {
+  border-color: var(--special-text-highlight-color);
+  border-style: dotted;
 }
 
 .btn:active {
