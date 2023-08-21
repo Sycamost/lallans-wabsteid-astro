@@ -9,16 +9,20 @@
   padding-block: var(--padding-block-sm);
   background-color: transparent;
   transition:
-    background-color 300ms,
-    text-decoration-color 300ms,
-    transform 50ms;
+    background-color 100ms,
+    font-weight 100ms,
+    transform 100ms;
 }
 
-.btn:hover {
+.btn:hover, .btn:active {
   color: var(--text-highlight-color);
   border-color: var(--background-highlight-color);
   background-color: var(--background-highlight-color);
-  text-decoration-color: transparent;
+  font-weight: 700;
+  transition:
+    background-color 300ms,
+    font-weight 300ms,
+    transform 300ms;
 }
 
 .btn:active {
