@@ -31,8 +31,9 @@
     font-size 300ms;
 }
 
-.link:focus {
+.link:focus, .link:focus-visible {
   box-shadow: none;
+  outline: none;
   border-color: var(--special-text-color);
 }
 
