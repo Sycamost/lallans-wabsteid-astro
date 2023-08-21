@@ -12,6 +12,12 @@
 }
 
 .news-index__item:hover {
+  color: var(--text-highlight-color);
+  border-color: var(--background-highlight-color);
   background: var(--background-highlight-color);
   transition-duration: 300ms;
+}
+
+.news-index__item:hover .link {
+  color: var(--special-text-highlight-color);
 }
