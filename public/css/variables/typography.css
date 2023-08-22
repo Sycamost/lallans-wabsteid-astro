@@ -1,11 +1,12 @@
 :root {
-  --font-size-0: 0.875rem;
-  --font-size-1: 1.125rem;
-  --font-size-2: 1.500rem;
-  --font-size-3: 2.000rem;
-  --font-size-4: 2.667rem;
-  --font-size-5: 3.375rem;
-  --font-size-6: 4.000rem;
+  --font-size-relative-px: 0.067rem;
+  --font-size-0: calc(14 * var(--font-size-relative-px));
+  --font-size-1: calc(18 * var(--font-size-relative-px));
+  --font-size-2: calc(24 * var(--font-size-relative-px));
+  --font-size-3: calc(32 * var(--font-size-relative-px));
+  --font-size-4: calc(40 * var(--font-size-relative-px));
+  --font-size-5: calc(52 * var(--font-size-relative-px));
+  --font-size-6: calc(64 * var(--font-size-relative-px));
 
   --font-serif: Alegreya, 'Goudy Old Style', Garamond, serif;
   --font-sans-serif: 'Alegreya Sans', Lato, Calibri, 'sans-serif';
