@@ -35,7 +35,7 @@ const mostRecentNewsItem = await getMostRecentNewsItem(locale);
   <section>
     <h2 set:html={t(tPage, { key: 'furthsettins' })} />
     <p set:html={t(tPage, { key: 'furthsettins-para' })} />
-    <div class="align-end margin-block-start-sm">
+    <div class="grid-span-3 grid-end margin-block-start-sm">
       <a href={`/${locale}/furthsettins`} class="btn">
         {t(tPage, { key: 'aw-furthsettins' })} ▷
       </a>
