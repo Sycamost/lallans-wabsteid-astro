@@ -1,0 +1,6 @@
+.grid-span-prose {
+    width: calc(
+      var(--grid-column-width) * min(8, var(--grid-column-count)) +
+      var(--grid-gutter-width) * min(7, (var(--grid-column-count) - 1))
+    );
+  }
