@@ -5,6 +5,7 @@
   transition: background 100ms;
   padding-block: var(--margin-block-md);
   padding-inline: var(--padding-inline-sm);
+  width: var(--width-prose);
 }
 
 .news-index__item:not(:first-child) {

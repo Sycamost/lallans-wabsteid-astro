@@ -8,6 +8,7 @@ import { getMostRecentNewsItem } from '$lib/newsUtils';
 import contactDetails from '$data/contactDetails';
 import NewsIndex from '$components/NewsIndex/NewsIndex.astro';
 import committee from '$data/committee';
+import Button from '$components/Button.astro';
 
 export async function getStaticPaths() {
   return localeStaticPaths;
@@ -24,11 +25,9 @@ const mostRecentNewsItem = await getMostRecentNewsItem(locale);
     <NewsIndex newsItems={mostRecentNewsItem ? [mostRecentNewsItem] : []} headingLevel="h3" />
     {
       mostRecentNewsItem && (
-        <div class="grid-span-3 grid-end margin-block-start-sm">
-          <a href={`/${locale}/news`} class="btn">
-            {t(tPage, { key: 'aw-news' })} ▶
-          </a>
-        </div>
+        <Button layoutClasses="grid-span-3 grid-prose-end" href={`/${locale}/news`}>
+          {t(tPage, { key: 'aw-news' })} ▶
+        </Button>
       )
     }
   </section>
@@ -63,11 +62,9 @@ const mostRecentNewsItem = await getMostRecentNewsItem(locale);
   <section>
     <h2 set:html={t(tPage, { key: 'furthsettins' })} />
     <p set:html={t(tPage, { key: 'furthsettins-para' })} />
-    <div class="grid-span-3 grid-end margin-block-start-sm">
-      <a href={`/${locale}/furthsettins`} class="btn">
-        {t(tPage, { key: 'aw-furthsettins' })} ▶
-      </a>
-    </div>
+    <Button layoutClasses="grid-span-3 grid-prose-end" href={`/${locale}/furthsettins`}>
+      {t(tPage, { key: 'aw-furthsettins' })} ▶
+    </Button>
   </section>
 
   <section id="jyne">

@@ -1,7 +1,7 @@
 ---
 import type Digit from '$types/Digit';
 
-type LayoutClasses = `grid-span-${Digit}` | `grid-span-${Digit} grid-end`;
+type LayoutClasses = `grid-span-${Digit}${'' | ' grid-end' | ' grid-prose-end'}`;
 
 interface Props {
   href: string;

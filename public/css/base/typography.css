@@ -61,3 +61,7 @@ h4 {
 p:not(:first-child) {
   margin-block-start: var(--margin-block-sm);
 }
+
+:is(p, h1, h2, h3, h4) {
+  max-width: var(--width-prose);
+}

@@ -64,3 +64,27 @@
   );
   margin-inline-end: 0;
 }
+
+.grid-span-1.grid-prose-end {
+  margin-inline-start: calc(
+    var(--grid-column-width) * (var(--grid-prose-column-count) - 1) +
+    var(--grid-gutter-width) * (var(--grid-prose-column-count) - 1)
+  );
+  margin-inline-end: 0;
+}
+
+.grid-span-2.grid-prose-end {
+  margin-inline-start: calc(
+    var(--grid-column-width) * (var(--grid-prose-column-count) - 2) +
+    var(--grid-gutter-width) * (var(--grid-prose-column-count) - 2)
+  );
+  margin-inline-end: 0;
+}
+
+.grid-span-3.grid-prose-end {
+  margin-inline-start: calc(
+    var(--grid-column-width) * (var(--grid-prose-column-count) - 3) +
+    var(--grid-gutter-width) * (var(--grid-prose-column-count) - 3)
+  );
+  margin-inline-end: 0;
+}

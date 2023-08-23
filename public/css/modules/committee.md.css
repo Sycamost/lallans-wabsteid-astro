@@ -12,5 +12,5 @@
 }
 
 .committee__member__text {
-  grid-column: 3 / min(9, calc(var(--grid-column-count) + 1));
+  grid-column: 3 / calc(3 + var(--grid-prose-column-count) - 2);
 }
