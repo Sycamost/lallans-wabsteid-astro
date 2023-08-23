@@ -5,3 +5,11 @@
   padding-inline: max(10%, calc((100% - var(--max-width-all-content)) / 2));
   gap: var(--spacing-inline-xs);
 }
+
+.nav__nav-links li:nth-child(4) {
+  grid-column: 8 / 10;
+}
+
+.nav__nav-links li:nth-child(5) {
+  grid-column: 10 / 12;
+}

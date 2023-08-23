@@ -158,8 +158,8 @@ const tPage = {
     `,
   },
   contact: {
-    sco: () => 'Contact us',
-    'en-GB': () => 'Contact us',
+    sco: () => 'Contact',
+    'en-GB': () => 'Contact',
   },
 };
 
