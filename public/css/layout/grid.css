@@ -3,7 +3,7 @@
   footer,
   nav,
   :is(main, article) > section:not(:is(section, header) :is(section, header))
-) {
+):not(.section--full-width) {
   padding-inline: calc(0.5 * (
     100vw - (var(--grid-padding-start) + (
       var(--grid-column-width) * var(--grid-column-count) +
