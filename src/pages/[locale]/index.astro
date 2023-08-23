@@ -7,6 +7,7 @@ import type Locale from '$types/Locale';
 import { getMostRecentNewsItem } from '$lib/newsUtils';
 import contactDetails from '$data/contactDetails';
 import NewsIndex from '$components/NewsIndex/NewsIndex.astro';
+import committee from '$data/committee';
 
 export async function getStaticPaths() {
   return localeStaticPaths;
@@ -30,6 +31,33 @@ const mostRecentNewsItem = await getMostRecentNewsItem(locale);
         </div>
       )
     }
+  </section>
+
+  <section id="about">
+    <h2 set:html={t(tPage, { key: 'about-us' })} />
+    <p set:html={t(tPage, { key: 'about-us-para-1' })} />
+    <p set:html={t(tPage, { key: 'about-us-para-2' })} />
+    <p set:html={t(tPage, { key: 'about-us-para-3' })} />
+    <h3 set:html={t(tPage, { key: 'meet-the-commattee' })} />
+    <ul>
+      {
+        committee.map((member) => (
+          <li class="committee__member">
+            {member.imgSrc && (
+              <img
+                class="committee__member__img"
+                src={member.imgSrc}
+                alt={`A photo of ${member.name}`}
+              />
+            )}
+            <div class="committee__member__text">
+              <h4>{member.name}</h4>
+              <p set:html={member.bio[locale]} />
+            </div>
+          </li>
+        ))
+      }
+    </ul>
   </section>
 
   <section>
