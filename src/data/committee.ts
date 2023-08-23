@@ -19,6 +19,46 @@ const committee: CommitteeMember[] = [
     },
     imgSrc: '/images/commattee/joe-carstairs.jpg',
   },
+  {
+    name: 'Tony Beekman',
+    roles: [],
+  },
+  {
+    name: 'David Bleiman',
+    roles: [],
+  },
+  {
+    name: 'Michael Everson',
+    roles: [],
+  },
+  {
+    name: 'Wullie Hershaw',
+    roles: [],
+  },
+  {
+    name: 'Derrick McClure',
+    roles: [],
+  },
+  {
+    name: 'Elaine Morton',
+    roles: [],
+  },
+  {
+    name: 'Colin Robertson',
+    roles: [],
+  },
+  {
+    name: 'Jack Stuart',
+    roles: [],
+  },
+  {
+    name: 'George T Watt',
+    roles: [CommitteeRole.MemmershipSecretar],
+  },
+  {
+    name: 'Rab Wilson',
+    roles: [],
+  },
 ];
 
 export default committee;
