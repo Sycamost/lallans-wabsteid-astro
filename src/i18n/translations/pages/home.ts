@@ -134,10 +134,10 @@ const tPage = {
   },
   'hou-jyne-para-1': {
     sco: () => `
-      Fur individuals, memmership costs £20 per annum. Fur aw ithers, the stent is £25 per annum.
+      Fur individuals, memmership costs £20 per annum. Fur institutions, the stent is £25 per annum.
     `,
     'en-GB': () => `
-      For individuals, membership costs £20 per annum. For all others, the fee is £25 per annum.
+      For individuals, membership costs £20 per annum. For institutions, the fee is £25 per annum.
     `,
   },
   'hou-jyne-para-2': {
