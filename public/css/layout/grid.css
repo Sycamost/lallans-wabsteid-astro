@@ -30,11 +30,8 @@
   width: calc(var(--grid-column-width) * 3 + var(--grid-gutter-width) * 2);
 }
 
-.grid-span-prose {
-  width: calc(
-    var(--grid-column-width) * min(6, var(--grid-column-count)) +
-    var(--grid-gutter-width) * min(5, (var(--grid-column-count) - 1))
-  );
+.width-prose {
+  width: var(--prose-width);
 }
 
 .grid-span-full {

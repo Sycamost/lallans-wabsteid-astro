@@ -23,6 +23,10 @@
   --relative-eighth-rem: calc(
     var(--grid-total-width) / var(--grid-total-relative-eighth-rem-width)
   );
+  --width-prose: calc(
+    var(--grid-column-width) * min(6, var(--grid-column-count)) +
+    var(--grid-gutter-width) * min(5, (var(--grid-column-count) - 1))
+  );
 
   --grid-column-width-relative-eighth-rem: 32;
   --grid-gutter-width-relative-eighth-rem: 4;

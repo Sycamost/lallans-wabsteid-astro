@@ -2,4 +2,8 @@
   --grid-total-width: 80rem;
   --grid-padding-start-relative-eighth-rem: 26;
   --grid-column-count: 12;
+  --width-prose: calc(
+    var(--grid-column-width) * min(8, var(--grid-column-count)) +
+    var(--grid-gutter-width) * min(7, (var(--grid-column-count) - 1))
+  );
 }
