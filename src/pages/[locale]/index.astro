@@ -52,10 +52,12 @@ const mostRecentNewsItem = await getMostRecentNewsItem(locale);
               />
             )}
             <div class="committee__member__text">
-              <h4>{member.name}</h4>
-              <p class="italic">
-                {member.roles.map((role) => t(tRole, { key: CommitteeRole[role] })).join(', ')}
-              </p>
+              <h4>
+                {member.name}
+                <span class="font-weight-lighter">
+                  |{member.roles.map((role) => t(tRole, { key: CommitteeRole[role] })).join(', ')}
+                </span>
+              </h4>
               {member.bio && <p set:html={member.bio[locale]} />}
             </div>
           </li>
