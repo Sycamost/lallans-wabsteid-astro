@@ -17,6 +17,7 @@ const committee: CommitteeMember[] = [
         He is from Perth but now lives in Edinburgh, where he lived since 2018.
       `,
     },
+    imgSrc: '/images/commattee/joe-carstairs.jpg',
   },
 ];
 
