@@ -1,26 +1,33 @@
 import type { TranslationsDictionary } from '$types/TranslationsDictionary';
-import CommitteeRole from 'enums/CommitteeRole';
 
 const tEnum = {
-  [CommitteeRole.Preses]: {
+  Preses: {
     sco: () => 'Preses',
     'en-GB': () => 'President',
   },
-  [CommitteeRole.Secretar]: {
+  Secretar: {
     sco: () => 'Secretar',
-    'en-GB': () => 'Secretar',
+    'en-GB': () => 'Secretary',
   },
-  [CommitteeRole.Thesaurer]: {
+  Thesaurer: {
     sco: () => 'Thesaurer',
     'en-GB': () => 'Treasurer',
   },
-  [CommitteeRole.Wabmaister]: {
+  MemmershipSecretar: {
+    sco: () => 'Memmership Secretar',
+    'en-GB': () => 'Membership Secretary',
+  },
+  Wabmaister: {
     sco: () => 'Wabmaister',
     'en-GB': () => 'Webmaster',
   },
-  [CommitteeRole.LallansEiditor]: {
+  LallansEiditor: {
     sco: () => 'Lallans Eiditor',
     'en-GB': () => 'Lallans Editor',
+  },
+  HonoraryPreses: {
+    sco: () => 'Honorary Preses',
+    'en-GB': () => 'Honorary President',
   },
 };
 

@@ -1,4 +1,4 @@
-import type CommitteeRole from 'enums/CommitteeRole';
+import type CommitteeRole from '$enums/CommitteeRole';
 import type Locale from './Locale';
 
 type CommitteeMember = {

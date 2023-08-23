@@ -1,5 +1,5 @@
 import type { CommitteeMember } from '$types/CommitteeMember';
-import CommitteeRole from 'enums/CommitteeRole';
+import CommitteeRole from '$enums/CommitteeRole';
 
 const committee: CommitteeMember[] = [
   {

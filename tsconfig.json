@@ -5,6 +5,7 @@
     "paths": {
       "$components/*": ["./components/*"],
       "$data/*": ["./data/*"],
+      "$enums/*": ["./enums/*"],
       "$i18n/*": ["./i18n/*"],
       "$layouts/*": ["./layouts/*"],
       "$lib/*": ["./lib/*"],
