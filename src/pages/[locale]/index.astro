@@ -51,7 +51,7 @@ const mostRecentNewsItem = await getMostRecentNewsItem(locale);
             )}
             <div class="committee__member__text">
               <h4>{member.name}</h4>
-              <p set:html={member.bio[locale]} />
+              {member.bio && <p set:html={member.bio[locale]} />}
             </div>
           </li>
         ))
