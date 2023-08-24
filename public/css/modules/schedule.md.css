@@ -1,0 +1,16 @@
+.schedule {
+  display: grid;
+  grid-template-columns: repeat(var(--grid-column-count), var(--grid-column-width));
+  column-gap: var(--grid-gutter-width);
+}
+
+.schedule dt {
+  grid-column: 1 / 3;
+  margin: 0;
+  text-align: end;
+}
+
+.schedule dd {
+  grid-column: 3 / calc(1 + var(--grid-prose-column-count));
+  text-align: start;
+}
