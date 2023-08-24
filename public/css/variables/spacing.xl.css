@@ -1,6 +1,6 @@
 :root {
   --grid-total-width: 80rem;
-  --grid-padding-start-relative-eighth-rem: 26;
+  --grid-padding-relative-eighth-rem: 26;
   --grid-column-count: 12;
   --grid-prose-column-count: 8;
   --width-prose: calc(

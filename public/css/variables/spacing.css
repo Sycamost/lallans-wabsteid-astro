@@ -11,12 +11,12 @@
   --padding-block-md: calc(8 * var(--relative-eighth-rem));
   --padding-block-sm: calc(5 * var(--relative-eighth-rem));
 
-  --grid-padding-start: calc(var(--grid-padding-start-relative-eighth-rem) * var(--relative-eighth-rem));
+  --grid-padding: calc(var(--grid-padding-relative-eighth-rem) * var(--relative-eighth-rem));
   --grid-column-width: calc(var(--grid-column-width-relative-eighth-rem) * var(--relative-eighth-rem));
   --grid-gutter-width: calc(var(--grid-gutter-width-relative-eighth-rem) * var(--relative-eighth-rem));
   
   --grid-total-relative-eighth-rem-width: calc(
-    var(--grid-padding-start-relative-eighth-rem) * 2 +
+    var(--grid-padding-relative-eighth-rem) * 2 +
     var(--grid-column-width-relative-eighth-rem) * var(--grid-column-count) + 
     var(--grid-gutter-width-relative-eighth-rem) * (var(--grid-column-count) - 1)
   );
@@ -34,7 +34,7 @@
   /* small screens */
 
   --grid-total-width: 30rem;
-  --grid-padding-start-relative-eighth-rem: 12;
+  --grid-padding-relative-eighth-rem: 12;
   --grid-column-count: 4;
   --grid-prose-column-count: 4;
 }
