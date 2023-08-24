@@ -45,7 +45,7 @@
 
 .nav__logo a {
   text-decoration: none;
-  border: 2px dotted transparent;
+  border: var(--relative-eighth-rem) dotted transparent;
   transition: border-color 100ms;
 }
 
