@@ -1,8 +1,0 @@
-@import 'colours.css';
-@import 'spacing.css';
-@import 'spacing.md.css' (min-width: 48rem);
-@import 'spacing.lg.css' (min-width: 64rem);
-@import 'spacing.xl.css' (min-width: 96rem);
-@import 'spacing.xxl.css' (min-width: 120rem);
-@import 'typography.css';
-@import 'layout.css';
