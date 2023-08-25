@@ -1,5 +1,6 @@
 @import 'colours.css';
 @import 'spacing.css';
+@import 'spacing.sm.css' (min-width: 30rem);
 @import 'spacing.md.css' (min-width: 48rem);
 @import 'spacing.lg.css' (min-width: 64rem);
 @import 'spacing.xl.css' (min-width: 96rem);
