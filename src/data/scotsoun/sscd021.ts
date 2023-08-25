@@ -8,6 +8,7 @@ const cd: Scotsoun = {
   cdCount: 1,
   price: '11.00',
   scotsounId: '021',
+  uploadDate: '2023-08-25',
   trackList: ['Of the Day Estivall by Alexander Hume', 'Boyd Sonet by Mark Alexander'],
 };
 

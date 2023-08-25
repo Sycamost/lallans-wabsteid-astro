@@ -8,6 +8,7 @@ const cd: Scotsoun = {
   cdCount: 2,
   price: '18.00',
   scotsounId: '051',
+  uploadDate: '2023-08-25',
   trackList: [
     'Intro to The Marrow Ballad',
     'The Marrow Ballad',

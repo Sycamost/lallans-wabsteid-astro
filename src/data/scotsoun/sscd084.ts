@@ -8,6 +8,7 @@ const cd: Scotsoun = {
   cdCount: 1,
   price: '11.00',
   scotsounId: '084',
+  uploadDate: '2023-08-25',
   description: {
     sco: `
       ‘Gleg’  wis wrocht ti gie bairns an innin til Scots in the wee schuils - the accompanyin

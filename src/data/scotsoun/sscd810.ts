@@ -7,6 +7,7 @@ const cd: Scotsoun = {
   cdCount: 2,
   price: '18.00',
   scotsounId: '810',
+  uploadDate: '2023-08-25',
   description: {
     sco: `
       Scotsoun wad fain say their thanks til Doug Ring that made the oreiginal recordins, an til

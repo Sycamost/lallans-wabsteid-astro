@@ -7,6 +7,7 @@ const cd: Scotsoun = {
   cdCount: 1,
   price: '11.00',
   scotsounId: '120',
+  uploadDate: '2023-08-25',
   trackList: ['Scots Language Features', 'Literary Features'],
 };
 

@@ -8,6 +8,7 @@ const cd: Scotsoun = {
   cdCount: 8,
   price: '25.00',
   scotsounId: '087',
+  uploadDate: '2023-08-25',
   trackList: [
     'after Ode 9, Book 1',
     'Ode 11, Book 1',

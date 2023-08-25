@@ -7,6 +7,7 @@ const cd: Scotsoun = {
   cdCount: 1,
   price: '11.00',
   scotsounId: '003',
+  uploadDate: '2023-08-25',
   description: {
     sco: 'Readins bi the Rev James Currie recordit at the Dunlop Manse durin 1974.',
     'en-GB': 'Readings by the Rev James Currie recorded at the Dunlop Manse during 1974.',

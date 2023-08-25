@@ -8,6 +8,7 @@ const cd: Scotsoun = {
   cdCount: 1,
   price: '11.00',
   scotsounId: '069',
+  uploadDate: '2023-08-25',
   trackList: ['Generations of Change', 'End of Johnie Brand’s Prologue to Brand the Builder'],
 };
 

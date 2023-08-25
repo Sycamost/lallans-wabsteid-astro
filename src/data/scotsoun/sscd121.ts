@@ -8,6 +8,7 @@ const cd: Scotsoun = {
   cdCount: 1,
   price: '11.00',
   scotsounId: '121',
+  uploadDate: '2023-08-25',
   description: {
     sco: `
       In Mey 1977, Renni McOwan arranged fur the Stirlin an Glesga memmers o the National Trust

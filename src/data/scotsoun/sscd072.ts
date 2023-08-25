@@ -8,6 +8,7 @@ const cd: Scotsoun = {
   cdCount: 1,
   price: '11.00',
   scotsounId: '072',
+  uploadDate: '2023-08-25',
   trackList: [
     'Echo in Scots (from Dain do Eimhir iii: Turmoil)',
     'A’Chorra-ghritheach',

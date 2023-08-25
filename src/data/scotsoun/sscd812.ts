@@ -8,6 +8,7 @@ const cd: Scotsoun = {
   cdCount: 1,
   price: '11.00',
   scotsounId: '812',
+  uploadDate: '2023-08-25',
   trackList: [
     'Leddy Stair’s Closse',
     'Ode til Lord Monboddo',

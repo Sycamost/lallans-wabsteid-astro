@@ -9,6 +9,8 @@ import tFeed from '$i18n/translations/pages/rss.xml';
 import type LallansIssue from '$types/LallansIssue';
 import type Locale from '$types/Locale';
 import { getAllLallansIssues } from '$data/lallans';
+import type Scotsoun from '$types/Scotsoun';
+import { getAllScotsoun } from '$data/scotsoun';
 
 export async function get(context: APIContext) {
   const locale = getLocaleFromPath(context.url.pathname);
@@ -20,12 +22,17 @@ export async function get(context: APIContext) {
 
   const news = (await getCollection('news')).filter((item) => isNewsItemInLocale(item, locale));
   const lallans = await getAllLallansIssues();
+  const scotsoun = await getAllScotsoun();
 
   return rss({
     title: t(tFeed, { key: 'title' }),
     description: t(tFeed, { key: 'description' }),
     site,
-    items: [...news.map(newsItemToRssFeedItem), ...lallans.map(lallansIssueToRssFeedItem(locale))],
+    items: [
+      ...news.map(newsItemToRssFeedItem),
+      ...lallans.map(lallansIssueToRssFeedItem(locale)),
+      ...scotsoun.map(scotsounReleaseToRssFeedItem(locale)),
+    ],
     customData: `<language>${locale}</language>`,
   });
 }
@@ -51,6 +58,17 @@ function lallansIssueToRssFeedItem(locale: Locale) {
       title: issue.issueName,
       description: issue.description[locale],
       pubDate: new Date(issue.uploadDate),
+    };
+  };
+}
+
+function scotsounReleaseToRssFeedItem(locale: Locale) {
+  return function (release: Scotsoun): RSSFeedItem {
+    return {
+      link: `/${locale}/furthsettins/scotsoun/${release.scotsounId}`,
+      title: release.title,
+      description: release.description?.[locale] ?? release.longName,
+      pubDate: new Date(release.uploadDate),
     };
   };
 }

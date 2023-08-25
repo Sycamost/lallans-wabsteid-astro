@@ -8,6 +8,7 @@ const cd: Scotsoun = {
   cdCount: 1,
   price: '11.00',
   scotsounId: '061',
+  uploadDate: '2023-08-25',
   trackList: [
     'Heard in the Cougate',
     'Fi’baw in the street',

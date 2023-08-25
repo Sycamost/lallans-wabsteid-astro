@@ -8,6 +8,7 @@ const cd: Scotsoun = {
   cdCount: 1,
   price: '11.00',
   scotsounId: '022',
+  uploadDate: '2023-08-25',
   trackList: ['The Miller’s Tale', 'The Marriage of Robin Redbreast'],
 };
 

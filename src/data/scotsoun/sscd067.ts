@@ -8,6 +8,7 @@ const cd: Scotsoun = {
   cdCount: 1,
   price: '11.00',
   scotsounId: '067',
+  uploadDate: '2023-08-25',
   trackList: ['Scots wha hae', 'Auld lang syne'],
 };
 

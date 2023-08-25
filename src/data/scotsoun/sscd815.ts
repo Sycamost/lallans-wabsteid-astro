@@ -7,6 +7,7 @@ const cd: Scotsoun = {
   cdCount: 2,
   price: '18.00',
   scotsounId: '815',
+  uploadDate: '2023-08-25',
   coverArtist: 'Mary an David Hershaw',
   releaseDate: '2020-06-24',
   trackList: ['Daft Laddie in the Wuids', 'Daftboy Suite (Instrumental)'],

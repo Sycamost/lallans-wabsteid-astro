@@ -8,6 +8,7 @@ const cd: Scotsoun = {
   cdCount: 3,
   price: '25.00',
   scotsounId: '018',
+  uploadDate: '2023-08-25',
   trackList: [
     'The Taill of the Uponlandis Mous and the Burges Mous',
     'The Taill of the Paddok and the Mous',

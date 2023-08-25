@@ -7,6 +7,7 @@ const cd: Scotsoun = {
   cdCount: 1,
   price: '11.00',
   scotsounId: '015',
+  uploadDate: '2023-08-25',
   trackList: [
     'Intro to O Ye who Taste',
     'O Ye who Taste',

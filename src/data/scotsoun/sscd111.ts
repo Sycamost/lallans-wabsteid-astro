@@ -7,6 +7,7 @@ const cd: Scotsoun = {
   cdCount: 1,
   price: '11.00',
   scotsounId: '111',
+  uploadDate: '2023-08-25',
   trackList: ['Brockit an The Berries', 'Brockit The Hero'],
   description: {
     sco: `

@@ -7,6 +7,7 @@ const cd: Scotsoun = {
   cdCount: 2,
   price: '18.00',
   scotsounId: '092',
+  uploadDate: '2023-08-25',
   trackList: [
     'Report to Erigena',
     'Morning walk',

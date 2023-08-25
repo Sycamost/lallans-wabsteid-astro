@@ -7,6 +7,7 @@ const cd: Scotsoun = {
   cdCount: 1,
   price: '11.00',
   scotsounId: '065',
+  uploadDate: '2023-08-25',
   trackList: ['MacIntosh’s Banner', 'Mr Alex MacLean of Lurebost / Delvinside / Dolina MacKay'],
 };
 

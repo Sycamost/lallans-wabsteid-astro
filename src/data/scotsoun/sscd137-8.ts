@@ -8,6 +8,7 @@ const cd: Scotsoun = {
   cdCount: 4,
   price: '28.00',
   scotsounId: '137-8',
+  uploadDate: '2023-08-25',
   trackList: [
     'Skinheads at Auschwitz, Easter 1996',
     'Ban Polaris, Halleluia',

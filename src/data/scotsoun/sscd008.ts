@@ -8,6 +8,7 @@ const cd: Scotsoun = {
   cdCount: 2,
   price: '18.00',
   scotsounId: '008',
+  uploadDate: '2023-08-25',
   trackList: ['To a Louse', 'Epistle to a Young Friend'],
 };
 

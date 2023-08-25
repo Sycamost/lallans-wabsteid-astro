@@ -8,6 +8,7 @@ const cd: Scotsoun = {
   cdCount: 2,
   price: '18.00',
   scotsounId: '099',
+  uploadDate: '2023-08-25',
   trackList: [
     'Guestless Howff',
     'Dain do Eimhir XLIII: Were ’t no for Ye',

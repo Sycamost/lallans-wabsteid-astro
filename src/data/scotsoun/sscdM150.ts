@@ -7,6 +7,7 @@ const cd: Scotsoun = {
   cdCount: 3,
   price: '25.00',
   scotsounId: 'M150',
+  uploadDate: '2023-08-25',
 };
 
 export default cd;

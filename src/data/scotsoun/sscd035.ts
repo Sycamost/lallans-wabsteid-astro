@@ -8,6 +8,7 @@ const cd: Scotsoun = {
   cdCount: 3,
   price: '25.00',
   scotsounId: '035',
+  uploadDate: '2023-08-25',
   trackList: [
     'The Holy Fair',
     'Death and Doctor Hornbook',

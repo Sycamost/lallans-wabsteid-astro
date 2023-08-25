@@ -7,6 +7,7 @@ const cd: Scotsoun = {
   cdCount: 1,
   price: '11.00',
   scotsounId: '071',
+  uploadDate: '2023-08-25',
   trackList: ['Ye Heilan Chiels Andy Hunter', 'The Battle o Harlaw (Traditional)'],
 };
 

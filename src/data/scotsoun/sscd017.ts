@@ -7,6 +7,7 @@ const cd: Scotsoun = {
   cdCount: 1,
   price: '11.00',
   scotsounId: '017',
+  uploadDate: '2023-08-25',
   description: {
     sco: 'Thir stories wis else broadcast on Scottish Television unner the same title.',
     'en-GB': 'These stories were previously broadcast on Scottish Television under the same title.',

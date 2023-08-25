@@ -16,6 +16,7 @@ type Scotsoun = {
   coverArtist?: string;
   trackList?: string[];
   releaseDate?: Date;
+  uploadDate: Date;
 };
 
 export default Scotsoun;

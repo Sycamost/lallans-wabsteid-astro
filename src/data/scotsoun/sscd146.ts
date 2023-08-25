@@ -7,6 +7,7 @@ const cd: Scotsoun = {
   cdCount: 1,
   price: '11.00',
   scotsounId: '146',
+  uploadDate: '2023-08-25',
   trackList: [
     'Beloved Scotland (The Lost Pibroch)',
     'Structure of the Pibroch: illustrated on the chanter by W McCallum',

@@ -8,6 +8,7 @@ const cd: Scotsoun = {
   cdCount: 2,
   price: '18.00',
   scotsounId: '020',
+  uploadDate: '2023-08-25',
   trackList: ['The Tretis of the Tua Mariit Wemen and the Wedo', 'Remonstrance to the King'],
 };
 

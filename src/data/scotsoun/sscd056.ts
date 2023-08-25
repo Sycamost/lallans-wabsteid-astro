@@ -8,6 +8,7 @@ const cd: Scotsoun = {
   cdCount: 2,
   price: '18.00',
   scotsounId: '056',
+  uploadDate: '2023-08-25',
   trackList: [
     'The Three Craws',
     'It wasna his Wyte',

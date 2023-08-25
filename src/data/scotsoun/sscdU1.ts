@@ -7,6 +7,7 @@ const cd: Scotsoun = {
   cdCount: 1,
   price: '6.00',
   scotsounId: 'U1',
+  uploadDate: '2023-08-25',
   description: {
     sco: 'As featured on BBC Radio Ulster’s ‘A Kist o Words’.',
     'en-GB': 'As featured on BBC Radio Ulster’s ‘A Kist o Words’.',

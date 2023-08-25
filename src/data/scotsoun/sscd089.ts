@@ -8,6 +8,7 @@ const cd: Scotsoun = {
   cdCount: 8,
   price: '18.00',
   scotsounId: '089',
+  uploadDate: '2023-08-25',
   trackList: [
     'Wild Hairst Making Tracks',
     'Mr & Mrs Absentee Landlord Despatches Home',
