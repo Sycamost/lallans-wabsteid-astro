@@ -2,6 +2,7 @@
 import Footer from '$components/Footer.astro';
 import Navbar from '$components/Navbar/Navbar.astro';
 import translate from '$i18n/translate';
+import tFeed from '$i18n/translations/pages/rss.xml';
 import site from '$i18n/translations/site';
 import getLocaleFromPath from '$lib/getLocaleFromPath';
 
@@ -24,6 +25,12 @@ const t = translate(locale);
     <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="stylesheet" href="/normalize.css" />
     <link rel="stylesheet" href="/main.css" />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title={t(tFeed, { key: 'title' })}
+      href={`/${locale}/rss.xml`}
+    />
     <meta name="generator" content={Astro.generator} />
     <title>{title} | {t(site, { key: 'title' })}</title>
   </head>
