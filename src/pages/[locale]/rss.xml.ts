@@ -26,6 +26,7 @@ export async function get(context: APIContext) {
 
   return rss({
     title: t(tFeed, { key: 'title' }),
+    xmlns: { atom: 'http://www.w3.org/2005/Atom' },
     description: t(tFeed, { key: 'description' }),
     site,
     items: [
@@ -33,7 +34,10 @@ export async function get(context: APIContext) {
       ...lallans.map(lallansIssueToRssFeedItem(locale)),
       ...scotsoun.map(scotsounReleaseToRssFeedItem(locale)),
     ],
-    customData: `<language>${locale}</language>`,
+    customData: `
+      <language>${locale}</language>
+      <atom:link href="${site}${locale}/rss.xml" rel="self" type="application/rss+xml" />
+    `,
   });
 }
 
