@@ -59,7 +59,7 @@ function lallansIssueToRssFeedItem(locale: Locale) {
   return function (issue: LallansIssue): RSSFeedItem {
     return {
       link: `/${locale}/furthsettins/lallans/${issue.issueNumber}`,
-      title: issue.issueName,
+      title: `Lallans ${issue.issueNumber}: ${issue.issueName}`,
       description: issue.description[locale],
       pubDate: new Date(issue.uploadDate),
     };
@@ -70,7 +70,7 @@ function scotsounReleaseToRssFeedItem(locale: Locale) {
   return function (release: Scotsoun): RSSFeedItem {
     return {
       link: `/${locale}/furthsettins/scotsoun/${release.scotsounId}`,
-      title: release.title,
+      title: `Scotsoun SSCD${release.scotsounId}: ${release.title}`,
       description: release.description?.[locale] ?? release.longName,
       pubDate: new Date(release.uploadDate),
     };
