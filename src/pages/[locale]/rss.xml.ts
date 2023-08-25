@@ -6,21 +6,26 @@ import getLocaleFromPath from '$lib/getLocaleFromPath';
 import type { APIContext } from 'astro';
 import translate from '$i18n/translate';
 import tFeed from '$i18n/translations/pages/rss.xml';
+import type LallansIssue from '$types/LallansIssue';
+import type Locale from '$types/Locale';
+import { getAllLallansIssues } from '$data/lallans';
 
 export async function get(context: APIContext) {
   const locale = getLocaleFromPath(context.url.pathname);
   const t = translate(locale);
-  const news = (await getCollection('news')).filter((item) => isNewsItemInLocale(item, locale));
   const site = context.site;
   if (!site) {
     throw new Error('No site provided in Astro configuration');
   }
 
+  const news = (await getCollection('news')).filter((item) => isNewsItemInLocale(item, locale));
+  const lallans = await getAllLallansIssues();
+
   return rss({
     title: t(tFeed, { key: 'title' }),
     description: t(tFeed, { key: 'description' }),
     site,
-    items: news.map(newsItemToRssFeedItem),
+    items: [...news.map(newsItemToRssFeedItem), ...lallans.map(lallansIssueToRssFeedItem(locale))],
     customData: `<language>${locale}</language>`,
   });
 }
@@ -36,6 +41,17 @@ function newsItemToRssFeedItem(item: CollectionEntry<'news'>): RSSFeedItem {
     title: item.data.title,
     description: item.data.summary,
     pubDate,
+  };
+}
+
+function lallansIssueToRssFeedItem(locale: Locale) {
+  return function (issue: LallansIssue): RSSFeedItem {
+    return {
+      link: `/${locale}/furthsettins/lallans/${issue.issueNumber}`,
+      title: issue.issueName,
+      description: issue.description[locale],
+      pubDate: new Date(issue.uploadDate),
+    };
   };
 }
 

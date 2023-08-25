@@ -1,9 +1,11 @@
+import type Date from './Date';
 import type LallansIssueNumber from './LallansIssueNumber';
 import type Price from './Price';
 
 type LallansIssue = {
   issueNumber: LallansIssueNumber;
   issueName: string;
+  uploadDate: Date;
   price: Price;
   description: {
     sco: string;

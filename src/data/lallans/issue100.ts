@@ -4,6 +4,7 @@ const issue: LallansIssue = {
   issueNumber: 100,
   issueName: 'Simmer 222',
   price: '10.00',
+  uploadDate: '2023-08-25',
   description: {
     'en-GB': 'The hundredth issue of the Lallans magazine.',
     sco: 'The hunnreth issue o the Lallans magazine.',

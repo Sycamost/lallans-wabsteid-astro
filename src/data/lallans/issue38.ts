@@ -4,6 +4,7 @@ const issue: LallansIssue = {
   issueNumber: 38,
   issueName: 'Whitsuntid 1992',
   price: '2.00',
+  uploadDate: '2023-08-25',
   description: {
     sco: 'The thirty-echtth issue o the Lallans magazine.',
     'en-GB': 'The thirty-eighth issue of the Lallans magazine.',

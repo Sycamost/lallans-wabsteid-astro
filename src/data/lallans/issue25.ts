@@ -4,6 +4,7 @@ const issue: LallansIssue = {
   issueNumber: 25,
   issueName: 'Mairtinmas 1985',
   price: '0.75',
+  uploadDate: '2023-08-25',
   description: {
     sco: 'The twanty-fift issue o the Lallans magazine.',
     'en-GB': 'The twenty-fifth issue of the Lallans magazine.',
