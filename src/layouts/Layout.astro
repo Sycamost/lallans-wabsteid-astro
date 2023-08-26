@@ -1,10 +1,12 @@
 ---
 import Footer from '$components/Footer.astro';
 import Navbar from '$components/Navbar/Navbar.astro';
+import locales, { defaultLocale } from '$i18n/locales';
 import translate from '$i18n/translate';
 import tFeed from '$i18n/translations/pages/rss.xml';
 import site from '$i18n/translations/site';
 import { getLocaleFromPathOrDefault } from '$lib/getLocaleFromPath';
+import type Locale from '$types/Locale';
 
 interface Props {
   title: string;
@@ -13,6 +15,12 @@ interface Props {
 const { title } = Astro.props;
 const locale = getLocaleFromPathOrDefault(Astro.url.pathname);
 const t = translate(locale);
+
+function qualifiedLocalisedPath(newLocale: Locale) {
+  const localePathSegment = new RegExp(`^/${locale}`);
+  const localisedPath = Astro.url.pathname.replace(localePathSegment, newLocale);
+  return Astro.site + localisedPath;
+}
 ---
 
 <!DOCTYPE html>
@@ -31,6 +39,12 @@ const t = translate(locale);
       title={t(tFeed, { key: 'title' })}
       href={`/${locale}/rss.xml`}
     />
+    {
+      locales.map((locale) => (
+        <link rel="alternate" href={qualifiedLocalisedPath(locale)} hreflang={locale} />
+      ))
+    }
+    <link rel="alternate" href={qualifiedLocalisedPath(defaultLocale)} hreflang="x-default" />
     <meta name="generator" content={Astro.generator} />
     <title>{title} | {t(site, { key: 'title' })}</title>
   </head>
