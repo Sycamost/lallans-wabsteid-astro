@@ -11,12 +11,14 @@
   width: var(--grid-column-width);
 }
 
+/* On screens narrower than 16rem, there is only one column. */
+
 .grid-span-2 {
-  width: calc(var(--grid-column-width) * 2 + var(--grid-gutter-width));
+  width: var(--grid-column-width);
 }
 
 .grid-span-3 {
-  width: calc(var(--grid-column-width) * 3 + var(--grid-gutter-width) * 2);
+  width: var(--grid-column-width);
 }
 
 .width-prose {
@@ -25,52 +27,4 @@
 
 .grid-span-full {
   width: var(--grid-total-width);
-}
-
-.grid-span-1.grid-end {
-  margin-inline-start: calc(
-    var(--grid-column-width) * (var(--grid-column-count) - 1) +
-    var(--grid-gutter-width) * (var(--grid-column-count) - 1)
-  );
-  margin-inline-end: 0;
-}
-
-.grid-span-2.grid-end {
-  margin-inline-start: calc(
-    var(--grid-column-width) * (var(--grid-column-count) - 2) +
-    var(--grid-gutter-width) * (var(--grid-column-count) - 2)
-  );
-  margin-inline-end: 0;
-}
-
-.grid-span-3.grid-end {
-  margin-inline-start: calc(
-    var(--grid-column-width) * (var(--grid-column-count) - 3) +
-    var(--grid-gutter-width) * (var(--grid-column-count) - 3)
-  );
-  margin-inline-end: 0;
-}
-
-.grid-span-1.grid-prose-end {
-  margin-inline-start: calc(
-    var(--grid-column-width) * (var(--grid-prose-column-count) - 1) +
-    var(--grid-gutter-width) * (var(--grid-prose-column-count) - 1)
-  );
-  margin-inline-end: 0;
-}
-
-.grid-span-2.grid-prose-end {
-  margin-inline-start: calc(
-    var(--grid-column-width) * (var(--grid-prose-column-count) - 2) +
-    var(--grid-gutter-width) * (var(--grid-prose-column-count) - 2)
-  );
-  margin-inline-end: 0;
-}
-
-.grid-span-3.grid-prose-end {
-  margin-inline-start: calc(
-    var(--grid-column-width) * (var(--grid-prose-column-count) - 3) +
-    var(--grid-gutter-width) * (var(--grid-prose-column-count) - 3)
-  );
-  margin-inline-end: 0;
 }

@@ -1,16 +1,11 @@
 .link-gallery {
   display: grid;
   grid-template-columns: repeat(var(--grid-column-count), var(--grid-column-width));
-  grid-auto-rows: calc(
-    var(--gallery-row-image-height) +
-    var(--margin-block-sm) +
-    var(--gallery-row-title-height)
-  );
   gap: var(--grid-gutter-width);
   padding-block: var(--margin-block-md);
-  --gallery-item-column-span: 2;
+  --gallery-item-column-span: 1;
   --gallery-row-image-height: 12rem;
-  --gallery-row-title-height: 11ex;
+  --gallery-row-title-height: fit-content;
   text-align: center;
 }
 
@@ -38,12 +33,6 @@
 .link-gallery__title {
   width: 100%;
   height: min-content;
-  max-height: 100%;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
   text-align: center;
   margin-inline: var(--spacing-inline-xs);
 }

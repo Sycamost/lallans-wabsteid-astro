@@ -1,11 +1,11 @@
 :root {
-  --font-size-0: calc(7 * var(--relative-eighth-rem));
-  --font-size-1: calc(9 * var(--relative-eighth-rem));
-  --font-size-2: calc(12 * var(--relative-eighth-rem));
-  --font-size-3: calc(16 * var(--relative-eighth-rem));
-  --font-size-4: calc(20 * var(--relative-eighth-rem));
-  --font-size-5: calc(26 * var(--relative-eighth-rem));
-  --font-size-6: calc(32 * var(--relative-eighth-rem));
+  --font-size-0: calc(8 * var(--relative-eighth-rem));
+  --font-size-1: calc(8 * var(--relative-eighth-rem));
+  --font-size-2: calc(8 * var(--relative-eighth-rem));
+  --font-size-3: calc(8 * var(--relative-eighth-rem));
+  --font-size-4: calc(8 * var(--relative-eighth-rem));
+  --font-size-5: calc(8 * var(--relative-eighth-rem));
+  --font-size-6: calc(8 * var(--relative-eighth-rem));
 
   --font-serif: Alegreya, -apple-system-ui-serif, 'Goudy Old Style', Garamond, serif;
   --font-sans-serif: 'Alegreya Sans', -apple-system-ui-sans, Lato, Calibri, 'sans-serif';

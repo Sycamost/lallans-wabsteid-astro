@@ -1,12 +1,12 @@
 :root {
-  --margin-inline-md: calc(8 * var(--relative-eighth-rem));
+  --margin-inline-md: calc(2 * var(--relative-eighth-rem));
   --margin-block-lg: calc(16 * var(--relative-eighth-rem));
   --margin-block-md: calc(10 * var(--relative-eighth-rem));
   --margin-block-sm: calc(5 * var(--relative-eighth-rem));
 
-  --padding-inline-lg: calc(22 * var(--relative-eighth-rem));
-  --padding-inline-md: calc(12 * var(--relative-eighth-rem));
-  --padding-inline-sm: calc(3 * var(--relative-eighth-rem));
+  --padding-inline-lg: calc(4 * var(--relative-eighth-rem));
+  --padding-inline-md: calc(2 * var(--relative-eighth-rem));
+  --padding-inline-sm: calc(1 * var(--relative-eighth-rem));
   --padding-block-lg: calc(12 * var(--relative-eighth-rem));
   --padding-block-md: calc(8 * var(--relative-eighth-rem));
   --padding-block-sm: calc(5 * var(--relative-eighth-rem));
@@ -31,10 +31,17 @@
   --grid-column-width-relative-eighth-rem: 32;
   --grid-gutter-width-relative-eighth-rem: 4;
 
-  /* small screens */
+  /***********************************************************
+   * Generally, we will use columns to keep things laid out  *
+   * nicely. However, on screens narrower than xs, this gets *
+   * pretty much impossible. So for those screens, we use a  *
+   * single-column layout taking up 100vw. In effect, this   *
+   * is just default CSS layout plus a wee bit padding. From *
+   * xs widewards, we use multiple columns on a fixed width. *
+   ***********************************************************/
 
-  --grid-total-width: 15rem;
+  --grid-total-width: 100vw;
   --grid-padding-relative-eighth-rem: 8;
-  --grid-column-count: 4;
-  --grid-prose-column-count: 4;
+  --grid-column-count: 1;
+  --grid-prose-column-count: 1;
 }
