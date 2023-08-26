@@ -1,7 +1,7 @@
 ---
-import { getLocaleFromPathOrThrow } from '$lib/getLocaleFromPath';
+import { getLocaleFromPathOrDefault } from '$lib/getLocaleFromPath';
 
-const locale = getLocaleFromPathOrThrow(Astro.url.pathname);
+const locale = getLocaleFromPathOrDefault(Astro.url.pathname);
 ---
 
 <meta http-equiv="refresh" content={`0;url=/${locale}/not-found`} />
