@@ -1,0 +1,21 @@
+---
+import translate from '$i18n/translate';
+import tPage from '$i18n/translations/pages/404';
+import Page from '$layouts/Page.astro';
+import { getLocaleFromPathOrThrow } from '$lib/getLocaleFromPath';
+import localeStaticPaths from '$lib/localeStaticPaths';
+
+export async function getStaticPaths() {
+  return localeStaticPaths;
+}
+
+const locale = getLocaleFromPathOrThrow(Astro.url.pathname);
+const t = translate(locale);
+---
+
+<Page title={t(tPage, { key: 'title' })}>
+  <section>
+    <h1>{t(tPage, { key: 'title' })}</h1>
+    <p set:html={t(tPage, { key: 'message' })} />
+  </section>
+</Page>
