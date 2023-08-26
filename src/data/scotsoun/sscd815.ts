@@ -13,14 +13,22 @@ const cd: Scotsoun = {
   trackList: ['Daft Laddie in the Wuids', 'Daftboy Suite (Instrumental)'],
   description: {
     'en-GB': `
-      Music inspired by the Scots poem _The Daft Boy – for John Hershaw: 11th Februar, 1941_ by Willie Hershaw, published by Neepheid Publications, 2019.
+        Music inspired by the Scots poem <i>The Daft Boy – for John Hershaw: 11th
+        Februar, 1941</i> by Willie Hershaw, published by Neepheid Publications, 2019.
+      </p>
 
-      The Bowhill Players are: William Hershaw (guitar, vocals, spoken voice), Erik Knussen (cello, double bass), Jenn Knussen (harp, vocals) and David Hershaw (guitar, vocals).
+      <p>
+        The Bowhill Players are: William Hershaw (guitar, vocals, spoken voice), Erik Knussen
+        (cello, double bass), Jenn Knussen (harp, vocals) and David Hershaw (guitar, vocals).
       `,
     sco: `
-      Muisic inspired by the Scots poem _The Daft Boy – for John Hershaw: 11th Februar, 1941_ by Willie Hershaw, publisht by Neepheid Publications, 2019.
+        Muisic inspired by the Scots poem <i>The Daft Boy – for John Hershaw: 11th
+        Februar, 1941</i> by Willie Hershaw, publisht by Neepheid Publications, 2019.
+      </p>
 
-      The Bowhill Players ar: William Hershaw (guitar, vocals, spoken vyce), Erik Knussen (cello, double bass), Jenn Knussen (harp, vocals) and David Hershaw (guitar, vocals).
+      <p>
+        The Bowhill Players ar: William Hershaw (guitar, vocals, spoken vyce), Erik Knussen
+        (cello, double bass), Jenn Knussen (harp, vocals) and David Hershaw (guitar, vocals).
       `,
   },
 };

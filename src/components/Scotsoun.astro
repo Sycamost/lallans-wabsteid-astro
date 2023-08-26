@@ -42,7 +42,7 @@ const t = translate(locale);
 </section>
 
 <section>
-  {scotsoun?.description && <p>{scotsoun.description[locale]}</p>}
+  {scotsoun?.description && <p set:html={scotsoun.description[locale]} />}
 
   {
     scotsoun?.coverArtist && (
