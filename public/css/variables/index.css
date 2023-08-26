@@ -7,3 +7,4 @@
 @import 'spacing.xl.css' (min-width: 96rem);
 @import 'spacing.xxl.css' (min-width: 120rem);
 @import 'typography.css';
+@import 'typography.xs.css' (min-width: 16rem);
