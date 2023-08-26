@@ -2,7 +2,7 @@ import rss, { RSSFeedItem } from '@astrojs/rss';
 import { CollectionEntry, getCollection } from 'astro:content';
 import { getDate, getHref, isNewsItemInLocale } from '$lib/newsUtils';
 import localeStaticPaths from '$lib/localeStaticPaths';
-import getLocaleFromPath from '$lib/getLocaleFromPath';
+import { getLocaleFromPathOrThrow } from '$lib/getLocaleFromPath';
 import type { APIContext } from 'astro';
 import translate from '$i18n/translate';
 import tFeed from '$i18n/translations/pages/rss.xml';
@@ -13,7 +13,7 @@ import type Scotsoun from '$types/Scotsoun';
 import { getAllScotsoun } from '$data/scotsoun';
 
 export async function get(context: APIContext) {
-  const locale = getLocaleFromPath(context.url.pathname);
+  const locale = getLocaleFromPathOrThrow(context.url.pathname);
   const t = translate(locale);
   const site = context.site;
   if (!site) {

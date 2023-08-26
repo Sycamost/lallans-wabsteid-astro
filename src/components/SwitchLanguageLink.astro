@@ -3,10 +3,10 @@ import tPage from '$i18n/translations/components/languageLinks';
 import tSite from '$i18n/translations/site';
 import translate from '$i18n/translate';
 import type Locale from '$types/Locale';
-import getLocaleFromPath from '$lib/getLocaleFromPath';
+import { getLocaleFromPathOrDefault } from '$lib/getLocaleFromPath';
 
 // This logic assumes that there are exactly two locales.
-const currentLocale = getLocaleFromPath(Astro.url.pathname);
+const currentLocale = getLocaleFromPathOrDefault(Astro.url.pathname);
 const otherLocale: Locale = currentLocale === 'sco' ? 'en-GB' : 'sco';
 const currentPath = Astro.url.pathname;
 const currentLocaleInPath = new RegExp(`(?<=^/)(${currentLocale}/)?`);

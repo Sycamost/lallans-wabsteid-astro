@@ -4,14 +4,14 @@ import Navbar from '$components/Navbar/Navbar.astro';
 import translate from '$i18n/translate';
 import tFeed from '$i18n/translations/pages/rss.xml';
 import site from '$i18n/translations/site';
-import getLocaleFromPath from '$lib/getLocaleFromPath';
+import { getLocaleFromPathOrDefault } from '$lib/getLocaleFromPath';
 
 interface Props {
   title: string;
 }
 
 const { title } = Astro.props;
-const locale = getLocaleFromPath(Astro.url.pathname);
+const locale = getLocaleFromPathOrDefault(Astro.url.pathname);
 const t = translate(locale);
 ---
 

@@ -1,9 +1,9 @@
 ---
 import translate from '$i18n/translate';
-import getLocaleFromPath from '$lib/getLocaleFromPath';
+import { getLocaleFromPathOrDefault } from '$lib/getLocaleFromPath';
 import tSite from '$i18n/translations/site';
 
-const locale = getLocaleFromPath(Astro.url.pathname);
+const locale = getLocaleFromPathOrDefault(Astro.url.pathname);
 const t = translate(locale);
 ---
 

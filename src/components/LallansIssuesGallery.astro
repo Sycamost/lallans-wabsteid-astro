@@ -1,9 +1,9 @@
 ---
 import { getAllLallansIssues } from '$data/lallans';
-import getLocaleFromPath from '$lib/getLocaleFromPath';
+import { getLocaleFromPathOrThrow } from '$lib/getLocaleFromPath';
 import type LallansIssue from '$types/LallansIssue';
 
-const locale = getLocaleFromPath(Astro.url.pathname);
+const locale = getLocaleFromPathOrThrow(Astro.url.pathname);
 const issues = (await getAllLallansIssues()).sort(issueNumberDescending);
 
 function issueNumberDescending(issue1: LallansIssue, issue2: LallansIssue) {

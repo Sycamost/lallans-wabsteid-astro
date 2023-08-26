@@ -1,9 +1,9 @@
 ---
 import { getAllScotsoun } from '$data/scotsoun';
-import getLocaleFromPath from '$lib/getLocaleFromPath';
+import { getLocaleFromPathOrThrow } from '$lib/getLocaleFromPath';
 import type Scotsoun from '$types/Scotsoun';
 
-const locale = getLocaleFromPath(Astro.url.pathname);
+const locale = getLocaleFromPathOrThrow(Astro.url.pathname);
 const scotsoun = (await getAllScotsoun()).sort(scotsounIdDescending);
 
 function scotsounIdDescending(scotsoun1: Scotsoun, scotsoun2: Scotsoun) {

@@ -1,7 +1,7 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import NewsPreviewLink from './NewsPreviewLink.astro';
-import getLocaleFromPath from '$lib/getLocaleFromPath';
+import { getLocaleFromPathOrThrow } from '$lib/getLocaleFromPath';
 import translate from '$i18n/translate';
 import tComponent from '$i18n/translations/components/newsIndex';
 interface Props {
@@ -10,7 +10,7 @@ interface Props {
 }
 
 const { headingLevel, newsItems } = Astro.props;
-const locale = getLocaleFromPath(Astro.url.pathname);
+const locale = getLocaleFromPathOrThrow(Astro.url.pathname);
 const t = translate(locale);
 ---
 

@@ -2,14 +2,14 @@
 import translate from '$i18n/translate';
 import tPage from '$i18n/translations/pages/news';
 import Page from '$layouts/Page.astro';
-import getLocaleFromPath from '$lib/getLocaleFromPath';
+import { getLocaleFromPathOrThrow } from '$lib/getLocaleFromPath';
 import localeStaticPaths from '$lib/localeStaticPaths';
 import { getCollection } from 'astro:content';
 import { isNewsItemInLocale } from '$lib/newsUtils';
 import NewsIndex from '$components/NewsIndex/NewsIndex.astro';
 
 const allNews = await getCollection('news');
-const locale = getLocaleFromPath(Astro.url.pathname);
+const locale = getLocaleFromPathOrThrow(Astro.url.pathname);
 const allNewsInLocale = allNews.filter((item) => isNewsItemInLocale(item, locale));
 const t = translate(locale);
 
