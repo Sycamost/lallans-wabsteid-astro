@@ -39,33 +39,33 @@ const t = translate(locale);
       />
     </div>
   </div>
+</section>
 
-  <section>
-    {scotsoun?.description && <p>{scotsoun.description[locale]}</p>}
+<section>
+  {scotsoun?.description && <p>{scotsoun.description[locale]}</p>}
 
-    {
-      scotsoun?.coverArtist && (
-        <p>{t(tComponent, { key: 'cover-artist', coverArtist: scotsoun.coverArtist })}</p>
-      )
-    }
+  {
+    scotsoun?.coverArtist && (
+      <p>{t(tComponent, { key: 'cover-artist', coverArtist: scotsoun.coverArtist })}</p>
+    )
+  }
 
-    {
-      scotsoun?.releaseDate && (
-        <p>{t(tComponent, { key: 'release-date', releaseDate: scotsoun.releaseDate })}</p>
-      )
-    }
+  {
+    scotsoun?.releaseDate && (
+      <p>{t(tComponent, { key: 'release-date', releaseDate: scotsoun.releaseDate })}</p>
+    )
+  }
 
-    {
-      scotsoun?.trackList && scotsoun.trackList.length > 1 && (
-        <>
-          <h2>Track list</h2>
-          <ol>
-            {scotsoun.trackList.map((track) => (
-              <li>{track}</li>
-            ))}
-          </ol>
-        </>
-      )
-    }
-  </section>
+  {
+    scotsoun?.trackList && scotsoun.trackList.length > 1 && (
+      <>
+        <h2>Track list</h2>
+        <ol>
+          {scotsoun.trackList.map((track) => (
+            <li>{track}</li>
+          ))}
+        </ol>
+      </>
+    )
+  }
 </section>
