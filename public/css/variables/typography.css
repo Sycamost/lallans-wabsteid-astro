@@ -7,6 +7,22 @@
   --font-size-5: calc(8 * var(--relative-eighth-rem));
   --font-size-6: calc(8 * var(--relative-eighth-rem));
 
-  --font-serif: Alegreya, -apple-system-ui-serif, 'Goudy Old Style', Garamond, serif;
-  --font-sans-serif: 'Alegreya Sans', -apple-system-ui-sans, Lato, Calibri, 'sans-serif';
+  --font-serif:
+    Alegreya,
+    Constantia,
+    -apple-system-ui-serif,
+    "Droid Serif",
+    ui-serif,
+    serif;
+  --font-sans-serif:
+    'Alegreya Sans',
+    Lato,
+    -apple-system,
+    system-ui,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
 }
