@@ -1,7 +1,7 @@
 ---
 import Page from '$layouts/Page.astro';
 import localeStaticPaths from '$lib/localeStaticPaths';
-import tPage from '$i18n/translations/pages/scotsounGallery';
+import tPage from '$i18n/translations/pages/scotsounRelease';
 import translate from '$i18n/translate';
 import type Locale from '$types/Locale';
 import { getScotsoun } from '$data/scotsoun';
@@ -22,6 +22,6 @@ const t = translate(locale);
 const scotsoun = await getScotsoun[scotsounId]();
 ---
 
-<Page title={t(tPage, { key: 'title' })}>
+<Page title={t(tPage, { key: 'title', scotsounId, name: scotsoun.title })}>
   <Scotsoun scotsoun={scotsoun} />
 </Page>
