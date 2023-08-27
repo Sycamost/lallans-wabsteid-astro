@@ -26,6 +26,25 @@ const committee: CommitteeMember[] = [
   {
     name: 'David Bleiman',
     roles: [],
+    bio: {
+      sco: `
+        David bides i Cramond on the Embro Riviera. He is a makar, an is the winner
+        o the 2020 Sangschaw Prize an 2023 McCash Prize fur poyums in Scots. He
+        sells buiks on
+        <a href="https://poetrykilt.bigcartel.com/" class="link">
+          poetrykilt.bigcartel.com
+        </a>.
+      `,
+      'en-GB': `
+        David lives in Cramond on the Edinburgh Riviera. He is a poet, and is the
+        winner of the 2020 Sangschaw Prize and 2023 McCash Prize for poems in Scots.
+        He sells books on
+        <a href="https://poetrykilt.bigcartel.com/" class="link">
+          poetrykilt.bigcartel.com
+        </a>.
+      `,
+    },
+    imgSrc: '/images/commattee/david-bleiman.jpg',
   },
   {
     name: 'Michael Everson',
