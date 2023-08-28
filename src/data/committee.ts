@@ -51,8 +51,52 @@ const committee: CommitteeMember[] = [
     roles: [],
   },
   {
-    name: 'Wullie Hershaw',
-    roles: [],
+    name: 'William Hershaw',
+    roles: [CommitteeRole.LallansEiditor],
+    bio: {
+      sco: `
+        William Hershaw is the praisent eiditor o Lallans. He is a weill-kent
+        <a
+          class="link"
+          href="http://www.scottishpoetrylibrary.org.uk/poetry/poets/william-hershaw"
+        >
+          poet
+        </a> and
+        <a
+          class="link"
+          href="https://en-gb.facebook.com/bowhillplayers"
+        >
+          singer
+        </a>. Brocht up as a native Scots speiker in a Fife
+        mining community he trowes that ‘the Scots leid is for aabody’ and
+        “gin ye tint your leid ye tint your sel’. Aa Scots leid has a feir in
+        Lallans.  William can be contacted at
+        <a class="link" href="mailto:w.hershaw678@btinternet">
+          w.hershaw678@btinternet
+        </a>.
+      `,
+      'en-GB': `
+        William Hershaw is the current editor of Lallans. He is a well-known
+        <a
+          class="link"
+          href="http://www.scottishpoetrylibrary.org.uk/poetry/poets/william-hershaw"
+        >
+          poet
+        </a> and
+        <a
+          class="link"
+          href="https://en-gb.facebook.com/bowhillplayers"
+        >
+          singer
+        </a>. Brought up as a native Scots speaker in a Fife mining
+        community, he believes that ‘the Scots language is for everyone’ and
+        “if you lose your language you lose your self.’ All Scots language can
+        give it a shot in Lallans. William can be contacted at
+        <a class="link" href="mailto:w.hershaw678@btinternet">
+          w.hershaw678@btinternet
+        </a>.
+      `,
+    },
   },
   {
     name: 'Derrick McClure',
