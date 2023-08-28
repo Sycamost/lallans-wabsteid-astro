@@ -29,6 +29,10 @@ const tEnum = {
     sco: () => 'Honorary Preses',
     'en-GB': () => 'Honorary President',
   },
+  OrdinaryMember: {
+    sco: () => 'Ordinary Memmer',
+    'en-GB': () => 'Ordinary Member',
+  },
 };
 
 type Raw = typeof tEnum;
