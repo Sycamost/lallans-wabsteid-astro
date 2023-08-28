@@ -25,7 +25,7 @@ const committee: CommitteeMember[] = [
   },
   {
     name: 'David Bleiman',
-    roles: [],
+    roles: [CommitteeRole.OrdinaryMember],
     bio: {
       sco: `
         David bides i Cramond on the Embro Riviera. He is a makar, an is the winner
