@@ -73,6 +73,21 @@ const committee: CommitteeMember[] = [
   {
     name: 'George T Watt',
     roles: [CommitteeRole.MemmershipSecretar],
+    bio: {
+      sco: `
+        George T Watt is a writer in Scots poesie, cutty tales and airticles.
+        This cheil haes been published in mony anthologies an magazines as weel
+        as Lallans. He haes produced seiveral recordings fur
+        <a class="link" href="/en-GB/furthsettins/scotsoun">Scotsoun</a> anaa.
+      `,
+      'en-GB': `
+        George T Watt is a writer in Scots poetry, short stories and articles.
+        He has been published in many anthologies and magazines as well as
+        Lallans. He has also produced several recordings for
+        <a class="link" href="/en-GB/furthsettins/scotsoun">Scotsoun</a>.
+      `,
+    },
+    imgSrc: '/images/commattee/george-t-watt.jpg',
   },
   {
     name: 'Rab Wilson',
