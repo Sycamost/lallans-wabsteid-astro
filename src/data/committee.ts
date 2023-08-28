@@ -97,6 +97,7 @@ const committee: CommitteeMember[] = [
         </a>.
       `,
     },
+    imgSrc: '/images/committee/william-hershaw.jpg',
   },
   {
     name: 'Derrick McClure',
