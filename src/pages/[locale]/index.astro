@@ -40,6 +40,7 @@ const mostRecentNewsItem = await getMostRecentNewsItem(locale);
     <p set:html={t(tPage, { key: 'about-us-para-2' })} />
     <p set:html={t(tPage, { key: 'about-us-para-3' })} />
     <h3 set:html={t(tPage, { key: 'meet-the-commattee' })} />
+    <p class="italic">{t(tPage, { key: 'mair-commattee-details-soon' })}</p>
     <ul>
       {
         committee.map((member) => (
@@ -54,9 +55,12 @@ const mostRecentNewsItem = await getMostRecentNewsItem(locale);
             <div class="committee__member__text">
               <h4>
                 {member.name}
-                <span class="font-weight-lighter">
-                  |{member.roles.map((role) => t(tRole, { key: CommitteeRole[role] })).join(', ')}
-                </span>
+                {member.roles.length > 0 && (
+                  <span class="font-weight-lighter">
+                    |{' '}
+                    {member.roles.map((role) => t(tRole, { key: CommitteeRole[role] })).join(', ')}
+                  </span>
+                )}
               </h4>
               {member.bio && <p set:html={member.bio[locale]} />}
             </div>

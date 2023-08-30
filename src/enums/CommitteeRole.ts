@@ -6,6 +6,7 @@ enum CommitteeRole {
   MemmershipSecretar,
   LallansEiditor,
   HonoraryPreses,
+  OrdinaryMember,
 }
 
 export default CommitteeRole;
