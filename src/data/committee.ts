@@ -105,7 +105,21 @@ const committee: CommitteeMember[] = [
   },
   {
     name: 'Elaine Morton',
-    roles: [],
+    roles: [CommitteeRole.OrdinaryMember],
+    bio: {
+      sco: `
+        Elaine is a past editor o Lallans an bides on the Commattee tae owersee
+        the Sangschaw competeition. Edinburgh is hame an she haes been wi the
+        Associe sin 1998. She wad be blithe o mair weemen on the Commattee, sae,
+        lasses, dinnae be blate tae come forrit!
+      `,
+      'en-GB': `
+        Elaine is a past editor of Lallans and remains on the Committee to oversee
+        the Sangschaw competition. Edinburgh is home and she has been with the
+        Society since 1998. She would be pleased to see more women on the
+        Committee, so, girls, don’t be shy to come forward!
+      `,
+    },
   },
   {
     name: 'Colin Robertson',
