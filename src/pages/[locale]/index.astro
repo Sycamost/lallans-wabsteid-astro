@@ -40,6 +40,7 @@ const mostRecentNewsItem = await getMostRecentNewsItem(locale);
     <p set:html={t(tPage, { key: 'about-us-para-2' })} />
     <p set:html={t(tPage, { key: 'about-us-para-3' })} />
     <h3 set:html={t(tPage, { key: 'meet-the-commattee' })} />
+    <p class="italic">{t(tPage, { key: 'mair-commattee-details-soon' })}</p>
     <ul>
       {
         committee.map((member) => (

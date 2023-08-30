@@ -59,6 +59,10 @@ const tPage = {
     sco: () => 'Meet the Commattee',
     'en-GB': () => 'Meet the Committee',
   },
+  'mair-commattee-details-soon': {
+    sco: () => 'Mair details comin shuin!',
+    'en-GB': () => 'More details coming soon!',
+  },
   furthsettins: {
     sco: () => 'Furthsettins',
     'en-GB': () => 'Publications',
