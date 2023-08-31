@@ -1,6 +1,6 @@
 ---
 import translate from '$i18n/translate';
-import tSite from '$i18n/translations/site';
+import tComponent from '$i18n/translations/components/footer';
 import { getLocaleFromPathOrDefault } from '$lib/getLocaleFromPath';
 import Button from './Button.astro';
 
@@ -9,7 +9,14 @@ const t = translate(locale);
 ---
 
 <footer>
-  <Button layoutClasses="grid-span-3 grid-end" href="#top">
-    ▲ {t(tSite, { key: 'back-to-top' })}
+  <a href={`/${locale}/rss.xml`} class="footer__rss-button">
+    <span class="footer__rss-button__label">
+      {t(tComponent, { key: 'subscribe-to-rss' })}
+    </span>
+    <img class="footer__rss-button__img" src="/images/rss.svg" />
+  </a>
+
+  <Button classNames="footer__back-to-top" href="#top">
+    ▲ {t(tComponent, { key: 'back-to-top' })}
   </Button>
 </footer>

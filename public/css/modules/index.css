@@ -13,3 +13,4 @@
 @import './skip-to-content.css';
 @import './committee.css';
 @import './committee.md.css' (min-width: 48rem);
+@import './footer.css';

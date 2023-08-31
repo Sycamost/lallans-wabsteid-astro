@@ -4,6 +4,11 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [mdx(), sitemap()],
-  site: 'https://www.lallans.co.uk',
+  integrations: [
+    mdx(),
+    sitemap({
+      filter: (page) => !page.includes('payment-success-confirmation'),
+    }),
+  ],
+  site: 'https://scotsleidassocie.org',
 });
