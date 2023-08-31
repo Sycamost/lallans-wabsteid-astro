@@ -1,17 +1,13 @@
 ---
-import type Digit from '$types/Digit';
-
-type LayoutClasses = `grid-span-${Digit}${'' | ' grid-end' | ' grid-prose-end'}`;
-
 interface Props {
   href: string;
-  layoutClasses: LayoutClasses;
+  classNames: string;
 }
 
-const { href, layoutClasses } = Astro.props;
+const { href, classNames } = Astro.props;
 ---
 
-<a class={`btn ${layoutClasses}`} href={href}>
+<a class={`btn ${classNames}`} href={href}>
   <p>
     <slot />
   </p>

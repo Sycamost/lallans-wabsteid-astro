@@ -27,7 +27,7 @@ const mostRecentNewsItem = await getMostRecentNewsItem(locale);
     <NewsIndex newsItems={mostRecentNewsItem ? [mostRecentNewsItem] : []} headingLevel="h3" />
     {
       mostRecentNewsItem && (
-        <Button layoutClasses="grid-span-3 grid-prose-end" href={`/${locale}/news`}>
+        <Button classNames="grid-span-3 grid-prose-end" href={`/${locale}/news`}>
           {t(tPage, { key: 'aw-news' })} ▶
         </Button>
       )
@@ -73,7 +73,7 @@ const mostRecentNewsItem = await getMostRecentNewsItem(locale);
   <section>
     <h2 set:html={t(tPage, { key: 'furthsettins' })} />
     <p set:html={t(tPage, { key: 'furthsettins-para' })} />
-    <Button layoutClasses="grid-span-3 grid-prose-end" href={`/${locale}/furthsettins`}>
+    <Button classNames="grid-span-3 grid-prose-end" href={`/${locale}/furthsettins`}>
       {t(tPage, { key: 'aw-furthsettins' })} ▶
     </Button>
   </section>
