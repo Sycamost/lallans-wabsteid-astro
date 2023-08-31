@@ -1,5 +1,0 @@
-User-agent: *
-User-agent: AdsBot-Google
-Disallow: */payment-success-confirmation
-
-Sitemap: https://scotsleidassocie.org/sitemap-index.xml
