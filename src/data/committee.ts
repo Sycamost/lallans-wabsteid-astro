@@ -3,6 +3,23 @@ import CommitteeRole from '$enums/CommitteeRole';
 
 const committee: CommitteeMember[] = [
   {
+    name: 'Rab Wilson',
+    roles: [CommitteeRole.Preses],
+    bio: {
+      sco: `
+        Rab Wilson is a poet wha scrieves predominantly i the Scots leid. He wis
+        born an aye-an-oan bides i New Cumnock, East Ayrshire. He is forby a
+        playwreicht, newspaper columnist an commentator on the Scots leid.
+      `,
+      'en-GB': `
+        Rab Wilson is a poet who scrieves predominantly in the Scots language.
+        He was born and remains in New Cumnock, East Ayrshire. He is also a
+        playwright, newpapaer columnist and commentator on the Scots language. 
+      `,
+    },
+    imgSrc: '/images/commattee/rab-wilson.jpg',
+  },
+  {
     name: 'Joe Carstairs',
     roles: [CommitteeRole.Secretar, CommitteeRole.Wabmaister],
     bio: {
@@ -147,10 +164,6 @@ const committee: CommitteeMember[] = [
       `,
     },
     imgSrc: '/images/commattee/george-t-watt.jpg',
-  },
-  {
-    name: 'Rab Wilson',
-    roles: [],
   },
 ];
 

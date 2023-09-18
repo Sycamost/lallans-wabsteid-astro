@@ -9,20 +9,34 @@
 
   --font-serif:
     Alegreya,
-    Sitka, "Sitka Display", "Sitka Heading", "Sitka Text",
     -apple-system-ui-serif,
-    "Droid Serif",
-    ui-serif,
-    serif;
+    Iowan Old Style,
+    Apple Garamond,
+    Baskerville,
+    Sitka, "Sitka Display", "Sitka Heading", "Sitka Text",
+    Times New Roman,
+    Droid Serif,
+    Times,
+    Source Serif Pro,
+    serif,
+    Apple Color Emoji,
+    Segoe UI Emoji,
+    Segoe UI Symbol;
+
   --font-sans-serif:
     'Alegreya Sans',
     Lato,
     -apple-system,
-    system-ui,
     BlinkMacSystemFont,
-    "Segoe UI",
-    Roboto,
-    "Helvetica Neue",
-    Arial,
-    sans-serif;
+    avenir next,
+    avenir,
+    segoe ui,
+    helvetica neue,
+    helvetica,
+    Cantarell,
+    Ubuntu,
+    roboto,
+    noto,
+    arial,
+    sans-serif
 }
