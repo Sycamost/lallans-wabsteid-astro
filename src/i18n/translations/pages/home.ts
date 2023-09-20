@@ -5,6 +5,26 @@ const tPage = {
     sco: () => 'Hame',
     'en-GB': () => 'Home',
   },
+  submit: {
+    sco: () => 'Submit til Lallans',
+    'en-GB': () => 'Submit to Lallans',
+  },
+  'submit-para-1': {
+    sco: () => 'We ar acceptin submeissions til Lallans 102!',
+    'en-GB': () => 'We are accepting submissions to Lallans 102!',
+  },
+  'submit-para-2': {
+    sco: () => `
+      We accep poesie, cuttie tales, reviews, essays an drama, baith
+      oreiginal an owerset. Sen yer submeissions til
+      <a class="link" href="mailto:lallans@hotmail.co.uk">lallans@hotmail.co.uk</a>.
+    `,
+    'en-GB': () => `
+      We accept poetry, short stories, reviews, essays and drama, both
+      original and translated. Send your submissions to
+      <a class="link" href="mailto:lallans@hotmail.co.uk">lallans@hotmail.co.uk</a>.
+    `,
+  },
   news: {
     sco: () => 'Recent News',
     'en-GB': () => 'Recent News',
