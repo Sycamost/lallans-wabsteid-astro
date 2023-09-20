@@ -2,7 +2,7 @@
 import Page from '$layouts/Page.astro';
 import localeStaticPaths from '$lib/localeStaticPaths';
 import translate from '$i18n/translate';
-import tFurthsettins from '$i18n/translations/pages/furthsettins';
+import tPage from '$i18n/translations/pages/lallansGallery';
 import type Locale from '$types/Locale';
 import LallansIssuesGallery from '$components/LallansIssuesGallery.astro';
 
@@ -14,9 +14,10 @@ const locale = Astro.params.locale as Locale;
 const t = translate(locale);
 ---
 
-<Page title={t(tFurthsettins, { key: 'title' })}>
+<Page title={t(tPage, { key: 'title' })}>
   <section>
-    <h1>Lallans</h1>
+    <h1>{t(tPage, { key: 'title' })}</h1>
+    <p>{t(tPage, { key: 'about-lallans' })}</p>
     <LallansIssuesGallery />
   </section>
 </Page>
