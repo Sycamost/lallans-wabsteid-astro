@@ -8,7 +8,7 @@ const tPage = {
   'about-lallans': {
     sco: () => `
       Lallans is the foremaist leiterar journal dedicatit til new Scots-leid leiteratur.
-      We hae furthset it isyne 1972 an pit two issues furth per year. We accep Scots
+      We hae furthset it syne 1972 an pit two issues furth per year. We accep Scots
       frae aw airts an in aw styles an dialects. Ye can finnd oot hoo tae submit til
       Lallans on the hame page.
     `,
