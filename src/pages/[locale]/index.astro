@@ -23,6 +23,11 @@ const mostRecentNewsItem = await getMostRecentNewsItem(locale);
 
 <Page title={t(tPage, { key: 'title' })}>
   <section>
+    <h2 set:html={t(tPage, { key: 'submit' })} />
+    <p set:html={t(tPage, { key: 'submit-para-1' })} />
+    <p set:html={t(tPage, { key: 'submit-para-2' })} />
+  </section>
+  <section>
     <h2 class="grid-span-6" set:html={t(tPage, { key: 'news' })} />
     <NewsIndex newsItems={mostRecentNewsItem ? [mostRecentNewsItem] : []} headingLevel="h3" />
     {
