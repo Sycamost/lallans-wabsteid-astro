@@ -40,6 +40,3 @@
   border-color: var(--special-text-color);
 }
 
-.link:active {
-  font-size: larger;
-}
