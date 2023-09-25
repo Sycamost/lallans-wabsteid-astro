@@ -38,7 +38,24 @@ const committee: CommitteeMember[] = [
   },
   {
     name: 'Tony Beekman',
-    roles: [],
+    roles: [CommitteeRole.Thesaurer],
+    bio: {
+      sco: `
+        Tony pits in a shift in the day job as a Community Lairnin an
+        Development Warker for a central Scottish cooncil. He is also a trade
+        union shop steward. Tony is a lifelang lairner o philosophy an likes
+        tae reflect on it in the pub ower a pint or a dram. This helps him
+        scrieve cutty tales whit he is chuffed tae see in Lallans occasionally.
+      `,
+      'en-GB': `
+        By day, Tony puts in a shift as the Community Learning and Development
+        Worker for a central Scottish council. He is also a trade union shop
+        steward. Tony is a lifelong learner of philosophy and likes to reflect
+        on it in the pub over a pint or a dram. This helps him to write short
+        stories which he is chuffed to see in Lallans occasionally.
+      `,
+    },
+    imgSrc: '/images/commattee/tony-beekman.jpg',
   },
   {
     name: 'David Bleiman',
