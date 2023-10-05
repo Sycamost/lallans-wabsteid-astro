@@ -1,6 +1,8 @@
+import img from '$images/scotsoun/sscd008.jpg';
 import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
+  img,
   title: 'Poems Chiefly in the Scottish Dialect',
   subtitle: 'Read by Members of the Irvine Burns Club',
   longName: 'Poems Chiefly in the Scottish Dialect',

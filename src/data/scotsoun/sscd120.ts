@@ -1,6 +1,8 @@
+import img from '$images/scotsoun/sscd120.jpg';
 import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
+  img,
   title: 'Thrawn Janet',
   longName: 'Thrawn Janet',
   author: 'Robert Louis Stevenson',

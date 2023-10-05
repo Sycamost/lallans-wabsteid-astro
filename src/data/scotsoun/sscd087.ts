@@ -1,6 +1,8 @@
+import img from '$images/scotsoun/sscd087.jpg';
 import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
+  img,
   title: 'Virgil, Dante et al',
   subtitle: 'Scotsoun Euro-Makars Series',
   longName: 'Scotsoun Euro-Makars Series – Virgil, Dante et al',

@@ -1,6 +1,8 @@
+import img from '$images/scotsoun/sscd017.jpg';
 import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
+  img,
   title: 'Tenement Tales',
   longName: 'Tenement Tales',
   author: 'Molly Weir',

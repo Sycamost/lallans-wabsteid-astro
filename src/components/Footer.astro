@@ -3,6 +3,7 @@ import translate from '$i18n/translate';
 import tComponent from '$i18n/translations/components/footer';
 import { getLocaleFromPathOrDefault } from '$lib/getLocaleFromPath';
 import Button from './Button.astro';
+import rssImg from '$images/rss.svg';
 
 const locale = getLocaleFromPathOrDefault(Astro.url.pathname);
 const t = translate(locale);
@@ -13,7 +14,7 @@ const t = translate(locale);
     <span class="footer__rss-button__label">
       {t(tComponent, { key: 'subscribe-to-rss' })}
     </span>
-    <img class="footer__rss-button__img" src="/images/rss.svg" />
+    <img class="footer__rss-button__img" src={rssImg.src} alt="" />
   </a>
 
   <Button classNames="footer__back-to-top" href="#top">

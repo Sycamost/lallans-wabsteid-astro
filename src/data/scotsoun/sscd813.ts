@@ -1,6 +1,8 @@
+import img from '$images/scotsoun/sscd813.jpg';
 import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
+  img,
   title: 'Mither Ape',
   longName: 'Mither Ape',
   author: 'Tam Hubbard',

@@ -21,10 +21,7 @@ const t = translate(locale);
         <li>
           <span class="italic">{contribution.title}</span>
           {'author' in contribution && (
-            <span>
-              {' '}
-              {t(tSite, { key: 'by' })} {contribution.author}
-            </span>
+            <span> {t(tSite, { key: 'by' }) + ' ' + contribution.author}</span>
           )}
         </li>
       ))

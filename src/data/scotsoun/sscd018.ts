@@ -1,6 +1,8 @@
+import img from '$images/scotsoun/sscd018.jpg';
 import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
+  img,
   title: 'Robert Henryson',
   subtitle: 'Scotsoun Makars Series',
   longName: 'Scotsoun Makars Series – Robert Henryson',

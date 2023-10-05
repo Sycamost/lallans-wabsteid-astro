@@ -1,6 +1,8 @@
+import img from '$images/scotsoun/sscd095.jpg';
 import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
+  img,
   title: 'Sangschaw and Penny Wheep',
   longName: 'Sangschaw and Penny Wheep',
   author: 'Hugh MacDiarmaid',

@@ -1,6 +1,8 @@
+import img from '$images/scotsoun/sscd811.jpg';
 import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
+  img,
   title: 'Stuart A Paterson',
   subtitle: 'mind noo has some swearie wurds!',
   longName: 'Stuart A Paterson',

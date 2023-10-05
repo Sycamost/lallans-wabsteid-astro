@@ -11,7 +11,8 @@
 
 .link-gallery__title {
   width: 100%;
-  height: 100%;
+  height: 9.9ex;
+  height: 3lh;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 3;

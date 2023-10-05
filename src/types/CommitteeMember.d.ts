@@ -5,5 +5,5 @@ type CommitteeMember = {
   name: string;
   roles: CommitteeRole[];
   bio?: { [key in Locale]: string };
-  imgSrc?: string;
+  img?: ImageMetadata;
 };

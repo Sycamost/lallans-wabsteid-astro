@@ -1,6 +1,8 @@
+import img from '$images/scotsoun/sscd067.jpg';
 import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
+  img,
   title: 'Burns Cottage Selection',
   subtitle: 'from the Works of Robert Burns',
   longName: 'Burns Cottage Selection – from the Works of Robert Burns',

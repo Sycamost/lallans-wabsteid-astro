@@ -1,6 +1,8 @@
+import img from '$images/scotsoun/sscd081.jpg';
 import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
+  img,
   title: 'Eisd Ceòl',
   longName: 'Eisd Ceòl',
   author: 'Paul McCallum',

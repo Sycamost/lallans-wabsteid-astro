@@ -1,6 +1,8 @@
+import img from '$images/scotsoun/sscd117.jpg';
 import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
+  img,
   title: 'A Child’s Garden of Verses',
   subtitle: 'read by children',
   longName: 'A Child’s Garden of Verses – read by children',

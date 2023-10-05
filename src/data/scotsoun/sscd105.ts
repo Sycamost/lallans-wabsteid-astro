@@ -1,6 +1,8 @@
+import img from '$images/scotsoun/sscd105.jpg';
 import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
+  img,
   title: 'Sheena Blackhall',
   subtitle: 'Scotsoun Makars Series',
   longName: 'Scotsoun Makars Series – Sheena Blackhall',

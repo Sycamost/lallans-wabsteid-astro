@@ -1,6 +1,8 @@
+import img from '$images/scotsoun/sscd110.jpg';
 import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
+  img,
   title: '21 Poems in Scots',
   longName: '21 Poems in Scots',
   author: 'Robert Louis Stevenson',

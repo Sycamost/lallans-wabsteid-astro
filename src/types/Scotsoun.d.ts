@@ -8,6 +8,7 @@ type Scotsoun = {
   title: string;
   subtitle?: string;
   longName: string;
+  img: ImageMetadata;
   author?: string;
   cdCount: number;
   price: Price;

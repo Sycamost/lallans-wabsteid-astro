@@ -1,6 +1,8 @@
+import img from '$images/scotsoun/sscd581.jpg';
 import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
+  img,
   title: 'Fiddle Heichlichts',
   longName: 'Fiddle Heichlichts',
   author: 'Karen Hannah, Yla Steven, Hugh MacGilp and Ian Powrie',
