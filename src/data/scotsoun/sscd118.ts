@@ -1,6 +1,8 @@
+import img from '$images/scotsoun/sscd118.jpg';
 import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
+  img,
   title: 'Lowland Souch',
   longName: 'Lowland Souch',
   author: 'Davie Robertson',

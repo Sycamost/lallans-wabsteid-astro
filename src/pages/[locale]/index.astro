@@ -50,13 +50,7 @@ const mostRecentNewsItem = await getMostRecentNewsItem(locale);
       {
         committee.map((member) => (
           <li class="committee__member">
-            {member.imgSrc && (
-              <img
-                class="committee__member__img"
-                src={member.imgSrc}
-                alt={`A photo of ${member.name}`}
-              />
-            )}
+            {member.img && <img class="committee__member__img" src={member.img.src} alt="" />}
             <div class="committee__member__text">
               <h4>
                 {member.name}

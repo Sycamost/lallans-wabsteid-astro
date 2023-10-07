@@ -1,6 +1,8 @@
+import img from '$images/scotsoun/sscd814.jpg';
 import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
+  img,
   title: 'Auld Leids, New Vyces',
   longName: 'Auld Leids, New Vyces',
   author:

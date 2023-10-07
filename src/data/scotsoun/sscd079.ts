@@ -1,6 +1,8 @@
+import img from '$images/scotsoun/sscd079.jpg';
 import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
+  img,
   title: 'Langholm Memorial Sculpture',
   subtitle: '"& 21 local poems of Hugh MacDiarmaid"',
   longName: '"Langholm Memorial Sculpture & 21 local poems of Hugh MacDiarmaid"',

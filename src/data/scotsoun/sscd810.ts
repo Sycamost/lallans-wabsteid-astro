@@ -1,6 +1,8 @@
+import img from '$images/scotsoun/sscd810.jpg';
 import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
+  img,
   title: 'Doric and Doric – German ti Doric',
   longName: 'Doric and Doric – German ti Doric',
   author: 'Mary Johnston',

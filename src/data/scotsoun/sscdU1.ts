@@ -1,6 +1,8 @@
+import img from '$images/scotsoun/sscdU1.jpg';
 import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
+  img,
   title: 'An Ulster Triptych',
   longName: 'An Ulster Triptych',
   author: 'George T Watt',

@@ -1,6 +1,8 @@
+import img from '$images/scotsoun/sscd809.jpg';
 import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
+  img,
   title: 'Ravines',
   subtitle: 'a richer tocher',
   longName: 'Ravines – A Richer Tocher',

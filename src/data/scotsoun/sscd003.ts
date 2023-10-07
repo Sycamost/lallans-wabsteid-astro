@@ -1,6 +1,8 @@
+import img from '$images/scotsoun/sscd003.jpg';
 import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
+  img,
   title: 'Currie Flavour',
   longName: 'Currie Flavour',
   author: 'Rev James Currie',

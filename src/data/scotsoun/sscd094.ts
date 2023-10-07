@@ -1,6 +1,8 @@
+import img from '$images/scotsoun/sscd094.jpg';
 import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
+  img,
   title: 'The Richt Noise',
   subtitle: 'Scotsoun Makars Series',
   longName: 'Scotsoun Makars Series – The Richt Noise',

@@ -1,7 +1,9 @@
+import img from '$images/lallans/issue50.jpg';
 import type LallansIssue from '$types/LallansIssue';
 
 const issue: LallansIssue = {
   issueNumber: 50,
+  img,
   issueName: 'Mairtinmas 1997',
   price: '3.00',
   uploadDate: '2023-08-25',

@@ -1,6 +1,8 @@
+import img from '$images/scotsoun/sscd039.jpg';
 import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
+  img,
   title: '18 Burns Sangs',
   subtitle: 'and thair stories',
   longName: '18 Burns Sangs and Thair Stories',

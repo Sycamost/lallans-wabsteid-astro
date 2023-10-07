@@ -1,6 +1,8 @@
+import img from '$images/scotsoun/sscd083.jpg';
 import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
+  img,
   title: 'Merry Matanzie',
   subtitle: 'Alex McCrindle reads his own selection of 37 poems by William Soutar',
   longName: 'Merry Matanzie',

@@ -20,12 +20,12 @@ const t = translate(locale);
 <section class="section--full-width">
   <div class="product__header-block">
     <header>
-      <h1>{t(tSite, { key: 'lallans' })} {issue.issueNumber}</h1>
+      <h1>{t(tSite, { key: 'lallans' }) + ' ' + issue.issueNumber}</h1>
       <p class="italic">{issue.description[locale]}</p>
     </header>
 
     <div class="product__action-block">
-      <img alt="" src={`/images/lallans/issue${issue.issueNumber}.jpg`} />
+      <img alt="" src={issue.img.src} />
       <PayPalButtons
         successPageUrl={relativePath(Astro.url.pathname, `payment-success-confirmation`)}
         productDescription={`Lallans ${issue.issueNumber} | ${issue.issueName}`}

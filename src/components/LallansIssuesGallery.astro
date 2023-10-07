@@ -19,7 +19,7 @@ function issueNumberDescending(issue1: LallansIssue, issue2: LallansIssue) {
           class="link link-gallery__container"
           href={`/${locale}/furthsettins/lallans/${issue.issueNumber}`}
         >
-          <img src={`/images/lallans/issue${issue.issueNumber}.jpg`} />
+          <img src={issue.img.src} alt="" />
           <p class="link-gallery__title">
             Lallans {issue.issueNumber} | {issue.issueName}
           </p>

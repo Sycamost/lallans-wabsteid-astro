@@ -1,6 +1,8 @@
+import img from '$images/scotsoun/sscd071.jpg';
 import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
+  img,
   title: 'A Sang’s a Sang for Aa That',
   longName: 'A Sang’s a Sang for Aa That',
   author: 'Andy Hunter',

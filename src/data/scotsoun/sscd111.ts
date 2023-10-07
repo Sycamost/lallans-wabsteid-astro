@@ -1,6 +1,8 @@
+import img from '$images/scotsoun/sscd111.jpg';
 import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
+  img,
   title: 'Brockit, the fermtoon cat',
   longName: 'Brockit, the fermtoon cat',
   author: 'Les Wheeler',

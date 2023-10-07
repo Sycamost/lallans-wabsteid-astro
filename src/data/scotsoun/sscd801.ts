@@ -1,6 +1,8 @@
+import img from '$images/scotsoun/sscd801.jpg';
 import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
+  img,
   title: 'Violet Jacob',
   subtitle: 'Scotsoun Makars Series',
   longName: 'Scotsoun Makars Series – Violet Jacob',

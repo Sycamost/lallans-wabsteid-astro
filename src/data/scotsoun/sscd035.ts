@@ -1,6 +1,8 @@
+import img from '$images/scotsoun/sscd035.jpg';
 import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
+  img,
   title: 'Poems of Robert Burns volumes 1 & 2',
   subtitle: 'Scotsoun Makars Series',
   longName: 'Scotsoun Makars Series – Robert Burns',

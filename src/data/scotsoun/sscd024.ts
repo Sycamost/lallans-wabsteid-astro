@@ -1,6 +1,8 @@
+import img from '$images/scotsoun/sscd024.jpg';
 import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
+  img,
   title: 'Under the Eildon Tree',
   longName: 'Under the Eildon Tree',
   author: 'Sydney Goodsir Smith',

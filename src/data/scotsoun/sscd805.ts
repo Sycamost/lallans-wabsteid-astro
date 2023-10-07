@@ -1,6 +1,8 @@
+import img from '$images/scotsoun/sscd805.jpg';
 import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
+  img,
   title: 'Oot o the Kist',
   longName: 'Oot o the Kist',
   author: 'Sheena Blackhall',

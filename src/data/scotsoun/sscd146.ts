@@ -1,6 +1,8 @@
+import img from '$images/scotsoun/sscd146.jpg';
 import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
+  img,
   title: 'The Lost Pibroch',
   longName: 'The Lost Pibroch',
   author: 'William McCallum and P/M Donald MacLeod',
