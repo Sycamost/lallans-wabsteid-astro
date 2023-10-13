@@ -21,7 +21,10 @@
 }
 
 .link-gallery--furthsettins img {
+  box-sizing: border-box;
   border-radius: 50%;
+  height: auto;
+  border: solid calc(2 * var(--relative-eighth-rem)) var(--text-color);
 }
 
 .link-gallery img {
