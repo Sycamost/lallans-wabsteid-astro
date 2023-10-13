@@ -1,9 +1,13 @@
-import img from '$images/lallans/issue22.jpg';
+import img192w from '$images/lallans/issue22-192w.jpg';
+import img274w from '$images/lallans/issue22-274w.jpg';
 import type LallansIssue from '$types/LallansIssue';
 
 const issue: LallansIssue = {
   issueNumber: 22,
-  img,
+  img: {
+    width192: img192w,
+    width274: img274w,
+  },
   issueName: 'Whitsunday 1984',
   price: '0.75',
   uploadDate: '2023-08-25',

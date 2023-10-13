@@ -1,11 +1,29 @@
 import type { CommitteeMember } from '$types/CommitteeMember';
 import CommitteeRole from '$enums/CommitteeRole';
-import RabWilsonImgSrc from '$images/committee/rab-wilson.jpg';
-import JoeCarstairsImgSrc from '$images/committee/joe-carstairs.jpg';
-import TonyBeekmanImgSrc from '$images/committee/tony-beekman.jpg';
-import DavidBleimanImgSrc from '$images/committee/david-bleiman.jpg';
-import WilliamHershawImgSrc from '$images/committee/william-hershaw.jpg';
-import GeorgeTWattImgSrc from '$images/committee/george-t-watt.jpg';
+import RabWilsonImg106Src from '$images/committee/rab-wilson-106w.webp';
+import RabWilsonImg146Src from '$images/committee/rab-wilson-146w.webp';
+import RabWilsonImg192Src from '$images/committee/rab-wilson-192w.webp';
+import RabWilsonImg222Src from '$images/committee/rab-wilson-222w.webp';
+import JoeCarstairsImg106Src from '$images/committee/joe-carstairs-106w.webp';
+import JoeCarstairsImg146Src from '$images/committee/joe-carstairs-146w.webp';
+import JoeCarstairsImg192Src from '$images/committee/joe-carstairs-192w.webp';
+import JoeCarstairsImg222Src from '$images/committee/joe-carstairs-222w.webp';
+import TonyBeekmanImg106Src from '$images/committee/tony-beekman-106w.webp';
+import TonyBeekmanImg146Src from '$images/committee/tony-beekman-146w.webp';
+import TonyBeekmanImg192Src from '$images/committee/tony-beekman-192w.webp';
+import TonyBeekmanImg222Src from '$images/committee/tony-beekman-222w.webp';
+import DavidBleimanImg106Src from '$images/committee/david-bleiman-106w.webp';
+import DavidBleimanImg146Src from '$images/committee/david-bleiman-146w.webp';
+import DavidBleimanImg192Src from '$images/committee/david-bleiman-192w.webp';
+import DavidBleimanImg222Src from '$images/committee/david-bleiman-222w.webp';
+import WilliamHershawImg106Src from '$images/committee/william-hershaw-106w.webp';
+import WilliamHershawImg146Src from '$images/committee/william-hershaw-146w.webp';
+import WilliamHershawImg192Src from '$images/committee/william-hershaw-192w.webp';
+import WilliamHershawImg222Src from '$images/committee/william-hershaw-222w.webp';
+import GeorgeTWattImg106Src from '$images/committee/george-t-watt-106w.webp';
+import GeorgeTWattImg146Src from '$images/committee/george-t-watt-146w.webp';
+import GeorgeTWattImg192Src from '$images/committee/george-t-watt-192w.webp';
+import GeorgeTWattImg222Src from '$images/committee/george-t-watt-222w.webp';
 
 const committee: CommitteeMember[] = [
   {
@@ -23,7 +41,12 @@ const committee: CommitteeMember[] = [
         playwright, newpapaer columnist and commentator on the Scots language. 
       `,
     },
-    img: RabWilsonImgSrc,
+    img: {
+      width106: RabWilsonImg106Src,
+      width146: RabWilsonImg146Src,
+      width192: RabWilsonImg192Src,
+      width222: RabWilsonImg222Src,
+    },
   },
   {
     name: 'Joe Carstairs',
@@ -40,7 +63,12 @@ const committee: CommitteeMember[] = [
         He is from Perth but now lives in Edinburgh, where he lived since 2018.
       `,
     },
-    img: JoeCarstairsImgSrc,
+    img: {
+      width106: JoeCarstairsImg106Src,
+      width146: JoeCarstairsImg146Src,
+      width192: JoeCarstairsImg192Src,
+      width222: JoeCarstairsImg222Src,
+    },
   },
   {
     name: 'Tony Beekman',
@@ -61,7 +89,12 @@ const committee: CommitteeMember[] = [
         stories which he is chuffed to see in Lallans occasionally.
       `,
     },
-    img: TonyBeekmanImgSrc,
+    img: {
+      width106: TonyBeekmanImg106Src,
+      width146: TonyBeekmanImg146Src,
+      width192: TonyBeekmanImg192Src,
+      width222: TonyBeekmanImg222Src,
+    },
   },
   {
     name: 'David Bleiman',
@@ -84,7 +117,12 @@ const committee: CommitteeMember[] = [
         </a>.
       `,
     },
-    img: DavidBleimanImgSrc,
+    img: {
+      width106: DavidBleimanImg106Src,
+      width146: DavidBleimanImg146Src,
+      width192: DavidBleimanImg192Src,
+      width222: DavidBleimanImg222Src,
+    },
   },
   {
     name: 'Michael Everson',
@@ -137,7 +175,12 @@ const committee: CommitteeMember[] = [
         </a>.
       `,
     },
-    img: WilliamHershawImgSrc,
+    img: {
+      width106: WilliamHershawImg106Src,
+      width146: WilliamHershawImg146Src,
+      width192: WilliamHershawImg192Src,
+      width222: WilliamHershawImg222Src,
+    },
   },
   {
     name: 'Derrick McClure',
@@ -186,7 +229,12 @@ const committee: CommitteeMember[] = [
         <a class="link" href="/en-GB/furthsettins/scotsoun">Scotsoun</a>.
       `,
     },
-    img: GeorgeTWattImgSrc,
+    img: {
+      width106: GeorgeTWattImg106Src,
+      width146: GeorgeTWattImg146Src,
+      width192: GeorgeTWattImg192Src,
+      width222: GeorgeTWattImg222Src,
+    },
   },
 ];
 

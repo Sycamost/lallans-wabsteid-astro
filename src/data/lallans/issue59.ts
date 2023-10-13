@@ -1,9 +1,13 @@
-import img from '$images/lallans/issue59.jpg';
+import img192w from '$images/lallans/issue59-192w.jpg';
+import img274w from '$images/lallans/issue59-274w.jpg';
 import type LallansIssue from '$types/LallansIssue';
 
 const issue: LallansIssue = {
   issueNumber: 59,
-  img,
+  img: {
+    width192: img192w,
+    width274: img274w,
+  },
   issueName: 'Hairst 201',
   price: '7.50',
   uploadDate: '2023-08-25',

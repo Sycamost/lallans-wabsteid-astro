@@ -1,8 +1,10 @@
-import img from '$images/scotsoun/sscd072.jpg';
+import img192w from '$images/scotsoun/sscd072-192w.jpg';
 import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
-  img,
+  img: {
+    width192: img192w,
+  },
   title: '"Poems in Scots & Gaelic"',
   subtitle: '"from ‘17 Poems for 6d’"',
   longName: '"Poems in Scots & Gaelic – from ‘17 Poems for 6d’"',

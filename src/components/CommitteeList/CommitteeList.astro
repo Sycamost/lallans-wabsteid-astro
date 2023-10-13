@@ -1,0 +1,8 @@
+---
+import committee from '$data/committee';
+import CommitteeListItem from './CommitteeListItem.astro';
+---
+
+<ul>
+  {committee.map((committeeMember) => <CommitteeListItem committeeMember={committeeMember} />)}
+</ul>

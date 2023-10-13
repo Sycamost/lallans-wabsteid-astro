@@ -1,8 +1,10 @@
-import img from '$images/scotsoun/sscd121.jpg';
+import img192w from '$images/scotsoun/sscd121-192w.jpg';
 import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
-  img,
+  img: {
+    width192: img192w,
+  },
   title: 'Neil Munro',
   subtitle: '1863-1930',
   longName: 'Scotsoun Makars Series – George Campell Hay',

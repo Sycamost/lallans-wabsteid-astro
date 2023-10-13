@@ -5,5 +5,10 @@ type CommitteeMember = {
   name: string;
   roles: CommitteeRole[];
   bio?: { [key in Locale]: string };
-  img?: ImageMetadata;
+  img?: {
+    width106: ImageMetadata;
+    width146: ImageMetadata;
+    width192: ImageMetadata;
+    width222: ImageMetadata;
+  };
 };

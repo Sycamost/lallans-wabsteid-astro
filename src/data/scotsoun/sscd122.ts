@@ -1,8 +1,10 @@
-import img from '$images/scotsoun/sscd122.jpg';
+import img192w from '$images/scotsoun/sscd122-192w.jpg';
 import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
-  img,
+  img: {
+    width192: img192w,
+  },
   title: 'How to Pronounce Older Scots',
   longName: 'How to Pronounce Older Scots',
   author: 'Prof AJ Aitken',

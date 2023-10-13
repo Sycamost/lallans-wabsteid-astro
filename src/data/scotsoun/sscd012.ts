@@ -1,8 +1,10 @@
-import img from '$images/scotsoun/sscd012.jpg';
+import img192w from '$images/scotsoun/sscd012-192w.jpg';
 import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
-  img,
+  img: {
+    width192: img192w,
+  },
   title: 'Fiddle Favourites',
   longName: 'Fiddle Favourites',
   author: 'Glasgow Caledonian Strathspey and Reel Society',

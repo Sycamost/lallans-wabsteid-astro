@@ -1,9 +1,13 @@
-import img from '$images/lallans/issue100.jpg';
+import img192w from '$images/lallans/issue100-192w.jpg';
+import img274w from '$images/lallans/issue100-274w.jpg';
 import type LallansIssue from '$types/LallansIssue';
 
 const issue: LallansIssue = {
   issueNumber: 100,
-  img,
+  img: {
+    width192: img192w,
+    width274: img274w,
+  },
   issueName: 'Simmer 222',
   price: '10.00',
   uploadDate: '2023-08-25',
