@@ -22,16 +22,10 @@ const t = translate(locale);
       <h1>{scotsoun.title}</h1>
       <p class="italic">Scotsoun SSCD{scotsoun.scotsounId}</p>
       {scotsoun?.subtitle && <p class="italic">{scotsoun.subtitle}</p>}
-      {
-        scotsoun?.author && (
-          <p>
-            {t(tSite, { key: 'by' })} {scotsoun.author}
-          </p>
-        )
-      }
+      {scotsoun?.author && <p>{t(tSite, { key: 'by' }) + ' ' + scotsoun.author}</p>}
     </header>
     <div class="product__action-block">
-      <img src={`/images/scotsoun/sscd${scotsoun.scotsounId}.jpg`} />
+      <img src={scotsoun.img.src} alt="" />
       <PayPalButtons
         successPageUrl={relativePath(Astro.url.pathname, `payment-success-confirmation`)}
         productDescription={`SSCD${scotsoun.scotsounId} | ${scotsoun.longName}`}

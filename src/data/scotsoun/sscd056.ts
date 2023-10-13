@@ -1,6 +1,8 @@
+import img from '$images/scotsoun/sscd056.jpg';
 import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
+  img,
   title: 'Hamewith',
   subtitle: 'and other poems',
   longName: 'Hamewith and other poems',

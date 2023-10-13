@@ -6,6 +6,8 @@ import tFurthsettins from '$i18n/translations/pages/furthsettins';
 import tSite from '$i18n/translations/site';
 import type Locale from '$types/Locale';
 import relativePath from '$lib/relativePath';
+import lallansImg from '$images/furthsettins/lallans.jpg';
+import scotsounImg from '$images/furthsettins/scotsoun.jpg';
 
 export async function getStaticPaths() {
   return localeStaticPaths;
@@ -22,13 +24,13 @@ const t = translate(locale);
     <ul class="link-gallery link-gallery--furthsettins">
       <li>
         <a href={relativePath(Astro.url.pathname, 'lallans')} class="link link-gallery__container">
-          <img src="/images/furthsettins/lallans.jpg" />
+          <img src={lallansImg.src} alt="" />
           <p class="link-gallery__title">{t(tSite, { key: 'lallans' })}</p>
         </a>
       </li>
       <li>
         <a href={relativePath(Astro.url.pathname, 'scotsoun')} class="link link-gallery__container">
-          <img src="/images/furthsettins/scotsoun.jpg" />
+          <img src={scotsounImg.src} alt="" />
           <p class="link-gallery__title">{t(tSite, { key: 'scotsoun' })}</p>
         </a>
       </li>

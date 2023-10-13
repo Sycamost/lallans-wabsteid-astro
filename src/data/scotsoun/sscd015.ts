@@ -1,6 +1,8 @@
+import img from '$images/scotsoun/sscd015.jpg';
 import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
+  img,
   title: 'Psaums, Hymns, Sangs',
   longName: 'Psaums, Hymns, Sangs',
   author: 'Clydebank Lyric Choir',

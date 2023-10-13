@@ -1,6 +1,8 @@
+import img from '$images/scotsoun/sscd804.jpg';
 import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
+  img,
   title: 'Whaleback City',
   subtitle: 'The Poetry of Dundee and Its Hinterland',
   longName: 'Whaleback City – The Poetry of Dundee and Its Hinterland',

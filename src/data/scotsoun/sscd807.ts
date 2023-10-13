@@ -1,6 +1,8 @@
+import img from '$images/scotsoun/sscd807.jpg';
 import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
+  img,
   title: 'The Lass o Gowrie',
   longName: 'The Lass o Gowrie',
   author: 'Margaret Gillies Brown',

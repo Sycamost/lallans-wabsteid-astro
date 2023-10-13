@@ -1,6 +1,8 @@
+import img from '$images/scotsoun/sscd092.jpg';
 import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
+  img,
   title: 'Into the White World',
   longName: 'Into the White World',
   author: 'Kenneth White',

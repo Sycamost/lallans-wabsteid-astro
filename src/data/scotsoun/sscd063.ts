@@ -1,6 +1,8 @@
+import img from '$images/scotsoun/sscd063.jpg';
 import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
+  img,
   title: 'Pipe Tunes',
   longName: 'Pipe Tunes',
   author: 'Duncan Johnstone',

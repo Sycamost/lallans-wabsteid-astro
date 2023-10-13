@@ -1,6 +1,8 @@
+import img from '$images/scotsoun/sscd808.jpg';
 import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
+  img,
   title: 'Scots Leid in Europe',
   longName: 'Scots Leid in Europe',
   author: 'Tam Hubbard, Kate Armstrong, Frances Robson, Lisa Simmons and George T Watt',

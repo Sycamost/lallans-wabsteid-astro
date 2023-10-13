@@ -1,6 +1,8 @@
+import img from '$images/scotsoun/sscd089.jpg';
 import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
+  img,
   title: 'William Neil',
   subtitle: 'Scotsoun Makars Series',
   longName: 'Scotsoun Makars Series – William Neil',

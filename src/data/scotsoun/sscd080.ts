@@ -1,6 +1,8 @@
+import img from '$images/scotsoun/sscd080.jpg';
 import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
+  img,
   title: 'Twa Leids – Dà Chànain',
   longName: 'Twa Leids – Dà Chànain',
   author: 'various',

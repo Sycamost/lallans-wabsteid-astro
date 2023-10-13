@@ -1,6 +1,8 @@
+import img from '$images/scotsoun/sscd048.jpg';
 import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
+  img,
   title: 'Poems in Scots',
   longName: 'Jean Taylor Smith reading from her own collection',
   author: 'Jean Taylor Smith',

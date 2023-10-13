@@ -1,6 +1,8 @@
+import img from '$images/scotsoun/sscd084.jpg';
 import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
+  img,
   title: 'Gleg',
   subtitle: 'Learning Scots in song and story',
   longName: 'Gleg – Learning Scots in song and story',

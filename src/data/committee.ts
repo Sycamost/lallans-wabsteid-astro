@@ -1,5 +1,11 @@
 import type { CommitteeMember } from '$types/CommitteeMember';
 import CommitteeRole from '$enums/CommitteeRole';
+import RabWilsonImgSrc from '$images/committee/rab-wilson.jpg';
+import JoeCarstairsImgSrc from '$images/committee/joe-carstairs.jpg';
+import TonyBeekmanImgSrc from '$images/committee/tony-beekman.jpg';
+import DavidBleimanImgSrc from '$images/committee/david-bleiman.jpg';
+import WilliamHershawImgSrc from '$images/committee/william-hershaw.jpg';
+import GeorgeTWattImgSrc from '$images/committee/george-t-watt.jpg';
 
 const committee: CommitteeMember[] = [
   {
@@ -17,7 +23,7 @@ const committee: CommitteeMember[] = [
         playwright, newpapaer columnist and commentator on the Scots language. 
       `,
     },
-    imgSrc: '/images/commattee/rab-wilson.jpg',
+    img: RabWilsonImgSrc,
   },
   {
     name: 'Joe Carstairs',
@@ -34,7 +40,7 @@ const committee: CommitteeMember[] = [
         He is from Perth but now lives in Edinburgh, where he lived since 2018.
       `,
     },
-    imgSrc: '/images/commattee/joe-carstairs.jpg',
+    img: JoeCarstairsImgSrc,
   },
   {
     name: 'Tony Beekman',
@@ -55,7 +61,7 @@ const committee: CommitteeMember[] = [
         stories which he is chuffed to see in Lallans occasionally.
       `,
     },
-    imgSrc: '/images/commattee/tony-beekman.jpg',
+    img: TonyBeekmanImgSrc,
   },
   {
     name: 'David Bleiman',
@@ -78,7 +84,7 @@ const committee: CommitteeMember[] = [
         </a>.
       `,
     },
-    imgSrc: '/images/commattee/david-bleiman.jpg',
+    img: DavidBleimanImgSrc,
   },
   {
     name: 'Michael Everson',
@@ -131,7 +137,7 @@ const committee: CommitteeMember[] = [
         </a>.
       `,
     },
-    imgSrc: '/images/commattee/william-hershaw.jpg',
+    img: WilliamHershawImgSrc,
   },
   {
     name: 'Derrick McClure',
@@ -180,7 +186,7 @@ const committee: CommitteeMember[] = [
         <a class="link" href="/en-GB/furthsettins/scotsoun">Scotsoun</a>.
       `,
     },
-    imgSrc: '/images/commattee/george-t-watt.jpg',
+    img: GeorgeTWattImgSrc,
   },
 ];
 

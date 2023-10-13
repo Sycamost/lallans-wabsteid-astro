@@ -19,7 +19,7 @@ function scotsounIdDescending(scotsoun1: Scotsoun, scotsoun2: Scotsoun) {
           class="link link-gallery__container"
           href={`/${locale}/furthsettins/scotsoun/${scotsounItem.scotsounId}`}
         >
-          <img src={`/images/scotsoun/sscd${scotsounItem.scotsounId}.jpg`} />
+          <img src={scotsounItem.img.src} alt="" />
           <p class="link-gallery__title">{scotsounItem.title}</p>
         </a>
       </li>

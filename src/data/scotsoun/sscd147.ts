@@ -1,6 +1,8 @@
+import img from '$images/scotsoun/sscd147.jpg';
 import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
+  img,
   title: 'George Campbell Hay',
   subtitle: 'Scotsoun Makars Series',
   longName: 'Scotsoun Makars Series – George Campell Hay',
