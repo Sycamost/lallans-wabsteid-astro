@@ -1,8 +1,10 @@
-import img from '$images/scotsoun/sscd051.jpg';
+import img192w from '$images/scotsoun/sscd051-192w.jpg';
 import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
-  img,
+  img: {
+    width192: img192w,
+  },
   title: 'Allan Ramsay',
   subtitle: 'Scotsoun Makars Series',
   longName: 'Scotsoun Makars Series – Allan Ramsay',

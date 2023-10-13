@@ -1,0 +1,55 @@
+---
+import CommitteeRole from '$enums/CommitteeRole';
+import tRole from '$i18n/translations/enums/committeeRole';
+import translate from '$i18n/translate';
+import type { CommitteeMember } from '$types/CommitteeMember';
+import type Locale from '$types/Locale';
+
+interface Props {
+  committeeMember: CommitteeMember;
+}
+
+const { committeeMember } = Astro.props;
+
+const locale = Astro.params.locale as Locale;
+
+const t = translate(locale);
+---
+
+<li class="committee__member">
+  {
+    committeeMember.img && (
+      <img
+        class="committee__member__img"
+        srcset={`
+          ${committeeMember.img.width106.src} 106w,
+          ${committeeMember.img.width146.src} 146w,
+          ${committeeMember.img.width192.src} 192w,
+          ${committeeMember.img.width222.src} 222w
+        `}
+        sizes="
+          (min-width: 120rem) 222px,
+          (min-width: 96rem) 146px,
+          (min-width: 64rem) 192px,
+          (min-width: 48rem) 222px,
+          106px
+        "
+        alt=""
+      />
+    )
+  }
+  <div class="committee__member__text">
+    <h4>
+      {committeeMember.name}
+      {
+        committeeMember.roles.length > 0 && (
+          <span class="font-weight-lighter">
+            |{' '}
+            {committeeMember.roles.map((role) => t(tRole, { key: CommitteeRole[role] })).join(', ')}
+          </span>
+        )
+      }
+    </h4>
+    {committeeMember.bio && <p set:html={committeeMember.bio[locale]} />}
+  </div>
+</li>

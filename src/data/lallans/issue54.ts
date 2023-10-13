@@ -1,9 +1,13 @@
-import img from '$images/lallans/issue54.jpg';
+import img192w from '$images/lallans/issue54-192w.jpg';
+import img274w from '$images/lallans/issue54-274w.jpg';
 import type LallansIssue from '$types/LallansIssue';
 
 const issue: LallansIssue = {
   issueNumber: 54,
-  img,
+  img: {
+    width192: img192w,
+    width274: img274w,
+  },
   issueName: '1999',
   price: '4.00',
   uploadDate: '2023-08-25',

@@ -1,8 +1,10 @@
-import img from '$images/scotsoun/sscd504.jpg';
+import img192w from '$images/scotsoun/sscd504-192w.jpg';
 import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
-  img,
+  img: {
+    width192: img192w,
+  },
   title: 'James Scott Skinner',
   subtitle: 'His Life and Achievement',
   longName: 'James Scott Skinner – His Life and Achievement',

@@ -1,8 +1,10 @@
-import img from '$images/scotsoun/sscd001.jpg';
+import img192w from '$images/scotsoun/sscd001-192w.jpg';
 import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
-  img,
+  img: {
+    width192: img192w,
+  },
   title: 'The Scottish Poems of Robert Fergusson',
   subtitle: 'Introduced by Douglas Gifford',
   longName: 'The Scottish Poems of Robert Fergusson',

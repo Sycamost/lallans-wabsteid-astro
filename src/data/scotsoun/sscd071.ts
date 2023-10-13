@@ -1,8 +1,10 @@
-import img from '$images/scotsoun/sscd071.jpg';
+import img192w from '$images/scotsoun/sscd071-192w.jpg';
 import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
-  img,
+  img: {
+    width192: img192w,
+  },
   title: 'A Sang’s a Sang for Aa That',
   longName: 'A Sang’s a Sang for Aa That',
   author: 'Andy Hunter',

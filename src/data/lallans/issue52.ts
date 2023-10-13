@@ -1,9 +1,13 @@
-import img from '$images/lallans/issue52.jpg';
+import img192w from '$images/lallans/issue52-192w.jpg';
+import img274w from '$images/lallans/issue52-274w.jpg';
 import type LallansIssue from '$types/LallansIssue';
 
 const issue: LallansIssue = {
   issueNumber: 52,
-  img,
+  img: {
+    width192: img192w,
+    width274: img274w,
+  },
   issueName: 'Whitsuntid 1998',
   price: '3.00',
   uploadDate: '2023-08-25',

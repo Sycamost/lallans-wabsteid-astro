@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import Page from '$layouts/Page.astro';
 import localeStaticPaths from '$lib/localeStaticPaths';
 import translate from '$i18n/translate';
@@ -6,8 +7,8 @@ import tFurthsettins from '$i18n/translations/pages/furthsettins';
 import tSite from '$i18n/translations/site';
 import type Locale from '$types/Locale';
 import relativePath from '$lib/relativePath';
-import lallansImg from '$images/furthsettins/lallans.jpg';
-import scotsounImg from '$images/furthsettins/scotsoun.jpg';
+import lallansImg from '$images/furthsettins/lallans-192w.jpg';
+import scotsounImg from '$images/furthsettins/scotsoun-192w.jpg';
 
 export async function getStaticPaths() {
   return localeStaticPaths;
@@ -24,13 +25,13 @@ const t = translate(locale);
     <ul class="link-gallery link-gallery--furthsettins">
       <li>
         <a href={relativePath(Astro.url.pathname, 'lallans')} class="link link-gallery__container">
-          <img src={lallansImg.src} alt="" />
+          <Image src={lallansImg} alt="" />
           <p class="link-gallery__title">{t(tSite, { key: 'lallans' })}</p>
         </a>
       </li>
       <li>
         <a href={relativePath(Astro.url.pathname, 'scotsoun')} class="link link-gallery__container">
-          <img src={scotsounImg.src} alt="" />
+          <Image src={scotsounImg} alt="" />
           <p class="link-gallery__title">{t(tSite, { key: 'scotsoun' })}</p>
         </a>
       </li>

@@ -1,8 +1,10 @@
-import img from '$images/scotsoun/sscd069.jpg';
+import img192w from '$images/scotsoun/sscd069-192w.jpg';
 import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
-  img,
+  img: {
+    width192: img192w,
+  },
   title: 'Lang Syne in the East Neuk o Fife',
   subtitle: 'an Ither Pairts o the Kinrick',
   longName: 'Lang Syne in the East Neuk o Fife – an Ither Pairts o the Kinrick',

@@ -1,8 +1,10 @@
-import img from '$images/scotsoun/sscd065.jpg';
+import img192w from '$images/scotsoun/sscd065-192w.jpg';
 import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
-  img,
+  img: {
+    width192: img192w,
+  },
   title: 'Duncan in Dunfermline',
   longName: 'Duncan in Dunfermline',
   author: 'Duncan Johnstone',

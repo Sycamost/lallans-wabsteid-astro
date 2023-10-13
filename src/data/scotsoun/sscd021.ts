@@ -1,8 +1,10 @@
-import img from '$images/scotsoun/sscd021.jpg';
+import img192w from '$images/scotsoun/sscd021-192w.jpg';
 import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
-  img,
+  img: {
+    width192: img192w,
+  },
   title: 'Ten Medieval Makars',
   subtitle: 'Scotsoun Makars Series',
   longName: 'Scotsoun Makars Series – Ten Medieval Makars',

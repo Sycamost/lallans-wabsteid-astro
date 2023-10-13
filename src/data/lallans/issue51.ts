@@ -1,9 +1,13 @@
-import img from '$images/lallans/issue51.jpg';
+import img192w from '$images/lallans/issue51-192w.jpg';
+import img274w from '$images/lallans/issue51-274w.jpg';
 import type LallansIssue from '$types/LallansIssue';
 
 const issue: LallansIssue = {
   issueNumber: 51,
-  img,
+  img: {
+    width192: img192w,
+    width274: img274w,
+  },
   issueName: 'Caunilmass 1998',
   price: '3.00',
   uploadDate: '2023-08-25',

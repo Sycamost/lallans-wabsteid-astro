@@ -1,8 +1,10 @@
-import img from '$images/scotsoun/sscd050.jpg';
+import img192w from '$images/scotsoun/sscd050-192w.jpg';
 import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
-  img,
+  img: {
+    width192: img192w,
+  },
   title: 'Four Linmill Stories',
   subtitle: 'Read by the author, Robert McLellan',
   longName: 'Four Linmill Stories',

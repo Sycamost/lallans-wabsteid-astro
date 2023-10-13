@@ -1,8 +1,10 @@
-import img from '$images/scotsoun/sscd115.jpg';
+import img192w from '$images/scotsoun/sscd115-192w.jpg';
 import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
-  img,
+  img: {
+    width192: img192w,
+  },
   title: 'The Preiching of the Swallow',
   subtitle: 'Searmonachadh a’ Ghòbhlain-Ghaoithe',
   longName: 'The Preiching of the Swallow – Searmonachadh a’ Ghòbhlain-Ghaoithe',
