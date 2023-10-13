@@ -19,6 +19,7 @@ footer {
 }
 
 .footer__rss-button__img {
+  min-width: 44px;
   width: calc(8 * var(--relative-eighth-rem));
 }
 
