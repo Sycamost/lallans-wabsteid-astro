@@ -1,9 +1,13 @@
-import img from '$images/lallans/issue97.jpg';
+import img192w from '$images/lallans/issue97-192w.jpg';
+import img274w from '$images/lallans/issue97-274w.jpg';
 import type LallansIssue from '$types/LallansIssue';
 
 const issue: LallansIssue = {
   issueNumber: 97,
-  img,
+  img: {
+    width192: img192w,
+    width274: img274w,
+  },
   issueName: 'Yuil 220',
   price: '9.00',
   uploadDate: '2023-08-25',

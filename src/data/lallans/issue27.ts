@@ -1,9 +1,13 @@
-import img from '$images/lallans/issue27.jpg';
+import img192w from '$images/lallans/issue27-192w.jpg';
+import img274w from '$images/lallans/issue27-274w.jpg';
 import type LallansIssue from '$types/LallansIssue';
 
 const issue: LallansIssue = {
   issueNumber: 27,
-  img,
+  img: {
+    width192: img192w,
+    width274: img274w,
+  },
   issueName: 'Mairtinmas 1986',
   price: '0.75',
   uploadDate: '2023-08-25',

@@ -4,7 +4,10 @@ import type Price from './Price';
 
 type LallansIssue = {
   issueNumber: LallansIssueNumber;
-  img: ImageMetadata;
+  img: {
+    width192: ImageMetadata;
+    width274: ImageMetadata;
+  };
   issueName: string;
   uploadDate: Date;
   price: Price;
