@@ -1,8 +1,10 @@
-import img from '$images/scotsoun/sscd063.jpg';
+import img192w from '$images/scotsoun/sscd063-192w.jpg';
 import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
-  img,
+  img: {
+    width192: img192w,
+  },
   title: 'Pipe Tunes',
   longName: 'Pipe Tunes',
   author: 'Duncan Johnstone',

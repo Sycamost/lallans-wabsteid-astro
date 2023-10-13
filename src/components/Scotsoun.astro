@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import translate from '$i18n/translate';
 import tSite from '$i18n/translations/site';
 import tComponent from '$i18n/translations/components/scotsoun';
@@ -25,7 +26,7 @@ const t = translate(locale);
       {scotsoun?.author && <p>{t(tSite, { key: 'by' }) + ' ' + scotsoun.author}</p>}
     </header>
     <div class="product__action-block">
-      <img src={scotsoun.img.src} alt="" />
+      <Image src={scotsoun.img.width192} alt="" />
       <PayPalButtons
         successPageUrl={relativePath(Astro.url.pathname, `payment-success-confirmation`)}
         productDescription={`SSCD${scotsoun.scotsounId} | ${scotsoun.longName}`}

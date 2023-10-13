@@ -1,8 +1,10 @@
-import img from '$images/scotsoun/sscd061.jpg';
+import img192w from '$images/scotsoun/sscd061-192w.jpg';
 import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
-  img,
+  img: {
+    width192: img192w,
+  },
   title: 'Robert Garioch 1909-1981',
   subtitle: 'In Mind o a Makar',
   longName: 'Robert Garioch 1909-1981 – In Mind o a Makar',

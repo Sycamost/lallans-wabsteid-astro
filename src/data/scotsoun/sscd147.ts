@@ -1,8 +1,10 @@
-import img from '$images/scotsoun/sscd147.jpg';
+import img192w from '$images/scotsoun/sscd147-192w.jpg';
 import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
-  img,
+  img: {
+    width192: img192w,
+  },
   title: 'George Campbell Hay',
   subtitle: 'Scotsoun Makars Series',
   longName: 'Scotsoun Makars Series – George Campell Hay',

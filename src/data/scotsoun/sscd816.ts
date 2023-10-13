@@ -1,8 +1,10 @@
-import img from '$images/scotsoun/sscd816.jpg';
+import img192w from '$images/scotsoun/sscd816-192w.jpg';
 import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
-  img,
+  img: {
+    width192: img192w,
+  },
   title: 'Michael',
   subtitle: 'A Ballad Play in Scots',
   longName: '"Michael: A Ballad Play in Scots"',

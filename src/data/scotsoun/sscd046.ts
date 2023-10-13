@@ -1,8 +1,10 @@
-import img from '$images/scotsoun/sscd046.jpg';
+import img192w from '$images/scotsoun/sscd046-192w.jpg';
 import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
-  img,
+  img: {
+    width192: img192w,
+  },
   title: 'Piper in the Nave',
   subtitle: 'of Dunfermline Abbey, vol 2',
   longName: 'Piper in the Nave of Dunfermline Abbey, vol 2',

@@ -1,8 +1,10 @@
-import img from '$images/scotsoun/sscd056.jpg';
+import img192w from '$images/scotsoun/sscd056-192w.jpg';
 import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
-  img,
+  img: {
+    width192: img192w,
+  },
   title: 'Hamewith',
   subtitle: 'and other poems',
   longName: 'Hamewith and other poems',

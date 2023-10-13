@@ -1,8 +1,10 @@
-import img from '$images/scotsoun/sscdM150.jpg';
+import img192w from '$images/scotsoun/sscdM150-192w.jpg';
 import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
-  img,
+  img: {
+    width192: img192w,
+  },
   title: 'Minnie',
   longName: 'Minnie',
   author: 'Sheena Blackhall',

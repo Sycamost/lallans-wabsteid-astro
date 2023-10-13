@@ -1,8 +1,10 @@
-import img from '$images/scotsoun/sscd070.jpg';
+import img192w from '$images/scotsoun/sscd070-192w.jpg';
 import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
-  img,
+  img: {
+    width192: img192w,
+  },
   title: 'Portions Waled frae the New Testament in Scots',
   longName: 'Portions Waled frae the New Testament in Scots',
   author: 'William Lorimer (tr.)',

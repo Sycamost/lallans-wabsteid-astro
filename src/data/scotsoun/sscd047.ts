@@ -1,8 +1,10 @@
-import img from '$images/scotsoun/sscd047.jpg';
+import img192w from '$images/scotsoun/sscd047-192w.jpg';
 import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
-  img,
+  img: {
+    width192: img192w,
+  },
   title: 'Ceòl Beag from the Castle',
   longName: 'Ceòl Beag from the Castle',
   author: 'Pipe Major Angus Macdonald',

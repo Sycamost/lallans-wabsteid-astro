@@ -1,8 +1,10 @@
-import img from '$images/scotsoun/sscd802.jpg';
+import img192w from '$images/scotsoun/sscd802-192w.jpg';
 import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
-  img,
+  img: {
+    width192: img192w,
+  },
   title: 'Three Doric Tales',
   longName: 'Three Doric Tales',
   author: 'Stephen Pacitti',

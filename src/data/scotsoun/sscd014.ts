@@ -1,8 +1,10 @@
-import img from '$images/scotsoun/sscd014.jpg';
+import img192w from '$images/scotsoun/sscd014-192w.jpg';
 import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
-  img,
+  img: {
+    width192: img192w,
+  },
   title: 'Ceol na Gàidhlig',
   subtitle: 'Gaelic Music & Poetry',
   longName: 'Ceol na Gàidhlig – Gaelic Music & Poetry',

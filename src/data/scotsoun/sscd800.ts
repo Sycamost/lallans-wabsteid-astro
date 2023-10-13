@@ -1,8 +1,10 @@
-import img from '$images/scotsoun/sscd800.jpg';
+import img192w from '$images/scotsoun/sscd800-192w.jpg';
 import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
-  img,
+  img: {
+    width192: img192w,
+  },
   title: 'Nan Chnochan Uain’ Ile',
   longName: 'Nan Chnochan Uain’ Ile',
   author: 'Ian Carmichael',

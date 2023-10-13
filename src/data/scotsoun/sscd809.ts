@@ -1,8 +1,10 @@
-import img from '$images/scotsoun/sscd809.jpg';
+import img192w from '$images/scotsoun/sscd809-192w.jpg';
 import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
-  img,
+  img: {
+    width192: img192w,
+  },
   title: 'Ravines',
   subtitle: 'a richer tocher',
   longName: 'Ravines – A Richer Tocher',

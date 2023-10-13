@@ -1,8 +1,10 @@
-import img from '$images/scotsoun/sscd137-8.jpg';
+import img192w from '$images/scotsoun/sscd137-8-192w.jpg';
 import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
-  img,
+  img: {
+    width192: img192w,
+  },
   title: 'TS Law',
   subtitle: 'Scotsoun Makars Series',
   longName: 'Scotsoun Makars Series – TS Law',

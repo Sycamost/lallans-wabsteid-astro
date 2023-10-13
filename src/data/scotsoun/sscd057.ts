@@ -1,8 +1,10 @@
-import img from '$images/scotsoun/sscd057.jpg';
+import img192w from '$images/scotsoun/sscd057-192w.jpg';
 import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
-  img,
+  img: {
+    width192: img192w,
+  },
   title: 'Piper Abune Them Aa',
   subtitle: 'Piobaire os Cionn Chaich',
   longName: 'Piper Abune Them Aa – Piobaire os Cionn Chaich',

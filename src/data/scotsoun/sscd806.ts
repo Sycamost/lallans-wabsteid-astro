@@ -1,8 +1,10 @@
-import img from '$images/scotsoun/sscd806.jpg';
+import img192w from '$images/scotsoun/sscd806-192w.jpg';
 import type Scotsoun from '$types/Scotsoun';
 
 const cd: Scotsoun = {
-  img,
+  img: {
+    width192: img192w,
+  },
   title: 'The Heichts o Macchu Picchu',
   subtitle: 'frae an owersettin by John Law',
   longName: 'The Heichts o Macchu Picchu – frae an owersettin by John Law',
