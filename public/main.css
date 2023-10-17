@@ -1,9 +1,0 @@
-@import 'css/variables/index.css';
-@import 'css/base/index.css';
-@import 'css/layout/index.css';
-@import 'css/modules/index.css';
-@import 'css/utils.css';
-
-:root {
-  scroll-behavior: smooth;
-}
