@@ -154,4 +154,7 @@ the website.
 5. Edit the file you just made with the new issue's information, including the
    locations of the correctly scaled cover images that you just made.
 6. Import that data file into the Lallans data index file, `src/data/lallans/index.ts`.
+7. Check that everything's working: the issue should appear at the top on the
+   Lallans page, `/furthsettins/lallans`, and the issue information should appear
+   at `/furthsettins/lallans/XYZ`. Check both the English and Scots versions.
 
