@@ -77,6 +77,7 @@ export const getLallansIssue: LallansIssueGetterTable = {
   99: async () => (await import('./issue99')).default,
   100: async () => (await import('./issue100')).default,
   101: async () => (await import('./issue101')).default,
+  102: async () => (await import('./issue102')).default,
 };
 
 export type LallansIssueGetterTable = { [key in LallansIssueNumber]: () => Promise<LallansIssue> };
