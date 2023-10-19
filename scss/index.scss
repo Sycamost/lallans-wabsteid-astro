@@ -1,4 +1,4 @@
-@import 'base/index';
+@use 'base/index' as *;
 @import 'layout/index';
 @import 'modules/index';
 @import 'variables/index';
