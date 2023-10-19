@@ -1,4 +1,3 @@
-@import 'layout/grid.css';
-@import 'layout/grid.xs.css' (min-width: 16rem);
-@import 'layout/grid.md.css' (min-width: 48rem);
-@import 'layout/section-margins.css';
+@use 'grid';
+@use 'section-margins';
+
