@@ -2,5 +2,5 @@
 @use 'layout/index' as *;
 @use 'modules/index' as *;
 @use 'variables/index' as *;
-@import 'utils';
+@use 'utils' as *;
 
