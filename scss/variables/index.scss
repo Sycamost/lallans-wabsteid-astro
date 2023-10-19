@@ -1,11 +1,5 @@
-@import 'variables/colours.css';
-@import 'variables/spacing.css';
-@import 'variables/spacing.xs.css' (min-width: 16rem);
-@import 'variables/spacing.sm.css' (min-width: 30rem);
-@import 'variables/spacing.md.css' (min-width: 48rem);
-@import 'variables/spacing.lg.css' (min-width: 64rem);
-@import 'variables/spacing.xl.css' (min-width: 96rem);
-@import 'variables/spacing.xxl.css' (min-width: 120rem);
-@import 'variables/typography.css';
-@import 'variables/typography.xs.css' (min-width: 16rem);
-@import 'variables/typography.md.css' (min-width: 48rem);
+@use 'colours' as *;
+@use 'palette' as *;
+@use 'spacing' as *;
+@use 'typography' as *;
+
