@@ -1,16 +1,11 @@
-@import 'modules/btn.css';
-@import 'modules/link.css';
-@import 'modules/news-index.css';
-@import 'modules/product.css';
-@import 'modules/schedule.css';
-@import 'modules/schedule.md.css' (min-width: 48rem);
-@import 'modules/link-gallery.css';
-@import 'modules/link-gallery.xs.css' (min-width: 16rem);
-@import 'modules/nav.css';
-@import 'modules/nav.xs.css' (min-width: 16rem);
-@import 'modules/nav.md.css' (min-width: 48rem);
-@import 'modules/nav.lg.css' (min-width: 64rem);
-@import 'modules/skip-to-content.css';
-@import 'modules/committee.css';
-@import 'modules/committee.md.css' (min-width: 48rem);
-@import 'modules/footer.css';
+@use 'btn' as *;
+@use 'committee' as *;
+@use 'footer' as *;
+@use 'link' as *;
+@use 'link-gallery' as *;
+@use 'nav' as *;
+@use 'news-index' as *;
+@use 'product' as *;
+@use 'schedule' as *;
+@use 'skip-to-content' as *;
+

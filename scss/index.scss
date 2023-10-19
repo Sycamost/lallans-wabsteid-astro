@@ -1,6 +1,6 @@
 @use 'base/index' as *;
 @use 'layout/index' as *;
-@import 'modules/index';
+@use 'modules/index' as *;
 @import 'variables/index';
 @import 'utils';
 
