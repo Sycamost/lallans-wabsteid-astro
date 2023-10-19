@@ -7,3 +7,5 @@ npm-debug.log*
 dist/
 .astro/
 .vercel
+public/css/
+scss-build/
