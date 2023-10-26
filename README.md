@@ -26,6 +26,9 @@ git clone https://github.com/Sycamost/lallans-wabsteid-astro.git \
   [a basic GitHub tutorial](https://docs.github.com/en/get-started/quickstart/hello-world)
   and here's a
   [GitHub guide to forking](https://docs.github.com/en/get-started/quickstart/fork-a-repo).
+* Can use a [command-line terminal](https://www.freecodecamp.org/news/command-line-for-beginners/).
+* Can use [NPM](https://nodesource.com/blog/an-absolute-beginners-guide-to-using-npm/)
+  to install dependencies and run scripts.
 
 ## Writing a news post
 
@@ -33,17 +36,20 @@ git clone https://github.com/Sycamost/lallans-wabsteid-astro.git \
 2. Copy and paste an existing news article in both English and Scots. You will
    find these in `src/content/news/en-GB` and `src/content/news/scots` respectively.
 3. Rename the news article following the existing pattern, which is the date of
-   publication followed by the title in
+   publication in `YYYY-MM-DD` format followed by the title in
    [kebab case](https://www.freecodecamp.org/news/snake-case-vs-camel-case-vs-pascal-case-vs-kebab-case-whats-the-difference/#whatiskebabcaseanamekebabcasea)
    and the `.mdx` file extension. For example, `2023-12-24-eiks-an-ens-3000.mdx`
    would be Eiks an Ens 3000, published on the 24th of December 2023.
 4. Edit the news articles to contain your desired content.
-5. Check it looks OK by running the website locally with `npm start`.
+5. Check it looks OK by running the website locally with `npm install && npm start`.
 6. When it looks OK, stage, commit and push your new news articles.
 7. Make a pull request to merge your new news articles into the `dev` branch upstream.
 8. Once a code owner approves your pull request, it'll get merged into `dev`, and
    (unless you yourself are a code owner) it is from that point no longer your
-   problem!
+   problem! From that point, it'll be live on
+   [staging.scotsleidassocie.org](https://staging.scotsleidassocie.org),
+   and it'll go live on [scotsleidassocie.org](https://scotsleidassocie.org) once
+   a code owner merges `dev` into `main`.
 
 ## Adding an issue of Lallans
 
