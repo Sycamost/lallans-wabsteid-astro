@@ -10,28 +10,18 @@
     color 100ms,
     text-decoration-color 100ms,
     text-decoration-thickness 100ms,
-    text-underline-offset 100ms,
-    border-color 100ms,
-    text-shadow 100ms;
+    border-color 100ms;
 }
 
 .link:is(:hover, :focus, :focus-visible, :focus-within),
 .group-hover:is(:hover, :focus, :focus-visible, :focus-within) .link {
   text-decoration-color: currentColor;
-  text-decoration-thickness: calc(4 * var(--relative-eighth-rem));
-  text-underline-offset: calc(3 * var(--relative-eighth-rem));
-  text-shadow:
-    0 1px 0 currentColor,
-    1px 0 0 currentColor,
-    1px 0 0 currentColor,
-    0 1px 0 currentColor;
+  text-decoration-thickness: calc(3 * var(--relative-eighth-rem));
   transition:
     color 300ms,
     text-decoration-color 300ms,
     text-decoration-thickness 300ms,
-    text-underline-offset 300ms,
-    border-color 300ms,
-    text-shadow 300ms;
+    border-color 300ms;
 }
 
 .link:focus, .link:focus-visible {
