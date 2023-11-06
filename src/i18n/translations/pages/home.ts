@@ -10,8 +10,8 @@ const tPage = {
     'en-GB': () => 'Submit to Lallans',
   },
   'submit-para-1': {
-    sco: () => 'We ar acceptin submeissions til Lallans 103!',
-    'en-GB': () => 'We are accepting submissions to Lallans 103!',
+    sco: () => 'We ar acceptin submeissions til Lallans 104!',
+    'en-GB': () => 'We are accepting submissions to Lallans 104!',
   },
   'submit-para-2': {
     sco: () => `
