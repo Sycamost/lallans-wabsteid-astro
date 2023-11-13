@@ -44,6 +44,12 @@ git clone https://github.com/Sycamost/lallans-wabsteid-astro.git \
    (This will update the production deployment on
    [scotsleidassocie.org](https://scotsleidassocie.org).)
 
+### Coding style
+
+Coding style is enforced by ESLint and Prettier. These tools are run on a commit hook, and you will
+not be able to commit if they fail. Please refrain from using `git commit --no-verify` except in
+extraordinary cases, and make it clear in your Pull Request when you have done so.
+
 ### Writing a news post
 
 Follow this guidance alongside the [general guidance](#general-guidance).
