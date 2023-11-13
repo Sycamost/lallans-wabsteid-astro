@@ -84,3 +84,61 @@ git clone https://github.com/Sycamost/lallans-wabsteid-astro.git \
 8. Check that everything's working: the release should appear at the top on the
    Scotsoun page, `/furthsettins/scotsoun`, and the release information should appear
    at `/furthsettins/scotsoun/XYZ`. Check both the English and Scots versions.
+
+## Infrastructure
+
+The deployment infrastructure for the website is in four parts: the domains,
+the SSL certificates, the hosting, and the CI/CD.
+
+### Domains
+
+The website is served on two domain names: [lallans.co.uk](https://www.lallans.co.uk)
+and [scotsleidassocie.org](https://scotsleidassocie.org). The lallans.co.uk
+domain is legacy, but will redirect to scotsleidassocie.org until at least
+September 2024.
+
+Firstly, lallans.co.uk is registered with [JoomlaWired](https://www.joomlawired.com),
+a hosting company specialising in hosting Joomla! and WordPress websites. We used
+to host a Joomla! website with them, hence the connection. We don't host
+anything with them any more, but we still rent the lallans.co.uk domain from
+them. The [Scots Language Society Webmaster](mailto:lallans@hotmail.co.uk)
+should have access to JoomlaWired.
+
+Redirecting requests to lallans.co.uk to scotsleidassocie.org is handled by
+[Vercel](#hosting).
+
+Meanwhile, scotsleidassocie.org is rented from AWS. Again, the Webmaster should
+have access to the AWS Console.
+
+### SSL certificates
+
+The SSL certificate for scotsleidassocie.org is bought from AWS Certificates
+Manager. Again, the Webmaster should have access to the AWS Console.
+
+### Hosting
+
+The website is hosted on [Vercel](https://vercel.com/sycamost/lallans-wabsteid-astro).
+Because we have the free plan, unfortunately only the Webmaster can access the
+Vercel dashboard.
+
+Vercel also handles redirecting from lallans.co.uk to scotsleidassocie.org.
+
+### CI/CD
+
+Our CI/CD pipeline is, thanks to the fantastic integration between GitHub and
+Vercel, no-code! We just need to make commits to the repo to see them deployed
+automagically.
+
+Ideally, we should check everything's working on deployment before everyone on
+the internet starts looking at it. For that reason, we have a staging deployment
+at [staging.scotsleidassocie.org](https://staging.scotsleidassocie.org). To
+update the staging deployment, simply commit to `dev` by making a Pull Request
+and getting it approved by a code owner and then merged.
+
+To update production, you'll want to first merge your changes into `dev` by
+making a Pull Request and getting it approved and merged. Once you've done that,
+given it five minutes to dpeloy, and you've checked that everything looks good
+on [staging.scotsleidassocie.org](https://staging.scotsleidassocie.org),
+[make a Pull Request to merge dev into main](https://github.com/Sycamost/lallans-wabsteid-astro/compare/main...dev).
+Once that Pull Request is approved by a code owner, merge it in and it should
+update production in under five minutes.
