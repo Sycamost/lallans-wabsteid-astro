@@ -38,13 +38,13 @@ git clone https://github.com/Sycamost/lallans-wabsteid-astro.git \
 2. Make a suitably named branch on your fork.
 3. Make your desired changes (see sections below for common cases).
 4. Commit and push them on your branch.
-5. Make a Pull Request to merge your changes into `dev`.
+5. Make a Pull Request to merge your changes into `deployment-staging`.
 6. A code owner (probably the Scots Language Society Webmaster) will review
    your Pull Request, ask for any necessary changes, and when satisfied, merge
-   it into `dev`. (This will update the [staging deployment](#cicd) on
-   [staging.scotsleidassocie.org](https://staging.scotsleidassocie.org).)
-7. Code owners will merge `dev` into `main` at their discretion. (This will
-   update the production deployment on
+   it into `deployment-staging`. (This will update the [staging deployment](#cicd)
+   on [staging.scotsleidassocie.org](https://staging.scotsleidassocie.org).)
+7. Code owners will merge `deployment-staging` into `deployment-production` at
+   their discretion. (This will update the production deployment on
    [scotsleidassocie.org](https://scotsleidassocie.org).)
 
 ### Writing a news post
@@ -60,14 +60,6 @@ Follow this guidance alongside the [general guidance](#general-guidance).
    would be Eiks an Ens 3000, published on the 24th of December 2023.
 3. Edit the news articles to contain your desired content.
 4. Check it looks OK by running the website locally with `npm install && npm start`.
-5. When it looks OK, stage, commit and push your new news articles.
-6. Make a pull request to merge your new news articles into the `dev` branch upstream.
-7. Once a code owner approves your pull request, it'll get merged into `dev`, and
-   (unless you yourself are a code owner) it is from that point no longer your
-   problem! From that point, it'll be live on
-   [staging.scotsleidassocie.org](https://staging.scotsleidassocie.org),
-   and it'll go live on [scotsleidassocie.org](https://scotsleidassocie.org) once
-   a code owner merges `dev` into `main`.
 
 ### Adding an issue of Lallans
 
@@ -152,13 +144,13 @@ automagically.
 Ideally, we should check everything's working on deployment before everyone on
 the internet starts looking at it. For that reason, we have a staging deployment
 at [staging.scotsleidassocie.org](https://staging.scotsleidassocie.org). To
-update the staging deployment, simply commit to `dev` by making a Pull Request
-and getting it approved by a code owner and then merged.
+update the staging deployment, simply commit to `deployment-staging` by making a
+Pull Request and getting it approved by a code owner and then merged.
 
-To update production, you'll want to first merge your changes into `dev` by
+To update production, you'll want to first merge your changes into `deployment-staging` by
 making a Pull Request and getting it approved and merged. Once you've done that,
 given it five minutes to dpeloy, and you've checked that everything looks good
 on [staging.scotsleidassocie.org](https://staging.scotsleidassocie.org),
-[make a Pull Request to merge dev into main](https://github.com/Sycamost/lallans-wabsteid-astro/compare/main...dev).
+[make a Pull Request to merge deployment-staging into deployment-production](https://github.com/Sycamost/lallans-wabsteid-astro/compare/deployment-production...deployment-staging).
 Once that Pull Request is approved by a code owner, merge it in and it should
 update production in under five minutes.
