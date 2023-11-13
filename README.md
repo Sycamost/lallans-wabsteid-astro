@@ -53,17 +53,18 @@ git clone https://github.com/Sycamost/lallans-wabsteid-astro.git \
 
 ## Adding an issue of Lallans
 
-1. Add the issue number to `src/types/LallansIssueNumber.d.ts`.
-2. Add the original issue cover photo as `src/images/issueXYZ.jpg`, where `XYZ`
+1. If you haven't already, fork the repository, and clone your fork.
+2. Add the issue number to `src/types/LallansIssueNumber.d.ts`.
+3. Add the original issue cover photo as `src/images/lallans/issueXYZ.jpg`, where `XYZ`
    is the issue number. Most of the examples are `.jpg`, but the file type isn't important.
-3. Make copies of the cover image that are scaled to 192 and 274 pixels wide.
+4. Make copies of the cover image that are scaled to 192 and 274 pixels wide.
    Name them `issueXYZ-192w.jpg` and `issueXYZ-274w.jpg` respectively.
-4. Copy one of the existing Lallans issues in `src/data/lallans` and name the
+5. Copy one of the existing Lallans issues in `src/data/lallans` and name the
    copy `issueXYZ.ts`.
-5. Edit the file you just made with the new issue's information, including the
+6. Edit the file you just made with the new issue's information, including the
    locations of the correctly scaled cover images that you just made.
-6. Import that data file into the Lallans data index file, `src/data/lallans/index.ts`.
-7. Check that everything's working: the issue should appear at the top on the
+7. Import that data file into the Lallans data index file, `src/data/lallans/index.ts`.
+8. Check that everything's working: the issue should appear at the top on the
    Lallans page, `/furthsettins/lallans`, and the issue information should appear
    at `/furthsettins/lallans/XYZ`. Check both the English and Scots versions.
 
