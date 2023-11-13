@@ -69,13 +69,14 @@ Follow this guidance alongside the [general guidance](#general-guidance).
 Follow this guidance alongside the [general guidance](#general-guidance).
 
 1. Add the issue number to `src/types/LallansIssueNumber.d.ts`.
-2. Add the original issue cover photo as `src/images/lallans/issueXYZ.jpg`, where `XYZ` is the issue
-   number. Most of the examples are `.jpg`, but the file type isn't important.
-3. Make copies of the cover image that are scaled to 192 and 274 pixels wide. Name them
-   `issueXYZ-192w.jpg` and `issueXYZ-274w.jpg` respectively.
-4. Copy one of the existing Lallans issues in `src/data/lallans` and name the copy `issueXYZ.ts`.
-5. Edit the file you just made with the new issue's information, including the locations of the
-   correctly scaled cover images that you just made.
+2. Add the original issue cover photo as `src/images/lallans/issueXYZ.jpg`, where `XYZ`
+   is the issue number. Most of the examples are `.jpg`, but the file type isn't important.
+3. Make copies of the cover image that are scaled to 192 and 274 pixels wide.
+   Name them `issueXYZ-192w.jpg` and `issueXYZ-274w.jpg` respectively.
+4. Copy one of the existing Lallans issues in `src/data/lallans` and name the
+   copy `issueXYZ.ts`.
+5. Edit the file you just made with the new issue's information, including the
+   locations of the correctly scaled cover images that you just made.
 6. Import that data file into the Lallans data index file, `src/data/lallans/index.ts`.
 7. Check that everything's working: the issue should appear at the top on the Lallans page,
    `/furthsettins/lallans`, and the issue information should appear at `/furthsettins/lallans/XYZ`.
@@ -86,50 +87,54 @@ Follow this guidance alongside the [general guidance](#general-guidance).
 Follow this guidance alongside the [general guidance](#general-guidance).
 
 1. Add the release ID to `src/types/ScotsounId.d.ts`.
-2. Add the original cover image as `src/images/scotsoun/scotsounXYZ.jpg`, where `XYZ` is the release
-   ID. Most of the examples are `.jpg`, but the file type isn't important.
+2. Add the original cover image as `src/images/scotsoun/scotsounXYZ.jpg`, where `XYZ`
+   is the release ID. Most of the examples are `.jpg`, but the file type isn't important.
 3. Make a copy of the cover image which is scaled to 192 pixels wide, and name it
    `scotsounXYZ-192w.jpg`.
-4. Copy one of the existing Scotsoun releases in `src/data/scotsoun` and name the copy
-   `scotsounXYZ.ts`.
-5. Edit the file you just made with the new release's information, including the location of the
-   correctly scaled cover image that you just made.
+4. Copy one of the existing Scotsoun releases in `src/data/scotsoun` and name the
+   copy `scotsounXYZ.ts`.
+5. Edit the file you just made with the new release's information, including the
+   location of the correctly scaled cover image that you just made.
 6. Import that data file into the Scotsoun data index file, `src/data/scotsoun/index.ts`.
-7. Check that everything's working: the release should appear at the top on the Scotsoun page,
-   `/furthsettins/scotsoun`, and the release information should appear at
-   `/furthsettins/scotsoun/XYZ`. Check both the English and Scots versions.
+7. Check that everything's working: the release should appear at the top on the
+   Scotsoun page, `/furthsettins/scotsoun`, and the release information should appear
+   at `/furthsettins/scotsoun/XYZ`. Check both the English and Scots versions.
 
 ## Infrastructure
 
-The deployment infrastructure for the website is in four parts: the domains, the SSL certificates,
-the hosting, and the CI/CD.
+The deployment infrastructure for the website is in four parts: the domains,
+the SSL certificates, the hosting, and the CI/CD.
 
 ### Domains
 
-The website is served on two domain names: [lallans.co.uk](https://www.lallans.co.uk) and
-[scotsleidassocie.org](https://scotsleidassocie.org). The lallans.co.uk domain is legacy, but will
-redirect to scotsleidassocie.org until at least September 2024.
+The website is served on two domain names: [lallans.co.uk](https://www.lallans.co.uk)
+and [scotsleidassocie.org](https://scotsleidassocie.org). The lallans.co.uk
+domain is legacy, but will redirect to scotsleidassocie.org until at least
+September 2024.
 
-Firstly, lallans.co.uk is registered with [JoomlaWired](https://www.joomlawired.com), a hosting
-company specialising in hosting Joomla! and WordPress websites. We used to host a Joomla! website
-with them, hence the connection. We don't host anything with them any more, but we still rent the
-lallans.co.uk domain from them. The [Scots Language Society Webmaster](mailto:lallans@hotmail.co.uk)
+Firstly, lallans.co.uk is registered with [JoomlaWired](https://www.joomlawired.com),
+a hosting company specialising in hosting Joomla! and WordPress websites. We used
+to host a Joomla! website with them, hence the connection. We don't host
+anything with them any more, but we still rent the lallans.co.uk domain from
+them. The [Scots Language Society Webmaster](mailto:lallans@hotmail.co.uk)
 should have access to JoomlaWired.
 
-Redirecting requests to lallans.co.uk to scotsleidassocie.org is handled by [Vercel](#hosting).
+Redirecting requests to lallans.co.uk to scotsleidassocie.org is handled by
+[Vercel](#hosting).
 
-Meanwhile, scotsleidassocie.org is rented from AWS. Again, the Webmaster should have access to the
-AWS Console.
+Meanwhile, scotsleidassocie.org is rented from AWS. Again, the Webmaster should
+have access to the AWS Console.
 
 ### SSL certificates
 
-The SSL certificate for scotsleidassocie.org is bought from AWS Certificates Manager. Again, the
-Webmaster should have access to the AWS Console.
+The SSL certificate for scotsleidassocie.org is bought from AWS Certificates
+Manager. Again, the Webmaster should have access to the AWS Console.
 
 ### Hosting
 
-The website is hosted on [Vercel](https://vercel.com/sycamost/lallans-wabsteid-astro). Because we
-have the free plan, unfortunately only the Webmaster can access the Vercel dashboard.
+The website is hosted on [Vercel](https://vercel.com/sycamost/lallans-wabsteid-astro).
+Because we have the free plan, unfortunately only the Webmaster can access the
+Vercel dashboard.
 
 Vercel also handles redirecting from lallans.co.uk to scotsleidassocie.org.
 
