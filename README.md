@@ -68,3 +68,19 @@ git clone https://github.com/Sycamost/lallans-wabsteid-astro.git \
    Lallans page, `/furthsettins/lallans`, and the issue information should appear
    at `/furthsettins/lallans/XYZ`. Check both the English and Scots versions.
 
+## Adding a Scotsoun release
+
+1. If you haven't already, fork the repository, and clone your fork.
+2. Add the release ID to `src/types/ScotsounId.d.ts`.
+3. Add the original cover image as `src/images/scotsoun/scotsounXYZ.jpg`, where `XYZ`
+   is the release ID. Most of the examples are `.jpg`, but the file type isn't important.
+4. Make a copy of the cover image which is scaled to 192 pixels wide, and name it
+   `scotsounXYZ-192w.jpg`.
+5. Copy one of the existing Scotsoun releases in `src/data/scotsoun` and name the
+   copy `scotsounXYZ.ts`.
+6. Edit the file you just made with the new release's information, including the
+   location of the correctly scaled cover image that you just made.
+7. Import that data file into the Scotsoun data index file, `src/data/scotsoun/index.ts`.
+8. Check that everything's working: the release should appear at the top on the
+   Scotsoun page, `/furthsettins/scotsoun`, and the release information should appear
+   at `/furthsettins/scotsoun/XYZ`. Check both the English and Scots versions.
