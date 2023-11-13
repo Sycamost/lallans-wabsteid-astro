@@ -8,7 +8,7 @@
     "plugin:astro/recommended",
     "plugin:@typescript-eslint/recommended"
   ],
-  "ignorePatterns": ["api"],
+  "ignorePatterns": ["api", "*.md"],
   "overrides": [
     {
       "files": ["*.astro"],
