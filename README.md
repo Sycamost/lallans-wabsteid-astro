@@ -35,12 +35,12 @@ git clone https://github.com/Sycamost/lallans-wabsteid-astro.git \
 2. Make a suitably named branch on your fork.
 3. Make your desired changes (see sections below for common cases).
 4. Commit and push them on your branch.
-5. Make a Pull Request to merge your changes into `deployment-staging`.
+5. Make a Pull Request to merge your changes into `Sycamost/deployment-staging`.
 6. A code owner (probably the Scots Language Society Webmaster) will review your Pull Request, ask
-   for any necessary changes, and when satisfied, merge it into `deployment-staging`. (This will
+   for any necessary changes, and when satisfied, merge it into `Sycamost/deployment-staging`. (This will
    update the [staging deployment](#cicd) on
    [staging.scotsleidassocie.org](https://staging.scotsleidassocie.org).)
-7. Code owners will merge `deployment-staging` into `deployment-production` at their discretion.
+7. Code owners will merge `Sycamost/deployment-staging` into `Sycamost/deployment-production` at their discretion.
    (This will update the production deployment on
    [scotsleidassocie.org](https://scotsleidassocie.org).)
 
