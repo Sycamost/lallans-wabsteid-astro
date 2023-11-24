@@ -11,3 +11,4 @@ public/css/
 scss-build/
 
 .vercel
+.env.development.local
