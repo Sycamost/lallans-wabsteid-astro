@@ -22,7 +22,7 @@ const ENV: { [key in keyof Env]: number } = {
   ENVIRONMENT: 1,
 };
 
-const { env }: { env: DirtyEnv } = process;
+const env = process.env as DirtyEnv;
 
 const sanitisedEnvEntries =
   (Object.keys(ENV) as (keyof Env)[])
