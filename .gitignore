@@ -9,3 +9,5 @@ dist/
 .vercel
 public/css/
 scss-build/
+
+.vercel
