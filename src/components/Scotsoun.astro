@@ -4,7 +4,7 @@ import translate from '$i18n/translate';
 import tSite from '$i18n/translations/site';
 import tComponent from '$i18n/translations/components/scotsoun';
 import type Scotsoun from '$types/Scotsoun';
-import PayPalButtons from './PayPalButtons.astro';
+import ProductPayPalButtons from './ProductPayPalButtons.astro';
 import relativePath from '$lib/relativePath';
 import { getLocaleFromPathOrThrow } from '$lib/getLocaleFromPath';
 
@@ -27,7 +27,7 @@ const t = translate(locale);
     </header>
     <div class="product__action-block">
       <Image src={scotsoun.img.width192} alt="" />
-      <PayPalButtons
+      <ProductPayPalButtons
         successPageUrl={relativePath(Astro.url.pathname, `payment-success-confirmation`)}
         productDescription={`SSCD${scotsoun.scotsounId} | ${scotsoun.longName}`}
         shortDescription={`SSCD${scotsoun.scotsounId}`}

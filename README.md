@@ -101,8 +101,8 @@ Follow this guidance alongside the [general guidance](#general-guidance).
 
 ## Infrastructure
 
-The deployment infrastructure for the website is in four parts: the domains, the SSL certificates,
-the hosting, and the CI/CD.
+The deployment infrastructure for the website is in five parts: the domains, the SSL certificates,
+the hosting, the CI/CD and the database.
 
 ### Domains
 
@@ -151,3 +151,24 @@ deploy, and you've checked that everything looks good on
 [make a Pull Request to merge deployment-staging into deployment-production](https://github.com/Sycamost/lallans-wabsteid-astro/compare/deployment-production...deployment-staging).
 Once that Pull Request is approved by a code owner, merge it in and it should update production in
 under five minutes.
+
+### Database
+
+We have a database. It is a
+[Postgres database hosted on Vercel](https://vercel.com/docs/storage/vercel-postgres/quickstart).
+
+It has two tables:
+
+- subscriptions
+  - id: VARCHAR(255)
+  - email_address: VARCHAR(255)
+- dev_subscriptions
+  - id: VARCHAR(255)
+  - email_address: VARCHAR(255)
+
+One table is there so that users can look up their subscriptions, and thereby
+retrieve the subscription ID so that they can amend or cancel their subscription.
+The second table is there to test out the Postgres integration in staging
+with dummy data.
+
+The easiest way to view, update, create and delete tables is on the Vercel dashboard.

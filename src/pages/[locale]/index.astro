@@ -64,6 +64,10 @@ const mostRecentNewsItem = await getMostRecentNewsItem(locale);
     <p set:html={t(tPage, { key: 'why-jyne-para-3' })} />
 
     <h3 set:html={t(tPage, { key: 'hou-jyne' })} />
+
+    <PayPalButtons
+      successPageUrl={`/${locale}/created-subscription`}
+
     <p set:html={t(tPage, { key: 'hou-jyne-para-1' })} />
     <p
       set:html={t(tPage, {

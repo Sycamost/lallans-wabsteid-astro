@@ -7,7 +7,7 @@ import type LallansIssue from '$types/LallansIssue';
 import { Image } from 'astro:assets';
 import LallansIssueContributions from './LallansIssueContributions.astro';
 import LallansIssueContributors from './LallansIssueContributors.astro';
-import PayPalButtons from './PayPalButtons.astro';
+import ProductPayPalButtons from './ProductPayPalButtons.astro';
 
 interface Props {
   issue: LallansIssue;
@@ -27,7 +27,7 @@ const t = translate(locale);
 
     <div class="product__action-block">
       <Image alt="" src={issue.img.width274} />
-      <PayPalButtons
+      <ProductPayPalButtons
         successPageUrl={relativePath(Astro.url.pathname, `payment-success-confirmation`)}
         productDescription={`Lallans ${issue.issueNumber} | ${issue.issueName}`}
         shortDescription={`Lallans ${issue.issueNumber}`}
