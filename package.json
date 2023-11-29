@@ -25,6 +25,7 @@
     "@astrojs/sitemap": "^3.0.0",
     "@paypal/paypal-js": "^6.0.1",
     "@vercel/postgres": "^0.5.1",
+    "@simplewebauthn/server": "^8.3.5",
     "astro": "^3.2.2",
     "csso-cli": "^4.0.2",
     "dotenv": "^16.3.1",
