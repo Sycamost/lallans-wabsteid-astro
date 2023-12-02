@@ -26,7 +26,9 @@ const PAYPAL_CLIENT_ID =
 </paypal-buttons>
 
 <script>
-  import { PayPalNamespace, loadScript } from '@paypal/paypal-js';
+  import type { PayPalNamespace } from '@paypal/paypal-js';
+
+  import { loadScript } from '@paypal/paypal-js';
 
   const backendUrl = '/api';
 
@@ -81,7 +83,11 @@ const PAYPAL_CLIENT_ID =
 
           let response;
           try {
-            response = await fetch(`${backendUrl}/order`, { method: 'POST', body, headers });
+            response = await fetch(`${backendUrl}/payments/order`, {
+              method: 'POST',
+              body,
+              headers,
+            });
           } catch (err) {
             throw new Error(`Failed to create order. ${err}`);
           }
@@ -113,7 +119,11 @@ const PAYPAL_CLIENT_ID =
 
           let response;
           try {
-            response = await fetch(`${backendUrl}/order`, { method: 'PATCH', body, headers });
+            response = await fetch(`${backendUrl}/payments/order`, {
+              method: 'PATCH',
+              body,
+              headers,
+            });
           } catch (err) {
             throw new Error(`Failed to capture order. ${err}`);
           }
