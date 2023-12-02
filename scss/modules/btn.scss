@@ -1,4 +1,4 @@
-.btn {
+:is(button, .btn) {
   display: block;
   box-sizing: border-box;
   color: var(--text-color);
@@ -14,7 +14,7 @@
     transform 100ms;
 }
 
-.btn:is(:hover, :focus, :focus-visible, :focus-within, :active) {
+:is(button, .btn):is(:hover, :focus, :focus-visible, :focus-within, :active) {
   box-shadow: none;
   outline: none;
   color: var(--text-highlight-color);
@@ -25,11 +25,11 @@
     transform 300ms;
 }
 
-.btn:is(:focus, :focus-visible, :focus-within) {
+:is(button, .btn):is(:focus, :focus-visible, :focus-within) {
   border-color: var(--special-text-highlight-color);
   border-style: dotted;
 }
 
-.btn:active {
+:is(button, .btn):active {
   transform: scale(1.1, 1.1);
 }

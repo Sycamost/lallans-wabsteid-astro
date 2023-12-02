@@ -1,0 +1,175 @@
+---
+import translate from '$i18n/translate';
+import tPage from '$i18n/translations/pages/signUp';
+import Page from '$layouts/Page.astro';
+import { getLocaleFromPathOrThrow } from '$lib/getLocaleFromPath';
+import localeStaticPaths from '$lib/localeStaticPaths';
+
+export async function getStaticPaths() {
+  return localeStaticPaths;
+}
+
+const locale = getLocaleFromPathOrThrow(Astro.url.pathname);
+const t = translate(locale);
+---
+
+<Page title={t(tPage, { key: 'title' })}>
+  <section>
+    <h1>Sign up</h1>
+
+    <form id="sign-up-form">
+      <label for="email">{t(tPage, { key: 'label-email' })}</label>
+      <input type="email" required id="email" />
+
+      <label for="display-name">{t(tPage, { key: 'label-display-name' })}</label>
+      <input type="text" required id="display-name" />
+
+      <button type="submit">{t(tPage, { key: 'submit' })}</button>
+    </form>
+  </section>
+</Page>
+
+<script>
+  import type { GetRegistrationOptionsResponseBody } from '$lib/api';
+  import type Locale from '$types/Locale';
+
+  import * as api from '$lib/api';
+  import { startRegistration } from '@simplewebauthn/browser';
+
+  const form = document.getElementById('sign-up-form') as HTMLFormElement;
+  const displayNameInput = document.getElementById('display-name') as HTMLInputElement;
+  const emailInput = document.getElementById('email') as HTMLInputElement;
+  const locale = document.getElementsByTagName('html')[0].lang as Locale;
+
+  const successPageUrl = `${locale}/sign-up/success`;
+
+  form.addEventListener('submit', async (event: SubmitEvent) => {
+    // Prevent default behaviour of submit button (which includes refreshing the page)
+    event.preventDefault();
+
+    let registrationOptions;
+    try {
+      registrationOptions = await getRegistrationOptions();
+    } catch (err) {
+      reportError('Failed to get registration options.', err);
+      return;
+    }
+
+    let registrationResponse;
+    try {
+      registrationResponse = await startRegistration(registrationOptions);
+    } catch (err) {
+      reportError('Failed to start registration on the client.', err);
+      return;
+    }
+
+    let isSuccessfullyRegistered;
+    try {
+      isSuccessfullyRegistered = await verifyRegistrationResponse({
+        userId: registrationOptions.user.id,
+        displayName: registrationOptions.user.displayName,
+        registrationResponse,
+      });
+    } catch (err) {
+      reportError('Failed to verify the registration response.', err);
+      return;
+    }
+
+    if (!isSuccessfullyRegistered) {
+      reportError(
+        `
+        Failed to verify your registration. Have another go, or contact us at
+        lallans@hotmail.co.uk if the issue persists.
+      `,
+        null
+      );
+    }
+
+    const url = new URL(successPageUrl);
+    url.searchParams.set('displayName', registrationOptions.user.displayName);
+    url.searchParams.set('username', registrationOptions.user.name);
+
+    console.info(`Redirecting to the success page ${url}...`);
+    window.location.href = url.toString();
+    return;
+  });
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  function reportError(context: string, err: any) {
+    console.error(context, err);
+    window.alert(`
+      Encountered an unexpected error. Please try again, or, if the error
+      persists, contact lallans@hotmail.co.uk.
+
+      ${context}
+
+      ${err?.toString() ?? ''}
+    `);
+  }
+
+  async function getRegistrationOptions(): Promise<GetRegistrationOptionsResponseBody> {
+    const response = await api.getRegistrationOptions({
+      displayName: displayNameInput.value,
+      userId: emailInput.value,
+    });
+
+    if (response.status === 409 /* CONFLICT: user ID already exists in database */) {
+      // TODO: go to a nice localised error page instead of showing an alert
+      window.alert('Username already exists! Log in or choose a different username.');
+
+      // TODO: obviously this is stupid. Do something non-stupid instead
+      return null as unknown as GetRegistrationOptionsResponseBody;
+    }
+
+    if (!response.ok) {
+      return Promise.reject(`
+        Tried to get registration options on API, but got an unsuccessful
+        response: ${response.status} ${response.statusText} ${await response.text()}
+      `);
+    }
+
+    const body = await response.json();
+    if (!body) {
+      return Promise.reject('Tried to get registration options on API, but got an empty reponse.');
+    }
+
+    return body as GetRegistrationOptionsResponseBody;
+  }
+
+  async function verifyRegistrationResponse(
+    params: Parameters<typeof api.verifyRegistrationResponse>[0]
+  ): Promise<boolean> {
+    const response = await api.verifyRegistrationResponse(params);
+
+    if (response.status === 409 /* CONFLICT: user ID already exists*/) {
+      // TODO: go to a nice localised error page instead of showing an alert
+      window.alert(
+        'Username or ID already exists! Try logging in or choosing a different username.'
+      );
+
+      // TODO: obviously this is stupid. Do something non-stupid instead
+      return null as unknown as boolean;
+    }
+
+    if (!response.ok) {
+      return Promise.reject(`
+        Tried to verify registration response on API, but got an unsuccessful
+        response: ${response.status} ${response.statusText} ${await response.text()}
+      `);
+    }
+
+    const body = await response.json();
+    if (body === true) {
+      return true;
+    }
+
+    if (body === false) {
+      return false;
+    }
+
+    return Promise.reject(`
+      Tried to verify registration response on API. Expected response to be
+      'true' or 'false', but got: ${body}
+    `);
+  }
+</script>

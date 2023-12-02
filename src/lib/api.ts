@@ -43,7 +43,6 @@ export async function getRegistrationOptions(params: GetRegistrationOptionsParam
   // Hack to avoid this bug.
   return await fetch(`${backendUrl}/auth/registration?${queryString}&hack=toavoidbug`, {
     method: 'GET',
-    body: JSON.stringify(params),
     headers: { 'Content-Type': 'application/json' },
   });
 }
