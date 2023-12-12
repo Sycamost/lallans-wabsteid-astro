@@ -135,6 +135,9 @@ textarea {
   @include form-control-reset;
 }
 
+/**
+ * Corrects the display in Firefox and Edge.
+ */
 details {
   display: block;
 }
