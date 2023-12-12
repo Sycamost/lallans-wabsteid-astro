@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 :root,
 html,
 body,
@@ -149,8 +155,3 @@ summary {
   display: list-item;
 }
 
-a, :link, :visited {
-  background-color: transparent;
-  color: currentColor;
-  text-decoration: none;
-}
