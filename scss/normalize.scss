@@ -32,6 +32,10 @@ html {
   text-size-adjust: none;
 }
 
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
 hr {
   box-sizing: content-box;
   height: 0;
