@@ -95,21 +95,44 @@ sup {
   top: -0.5em;
 }
 
-button, [type='button'], [type='reset'], [type='submit'] {
+@mixin form-control-reset {
   font-family: inherit;
   font-size: 100%;
   line-height: 1.15;
+  margin: 0;
+  text-transform: none; /* For buttons (Firefox, Edge) and selects (Firefox) */
+}
+
+:is(
+  button,
+  [type='button'],
+  [type='reset'],
+  [type='submit']
+) {
+  @include form-control-reset;
   text-transform: none;
-  overflow: visible;
+
+  /**
+   * Remove the inner border and padding in Firefox.
+   */
+  &::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+  }
+
+  /**
+   * Restore the focus styles unset by the previous rule.
+   */
+  &:-moz-focusring {
+    outline: 1px dotted ButtonText;
+  }
 }
 
-:is(button, [type='button'], [type='reset'], [type='submit'])::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
-}
-
-:is(button, [type='button'], [type='reset'], [type='submit']):-moz-focusring {
-  outline: 1px dotted ButtonText;
+input,
+optgroup,
+select,
+textarea {
+  @include form-control-reset;
 }
 
 details {
