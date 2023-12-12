@@ -73,8 +73,12 @@ small {
   font-size: 80%;
 }
 
-sub,
-sup {
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+
+@mixin baseline-adjustment {
   font-size: 75%;
   line-height: 0;
   position: relative;
@@ -82,10 +86,12 @@ sup {
 }
 
 sub {
+  @include baseline-adjustment;
   bottom: -0.25em;
 }
 
 sup {
+  @include baseline-adjustment;
   top: -0.5em;
 }
 
