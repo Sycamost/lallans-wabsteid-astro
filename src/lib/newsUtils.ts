@@ -1,5 +1,6 @@
+import locales from '$i18n/locales';
 import type Locale from '$types/Locale';
-import { CollectionEntry, getCollection } from 'astro:content';
+import { getCollection, type CollectionEntry } from 'astro:content';
 
 export async function getMostRecentNewsItem(locale: Locale) {
   const allNews = await getCollection('news');
@@ -18,7 +19,13 @@ export function getLocale(newsItem: CollectionEntry<'news'>) {
 
 export function getHref(newsItem: CollectionEntry<'news'>) {
   const locale = getLocale(newsItem);
-  return `/${locale}/news/${newsItem.slug.replace('/', '-')}`;
+  return `/${locale}/news/${getSlug(newsItem)}`;
+}
+
+export function getSlug(newsItem: CollectionEntry<'news'>) {
+  const toLowerCase = (s: string) => s.toLowerCase();
+  const matchLocales = new RegExp(`(${locales.map(toLowerCase).join('|')})/`)
+  return newsItem.slug.replace(matchLocales, '');
 }
 
 export function isNewsItemInLocale(newsItem: CollectionEntry<'news'>, locale: Locale) {
