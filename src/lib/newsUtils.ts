@@ -46,6 +46,7 @@ function isBefore(item1: CollectionEntry<'news'>, item2: CollectionEntry<'news'>
 }
 
 export function getDate(newsItem: CollectionEntry<'news'>) {
-  const match = newsItem.id.match(/(?<=(en-GB|sco))\/(\d\d\d\d-\d\d-\d\d)/)?.[2];
-  return match ? new Date(match) : null;
+  const matchDate = new RegExp(`(${locales.join('|')})/(\\d\\d\\d\\d-\\d\\d-\\d\\d)`);
+  const date = newsItem.id.match(matchDate)?.[2];
+  return date ? new Date(date) : null;
 }
