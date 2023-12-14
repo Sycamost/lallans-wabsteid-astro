@@ -33,7 +33,7 @@ export function isNewsItemInLocale(newsItem: CollectionEntry<'news'>, locale: Lo
   return newsItemLocale === locale;
 }
 
-function isBefore(item1: CollectionEntry<'news'>, item2: CollectionEntry<'news'>) {
+export function isBefore(item1: CollectionEntry<'news'>, item2: CollectionEntry<'news'>) {
   const date1 = getDate(item1);
   const date2 = getDate(item2);
   if (!date2) {

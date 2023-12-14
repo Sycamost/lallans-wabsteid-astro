@@ -5,12 +5,14 @@ import Page from '$layouts/Page.astro';
 import { getLocaleFromPathOrThrow } from '$lib/getLocaleFromPath';
 import localeStaticPaths from '$lib/localeStaticPaths';
 import { getCollection } from 'astro:content';
-import { isNewsItemInLocale } from '$lib/newsUtils';
+import { isBefore, isNewsItemInLocale } from '$lib/newsUtils';
 import NewsIndex from '$components/NewsIndex/NewsIndex.astro';
 
 const allNews = await getCollection('news');
 const locale = getLocaleFromPathOrThrow(Astro.url.pathname);
-const allNewsInLocale = allNews.filter((item) => isNewsItemInLocale(item, locale));
+const allNewsInLocale = allNews
+  .filter((item) => isNewsItemInLocale(item, locale))
+  .sort((a, b) => (isBefore(a, b) ? 1 : isBefore(b, a) ? -1 : 0));
 const t = translate(locale);
 
 export async function getStaticPaths() {
