@@ -9,6 +9,7 @@
   text-align: center;
 
   li {
+    list-style-type: none;
     grid-column: span var(--gallery-item-column-span);
   }
 

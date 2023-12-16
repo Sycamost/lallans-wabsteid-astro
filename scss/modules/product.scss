@@ -18,3 +18,14 @@
   width: 100%;
   height: auto;
 }
+
+:is(.product__contributors, .product__contributions) {
+  list-style-type: none;
+}
+
+.product__contribution__title {
+  font-style: italic;
+  &:has(+ .product__contribution__author) {
+    margin-inline-end: 0.3em;
+  }
+}

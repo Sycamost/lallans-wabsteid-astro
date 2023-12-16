@@ -8,9 +8,9 @@ interface Props {
 const { contributors } = Astro.props;
 ---
 
-<section class="lallans-contributors">
+<section>
   <h2>Contributors</h2>
-  <ul>
+  <ul class="product__contributors">
     {contributors.map((contributor) => <li>{contributor}</li>)}
   </ul>
 </section>

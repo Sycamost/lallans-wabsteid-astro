@@ -15,13 +15,15 @@ const t = translate(locale);
 
 <section>
   <h2>Contributions</h2>
-  <ul class="lallans-issue__contributions">
+  <ul class="product__contributions">
     {
       contributions.map((contribution) => (
         <li>
-          <span class="italic">{contribution.title}</span>
+          <span class="product__contribution__title">{contribution.title}</span>
           {'author' in contribution && (
-            <span> {t(tSite, { key: 'by' }) + ' ' + contribution.author}</span>
+            <span class="product__contribution__author">
+              {t(tSite, { key: 'by' }) + ' ' + contribution.author}
+            </span>
           )}
         </li>
       ))
