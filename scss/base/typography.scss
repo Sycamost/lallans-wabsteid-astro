@@ -45,6 +45,8 @@ h3,
 h4 {
   font-family: var(--font-serif);
   font-weight: 700;
+  line-height: 1.15;
+  text-wrap: balance;
 }
 
 .title {
@@ -52,6 +54,7 @@ h4 {
   font-size: var(--font-size-6);
   font-weight: 700;
   margin-block-start: var(--margin-block-sm);
+  text-wrap: balance;
 }
 
 .title--small {
@@ -59,7 +62,7 @@ h4 {
   margin-block-start: 0;
 }
 
-p:not(:first-child) {
+:is(p, ol, ul):not(:first-child) {
   margin-block-start: var(--margin-block-sm);
 }
 
