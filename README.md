@@ -37,11 +37,11 @@ git clone https://github.com/Sycamost/lallans-wabsteid-astro.git \
 4. Commit and push them on your branch.
 5. Make a Pull Request to merge your changes into `Sycamost/deployment-staging`.
 6. A code owner (probably the Scots Language Society Webmaster) will review your Pull Request, ask
-   for any necessary changes, and when satisfied, merge it into `Sycamost/deployment-staging`. (This will
-   update the [staging deployment](#cicd) on
+   for any necessary changes, and when satisfied, merge it into `Sycamost/deployment-staging`. (This
+   will update the [staging deployment](#cicd) on
    [staging.scotsleidassocie.org](https://staging.scotsleidassocie.org).)
-7. Code owners will merge `Sycamost/deployment-staging` into `Sycamost/deployment-production` at their discretion.
-   (This will update the production deployment on
+7. Code owners will merge `Sycamost/deployment-staging` into `Sycamost/deployment-production` at
+   their discretion. (This will update the production deployment on
    [scotsleidassocie.org](https://scotsleidassocie.org).)
 
 ### Coding style
@@ -151,3 +151,24 @@ deploy, and you've checked that everything looks good on
 [make a Pull Request to merge deployment-staging into deployment-production](https://github.com/Sycamost/lallans-wabsteid-astro/compare/deployment-production...deployment-staging).
 Once that Pull Request is approved by a code owner, merge it in and it should update production in
 under five minutes.
+
+## Authentication
+
+This website implements [WebAuthn](https://webauthn.guide) for user authentication.
+
+### Registration flow
+
+1. A user goes to the signup page, `/sign-up` and enters their username and display name.
+2. That sends their details to `GET /registration` on the backend.
+3. If a user with the provided username already exists, the flow fails and the user is directed to
+   log in or provide a different username. (TODO!)
+4. Otherwise, the backend returns registration options.
+5. On the client, these registration options are handed to the user's authenticator, which will
+   generate a public-private keypair and expose the public key. The authenticator might be a
+   biometric method, such as facial or fingerprint recognition, a PIN, or a physical key, depending
+   on what is available to the user.
+6. The public key is passed back to the backend at `POST /registration` to verify the registration
+   response from the authenticator.
+7. If the verification was not successful, the user is informed of the failure and directed to try
+   again or get in touch to get help.
+8. If the verification was successful, the user is informed of this and logged in.

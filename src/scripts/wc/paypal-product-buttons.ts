@@ -1,6 +1,7 @@
-import { type PayPalNamespace, loadScript } from '@paypal/paypal-js';
+import type { PayPalNamespace } from '@paypal/paypal-js';
 
-const backendUrl = '/api';
+import { loadScript } from '@paypal/paypal-js';
+import * as api from '$lib/api';
 
 class PaypalProductButtons extends HTMLElement {
   constructor() {
@@ -67,18 +68,10 @@ class PaypalProductButtons extends HTMLElement {
     return constructButtons({
       // This function is called to set up the transaction details without actually carrying it out
       async createOrder() {
-        const body = JSON.stringify({
-          productDescription,
-          shortDescription,
-          totalPrice,
-        });
-        const headers = {
-          'Content-Type': 'application/json',
-        };
 
         let response: Response;
         try {
-          response = await fetch(`${backendUrl}/order`, { method: 'POST', body, headers });
+          response = await api.createOrder({ productDescription, shortDescription, totalPrice });
         } catch (err) {
           throw new Error(`Failed to create order. ${err}`);
         }
@@ -100,17 +93,9 @@ class PaypalProductButtons extends HTMLElement {
 
       // This function is called after payment is confirmed
       async onApprove(data) {
-        const body = JSON.stringify({
-          id: data.orderID,
-          isApproved: true,
-        });
-        const headers = {
-          'Content-Type': 'application/json',
-        };
-
         let response: Response;
         try {
-          response = await fetch(`${backendUrl}/order`, { method: 'PATCH', body, headers });
+          response = await api.captureOrder(data.orderID);
         } catch (err) {
           throw new Error(`Failed to capture order. ${err}`);
         }

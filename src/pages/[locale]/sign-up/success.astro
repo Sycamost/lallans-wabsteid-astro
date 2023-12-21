@@ -1,0 +1,42 @@
+---
+import localeStaticPaths from '$lib/localeStaticPaths';
+
+export async function getStaticPaths() {
+  return localeStaticPaths;
+}
+---
+
+<!-- TODO: localise this -->
+<h1>Successfully signed up</h1>
+
+<script>
+  const errorMsg = new HTMLParagraphElement();
+  errorMsg.append('Something went wrong. Please send an error report to ');
+  const lallansEmailAnchor = new HTMLAnchorElement();
+  lallansEmailAnchor.href = 'mailto:lallans@hotmail.co.uk';
+  lallansEmailAnchor.textContent = 'lallans@hotmail.co.uk';
+  errorMsg.append(lallansEmailAnchor);
+  errorMsg.append('.');
+
+  const heading = document.getElementsByTagName('h1')[0];
+
+  const url = new URL(window.location.href);
+
+  const displayName = url.searchParams.get('displayName');
+  const username = url.searchParams.get('username');
+  if (!displayName || !username) {
+    heading.after(errorMsg);
+  }
+
+  const successMsg = [new HTMLParagraphElement(), new HTMLParagraphElement()];
+  // TODO: localise this
+  successMsg[0].textContent = `
+    Congratulations, ${displayName}! You have successfully registered a new
+    account with us.
+  `;
+  successMsg[1].textContent = `
+    Your new unique username is ${username}. Use this next time you want to log in.
+  `;
+  heading.after(...successMsg);
+</script>
+<!-- TODO: 'go back to where you were' link -->

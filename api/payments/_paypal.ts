@@ -1,5 +1,6 @@
-import type Order from './_Order';
-import env from './_env';
+import type Order from '../types/Order';
+
+import env from '_env';
 
 export async function paypalCreateOrder(order: Order) {
   const accessToken = await getLazyAccessToken();
