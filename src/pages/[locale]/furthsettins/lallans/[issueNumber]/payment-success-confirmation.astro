@@ -23,7 +23,7 @@ const issueNumber = new Number(Astro.params.issueNumber).valueOf() as LallansIss
   <section>
     <h1>{t(tPage, { key: 'title' })}</h1>
     <p>{t(tPage, { key: 'payment-confirmation-message', issueNumber: `${issueNumber}` })}</p>
-    <a class="link" href={`/${locale}/furthsettins/lallans/${issueNumber}`}>
+    <a href={`/${locale}/furthsettins/lallans/${issueNumber}`}>
       {t(tPage, { key: 'back-button-text', issueNumber: `${issueNumber}` })}
     </a>
   </section>
