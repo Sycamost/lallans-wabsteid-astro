@@ -24,13 +24,13 @@ const t = translate(locale);
 
     <ul class="link-gallery link-gallery--furthsettins">
       <li>
-        <a href={relativePath(Astro.url.pathname, 'lallans')} class="link link-gallery__container">
+        <a href={relativePath(Astro.url.pathname, 'lallans')} class="link-gallery__container">
           <Image src={lallansImg} alt="" />
           <p class="link-gallery__title">{t(tSite, { key: 'lallans' })}</p>
         </a>
       </li>
       <li>
-        <a href={relativePath(Astro.url.pathname, 'scotsoun')} class="link link-gallery__container">
+        <a href={relativePath(Astro.url.pathname, 'scotsoun')} class="link-gallery__container">
           <Image src={scotsounImg} alt="" />
           <p class="link-gallery__title">{t(tSite, { key: 'scotsoun' })}</p>
         </a>

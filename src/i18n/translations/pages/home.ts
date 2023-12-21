@@ -17,12 +17,12 @@ const tPage = {
     sco: () => `
       We accep poesie, cuttie tales, reviews, essays an drama, baith
       oreiginal an owerset. Sen yer submeissions til
-      <a class="link" href="mailto:lallans@hotmail.co.uk">lallans@hotmail.co.uk</a>.
+      <a href="mailto:lallans@hotmail.co.uk">lallans@hotmail.co.uk</a>.
     `,
     'en-GB': () => `
       We accept poetry, short stories, reviews, essays and drama, both
       original and translated. Send your submissions to
-      <a class="link" href="mailto:lallans@hotmail.co.uk">lallans@hotmail.co.uk</a>.
+      <a href="mailto:lallans@hotmail.co.uk">lallans@hotmail.co.uk</a>.
     `,
   },
   news: {
@@ -91,14 +91,14 @@ const tPage = {
     sco: () => `
       We ar ane o the foremaist furthsetters o new Scots leitratur.
       Oor maist important furthsettins ar
-      <a href="/sco/furthsettins/lallans" class="link">Lallans</a> an
-      <a href="/sco/furthsettins/scotsoun" class="link">Scotsoun</a>.
+      <a href="/sco/furthsettins/lallans">Lallans</a> an
+      <a href="/sco/furthsettins/scotsoun">Scotsoun</a>.
     `,
     'en-GB': () => `
       We are one of the leading publishers of new Scots literature.
       Our most important publications are
-      <a href="/en-GB/furthsettins/lallans" class="link">Lallans</a> and
-      <a href="/en-GB/furthsettins/scotsoun" class="link">Scotsoun</a>.
+      <a href="/en-GB/furthsettins/lallans">Lallans</a> and
+      <a href="/en-GB/furthsettins/scotsoun">Scotsoun</a>.
     `,
   },
   'aw-furthsettins': {
@@ -167,18 +167,18 @@ const tPage = {
   'hou-jyne-para-2': {
     sco: ({ membershipEmail }: { membershipEmail: string }) => `
       Fur tae become a memmer, simply get in titch wi us at
-      <a class="link" href="mailto:${membershipEmail}">${membershipEmail}</a>
+      <a href="mailto:${membershipEmail}">${membershipEmail}</a>
       an we’ll provide ye wi our bank details; or ye can jyne bi sendin us a cheque
       made peyable til <b>The Scots Language Society</b>. See
-      <a class="link" href="#contact">Contact us</a>
+      <a href="#contact">Contact us</a>
       fur our address.
     `,
     'en-GB': ({ membershipEmail }: { membershipEmail: string }) => `
       To become a member, simply get in touch with us at
-      <a class="link" href="mailto:${membershipEmail}">${membershipEmail}</a>
+      <a href="mailto:${membershipEmail}">${membershipEmail}</a>
       and we’ll provide you with our bank details; or you can join by sending us
       a cheque made payable to <b>The Scots Language Society</b>. See
-      <a class="link" href="#contact">Contact us</a> for our address.
+      <a href="#contact">Contact us</a> for our address.
     `,
   },
   contact: {
