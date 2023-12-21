@@ -6,6 +6,5 @@ do
     --output $output \
     --input-source-map $x.map \
     --source-map $output.map \
-    --watch;
+    --watch &
 done;
-
