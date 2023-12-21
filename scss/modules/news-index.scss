@@ -8,6 +8,11 @@
   width: var(--width-prose);
 }
 
+a.news-index__item {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
 .news-index__item:not(:first-child) {
   border-top-width: 0;
 }

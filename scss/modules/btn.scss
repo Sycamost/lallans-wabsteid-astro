@@ -1,7 +1,5 @@
 .btn {
   display: block;
-  box-sizing: border-box;
-  color: var(--text-color);
   border: solid var(--relative-eighth-rem) var(--text-color);
   font-weight: 600;
   text-align: center;
@@ -33,3 +31,10 @@
 .btn:active {
   transform: scale(1.1, 1.1);
 }
+
+/* Override anchor styling. */
+a.btn {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
