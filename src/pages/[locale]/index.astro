@@ -75,7 +75,7 @@ const mostRecentNewsItem = await getMostRecentNewsItem(locale);
 
   <section id="contact">
     <h2 set:html={t(tPage, { key: 'contact' })} />
-    <a class="link" href={`${locale}/mailto:${contactDetails.generalEnquiries.emailAddress}`}>
+    <a href={`${locale}/mailto:${contactDetails.generalEnquiries.emailAddress}`}>
       {contactDetails.generalEnquiries.emailAddress}
     </a>
     <address>

@@ -1,32 +1,31 @@
-.link {
+a, .link {
   color: var(--special-text-color);
   text-decoration-line: underline;
   text-decoration-color: var(--special-text-color);
   text-decoration-thickness: var(--relative-eighth-rem);
   text-underline-offset: var(--relative-eighth-rem);
   border: dotted transparent var(--relative-eighth-rem);
-  border-radius: calc(3 * var(--relative-eighth-rem));
   transition:
     color 100ms,
     text-decoration-color 100ms,
     text-decoration-thickness 100ms,
     border-color 100ms;
-}
 
-.link:is(:hover, :focus, :focus-visible, :focus-within),
-.group-hover:is(:hover, :focus, :focus-visible, :focus-within) .link {
-  text-decoration-color: currentColor;
-  text-decoration-thickness: calc(3 * var(--relative-eighth-rem));
-  transition:
-    color 300ms,
-    text-decoration-color 300ms,
-    text-decoration-thickness 300ms,
-    border-color 300ms;
-}
+  &:is(:hover, :focus, :focus-visible, :focus-within),
+  .group-hover:is(:hover, :focus, :focus-visible, :focus-within) & {
+    text-decoration-color: currentColor;
+    text-decoration-thickness: calc(3 * var(--relative-eighth-rem));
+    transition:
+      color 300ms,
+      text-decoration-color 300ms,
+      text-decoration-thickness 300ms,
+      border-color 300ms;
+  }
 
-.link:focus, .link:focus-visible {
-  box-shadow: none;
-  outline: none;
-  border-color: var(--special-text-color);
+  &:is(:focus, :focus-visible, :focus-within) {
+    box-shadow: none;
+    outline: none;
+    border-color: var(--special-text-color);
+  }
 }
 

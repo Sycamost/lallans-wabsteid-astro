@@ -23,9 +23,7 @@ const t = translate(locale);
     parentRoutes.map((route) => {
       return (
         <li>
-          <a class="link" href={`/${locale}${route}`}>
-            {t(tBreadcrumbs, { key: route })}
-          </a>
+          <a href={`/${locale}${route}`}>{t(tBreadcrumbs, { key: route })}</a>
         </li>
       );
     })

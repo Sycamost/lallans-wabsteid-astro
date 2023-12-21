@@ -8,11 +8,11 @@ const tPage = {
   message: {
     sco: () => `
         Yon page disna exeist. Try gaein til oor
-        <a href="/sco" class="link">hame page</a>?
+        <a href="/sco">hame page</a>?
     `,
     'en-GB': () => `
         That page doesn’t exist. Try going to our
-        <a href="/en-GB" class="link">home page</a>?
+        <a href="/en-GB">home page</a>?
     `,
   },
 };
