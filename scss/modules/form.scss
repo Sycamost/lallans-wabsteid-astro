@@ -1,0 +1,17 @@
+:is(input, label, button) {
+  display: block;
+}
+
+input {
+  width: var(--width-prose);
+  font-size: var(--font-size-1);
+}
+
+:is(input + label, :is(button, [type=submit])) {
+  margin-block-start: var(--margin-block-md);
+}
+
+:is(button, [type=submit]) {
+  width: var(--grid-column-width);
+  margin-inline-start: auto;
+}
