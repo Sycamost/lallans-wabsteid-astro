@@ -2,7 +2,7 @@ import type Authenticator from '../types/Authenticator';
 import type User from '../types/User';
 import { type RegistrationResponseJSON } from '@simplewebauthn/server/script/deps';
 
-import simplewebauthn from '@simplewebauthn/server';
+import { verifyRegistrationResponse as innerVerifyRegistrationResponse } from '@simplewebauthn/server';
 import RELYING_PARTY from './_relyingParty';
 import addAuthenticator from '../db/_addAuthenticator';
 import addUser from '../db/_addUser';
@@ -21,7 +21,7 @@ export default async function verifyRegistrationResponse(
   expectedChallenge: string,
   registrationResponse: RegistrationResponseJSON,
 ): Promise<boolean> {
-  const verification = await simplewebauthn.verifyRegistrationResponse({
+  const verification = await innerVerifyRegistrationResponse({
     response: registrationResponse,
     expectedChallenge,
     expectedOrigin: origin,
