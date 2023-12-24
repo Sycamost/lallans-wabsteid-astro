@@ -11,13 +11,13 @@ export default async function setCurrentChallenge(userId: string, challenge: str
         ${userId},
         ${challenge}
       );
-    `);
+    `;
 
     const update = `
       UPDATE TABLE ${CURRENT_CHALLENGES.name}
       SET ${CURRENT_CHALLENGES.fields.currentChallenge} = ${challenge}
       WHERE ${CURRENT_CHALLENGES.fields.userId} = '${userId}';
-    `);
+    `;
 
     await sql.query(`
       BEGIN
@@ -28,7 +28,7 @@ export default async function setCurrentChallenge(userId: string, challenge: str
           ${update};
         ELSE
           ${insert};
-    `
+    `);
   } catch (err) {
     throw new Error(`Failed to set current challenge for user with ID ${userId} in database.`, err);
   }
