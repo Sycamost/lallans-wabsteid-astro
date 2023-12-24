@@ -2,12 +2,14 @@ import { QueryResultRow, sql } from '@vercel/postgres';
 import { CURRENT_CHALLENGES } from './_tables';
 
 export default async function getCurrentChallenge(userId: string): Promise<string | null> {
+  const query = `
+    SELECT ${CURRENT_CHALLENGES.fields.currentChallenge}
+    FROM ${CURRENT_CHALLENGES.name}
+    WHERE ${CURRENT_CHALLENGES.fields.userId} = '${userId}';
+  `;
+
   try {
-    const result = await sql.query(`
-      SELECT ${CURRENT_CHALLENGES.fields.currentChallenge}
-      FROM ${CURRENT_CHALLENGES.name}
-      WHERE ${CURRENT_CHALLENGES.fields.userId} = '${userId}';
-    `);
+    const result = await sql.query(query);
 
     if (!result.rows.length) {
       return null;
@@ -19,6 +21,6 @@ export default async function getCurrentChallenge(userId: string): Promise<strin
     // See https://github.com/brianc/node-postgres/blob/master/packages/pg/lib/result.js
     return row[CURRENT_CHALLENGES.fields.currentChallenge];
   } catch (err) {
-    throw new Error(`Failed to get current challenge for user with ID ${userId} from database.`, err);
+    throw new Error(`Failed to get current challenge for user with ID ${userId} from database. Query was ${query.replace(/\s+/g, ' ')}. ${err}`);
   }
 }

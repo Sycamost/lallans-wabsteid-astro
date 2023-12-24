@@ -5,13 +5,15 @@ import { USERS } from './_tables';
 export default async function getUser(
   userId: string
 ): Promise<Pick<User, 'id' | 'displayName'> | null> {
+  const query = `
+    SELECT
+      ${USERS.fields.displayName}
+    FROM ${USERS.name}
+    WHERE ${USERS.fields.id} = '${userId}';
+  `;
+
   try {
-    const result = await sql.query(`
-      SELECT
-        ${USERS.fields.displayName}
-      FROM ${USERS.name}
-      WHERE ${USERS.fields.id} = '${userId}';
-    `);
+    const result = await sql.query(query);
 
     if (!result.rows.length) {
       return null;
@@ -24,6 +26,6 @@ export default async function getUser(
       displayName: row[USERS.fields.displayName],
     };
   } catch (err) {
-    throw new Error(`Failed to get user with ID ${userId} from database.`, err);
+    throw new Error(`Failed to get user with ID ${userId} from database. Query was ${query.replace(/\s+/g, ' ')}. ${err}`);
   }
 }
