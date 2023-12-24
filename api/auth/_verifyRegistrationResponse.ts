@@ -6,6 +6,7 @@ import { verifyRegistrationResponse as innerVerifyRegistrationResponse } from '@
 import RELYING_PARTY from './_relyingParty';
 import addAuthenticator from '../db/_addAuthenticator';
 import addUser from '../db/_addUser';
+import env from '../_env';
 
 /**
  * Verifies the registration response returned by @simplewebauthn/browser's
@@ -24,7 +25,9 @@ export default async function verifyRegistrationResponse(
   const verification = await innerVerifyRegistrationResponse({
     response: registrationResponse,
     expectedChallenge,
-    expectedOrigin: origin,
+    expectedOrigin: env.ENVIRONMENT === 'dev'
+      ? 'https://scotsleidassocie.org'
+      : 'https://staging.scotsleidassocie.org',
     expectedRPID: RELYING_PARTY.id,
   }).catch((err) => {
     throw new Error('Registration response verification failed.', err);
