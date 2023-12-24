@@ -6,18 +6,20 @@ import { AUTHENTICATORS } from './_tables';
 export default async function updateAuthenticator<
   T extends keyof Omit<Authenticator, 'id'>
 >(id: string, updatedFields: Pick<Authenticator, T>): Promise<void> {
-  try {
-    const assignments = Object.entries(updatedFields)
-      .filter(([key]) => key !== 'id') // never update the ID
-      .map(([key, value]) => `${key}=${value}`)
-      .join(', ');
+  const assignments = Object.entries(updatedFields)
+    .filter(([key]) => key !== 'id') // never update the ID
+    .map(([key, value]) => `${key}=${value}`)
+    .join(', ');
 
-    await sql.query(`
-      UPDATE ${AUTHENTICATORS.name}
-      SET ${assignments}
-      WHERE ${AUTHENTICATORS.fields.id} = '${id}';
-    `);
+  const query = `
+    UPDATE ${AUTHENTICATORS.name}
+    SET ${assignments}
+    WHERE ${AUTHENTICATORS.fields.id} = '${id}';
+  `;
+
+  try {
+    await sql.query(query);
   } catch (err) {
-    throw new Error(`Failed to update authenticator with ID ${id} in database.`, err);
+    throw new Error(`Failed to update authenticator with ID ${id} in database. Query was ${query.replace(/\s+/g, ' ')}. ${err}`);
   }
 }
