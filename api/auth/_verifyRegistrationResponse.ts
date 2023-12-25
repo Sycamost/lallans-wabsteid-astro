@@ -25,7 +25,7 @@ export default async function verifyRegistrationResponse(
   const verification = await innerVerifyRegistrationResponse({
     response: registrationResponse,
     expectedChallenge,
-    expectedOrigin: env.ENVIRONMENT === 'dev'
+    expectedOrigin: env.ENVIRONMENT === 'prod'
       ? 'https://scotsleidassocie.org'
       : 'https://staging.scotsleidassocie.org',
     expectedRPID: RELYING_PARTY.id,
