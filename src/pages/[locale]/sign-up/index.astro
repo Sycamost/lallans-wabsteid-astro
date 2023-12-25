@@ -40,12 +40,18 @@ const t = translate(locale);
   const displayNameInput = document.getElementById('display-name') as HTMLInputElement;
   const emailInput = document.getElementById('email') as HTMLInputElement;
   const locale = document.getElementsByTagName('html')[0].lang as Locale;
+  const statusInfoMsg = document.createElement('p');
+  statusInfoMsg.textContent = locale === 'en-GB' ? 'Signing you up…' : 'Signin you up…';
 
   const successPageUrl = `${locale}/sign-up/success`;
 
   form.addEventListener('submit', async (event: SubmitEvent) => {
     // Prevent default behaviour of submit button (which includes refreshing the page)
     event.preventDefault();
+
+    // Disable the form and leave message to let the user know it’s been submitted
+    form.setAttribute('disabled', '');
+    form.after(statusInfoMsg);
 
     let registrationOptions;
     try {
@@ -90,21 +96,28 @@ const t = translate(locale);
     url.searchParams.set('username', registrationOptions.user.name);
 
     console.info(`Redirecting to the success page ${url}...`);
+    statusInfoMsg.innerHTML = locale === 'en-GB'
+      ? `Redirecting to <a href="${url.toString()}">the success page</a>…`
+      : `Redirectin til <a href="${url.toString()}">the success page</a>…`;
     window.location.href = url.toString();
     return;
   });
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   function reportError(context: string, err: any) {
-    console.error(context, err);
-    window.alert(`
+    const msg = `
       Encountered an unexpected error. Please try again, or, if the error
       persists, contact lallans@hotmail.co.uk.
 
-      ${context}
-
       ${err?.toString() ?? ''}
-    `);
+
+      ${context}
+    `;
+
+    console.error(context, err);
+    window.alert(msg);
+    statusInfoMsg.textContent = msg;
+    form.removeAttribute('disabled');
   }
 
   async function getRegistrationOptions(): Promise<GetRegistrationOptionsResponseBody> {
