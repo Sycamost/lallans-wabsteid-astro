@@ -7,12 +7,13 @@
   padding-inline: var(--spacing-inline-md);
   padding-block: var(--spacing-block-sm);
   background-color: transparent;
+  cursor: pointer;
   transition:
     background-color 100ms,
     transform 100ms;
 }
 
-:is(button, .btn):is(:hover, :focus, :focus-visible, :focus-within, :active) {
+:is(button, .btn):is(:hover, :focus, :focus-visible, :focus-within, :active):not(:is(:disabled, [disabled])) {
   box-shadow: none;
   outline: none;
   color: var(--text-highlight-color);
@@ -23,12 +24,12 @@
     transform 300ms;
 }
 
-:is(button, .btn):is(:focus, :focus-visible, :focus-within) {
+:is(button, .btn):is(:focus, :focus-visible, :focus-within):not(:is(:disabled, [disabled])) {
   border-color: var(--special-text-highlight-color);
   border-style: dotted;
 }
 
-:is(button, .btn):active {
+:is(button, .btn):active:not(:is(:disabled), [disabled]) {
   transform: scale(1.1, 1.1);
 }
 
@@ -37,4 +38,12 @@ a.btn {
   color: var(--text-color);
   text-decoration: none;
 }
+
+:is(button, .btn):is(:disabled, [disabled]) {
+  color: var(--neutral-text-color);
+  background-color: var(--neutral-background-color);
+  border-color: var(--neutral-text-color);
+  cursor: initial;
+}
+
 
