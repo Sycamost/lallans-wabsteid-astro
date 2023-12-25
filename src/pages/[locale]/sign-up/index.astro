@@ -35,10 +35,12 @@ const t = translate(locale);
 
   import * as api from '$lib/api';
   import { startRegistration } from '@simplewebauthn/browser';
+  import UserAlreadyExistsError from '$types/UserAlreadyExistsError.d';
 
   const form = document.getElementById('sign-up-form') as HTMLFormElement;
   const displayNameInput = document.getElementById('display-name') as HTMLInputElement;
   const emailInput = document.getElementById('email') as HTMLInputElement;
+  const submitButton = document.getElementsByTagName('button')[0] as HTMLButtonElement;
   const locale = document.getElementsByTagName('html')[0].lang as Locale;
   const statusInfoMsg = document.createElement('p');
   statusInfoMsg.textContent = locale === 'en-GB' ? 'Signing you up…' : 'Signin you up…';
@@ -50,7 +52,7 @@ const t = translate(locale);
     event.preventDefault();
 
     // Disable the form and leave message to let the user know it’s been submitted
-    form.setAttribute('disabled', '');
+    setIsFormDisabled('true');
     form.after(statusInfoMsg);
 
     let registrationOptions;
@@ -96,28 +98,52 @@ const t = translate(locale);
     url.searchParams.set('username', registrationOptions.user.name);
 
     console.info(`Redirecting to the success page ${url}...`);
-    statusInfoMsg.innerHTML = locale === 'en-GB'
-      ? `Redirecting to <a href="${url.toString()}">the success page</a>…`
-      : `Redirectin til <a href="${url.toString()}">the success page</a>…`;
+    statusInfoMsg.innerHTML =
+      locale === 'en-GB'
+        ? `Redirecting to <a href="${url.toString()}">the success page</a>…`
+        : `Redirectin til <a href="${url.toString()}">the success page</a>…`;
     window.location.href = url.toString();
     return;
   });
 
+  function setIsFormDisabled(isDisabled: boolean) {
+    if (isDisabled) {
+      form.setAttribute('disabled', '');
+      emailInput.setAttribute('disabled', '');
+      displayNameInput.setAttribute('disabled', '');
+      submitButton.setAttribute('disabled', '');
+    } else {
+      form.removeAttribute('disabled');
+      emailInput.removeAttribute('disabled');
+      displayNameInput.removeAttribute('disabled');
+      submitButton.removeAttribute('disabled');
+    }
+  }
+
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   function reportError(context: string, err: any) {
-    const msg = `
-      Encountered an unexpected error. Please try again, or, if the error
-      persists, contact lallans@hotmail.co.uk.
+    let msg;
 
-      ${err?.toString() ?? ''}
+    if (err instanceof UserAlreadyExistsError) {
+      console.warn(err);
+      msg = `
+        A user already exists with that username. Please log in, or try a
+        different username.
+      `;
+    } else {
+      msg = `
+        Encountered an unexpected error. Please try again, or, if the error
+        persists, contact lallans@hotmail.co.uk.
 
-      ${context}
-    `;
+        ${err?.toString() ?? ''}
 
-    console.error(context, err);
-    window.alert(msg);
+        ${context}
+      `;
+      console.error('Unexpected error in sign-up.', err);
+    }
+
     statusInfoMsg.textContent = msg;
-    form.removeAttribute('disabled');
+    setIsFormDisabled(false);
   }
 
   async function getRegistrationOptions(): Promise<GetRegistrationOptionsResponseBody> {
@@ -126,12 +152,8 @@ const t = translate(locale);
       userId: emailInput.value,
     });
 
-    if (response.status === 409 /* CONFLICT: user ID already exists in database */) {
-      // TODO: go to a nice localised error page instead of showing an alert
-      window.alert('Username already exists! Log in or choose a different username.');
-
-      // TODO: obviously this is stupid. Do something non-stupid instead
-      return null as unknown as GetRegistrationOptionsResponseBody;
+    if (response.status === 409) {
+      throw new UserAlreadyExistsError(emailInput.value);
     }
 
     if (!response.ok) {
@@ -154,14 +176,8 @@ const t = translate(locale);
   ): Promise<boolean> {
     const response = await api.verifyRegistrationResponse(params);
 
-    if (response.status === 409 /* CONFLICT: user ID already exists*/) {
-      // TODO: go to a nice localised error page instead of showing an alert
-      window.alert(
-        'Username or ID already exists! Try logging in or choosing a different username.'
-      );
-
-      // TODO: obviously this is stupid. Do something non-stupid instead
-      return null as unknown as boolean;
+    if (response.status === 409) {
+      throw new UserAlreadyExistsError(params.userId);
     }
 
     if (!response.ok) {
