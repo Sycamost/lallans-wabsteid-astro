@@ -30,7 +30,7 @@ export default async function verifyRegistrationResponse(
       : 'https://staging.scotsleidassocie.org',
     expectedRPID: RELYING_PARTY.id,
   }).catch((err) => {
-    throw new Error('Registration response verification failed.', err);
+    throw new Error(`Registration response verification failed. ${err}`);
   });
 
   if (!verification.verified || !verification.registrationInfo) {

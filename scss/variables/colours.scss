@@ -5,6 +5,8 @@
   --background-highlight-color: var(--color-primary-90);
   --special-text-color: var(--color-secondary-90);
   --special-text-highlight-color: var(--color-secondary-10);
+  --neutral-text-color: var(--color-neutral-50);
+  --neutral-background-color: var(--color-neutral-30);
 }
 
 :is(main, article) {
@@ -14,6 +16,8 @@
   --background-highlight-color: var(--color-primary-10);
   --special-text-color: var(--color-secondary-40);
   --special-text-highlight-color: var(--color-secondary-90);
+  --neutral-text-color: var(--color-neutral-70);
+  --neutral-background-color: var(--color-neutral-95);
 }
 
 :is(main, article) > section:nth-child(even):not(:is(section, header) :is(section, header)) {
