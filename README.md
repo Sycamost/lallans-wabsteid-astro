@@ -161,7 +161,7 @@ This website implements [WebAuthn](https://webauthn.guide) for user authenticati
 1. A user goes to the signup page, `/sign-up` and enters their username and display name.
 2. That sends their details to `GET /registration` on the backend.
 3. If a user with the provided username already exists, the flow fails and the user is directed to
-   log in or provide a different username. (TODO!)
+   log in or provide a different username.
 4. Otherwise, the backend returns registration options.
 5. On the client, these registration options are handed to the user's authenticator, which will
    generate a public-private keypair and expose the public key. The authenticator might be a
