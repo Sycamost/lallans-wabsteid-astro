@@ -1,42 +1,55 @@
 ---
+import translate from '$i18n/translate';
+import tPage from '$i18n/translations/pages/signUp/success';
 import localeStaticPaths from '$lib/localeStaticPaths';
+import { getLocaleFromPathOrThrow } from '$lib/getLocaleFromPath';
+import Page from '$layouts/Page.astro';
 
 export async function getStaticPaths() {
   return localeStaticPaths;
 }
+
+const locale = getLocaleFromPathOrThrow(Astro.url.pathname);
+const t = translate(locale);
 ---
 
-<!-- TODO: localise this -->
-<h1>Successfully signed up</h1>
+<Page title={t(tPage, { key: 'title' })} noBreadcrumbs={true}>
+  <section>
+    <h1>{t(tPage, { key: 'title' })}</h1>
 
-<script>
-  const errorMsg = new HTMLParagraphElement();
-  errorMsg.append('Something went wrong. Please send an error report to ');
-  const lallansEmailAnchor = new HTMLAnchorElement();
-  lallansEmailAnchor.href = 'mailto:lallans@hotmail.co.uk';
-  lallansEmailAnchor.textContent = 'lallans@hotmail.co.uk';
-  errorMsg.append(lallansEmailAnchor);
-  errorMsg.append('.');
+    <script>
+      import translate from '$i18n/translate';
+      import tPage from '$i18n/translations/pages/signUp/success';
+      import { getLocaleFromPathOrThrow } from '$lib/getLocaleFromPath';
 
-  const heading = document.getElementsByTagName('h1')[0];
+      const locale = getLocaleFromPathOrThrow(window.location.pathname);
+      const t = translate(locale);
 
-  const url = new URL(window.location.href);
+      const heading = document.getElementsByTagName('h1')[0];
 
-  const displayName = url.searchParams.get('displayName');
-  const username = url.searchParams.get('username');
-  if (!displayName || !username) {
-    heading.after(errorMsg);
-  }
+      const url = new URL(window.location.href);
 
-  const successMsg = [new HTMLParagraphElement(), new HTMLParagraphElement()];
-  // TODO: localise this
-  successMsg[0].textContent = `
-    Congratulations, ${displayName}! You have successfully registered a new
-    account with us.
-  `;
-  successMsg[1].textContent = `
-    Your new unique username is ${username}. Use this next time you want to log in.
-  `;
-  heading.after(...successMsg);
-</script>
-<!-- TODO: 'go back to where you were' link -->
+      const displayName = url.searchParams.get('displayName');
+      const userId = url.searchParams.get('userId');
+      if (displayName && userId) {
+        const successMsg = [document.createElement('p'), document.createElement('p')];
+        successMsg[0].textContent = t(tPage, { key: 'para-1', displayName });
+        successMsg[1].textContent = t(tPage, { key: 'para-2', userId });
+
+        heading.after(...successMsg);
+      } else {
+        const errorMsg = document.createElement('p');
+        errorMsg.append('Something went wrong. Please send an error report to ');
+        const lallansEmailAnchor = document.createElement('a');
+        lallansEmailAnchor.href = 'mailto:lallans@hotmail.co.uk';
+        lallansEmailAnchor.textContent = 'lallans@hotmail.co.uk';
+        errorMsg.append(lallansEmailAnchor);
+        errorMsg.append('.');
+
+        heading.after(errorMsg);
+      }
+    </script>
+
+    <!-- TODO: 'go back to where you were' link -->
+  </section>
+</Page>

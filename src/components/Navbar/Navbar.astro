@@ -3,13 +3,19 @@ import Breadcrumbs from './Breadcrumbs.astro';
 import SwitchLanguageLink from '../SwitchLanguageLink.astro';
 import NavLinks from './NavLinks.astro';
 import Logo from './Logo.astro';
+
+interface Props {
+  noBreadcrumbs?: boolean;
+}
+
+const { noBreadcrumbs } = Astro.props;
 ---
 
 <nav class="nav">
   <Logo />
   <NavLinks />
   <div class="nav__bottom-row">
-    <Breadcrumbs />
+    {!noBreadcrumbs && <Breadcrumbs />}
     <SwitchLanguageLink />
   </div>
 </nav>

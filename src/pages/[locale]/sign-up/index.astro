@@ -45,14 +45,14 @@ const t = translate(locale);
   const statusInfoMsg = document.createElement('p');
   statusInfoMsg.textContent = locale === 'en-GB' ? 'Signing you up…' : 'Signin you up…';
 
-  const successPageUrl = `${locale}/sign-up/success`;
+  const successPageUrl = `/${locale}/sign-up/success`;
 
   form.addEventListener('submit', async (event: SubmitEvent) => {
     // Prevent default behaviour of submit button (which includes refreshing the page)
     event.preventDefault();
 
     // Disable the form and leave message to let the user know it’s been submitted
-    setIsFormDisabled('true');
+    setIsFormDisabled(true);
     form.after(statusInfoMsg);
 
     let registrationOptions;
@@ -93,9 +93,12 @@ const t = translate(locale);
       );
     }
 
-    const url = new URL(successPageUrl);
-    url.searchParams.set('displayName', registrationOptions.user.displayName);
-    url.searchParams.set('username', registrationOptions.user.name);
+    const url =
+      successPageUrl +
+      '?displayName=' +
+      registrationOptions.user.displayName +
+      '&userId=' +
+      registrationOptions.user.name;
 
     console.info(`Redirecting to the success page ${url}...`);
     statusInfoMsg.innerHTML =
