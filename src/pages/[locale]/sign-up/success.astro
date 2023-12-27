@@ -20,9 +20,9 @@ const t = translate(locale);
     <script>
       import translate from '$i18n/translate';
       import tPage from '$i18n/translations/pages/signUp/success';
-      import { getLocaleFromPathOrThrow } from '$lib/getLocaleFromPath';
+      import { getLocaleFromDocumentOrThrow } from '$lib/getLocaleFromDocument';
 
-      const locale = getLocaleFromPathOrThrow(window.location.pathname);
+      const locale = getLocaleFromDocumentOrThrow(document);
       const t = translate(locale);
 
       const heading = document.getElementsByTagName('h1')[0];

@@ -31,17 +31,17 @@ const t = translate(locale);
 
 <script>
   import type { GetRegistrationOptionsResponseBody } from '$lib/api';
-  import type Locale from '$types/Locale';
 
   import * as api from '$lib/api';
   import { startRegistration } from '@simplewebauthn/browser';
   import UserAlreadyExistsError from '$types/UserAlreadyExistsError.d';
+  import { getLocaleFromDocumentOrThrow } from '$lib/getLocaleFromDocument';
 
   const form = document.getElementById('sign-up-form') as HTMLFormElement;
   const displayNameInput = document.getElementById('display-name') as HTMLInputElement;
   const emailInput = document.getElementById('email') as HTMLInputElement;
   const submitButton = document.getElementsByTagName('button')[0] as HTMLButtonElement;
-  const locale = document.getElementsByTagName('html')[0].lang as Locale;
+  const locale = getLocaleFromDocumentOrThrow(document);
   const statusInfoMsg = document.createElement('p');
   statusInfoMsg.textContent = locale === 'en-GB' ? 'Signing you up…' : 'Signin you up…';
 
