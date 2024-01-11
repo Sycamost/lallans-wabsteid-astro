@@ -6,23 +6,41 @@ const tPage = {
     'en-GB': () => 'Home',
   },
   submit: {
-    sco: () => 'Submit til Lallans',
-    'en-GB': () => 'Submit to Lallans',
+    sco: () => 'Sangschaw apen for submeissions',
+    'en-GB': () => 'Sangschaw open for submissions',
   },
   'submit-para-1': {
-    sco: () => 'We ar acceptin submeissions til Lallans 104!',
-    'en-GB': () => 'We are accepting submissions to Lallans 104!',
+    sco: () => `
+      We ar acceptin submeissions til our annual Scots scrievin competeition,
+      the Sangschaw, until the 31st o Januar 2024.
+    `,
+    'en-GB': () => `
+      We are accepting submissions to our annual Scots writing competition, the
+      Sangschaw, until the 31st of January 2024.
+    `,
   },
   'submit-para-2': {
     sco: () => `
-      We accep poesie, cuttie tales, reviews, essays an drama, baith
-      oreiginal an owerset. Sen yer submeissions til
+      Aince ye’ve read the submeission criteria in
+      <a href="/sco/news/2023-12-10-eiks-31"><i>Eiks an Ens</i> 31</a>, send
+      your submeissions til
       <a href="mailto:lallans@hotmail.co.uk">lallans@hotmail.co.uk</a>.
     `,
     'en-GB': () => `
-      We accept poetry, short stories, reviews, essays and drama, both
-      original and translated. Send your submissions to
+      Once you’ve read the submission criteria in
+      <a href="/en-GB/news/2023-12-10-eiks-31"><i>Eiks an Ens</i> 31</a>, send
+      your submissions to
       <a href="mailto:lallans@hotmail.co.uk">lallans@hotmail.co.uk</a>.
+    `,
+  },
+  'submit-para-3': {
+    sco: () => `
+      We luik forrit tae haein your submeission, whither you’ve been submittin
+      for years or you’re a first-time writer!
+    `,
+    'en-GB': () => `
+      We look forward to having your submission, whether you’ve been
+      submitting for years or you’re a first-time writer!
     `,
   },
   news: {
