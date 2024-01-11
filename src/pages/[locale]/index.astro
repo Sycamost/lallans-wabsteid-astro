@@ -24,6 +24,7 @@ const mostRecentNewsItem = await getMostRecentNewsItem(locale);
     <h2 set:html={t(tPage, { key: 'submit' })} />
     <p set:html={t(tPage, { key: 'submit-para-1' })} />
     <p set:html={t(tPage, { key: 'submit-para-2' })} />
+    <p set:html={t(tPage, { key: 'submit-para-3' })} />
   </section>
   <section>
     <h2 class="grid-span-6" set:html={t(tPage, { key: 'news' })} />
@@ -75,7 +76,7 @@ const mostRecentNewsItem = await getMostRecentNewsItem(locale);
 
   <section id="contact">
     <h2 set:html={t(tPage, { key: 'contact' })} />
-    <a class="link" href={`${locale}/mailto:${contactDetails.generalEnquiries.emailAddress}`}>
+    <a href={`${locale}/mailto:${contactDetails.generalEnquiries.emailAddress}`}>
       {contactDetails.generalEnquiries.emailAddress}
     </a>
     <address>
