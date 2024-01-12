@@ -1,6 +1,4 @@
 ---
-import Footer from '$components/Footer.astro';
-import Navbar from '$components/Navbar/Navbar.astro';
 import locales, { defaultLocale } from '$i18n/locales';
 import translate from '$i18n/translate';
 import tFeed from '$i18n/translations/pages/rss.xml';
@@ -55,8 +53,6 @@ function qualifiedLocalisedPath(newLocale: Locale) {
   </head>
   <body id="top">
     <a class="btn skip-to-content" href="#main">Skip to content</a>
-    <Navbar />
     <slot />
-    <Footer />
   </body>
 </html>
