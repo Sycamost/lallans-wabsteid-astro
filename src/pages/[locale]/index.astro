@@ -4,11 +4,6 @@ import localeStaticPaths from '$lib/localeStaticPaths';
 import translate from '$i18n/translate';
 import tPage from '$i18n/translations/pages/home';
 import type Locale from '$types/Locale';
-import { getMostRecentNewsItem } from '$lib/newsUtils';
-import contactDetails from '$data/contactDetails';
-import NewsIndex from '$components/NewsIndex/NewsIndex.astro';
-import Button from '$components/Button.astro';
-import CommitteeList from '$components/CommitteeList/CommitteeList.astro';
 
 export async function getStaticPaths() {
   return localeStaticPaths;
@@ -16,76 +11,50 @@ export async function getStaticPaths() {
 
 const locale = Astro.params.locale as Locale;
 const t = translate(locale);
-const mostRecentNewsItem = await getMostRecentNewsItem(locale);
 ---
 
 <Page title={t(tPage, { key: 'title' })}>
   <section>
-    <h2 set:html={t(tPage, { key: 'submit' })} />
-    <p set:html={t(tPage, { key: 'submit-para-1' })} />
-    <p set:html={t(tPage, { key: 'submit-para-2' })} />
-    <p set:html={t(tPage, { key: 'submit-para-3' })} />
-  </section>
-  <section>
-    <h2 class="grid-span-6" set:html={t(tPage, { key: 'news' })} />
-    <NewsIndex newsItems={mostRecentNewsItem ? [mostRecentNewsItem] : []} headingLevel="h3" />
-    {
-      mostRecentNewsItem && (
-        <Button classNames="grid-span-3 grid-prose-end" href={`/${locale}/news`}>
-          {t(tPage, { key: 'aw-news' })} ▶
-        </Button>
-      )
-    }
-  </section>
+    <p>{t(tPage, { key: 'intro' })}</p>
 
-  <section id="about">
-    <h2 set:html={t(tPage, { key: 'about-us' })} />
-    <p set:html={t(tPage, { key: 'about-us-para-1' })} />
-    <p set:html={t(tPage, { key: 'about-us-para-2' })} />
-    <p set:html={t(tPage, { key: 'about-us-para-3' })} />
-    <h3 set:html={t(tPage, { key: 'meet-the-commattee' })} />
-    <p class="italic">{t(tPage, { key: 'mair-commattee-details-soon' })}</p>
-    <CommitteeList />
-  </section>
-
-  <section>
-    <h2 set:html={t(tPage, { key: 'furthsettins' })} />
-    <p set:html={t(tPage, { key: 'furthsettins-para' })} />
-    <Button classNames="grid-span-3 grid-prose-end" href={`/${locale}/furthsettins`}>
-      {t(tPage, { key: 'aw-furthsettins' })} ▶
-    </Button>
-  </section>
-
-  <section id="jyne">
-    <h2 set:html={t(tPage, { key: 'jyne' })} />
-
-    <h3 set:html={t(tPage, { key: 'why-jyne' })} />
-    <p set:html={t(tPage, { key: 'why-jyne-para-1' })} />
-    <p set:html={t(tPage, { key: 'why-jyne-para-2' })} />
-    <p set:html={t(tPage, { key: 'why-jyne-para-3' })} />
-
-    <h3 set:html={t(tPage, { key: 'hou-jyne' })} />
-    <p set:html={t(tPage, { key: 'hou-jyne-para-1' })} />
-    <p
-      set:html={t(tPage, {
-        key: 'hou-jyne-para-2',
-        membershipEmail: contactDetails.membershipSecretary.emailAddress,
-      })}
-    />
-  </section>
-
-  <section id="contact">
-    <h2 set:html={t(tPage, { key: 'contact' })} />
-    <a href={`${locale}/mailto:${contactDetails.generalEnquiries.emailAddress}`}>
-      {contactDetails.generalEnquiries.emailAddress}
-    </a>
-    <address>
-      Scots Language Society<br />
-       c/o 61 Cliffburn Road<br />
-       Arbroath<br />
-       Angus<br />
-       DD11 5BA<br />
-       United Kingdom<br />
-    </address>
+    <nav>
+      <ul class="list-style-none">
+        <li>
+          <a href={`/${locale}/submit`} class="btn">
+            {t(tPage, { key: 'submit' })}
+          </a>
+        </li>
+        <li>
+          <a href={`/${locale}/furthsettins`} class="btn">
+            {t(tPage, { key: 'buy' })}
+          </a>
+        </li>
+        <li>
+          <a href={`/${locale}/jyne`} class="btn">
+            {t(tPage, { key: 'join' })}
+          </a>
+        </li>
+        <li>
+          <a href={`/${locale}/news`} class="btn">
+            {t(tPage, { key: 'news' })}
+          </a>
+        </li>
+        <li>
+          <a href={`/${locale}/about`} class="btn">
+            {t(tPage, { key: 'about' })}
+          </a>
+        </li>
+        <li>
+          <a href={`/${locale}/comatee`} class="btn">
+            {t(tPage, { key: 'committee' })}
+          </a>
+        </li>
+        <li>
+          <a href={`/${locale}/contact`} class="btn">
+            {t(tPage, { key: 'contact' })}
+          </a>
+        </li>
+      </ul>
+    </nav>
   </section>
 </Page>
