@@ -1,15 +1,15 @@
 :root {
-  --margin-inline-md: calc(2 * var(--relative-eighth-rem));
-  --margin-block-lg: calc(16 * var(--relative-eighth-rem));
-  --margin-block-md: calc(10 * var(--relative-eighth-rem));
-  --margin-block-sm: calc(5 * var(--relative-eighth-rem));
+  --margin-inline-md: 0.125rem;
+  --margin-block-lg: 0.8rem;
+  --margin-block-md: 0.5rem;
+  --margin-block-sm: 0.25rem;
 
-  --padding-inline-lg: calc(4 * var(--relative-eighth-rem));
-  --padding-inline-md: calc(2 * var(--relative-eighth-rem));
-  --padding-inline-sm: calc(1 * var(--relative-eighth-rem));
-  --padding-block-lg: calc(12 * var(--relative-eighth-rem));
-  --padding-block-md: calc(8 * var(--relative-eighth-rem));
-  --padding-block-sm: calc(5 * var(--relative-eighth-rem));
+  --padding-inline-lg: 0.25rem;
+  --padding-inline-md: 0.125rem;
+  --padding-inline-sm: 0.0625rem;
+  --padding-block-lg: 0.8rem;
+  --padding-block-md: 0.5rem;
+  --padding-block-sm: 0.25rem;
 
   --grid-padding: calc(var(--grid-padding-relative-eighth-rem) * var(--relative-eighth-rem));
   --grid-column-width: calc(var(--grid-column-width-relative-eighth-rem) * var(--relative-eighth-rem));
@@ -41,7 +41,7 @@
    ***********************************************************/
 
   --grid-total-width: 100vw;
-  --grid-padding-relative-eighth-rem: 8;
+  --grid-padding-relative-eighth-rem: 1;
   --grid-column-count: 1;
   --grid-prose-column-count: 1;
 }

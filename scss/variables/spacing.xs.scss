@@ -1,4 +1,16 @@
 :root {
+  --margin-inline-md: calc(1 * var(--relative-eighth-rem));
+  --margin-block-lg: calc(6.4 * var(--relative-eighth-rem));
+  --margin-block-md: calc(4 * var(--relative-eighth-rem));
+  --margin-block-sm: calc(2 * var(--relative-eighth-rem));
+
+  --padding-inline-lg: calc(2 * var(--relative-eighth-rem));
+  --padding-inline-md: calc(1 * var(--relative-eighth-rem));
+  --padding-inline-sm: calc(0.5 * var(--relative-eighth-rem));
+  --padding-block-lg: calc(6.4 * var(--relative-eighth-rem));
+  --padding-block-md: calc(4 * var(--relative-eighth-rem));
+  --padding-block-sm: calc(2 * var(--relative-eighth-rem));
+
   --grid-total-width: 15rem;
   --grid-padding-relative-eighth-rem: 8;
   --grid-column-count: 4;
