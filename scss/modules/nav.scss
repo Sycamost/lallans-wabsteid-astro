@@ -67,14 +67,9 @@
 }
 
 .nav__breadcrumbs {
-  display: flex;
-  flex-wrap: wrap;
-
   li {
-    min-width: max-content;
-    &::before {
-      content: '/'
-    }
+    list-style: '▸';
+    list-style-position: inside;
   }
 }
 

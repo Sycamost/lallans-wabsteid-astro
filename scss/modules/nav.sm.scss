@@ -1,0 +1,16 @@
+.nav__breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+
+  li {
+    display: inline;
+    min-width: max-content;
+
+    + li::before {
+      content: '/';
+      margin-inline: var(--margin-inline-md);
+    }
+  }
+}
+
