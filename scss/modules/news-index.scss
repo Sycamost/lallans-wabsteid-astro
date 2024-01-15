@@ -1,7 +1,7 @@
 .news-index__item {
   display: block;
   box-sizing: border-box;
-  border: var(--relative-eighth-rem) solid var(--text-color);
+  border: var(--border-width) solid var(--text-color);
   transition: background 100ms;
   padding-block: var(--margin-block-md);
   padding-inline: var(--padding-inline-sm);

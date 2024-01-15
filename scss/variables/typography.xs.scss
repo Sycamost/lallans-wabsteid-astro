@@ -7,4 +7,6 @@
   --font-size-4: clamp(2.5rem, calc(14 * var(--relative-eighth-rem)), 3.3rem);
   --font-size-5: clamp(3rem, calc(17 * var(--relative-eighth-rem)), 4.2rem);
   --font-size-6: clamp(3.5rem, calc(20 * var(--relative-eighth-rem)), 5rem);
+
+  --border-width: var(--relative-eighth-rem);
 }

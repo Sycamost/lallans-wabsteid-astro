@@ -54,7 +54,7 @@
 
   a {
     text-decoration: none;
-    border: var(--relative-eighth-rem) dotted transparent;
+    border: var(--border-width) dotted transparent;
     transition: border-color 100ms;
 
     &:is(:focus, :focus-visible, :focus-within) {

@@ -31,7 +31,7 @@
 .link-gallery--furthsettins img {
   box-sizing: border-box;
   border-radius: 50%;
-  border: solid calc(2 * var(--relative-eighth-rem)) var(--text-color);
+  border: solid var(--border-width) var(--text-color);
 }
 
 .link-gallery__title {
