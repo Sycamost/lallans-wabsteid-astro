@@ -1,6 +1,5 @@
 :is(main, article) > :is(section, header):not(:is(section, header) :is(section, header)) {
-  padding-block-start: var(--margin-block-lg);
-  padding-block-end: var(--margin-block-md);
+  padding-block: var(--margin-block-md);
 }
 
 footer {
