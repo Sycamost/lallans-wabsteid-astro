@@ -3,6 +3,22 @@
   margin-block-start: var(--margin-block-sm);
 }
 
+.committee__member + .committee__member {
+  border-top-width: var(--border-width);
+  border-top-style: solid;
+  border-image: linear-gradient(
+    to right,
+    transparent 0%,
+    transparent 19.1%,
+    var(--text-color) 19.1%,
+    var(--text-color) 80.9%,
+    transparent 80.9%,
+    transparent 100%
+  ) 1;
+  margin-block-start: var(--margin-block-md);
+  padding-block-start: var(--margin-block-md);
+}
+
 .committee__member__img {
   margin-inline: 25%;
   width: 50%;
