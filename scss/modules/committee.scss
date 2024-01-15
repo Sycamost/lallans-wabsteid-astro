@@ -24,3 +24,14 @@
   width: 50%;
   border-radius: 50%;
 }
+
+.committee__member__text {
+  text-align: center;
+  margin-block-start: var(--margin-block-sm);
+}
+
+.committee__member__role {
+  display: block;
+  font-weight: lighter;
+}
+

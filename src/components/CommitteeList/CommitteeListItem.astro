@@ -43,8 +43,7 @@ const t = translate(locale);
       {committeeMember.name}
       {
         committeeMember.roles.length > 0 && (
-          <span class="font-weight-lighter">
-            |{' '}
+          <span class="committee__member__role">
             {committeeMember.roles.map((role) => t(tRole, { key: CommitteeRole[role] })).join(', ')}
           </span>
         )
