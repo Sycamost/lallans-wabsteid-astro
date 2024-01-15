@@ -1,9 +1,10 @@
 :root {
-  --font-size-0: calc(6 * var(--relative-eighth-rem));
-  --font-size-1: calc(8 * var(--relative-eighth-rem));
-  --font-size-2: calc(11 * var(--relative-eighth-rem));
-  --font-size-3: calc(14 * var(--relative-eighth-rem));
-  --font-size-4: calc(18 * var(--relative-eighth-rem));
-  --font-size-5: calc(23 * var(--relative-eighth-rem));
-  --font-size-6: calc(28 * var(--relative-eighth-rem));
+  /* Min font size matches <xs breakpoint, max font size matches xs-sm */
+  --font-size-0: clamp(1rem, calc(5 * var(--relative-eighth-rem)), 1rem);
+  --font-size-1: clamp(1.25rem, calc(7 * var(--relative-eighth-rem)), 1.45rem);
+  --font-size-2: clamp(1.5rem, calc(9 * var(--relative-eighth-rem)), 2rem);
+  --font-size-3: clamp(2rem, calc(11 * var(--relative-eighth-rem)), 2.55rem);
+  --font-size-4: clamp(2.5rem, calc(14 * var(--relative-eighth-rem)), 3.3rem);
+  --font-size-5: clamp(3rem, calc(17 * var(--relative-eighth-rem)), 4.2rem);
+  --font-size-6: clamp(3.5rem, calc(20 * var(--relative-eighth-rem)), 5rem);
 }

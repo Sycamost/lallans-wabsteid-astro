@@ -1,18 +1,21 @@
 :root {
-  --margin-inline-md: calc(1 * var(--relative-eighth-rem));
-  --margin-block-lg: calc(6.4 * var(--relative-eighth-rem));
-  --margin-block-md: calc(4 * var(--relative-eighth-rem));
-  --margin-block-sm: calc(2 * var(--relative-eighth-rem));
+  /* margins and padding are clamped between <xs values and xs-sm values */
+  --margin-inline-md: clamp(1.25rem, calc(2 * var(--relative-eighth-rem)), calc(15rem / 41));
+  --margin-block-lg: clamp(0.8rem, calc(16 * var(--relative-eighth-rem)), calc(120rem / 41));
+  --margin-block-md: clamp(0.5rem, calc(10 * var(--relative-eighth-rem)), calc(75rem / 41));
+  --margin-block-sm: clamp(0.25rem, calc(5 * var(--relative-eighth-rem)), calc(37.5rem / 41));
 
-  --padding-inline-lg: calc(2 * var(--relative-eighth-rem));
-  --padding-inline-md: calc(1 * var(--relative-eighth-rem));
-  --padding-inline-sm: calc(0.5 * var(--relative-eighth-rem));
-  --padding-block-lg: calc(6.4 * var(--relative-eighth-rem));
-  --padding-block-md: calc(4 * var(--relative-eighth-rem));
-  --padding-block-sm: calc(2 * var(--relative-eighth-rem));
+  --padding-inline-lg: clamp(0.25rem, calc(4 * var(--relative-eighth-rem)), calc(30rem / 41));
+  --padding-inline-md: clamp(0.125rem, calc(2 * var(--relative-eighth-rem)), calc(15rem / 41));
+  --padding-inline-sm: clamp(0.0625rem, calc(1 * var(--relative-eighth-rem)), calc(7.5rem / 41));
+  --padding-block-lg: clamp(0.8rem, calc(12 * var(--relative-eighth-rem)), calc(90rem / 41));
+  --padding-block-md: clamp(0.5rem, calc(8 * var(--relative-eighth-rem)), calc(60rem / 41));
+  --padding-block-sm: clamp(0.25rem, calc(5 * var(--relative-eighth-rem)), calc(37.5rem / 41));
 
-  --grid-total-width: 15rem;
-  --grid-padding-relative-eighth-rem: 8;
+  /* Still using full-width layout: see comment in spacing.scss */
+  /* until reaches full-width of sm layout */
+  --grid-total-width: min(100vw, calc(1050rem / 41));
+  --grid-padding-relative-eighth-rem: 4;
   --grid-column-count: 4;
   --grid-prose-column-count: 4;
 }
