@@ -5,8 +5,9 @@ import type { TranslationsDictionary } from '$types/TranslationsDictionary';
 
 const tSite = {
   title: {
-    sco: () => 'Scots Leid Associe',
-    'en-GB': () => 'Scots Language Society',
+    // On very narrow screens, use \u00ad to suggest hyphenation points
+    sco: () => 'Scots Leid Assoc\u00adie',
+    'en-GB': () => 'Scots Lang\u00aduage Soc\u00adiety',
   },
   description: {
     sco: () => 'The wabsteid o the Scots Leid Associe',
@@ -21,8 +22,9 @@ const tSite = {
     'en-GB': () => 'Scotsoun',
   },
   'scots-leid-associe': {
-    sco: () => 'Scots Leid Associe',
-    'en-GB': () => 'Scots Language Society',
+    // On very narrow screens, use \u00ad to suggest hyphenation points
+    sco: () => 'Scots Leid Assoc\u00adie',
+    'en-GB': () => 'Scots Lang\u00aduage Soc\u00adiety',
   },
   by: {
     sco: () => 'bi',
