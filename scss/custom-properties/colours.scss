@@ -1,4 +1,4 @@
-@use '../variables/colours' as colours;
+@use '../values/colours' as colours;
 
 :root {
   --text-color: #{colours.$primary-98};
