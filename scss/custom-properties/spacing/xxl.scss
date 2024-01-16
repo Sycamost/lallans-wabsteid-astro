@@ -1,0 +1,10 @@
+@use 'mixins';
+@use '../../values/spacing' as spacing-values;
+
+:root {
+  // No need for spacing here, since it's the same as sm.
+  @include mixins.grid($breakpoint: xxl);
+  --er: #{spacing-values.er-to-absolute(1, xxl)};
+
+  --grid-total-width: 100rem;
+}

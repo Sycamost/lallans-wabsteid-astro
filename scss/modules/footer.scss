@@ -1,8 +1,8 @@
 footer {
-  display: grid;
-  grid-template-columns: repeat(var(--grid-column-count), var(--grid-column-width));
-  gap: var(--grid-gutter-width);
-  align-items: end;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-block-sm);
+  align-items: center;
 }
 
 .footer__rss-button__label {
@@ -20,7 +20,7 @@ footer {
 
 .footer__rss-button__img {
   min-width: 44px;
-  width: calc(8 * var(--relative-eighth-rem));
+  width: calc(8 * var(--er));
   display: block;
 }
 

@@ -1,0 +1,7 @@
+.footer {
+  display: grid;
+  grid-template-columns: repeat(var(--grid-column-count), var(--grid-column-width));
+  gap: var(--grid-gutter-width);
+  align-items: end;
+}
+

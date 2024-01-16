@@ -1,0 +1,11 @@
+@use 'sass:map';
+
+@use 'constants';
+
+@function grid-total-width-er($breakpoint) {
+  $padding-width: calc(2 * map.get(constants.$grid-padding-er, $breakpoint));
+  $column-count: map.get(constants.$grid-column-count, $breakpoint);
+  $columns-width: calc($column-count * constants.$grid-column-width-er);
+  $gutters-width: calc(($column-count - 1) * constants.$grid-gutter-width-er);
+  @return $padding-width + $columns-width + $gutters-width;
+}

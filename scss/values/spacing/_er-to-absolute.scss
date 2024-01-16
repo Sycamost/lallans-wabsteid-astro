@@ -1,0 +1,12 @@
+@use 'sass:map';
+
+@use 'constants';
+@use 'grid-total-width-er' as *;
+
+@function er-to-absolute($length-er, $breakpoint: initial) {
+  $absolute-per-er: calc(
+    map.get(constants.$grid-total-width-absolute, $breakpoint)
+    / grid-total-width-er($breakpoint)
+  );
+  @return calc($length-er * $absolute-per-er);
+}

@@ -1,0 +1,22 @@
+@use 'sass:list';
+@use 'sass:map';
+
+@use 'constants';
+@use 'er-to-absolute' as *;
+
+@function padding($breakpoint: initial) {
+  @return er-to-absolute(map.get(constants.$grid-padding-er, $breakpoint), $breakpoint);
+}
+
+@function column-width($breakpoint: initial) {
+  @return er-to-absolute(constants.$grid-column-width-er, $breakpoint);
+}
+
+@function gutter-width($breakpoint: initial) {
+  @return er-to-absolute(constants.$grid-gutter-width-er, $breakpoint);
+}
+
+@function column-count($breakpoint: initial) {
+  @return map.get(constants.$grid-column-count, $breakpoint);
+}
+

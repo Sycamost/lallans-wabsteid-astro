@@ -1,0 +1,20 @@
+@use 'sass:map';
+
+@use '../../values/spacing' as spacing-values;
+
+@mixin spacing($breakpoint: initial) {
+  --spacing-inline-lg: #{spacing-values.spacing($direction: inline, $size: lg, $breakpoint: $breakpoint)};
+  --spacing-inline-md: #{spacing-values.spacing($direction: inline, $size: md, $breakpoint: $breakpoint)};
+  --spacing-inline-sm: #{spacing-values.spacing($direction: inline, $size: sm, $breakpoint: $breakpoint)};
+  --spacing-block-lg: #{spacing-values.spacing($direction: block, $size: lg, $breakpoint: $breakpoint)};
+  --spacing-block-md: #{spacing-values.spacing($direction: block, $size: md, $breakpoint: $breakpoint)};
+  --spacing-block-sm: #{spacing-values.spacing($direction: block, $size: sm, $breakpoint: $breakpoint)};
+}
+
+@mixin grid($breakpoint: initial) {
+  --grid-padding: #{spacing-values.grid-padding($breakpoint: $breakpoint)};
+  --grid-column-count: #{map.get(spacing-values.$grid-column-count, $breakpoint)};
+  --grid-column-width: #{spacing-values.grid-column-width($breakpoint: $breakpoint)};
+  --grid-gutter-width: #{spacing-values.grid-gutter-width($breakpoint: $breakpoint)};
+  --grid-prose-column-count: #{map.get(spacing-values.$grid-prose-column-count, $breakpoint)};
+}
