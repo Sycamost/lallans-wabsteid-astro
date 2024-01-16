@@ -3,8 +3,8 @@
   box-sizing: border-box;
   border: var(--border-width) solid var(--text-color);
   transition: background 100ms;
-  padding-block: var(--margin-block-md);
-  padding-inline: var(--padding-inline-sm);
+  padding-block: var(--spacing-block-md);
+  padding-inline: var(--spacing-inline-sm);
   width: var(--width-prose);
 }
 

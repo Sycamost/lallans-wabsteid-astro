@@ -1,6 +1,6 @@
 .committee__member {
   list-style-type: none;
-  margin-block-start: var(--margin-block-sm);
+  margin-block-start: var(--spacing-block-sm);
 }
 
 .committee__member + .committee__member {
@@ -15,8 +15,8 @@
     transparent 80.9%,
     transparent 100%
   ) 1;
-  margin-block-start: var(--margin-block-md);
-  padding-block-start: var(--margin-block-md);
+  margin-block-start: var(--spacing-block-md);
+  padding-block-start: var(--spacing-block-md);
 }
 
 .committee__member__img {
@@ -27,7 +27,7 @@
 
 .committee__member__text {
   text-align: center;
-  margin-block-start: var(--margin-block-sm);
+  margin-block-start: var(--spacing-block-sm);
 }
 
 .committee__member__role {

@@ -1,15 +1,10 @@
 :root {
-  --margin-inline-md: 0.125rem;
-  --margin-block-lg: 0.8rem;
-  --margin-block-md: 0.5rem;
-  --margin-block-sm: 0.25rem;
-
-  --padding-inline-lg: 0.25rem;
-  --padding-inline-md: 0.125rem;
-  --padding-inline-sm: 0.0625rem;
-  --padding-block-lg: 0.8rem;
-  --padding-block-md: 0.5rem;
-  --padding-block-sm: 0.25rem;
+  --spacing-inline-lg: 0.25rem;
+  --spacing-inline-md: 0.125rem;
+  --spacing-inline-sm: 0.0625rem;
+  --spacing-block-lg: 0.8rem;
+  --spacing-block-md: 0.5rem;
+  --spacing-block-sm: 0.25rem;
 
   --grid-padding: calc(var(--grid-padding-relative-eighth-rem) * var(--relative-eighth-rem));
   --grid-column-width: calc(var(--grid-column-width-relative-eighth-rem) * var(--relative-eighth-rem));

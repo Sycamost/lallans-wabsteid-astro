@@ -1,16 +1,11 @@
 :root {
   /* margins and padding are clamped between <xs values and xs-sm values */
-  --margin-inline-md: clamp(1.25rem, calc(2 * var(--relative-eighth-rem)), calc(15rem / 41));
-  --margin-block-lg: clamp(0.8rem, calc(16 * var(--relative-eighth-rem)), calc(120rem / 41));
-  --margin-block-md: clamp(0.5rem, calc(10 * var(--relative-eighth-rem)), calc(75rem / 41));
-  --margin-block-sm: clamp(0.25rem, calc(5 * var(--relative-eighth-rem)), calc(37.5rem / 41));
-
-  --padding-inline-lg: clamp(0.25rem, calc(4 * var(--relative-eighth-rem)), calc(30rem / 41));
-  --padding-inline-md: clamp(0.125rem, calc(2 * var(--relative-eighth-rem)), calc(15rem / 41));
-  --padding-inline-sm: clamp(0.0625rem, calc(1 * var(--relative-eighth-rem)), calc(7.5rem / 41));
-  --padding-block-lg: clamp(0.8rem, calc(12 * var(--relative-eighth-rem)), calc(90rem / 41));
-  --padding-block-md: clamp(0.5rem, calc(8 * var(--relative-eighth-rem)), calc(60rem / 41));
-  --padding-block-sm: clamp(0.25rem, calc(5 * var(--relative-eighth-rem)), calc(37.5rem / 41));
+  --spacing-inline-lg: clamp(0.25rem, calc(4 * var(--relative-eighth-rem)), calc(30rem / 41));
+  --spacing-inline-md: clamp(1.25rem, calc(2 * var(--relative-eighth-rem)), calc(15rem / 41));
+  --spacing-inline-sm: clamp(0.0625rem, calc(1 * var(--relative-eighth-rem)), calc(7.5rem / 41));
+  --spacing-block-lg: clamp(0.8rem, calc(16 * var(--relative-eighth-rem)), calc(120rem / 41));
+  --spacing-block-md: clamp(0.5rem, calc(10 * var(--relative-eighth-rem)), calc(75rem / 41));
+  --spacing-block-sm: clamp(0.25rem, calc(5 * var(--relative-eighth-rem)), calc(37.5rem / 41));
 
   /* Still using full-width layout: see comment in spacing.scss */
   /* until reaches full-width of sm layout */

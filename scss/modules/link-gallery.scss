@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: repeat(var(--grid-column-count), var(--grid-column-width));
   gap: var(--grid-gutter-width);
-  padding-block: var(--margin-block-md);
+  padding-block: var(--spacing-block-md);
   --gallery-item-column-span: 1;
   --gallery-row-image-height: 12rem;
   --gallery-row-title-height: fit-content;
@@ -25,7 +25,7 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: var(--gallery-row-image-height) var(--gallery-row-title-height);
-  row-gap: var(--margin-block-sm);
+  row-gap: var(--spacing-block-sm);
 }
 
 .link-gallery--furthsettins img {
