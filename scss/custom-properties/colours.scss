@@ -1,21 +1,23 @@
+@use '../variables/colours' as colours;
+
 :root {
-  --text-color: var(--color-primary-98);
-  --text-highlight-color: var(--color-primary-10);
-  --background-color: var(--color-primary-10);
-  --background-highlight-color: var(--color-primary-90);
-  --special-text-color: var(--color-secondary-90);
-  --special-text-highlight-color: var(--color-secondary-10);
+  --text-color: #{colours.$primary-98};
+  --text-highlight-color: #{colours.$primary-10};
+  --background-color: #{colours.$primary-10};
+  --background-highlight-color: #{colours.$primary-90};
+  --special-text-color: #{colours.$secondary-90};
+  --special-text-highlight-color: #{colours.$secondary-10};
 }
 
 :is(main, article) {
-  --text-color: var(--color-primary-10);
-  --text-highlight-color: var(--color-primary-90);
-  --background-color: var(--color-primary-98);
-  --background-highlight-color: var(--color-primary-10);
-  --special-text-color: var(--color-secondary-40);
-  --special-text-highlight-color: var(--color-secondary-90);
+  --text-color: #{colours.$primary-10};
+  --text-highlight-color: #{colours.$primary-90};
+  --background-color: #{colours.$primary-98};
+  --background-highlight-color: #{colours.$primary-10};
+  --special-text-color: #{colours.$secondary-40};
+  --special-text-highlight-color: #{colours.$secondary-90};
 }
 
 :is(main, article) > section:nth-child(even):not(:is(section, header) :is(section, header)) {
-    --background-color: var(--color-primary-95);
+    --background-color: #{colours.$primary-95};
 }
