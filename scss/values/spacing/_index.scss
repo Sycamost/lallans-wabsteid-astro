@@ -17,12 +17,9 @@
   *   - xxl
   */
 
-@use 'constants';
-
+@forward 'constants' show $grid-column-count, $grid-prose-column-count;
 @forward 'grid' as grid-* hide er-to-absolute;
 @forward 'grid' show er-to-absolute;
-$grid-column-count: constants.$grid-column-count;
-$grid-prose-column-count: constants.$grid-prose-column-count;
 // TODO: grid-gutter-width
 @forward 'spacing';
 // TODO: width-prose
