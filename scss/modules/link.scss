@@ -2,7 +2,7 @@ a, .link {
   color: var(--special-text-color);
   text-decoration-line: underline;
   text-decoration-color: var(--special-text-color);
-  border: dotted transparent var(--er);
+  border: dotted transparent var(--border-width);
   transition:
     color 100ms,
     text-decoration-color 100ms,

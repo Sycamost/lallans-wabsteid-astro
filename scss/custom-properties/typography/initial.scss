@@ -1,11 +1,10 @@
+@use 'mixins';
+
+@use '../../values/typography' as typography-values;
+
 :root {
-  --font-size-0: 1rem;
-  --font-size-1: 1.25rem;
-  --font-size-2: 1.5rem;
-  --font-size-3: 2rem;
-  --font-size-4: 2.5rem;
-  --font-size-5: 3rem;
-  --font-size-6: 3.5rem;
+  @include mixins.font-sizes();
+  --border-width: #{typography-values.border-width()};
 
   --font-serif:
     Alegreya,
@@ -39,7 +38,4 @@
     noto,
     arial,
     sans-serif;
-
-  --border-width: 0.125rem;
-  --text-decoration-thickness: 0.125rem;
 }

@@ -1,0 +1,9 @@
+@use 'mixins';
+
+@use '../../values/typography' as typography-values;
+
+:root {
+  @include mixins.font-sizes(xs);
+  --border-width: #{typography-values.border-width(xs)};
+}
+
