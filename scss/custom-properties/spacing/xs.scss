@@ -4,7 +4,6 @@
 :root {
   @include mixins.spacing($breakpoint: xs);
   @include mixins.grid($breakpoint: xs);
-  --er: #{spacing-values.er-to-absolute(1, xs)};
 
   /* Still using full-width layout: see comment in spacing.scss */
   /* until reaches full-width of sm layout */

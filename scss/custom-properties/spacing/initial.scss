@@ -6,7 +6,6 @@
 :root {
   @include mixins.spacing();
   @include mixins.grid();
-  --er: #{spacing-values.er-to-absolute(1, initial)};
 
   --width-prose: calc(
     var(--grid-column-width) * var(--grid-prose-column-count) +

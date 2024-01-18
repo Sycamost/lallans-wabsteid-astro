@@ -4,7 +4,6 @@
 :root {
   @include mixins.spacing($breakpoint: sm);
   @include mixins.grid($breakpoint: sm);
-  --er: #{spacing-values.er-to-absolute(1, sm)};
 
   --grid-total-width: 30rem;
 }
