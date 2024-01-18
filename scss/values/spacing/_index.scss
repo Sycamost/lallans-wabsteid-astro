@@ -20,6 +20,5 @@
 @forward 'constants' show $grid-column-count, $grid-prose-column-count;
 @forward 'grid' as grid-* hide er-to-absolute;
 @forward 'grid' show er-to-absolute;
-// TODO: grid-gutter-width
 @forward 'spacing';
-// TODO: width-prose
+

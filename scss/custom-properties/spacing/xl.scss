@@ -4,9 +4,4 @@
 :root {
   // No need for spacing here, since it's the same as sm.
   @include mixins.grid($breakpoint: xl);
-
-  --width-prose: calc(
-    var(--grid-column-width) * min(8, var(--grid-column-count)) +
-    var(--grid-gutter-width) * min(7, (var(--grid-column-count) - 1))
-  );
 }
