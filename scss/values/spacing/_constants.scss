@@ -46,14 +46,13 @@ $spacing-factor: (
   'block': (lg: 16, md: 10, sm: 5)
 );
 
-// TODO: use SCSS function to calculate xs value robustly
-$grid-total-width-absolute: (
+$grid-min-total-width-absolute: (
   'xxl': 100rem,
   'xl': 80rem,
   'lg': 64rem,
   'md': 48rem,
   'sm': 30rem,
-  'xs': min(100vw, calc(1050rem / 41)),
+  'xs': 100vw,
   'initial': 100vw
 );
 

@@ -4,6 +4,4 @@
 :root {
   @include mixins.spacing($breakpoint: sm);
   @include mixins.grid($breakpoint: sm);
-
-  --grid-total-width: 30rem;
 }

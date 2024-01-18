@@ -4,8 +4,4 @@
 :root {
   @include mixins.spacing($breakpoint: xs);
   @include mixins.grid($breakpoint: xs);
-
-  /* Still using full-width layout: see comment in spacing.scss */
-  /* until reaches full-width of sm layout */
-  --grid-total-width: min(100vw, calc(1050rem / 41));
 }

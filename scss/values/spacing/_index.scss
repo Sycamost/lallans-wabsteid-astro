@@ -19,11 +19,10 @@
 
 @use 'constants';
 
-@forward 'grid' as grid-*;
+@forward 'grid' as grid-* hide er-to-absolute;
+@forward 'grid' show er-to-absolute;
 $grid-column-count: constants.$grid-column-count;
 $grid-prose-column-count: constants.$grid-prose-column-count;
 // TODO: grid-gutter-width
-@forward 'er-to-absolute';
 @forward 'spacing';
 // TODO: width-prose
-// TODO: grid-total-width

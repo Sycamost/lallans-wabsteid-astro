@@ -11,15 +11,4 @@
     var(--grid-column-width) * var(--grid-prose-column-count) +
     var(--grid-gutter-width) * (var(--grid-prose-column-count) - 1)
   );
-
-  /***********************************************************
-   * Generally, we will use columns to keep things laid out  *
-   * nicely. However, on screens narrower than sm, space is  *
-   * too precious for guttering. So for those screens we use *
-   * a single-column layout taking up 100vw. In effect, this *
-   * is just default CSS layout plus a wee bit padding. From *
-   * sm widewards, we use multiple columns on a fixed width. *
-   ***********************************************************/
-
-  --grid-total-width: 100vw;
 }

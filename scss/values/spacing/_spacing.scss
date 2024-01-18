@@ -2,7 +2,7 @@
 @use 'sass:map';
 
 @use 'constants';
-@use 'er-to-absolute' as *;
+@use 'grid';
 
 /**
   * - size: sm, md, lg
@@ -15,12 +15,12 @@
   );
 
   @if list.index([xxl xl lg md sm], ($breakpoint)) {
-    @return er-to-absolute($factor, $breakpoint);
+    @return grid.er-to-absolute($factor, $breakpoint);
   }
   @else if $breakpoint == xs {
     @return clamp(
       spacing($direction, $size, initial),
-      er-to-absolute($factor, xs),
+      grid.er-to-absolute($factor, xs),
       spacing($direction, $size, sm)
     );
   }

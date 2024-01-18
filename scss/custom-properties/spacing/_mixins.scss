@@ -17,4 +17,5 @@
   --grid-column-width: #{spacing-values.grid-column-width($breakpoint: $breakpoint)};
   --grid-gutter-width: #{spacing-values.grid-gutter-width($breakpoint: $breakpoint)};
   --grid-prose-column-count: #{map.get(spacing-values.$grid-prose-column-count, $breakpoint)};
+  --grid-total-width: #{spacing-values.grid-total-width-absolute($breakpoint)};
 }
