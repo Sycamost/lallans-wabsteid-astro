@@ -1,0 +1,27 @@
+a, .link {
+  color: var(--special-text-color);
+  text-decoration-line: underline;
+  text-decoration-color: var(--special-text-color);
+  border: dotted transparent var(--border-width);
+  transition:
+    color 100ms,
+    text-decoration-color 100ms,
+    border-color 100ms;
+
+  &:is(:hover, :focus, :focus-visible, :focus-within),
+  .group-hover:is(:hover, :focus, :focus-visible, :focus-within) & {
+    text-decoration-color: currentColor;
+    text-decoration-style: wavy;
+    transition:
+      color 300ms,
+      text-decoration-color 300ms,
+      border-color 300ms;
+  }
+
+  &:is(:focus, :focus-visible, :focus-within) {
+    box-shadow: none;
+    outline: none;
+    border-color: var(--special-text-color);
+  }
+}
+

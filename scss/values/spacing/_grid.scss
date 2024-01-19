@@ -1,0 +1,63 @@
+@use 'sass:list';
+@use 'sass:map';
+
+@use 'constants';
+
+@function padding($breakpoint: initial) {
+  @return er-to-absolute(map.get(constants.$grid-padding-er, $breakpoint), $breakpoint);
+}
+
+@function column-width($breakpoint: initial) {
+  @return er-to-absolute(constants.$grid-column-width-er, $breakpoint);
+}
+
+@function gutter-width($breakpoint: initial) {
+  @return er-to-absolute(constants.$grid-gutter-width-er, $breakpoint);
+}
+
+@function column-count($breakpoint: initial) {
+  @return map.get(constants.$grid-column-count, $breakpoint);
+}
+
+@function total-width-er($breakpoint) {
+  $padding-width: calc(2 * map.get(constants.$grid-padding-er, $breakpoint));
+  $column-count: map.get(constants.$grid-column-count, $breakpoint);
+  $columns-width: calc($column-count * constants.$grid-column-width-er);
+  $gutters-width: calc(($column-count - 1) * constants.$grid-gutter-width-er);
+  @return $padding-width + $columns-width + $gutters-width;
+}
+
+@function total-width-absolute($breakpoint: initial) {
+  /**
+    * In theory, the grid total width should be clamped between the min at this
+    * breakpoint and the min at the next breakpoint minus grid padding. In
+    * practice, the only time this makes a difference is at xs, so at every
+    * other breakpoint, we'll just return the min at the current breakpoint.
+    */
+
+  @if $breakpoint == xs {
+    $min-width-xs: map.get(constants.$grid-min-total-width-absolute, xs);
+    $min-width-sm: map.get(constants.$grid-min-total-width-absolute, sm);
+    $padding-sm: calc(2 * padding(sm));
+    @return min($min-width-xs, calc($min-width-sm - $padding-sm));
+  }
+
+  @return map.get(constants.$grid-min-total-width-absolute, $breakpoint);
+}
+
+/**
+  * Converts er units to absolute units.
+  *
+  * This doesn't really belong here, but I think it has to, because it depends
+  * on grid-total-width-absolute which depends on grid-padding which depends on
+  * this. It's fine here, it's just a recursion. But if it lived in a separate
+  * module you'd end up with a circular dependency.
+  */
+@function er-to-absolute($length-er, $breakpoint: initial) {
+  $absolute-per-er: calc(
+    total-width-absolute($breakpoint)
+    / total-width-er($breakpoint)
+  );
+  @return calc($length-er * $absolute-per-er);
+}
+

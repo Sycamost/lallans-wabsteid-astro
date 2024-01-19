@@ -1,0 +1,41 @@
+@use 'mixins';
+
+@use '../../values/typography' as typography-values;
+
+:root {
+  @include mixins.font-sizes();
+  --border-width: #{typography-values.border-width()};
+
+  --font-serif:
+    Alegreya,
+    -apple-system-ui-serif,
+    Iowan Old Style,
+    Apple Garamond,
+    Baskerville,
+    Sitka, "Sitka Display", "Sitka Heading", "Sitka Text",
+    Times New Roman,
+    Droid Serif,
+    Times,
+    Source Serif Pro,
+    serif,
+    Apple Color Emoji,
+    Segoe UI Emoji,
+    Segoe UI Symbol;
+
+  --font-sans-serif:
+    'Alegreya Sans',
+    Lato,
+    -apple-system,
+    BlinkMacSystemFont,
+    avenir next,
+    avenir,
+    segoe ui,
+    helvetica neue,
+    helvetica,
+    Cantarell,
+    Ubuntu,
+    roboto,
+    noto,
+    arial,
+    sans-serif;
+}

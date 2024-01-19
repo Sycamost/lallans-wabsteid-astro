@@ -1,0 +1,14 @@
+@use 'sass:map';
+
+@use '../../values/spacing' as spacing-values;
+@use 'mixins';
+
+:root {
+  @include mixins.spacing();
+  @include mixins.grid();
+
+  --width-prose: calc(
+    var(--grid-column-width) * var(--grid-prose-column-count) +
+    var(--grid-gutter-width) * (var(--grid-prose-column-count) - 1)
+  );
+}

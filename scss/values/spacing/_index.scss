@@ -1,0 +1,24 @@
+/**
+  * 'er' (from 'eighth-rem') is a conceptual unit of length. It is determined
+  * by the total width of the grid, the relative eighth rem length of the grid
+  * padding, and the number of columns in the grid. This means you can just
+  * specify those values for each breakpoint, and the rest of the nitty-gritty
+  * griddy details happens by SCSS magic.
+  */
+
+/**
+  * Breakpoints can be:
+  *   - initial
+  *   - xs
+  *   - sm
+  *   - md
+  *   - lg
+  *   - xl
+  *   - xxl
+  */
+
+@forward 'constants' show $grid-column-count, $grid-prose-column-count;
+@forward 'grid' as grid-* hide er-to-absolute;
+@forward 'grid' show er-to-absolute;
+@forward 'spacing';
+

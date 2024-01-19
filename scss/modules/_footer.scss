@@ -1,0 +1,28 @@
+footer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-block-sm);
+  align-items: center;
+}
+
+.footer__rss-button__label {
+  /* Hides the label from non-screen-readers */
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.footer__rss-button__img {
+  display: block;
+}
+
+.footer__back-to-top {
+  grid-column: calc(var(--grid-column-count) - 2) / calc(var(--grid-column-count) + 1);
+  margin: 0;
+}

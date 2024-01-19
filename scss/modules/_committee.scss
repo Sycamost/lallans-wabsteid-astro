@@ -1,0 +1,37 @@
+.committee__member {
+  list-style-type: none;
+  margin-block-start: var(--spacing-block-sm);
+}
+
+.committee__member + .committee__member {
+  border-top-width: var(--border-width);
+  border-top-style: solid;
+  border-image: linear-gradient(
+    to right,
+    transparent 0%,
+    transparent 19.1%,
+    var(--text-color) 19.1%,
+    var(--text-color) 80.9%,
+    transparent 80.9%,
+    transparent 100%
+  ) 1;
+  margin-block-start: var(--spacing-block-md);
+  padding-block-start: var(--spacing-block-md);
+}
+
+.committee__member__img {
+  margin-inline: 25%;
+  width: 50%;
+  border-radius: 50%;
+}
+
+.committee__member__text {
+  text-align: center;
+  margin-block-start: var(--spacing-block-sm);
+}
+
+.committee__member__role {
+  display: block;
+  font-weight: lighter;
+}
+

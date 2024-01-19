@@ -1,0 +1,40 @@
+.btn {
+  display: block;
+  border: solid var(--border-width) var(--text-color);
+  font-weight: 600;
+  text-align: center;
+  margin-block-start: var(--spacing-block-sm);
+  padding-inline: var(--spacing-inline-md);
+  padding-block: var(--spacing-block-sm);
+  background-color: transparent;
+  transition:
+    background-color 100ms,
+    transform 100ms;
+}
+
+.btn:is(:hover, :focus, :focus-visible, :focus-within, :active) {
+  box-shadow: none;
+  outline: none;
+  color: var(--text-highlight-color);
+  border-color: var(--background-highlight-color);
+  background-color: var(--background-highlight-color);
+  transition:
+    background-color 300ms,
+    transform 300ms;
+}
+
+.btn:is(:focus, :focus-visible, :focus-within) {
+  border-color: var(--special-text-highlight-color);
+  border-style: dotted;
+}
+
+.btn:active {
+  transform: scale(1.1, 1.1);
+}
+
+/* Override anchor styling. */
+a.btn {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
