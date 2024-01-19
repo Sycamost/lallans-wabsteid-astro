@@ -1,0 +1,18 @@
+@use 'sass:map';
+
+@use 'constants';
+
+@function font-size($font-size-grade, $breakpoint: initial) {
+  @return calc(
+    map.get(constants.$base-font-size, $breakpoint)
+    * map.get(constants.$font-size-factor, $font-size-grade)
+  );
+}
+
+@function border-width($breakpoint: initial) {
+  @return calc(
+    map.get(constants.$base-font-size, $breakpoint)
+    / 8
+  );
+}
+

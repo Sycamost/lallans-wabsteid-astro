@@ -1,8 +1,8 @@
 footer {
-  display: grid;
-  grid-template-columns: repeat(var(--grid-column-count), var(--grid-column-width));
-  gap: var(--grid-gutter-width);
-  align-items: baseline;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-block-sm);
+  align-items: center;
 }
 
 .footer__rss-button__label {
@@ -19,10 +19,10 @@ footer {
 }
 
 .footer__rss-button__img {
-  min-width: 44px;
-  width: calc(8 * var(--relative-eighth-rem));
+  display: block;
 }
 
 .footer__back-to-top {
   grid-column: calc(var(--grid-column-count) - 2) / calc(var(--grid-column-count) + 1);
+  margin: 0;
 }

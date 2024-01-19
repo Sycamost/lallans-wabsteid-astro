@@ -1,11 +1,10 @@
+@use 'mixins';
+
+@use '../../values/typography' as typography-values;
+
 :root {
-  --font-size-0: calc(8 * var(--relative-eighth-rem));
-  --font-size-1: calc(8 * var(--relative-eighth-rem));
-  --font-size-2: calc(8 * var(--relative-eighth-rem));
-  --font-size-3: calc(8 * var(--relative-eighth-rem));
-  --font-size-4: calc(8 * var(--relative-eighth-rem));
-  --font-size-5: calc(8 * var(--relative-eighth-rem));
-  --font-size-6: calc(8 * var(--relative-eighth-rem));
+  @include mixins.font-sizes();
+  --border-width: #{typography-values.border-width()};
 
   --font-serif:
     Alegreya,
@@ -38,5 +37,5 @@
     roboto,
     noto,
     arial,
-    sans-serif
+    sans-serif;
 }

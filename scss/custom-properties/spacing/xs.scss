@@ -1,0 +1,7 @@
+@use 'mixins';
+@use '../../values/spacing' as spacing-values;
+
+:root {
+  @include mixins.spacing($breakpoint: xs);
+  @include mixins.grid($breakpoint: xs);
+}

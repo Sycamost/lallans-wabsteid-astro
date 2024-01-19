@@ -6,8 +6,8 @@ const tPage = {
     'en-GB': () => 'Home',
   },
   submit: {
-    sco: () => 'Sangschaw apen for submeissions',
-    'en-GB': () => 'Sangschaw open for submissions',
+    sco: () => 'Sang\u00adschaw apen for submeissions',
+    'en-GB': () => 'Sang\u00adschaw open for submissions',
   },
   'submit-para-1': {
     sco: () => `
@@ -97,13 +97,9 @@ const tPage = {
     sco: () => 'Meet the Commattee',
     'en-GB': () => 'Meet the Committee',
   },
-  'mair-commattee-details-soon': {
-    sco: () => 'Mair details comin shuin!',
-    'en-GB': () => 'More details coming soon!',
-  },
   furthsettins: {
-    sco: () => 'Furthsettins',
-    'en-GB': () => 'Publications',
+    sco: () => 'Furth\u00adsettins',
+    'en-GB': () => 'Public\u00adations',
   },
   'furthsettins-para': {
     sco: () => `

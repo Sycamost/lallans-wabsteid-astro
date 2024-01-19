@@ -1,11 +1,11 @@
 .btn {
   display: block;
-  border: solid var(--relative-eighth-rem) var(--text-color);
+  border: solid var(--border-width) var(--text-color);
   font-weight: 600;
   text-align: center;
-  margin-block-start: var(--margin-block-sm);
-  padding-inline: var(--padding-inline-md);
-  padding-block: var(--padding-block-sm);
+  margin-block-start: var(--spacing-block-sm);
+  padding-inline: var(--spacing-inline-md);
+  padding-block: var(--spacing-block-sm);
   background-color: transparent;
   transition:
     background-color 100ms,

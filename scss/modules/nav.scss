@@ -28,9 +28,10 @@
   font-family: var(--font-serif);
   font-size: var(--font-size-5);
   font-weight: 700;
+  line-height: 1.15;
 
   /* This gradient is based on                  *
-   * --color-primary-60 -> --color-secondary-60 *
+   * colours.$primary-60 -> colours.$secondary-60 *
    * using Josh W Comeau's gradient generator   */
   width: fit-content;
   background-image: linear-gradient(
@@ -53,7 +54,7 @@
 
   a {
     text-decoration: none;
-    border: var(--relative-eighth-rem) dotted transparent;
+    border: var(--border-width) dotted transparent;
     transition: border-color 100ms;
 
     &:is(:focus, :focus-visible, :focus-within) {
@@ -66,14 +67,9 @@
 }
 
 .nav__breadcrumbs {
-  display: flex;
-  flex-wrap: wrap;
-
   li {
-    min-width: max-content;
-    &::before {
-      content: '/'
-    }
+    list-style: '▸';
+    list-style-position: inside;
   }
 }
 

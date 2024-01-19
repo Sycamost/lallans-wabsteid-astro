@@ -1,0 +1,12 @@
+@use '../../values/typography' as typography-values;
+
+@mixin font-sizes($breakpoint: initial) {
+  --font-size-0: #{typography-values.font-size('0', $breakpoint)};
+  --font-size-1: #{typography-values.font-size('1', $breakpoint)};
+  --font-size-2: #{typography-values.font-size('2', $breakpoint)};
+  --font-size-3: #{typography-values.font-size('3', $breakpoint)};
+  --font-size-4: #{typography-values.font-size('4', $breakpoint)};
+  --font-size-5: #{typography-values.font-size('5', $breakpoint)};
+  --font-size-6: #{typography-values.font-size('6', $breakpoint)};
+}
+
