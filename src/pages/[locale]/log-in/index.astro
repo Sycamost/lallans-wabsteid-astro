@@ -1,0 +1,66 @@
+---
+import translate from '$i18n/translate';
+import tPage from '$i18n/translations/pages/logIn/index';
+import Page from '$layouts/Page.astro';
+import { getLocaleFromPathOrThrow } from '$lib/getLocaleFromPath';
+import localeStaticPaths from '$lib/localeStaticPaths';
+
+export async function getStaticPaths() {
+  return localeStaticPaths;
+}
+
+const locale = getLocaleFromPathOrThrow(Astro.url.pathname);
+const t = translate(locale);
+---
+
+<Page title={t(tPage, { key: 'title' })}>
+  <section>
+    <h1>{t(tPage, { key: 'title' })}</h1>
+
+    <form id="log-in-form">
+      <label for="username">{t(tPage, { key: 'label-username' })}</label>
+      <input type="email" required id="username-input" />
+
+      <button type="submit" id="submit-button">{t(tPage, { key: 'submit' })}</button>
+    </form>
+  </section>
+</Page>
+
+<script>
+  import { getLocaleFromDocumentOrThrow } from '$lib/getLocaleFromDocument';
+  import translate from '$i18n/translate';
+  import tPage from '$i18n/translations/pages/logIn/index';
+
+  const locale = getLocaleFromDocumentOrThrow(document);
+  const t = translate(locale);
+
+  const form = document.getElementById('log-in-form') as HTMLFormElement;
+  const usernameInput = document.getElementById('username-input') as HTMLInputElement;
+  const submitButton = document.getElementById('submit-button') as HTMLButtonElement;
+
+  const statusInfoMsg = document.createElement('p');
+
+  form.addEventListener('submit', (event) => {
+    // Prevent default behaviour of submit button (which includes refreshing the page)
+    event.preventDefault();
+
+    // Disable the form and leave message to let the user know it’s been submitted
+    setIsFormDisabled(true);
+    statusInfoMsg.textContent = t(tPage, { key: 'status-working' });
+    form.after(statusInfoMsg);
+
+    let 
+  });
+
+  function setIsFormDisabled(isDisabled: boolean) {
+    if (isDisabled) {
+      form.setAttribute('disabled', '');
+      usernameInput.setAttribute('disabled', '');
+      submitButton.setAttribute('disabled', '');
+    } else {
+      form.removeAttribute('disabled');
+      usernameInput.removeAttribute('disabled');
+      submitButton.removeAttribute('disabled');
+    }
+  }
+</script>
