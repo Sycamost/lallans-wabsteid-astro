@@ -27,7 +27,7 @@ export default async function verifyRegistrationResponse(
     expectedChallenge,
     expectedOrigin: env.ENVIRONMENT === 'prod'
       ? 'https://scotsleidassocie.org'
-      : 'https://staging.scotsleidassocie.org',
+      : 'https://webauthn.scotsleidassocie.org',
     expectedRPID: RELYING_PARTY.id,
   }).catch((err) => {
     throw new Error(`Registration response verification failed. ${err}`);
