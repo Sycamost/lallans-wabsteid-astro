@@ -34,16 +34,21 @@ const t = translate(locale);
 
   import * as api from '$lib/api';
   import { startRegistration } from '@simplewebauthn/browser';
-  import UserAlreadyExistsError from '$types/UserAlreadyExistsError.d';
+  import UserAlreadyExistsError from '$types/UserAlreadyExistsError';
+  import RegistrationResponseVerificationFailedError from '$types/RegistrationResponseVerificationFailedError';
   import { getLocaleFromDocumentOrThrow } from '$lib/getLocaleFromDocument';
+  import translate from '$i18n/translate';
+  import tPage from '$i18n/translations/pages/signUp';
+
+  const locale = getLocaleFromDocumentOrThrow(document);
+  const t = translate(locale);
 
   const form = document.getElementById('sign-up-form') as HTMLFormElement;
   const displayNameInput = document.getElementById('display-name') as HTMLInputElement;
   const emailInput = document.getElementById('email') as HTMLInputElement;
   const submitButton = document.getElementsByTagName('button')[0] as HTMLButtonElement;
-  const locale = getLocaleFromDocumentOrThrow(document);
   const statusInfoMsg = document.createElement('p');
-  statusInfoMsg.textContent = locale === 'en-GB' ? 'Signing you up…' : 'Signin you up…';
+  statusInfoMsg.textContent = t(tPage, { key: 'status-working' });
 
   const successPageUrl = `/${locale}/sign-up/success`;
 
@@ -59,7 +64,7 @@ const t = translate(locale);
     try {
       registrationOptions = await getRegistrationOptions();
     } catch (err) {
-      reportError('Failed to get registration options.', err);
+      reportError(t(tPage, { key: 'error-getting-registration-options' }), err);
       return;
     }
 
@@ -67,7 +72,7 @@ const t = translate(locale);
     try {
       registrationResponse = await startRegistration(registrationOptions);
     } catch (err) {
-      reportError('Failed to start registration on the client.', err);
+      reportError(t(tPage, { key: 'error-starting-registration' }), err);
       return;
     }
 
@@ -79,7 +84,7 @@ const t = translate(locale);
         registrationResponse,
       });
     } catch (err) {
-      reportError('Failed to verify the registration response.', err);
+      reportError(t(tPage, { key: 'error-verifying-registration-response' }), err);
       return;
     }
 
@@ -89,7 +94,7 @@ const t = translate(locale);
         Failed to verify your registration. Have another go, or contact us at
         lallans@hotmail.co.uk if the issue persists.
       `,
-        null
+        new RegistrationResponseVerificationFailedError(locale)
       );
     }
 
@@ -98,7 +103,7 @@ const t = translate(locale);
       '?displayName=' +
       registrationOptions.user.displayName +
       '&userId=' +
-      registrationOptions.user.name;
+      registrationOptions.user.id;
 
     console.info(`Redirecting to the success page ${url}...`);
     statusInfoMsg.innerHTML =
