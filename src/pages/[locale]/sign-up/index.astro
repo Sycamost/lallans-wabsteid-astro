@@ -48,7 +48,6 @@ const t = translate(locale);
   const emailInput = document.getElementById('email') as HTMLInputElement;
   const submitButton = document.getElementsByTagName('button')[0] as HTMLButtonElement;
   const statusInfoMsg = document.createElement('p');
-  statusInfoMsg.textContent = t(tPage, { key: 'status-working' });
 
   const successPageUrl = `/${locale}/sign-up/success`;
 
@@ -58,6 +57,7 @@ const t = translate(locale);
 
     // Disable the form and leave message to let the user know it’s been submitted
     setIsFormDisabled(true);
+    statusInfoMsg.textContent = t(tPage, { key: 'status-working' });
     form.after(statusInfoMsg);
 
     let registrationOptions;
