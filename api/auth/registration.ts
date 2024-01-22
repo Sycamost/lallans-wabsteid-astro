@@ -96,17 +96,6 @@ async function handleGet(request: VercelRequest): Promise<(r: VercelResponse) =>
   return (response) => void (response.status(200).json(options));
 }
 
-function getFirstQueryParam(key: string, query: VercelRequest['query']): string | null {
-  const value = query[key];
-  if (!value) {
-    return null;
-  }
-  if (typeof(value) === 'string') {
-    return value;
-  }
-  return value[0] as string;
-}
-
 async function handlePost(request: VercelRequest): Promise<(r: VercelResponse) => void> {
   type Body = {
     userId: string,
