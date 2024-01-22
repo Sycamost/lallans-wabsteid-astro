@@ -37,14 +37,12 @@ export default async function verifyRegistrationResponse(
     return false;
   }
 
-  const textDecoder = new TextDecoder();
-
   const authenticator: Authenticator = {
-    id: textDecoder.decode(verification.registrationInfo.credentialID),
+    id: verification.registrationInfo.credentialID,
     backedUp: verification.registrationInfo.credentialBackedUp,
     counter: verification.registrationInfo.counter,
     deviceType: verification.registrationInfo.credentialDeviceType,
-    publicKey: textDecoder.decode(verification.registrationInfo.credentialPublicKey),
+    publicKey: verification.registrationInfo.credentialPublicKey,
     type: verification.registrationInfo.credentialType,
     userId: newUser.id,
 
@@ -57,6 +55,8 @@ export default async function verifyRegistrationResponse(
     transports: verification.registrationInfo['transports'] ?? [],
   };
 
-  addUser(newUser);
-  addAuthenticator(authenticator);
+  await addUser(newUser);
+  await addAuthenticator(authenticator);
+
+  return true;
 }

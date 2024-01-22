@@ -10,19 +10,19 @@ export default async function addAuthenticator(authenticator: Authenticator) {
       ${AUTHENTICATORS.fields.backedUp},
       ${AUTHENTICATORS.fields.counter},
       ${AUTHENTICATORS.fields.deviceType},
-      ${AUTHENTICATORS.fields.publicKey}
+      ${AUTHENTICATORS.fields.publicKey},
       ${AUTHENTICATORS.fields.transports},
       ${AUTHENTICATORS.fields.type},
       ${AUTHENTICATORS.fields.userId}
     ) VALUES (
-      ${authenticator.id},
-      ${authenticator.backedUp},
+      '{ ${authenticator.id.toString()} }',
+      ${authenticator.backedUp ? 'TRUE' : 'FALSE'},
       ${authenticator.counter},
-      ${authenticator.deviceType},
-      ${authenticator.publicKey}
-      { ${authenticator.transports.join(', ')} },
-      ${authenticator.type},
-      ${authenticator.userId}
+      '${authenticator.deviceType}',
+      '{ ${authenticator.publicKey.toString()} }',
+      '{ ${authenticator.transports.join(',')} }',
+      '${authenticator.type}',
+      '${authenticator.userId}'
     );
   `;
 

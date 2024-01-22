@@ -1,11 +1,11 @@
 import User from './User';
 
 type Authenticator = {
-  id: string,
+  id: Uint8Array,
   backedUp: boolean,
   counter: number,
   deviceType: string,
-  publicKey: string,
+  publicKey: Uint8Array,
   type: 'public-key',
   transports: AuthenticatorTransport[],
   userId: User['id'],
