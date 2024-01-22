@@ -6,6 +6,9 @@ import verifyRegistrationResponse from './_verifyRegistrationResponse';
 import getUser from '../db/_getUser';
 import getCurrentChallenge from '../db/_getCurrentChallenge';
 import setCurrentChallenge from '../db/_setCurrentChallenge';
+import { getFirstQueryParam } from '../_getFirstQueryParam';
+import addUser from 'db/_addUser';
+import addAuthenticator from 'db/_addAuthenticator';
 
 /**
  * # registration
@@ -152,8 +155,15 @@ async function handlePost(request: VercelRequest): Promise<(r: VercelResponse) =
     );
   }
 
-  const isValid = await verifyRegistrationResponse(newUser, expectedChallenge, registrationResponse);
+  const authenticator = await verifyRegistrationResponse(newUser, expectedChallenge, registrationResponse);
+  const isVerified = !!authenticator;
+
+  if (isVerified) {
+    await addUser(newUser);
+    await addAuthenticator(authenticator);
+  }
+
   return (response) => void (
-    response.status(200).send(isValid ? 'true' : 'false')
+    response.status(200).send(isVerified ? 'true' : 'false')
   );
 }

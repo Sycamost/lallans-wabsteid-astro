@@ -4,8 +4,6 @@ import { type RegistrationResponseJSON } from '@simplewebauthn/server/script/dep
 
 import { verifyRegistrationResponse as innerVerifyRegistrationResponse } from '@simplewebauthn/server';
 import RELYING_PARTY from './_relyingParty';
-import addAuthenticator from '../db/_addAuthenticator';
-import addUser from '../db/_addUser';
 import env from '../_env';
 
 /**
@@ -14,14 +12,14 @@ import env from '../_env';
  * matches the expected challenge, which should be the most recent challenge
  * to be associated with the given user.
  *
- * If verification is successful, saves the new user and their new
- * authenticator to the database.
+ * If verification is successful, returns the authenticator object. Otherwise,
+ * returns null.
  */
 export default async function verifyRegistrationResponse(
   newUser: User,
   expectedChallenge: string,
   registrationResponse: RegistrationResponseJSON,
-): Promise<boolean> {
+): Promise<Authenticator | null> {
   const verification = await innerVerifyRegistrationResponse({
     response: registrationResponse,
     expectedChallenge,
@@ -34,7 +32,7 @@ export default async function verifyRegistrationResponse(
   });
 
   if (!verification.verified || !verification.registrationInfo) {
-    return false;
+    return null;
   }
 
   const authenticator: Authenticator = {
@@ -55,8 +53,5 @@ export default async function verifyRegistrationResponse(
     transports: verification.registrationInfo['transports'] ?? [],
   };
 
-  await addUser(newUser);
-  await addAuthenticator(authenticator);
-
-  return true;
+  return authenticator;
 }
