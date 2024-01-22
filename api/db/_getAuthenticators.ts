@@ -1,10 +1,12 @@
+import type Authenticator from '../types/Authenticator';
+import type User from '../types/User';
+
 import { sql } from '@vercel/postgres';
 import { AUTHENTICATORS } from './_tables';
-import Authenticator from '../types/Authenticator';
 
 export default async function getAuthenticators<
   T extends keyof Authenticator
->(userId: string, fields: T[]): Promise<Pick<Authenticator, T>[]> {
+>(userId: User['id'], fields: T[]): Promise<Pick<Authenticator, T>[]> {
   const query = `
     SELECT ${fields.join(', ')}
     FROM ${AUTHENTICATORS.name}
@@ -17,8 +19,18 @@ export default async function getAuthenticators<
     return result.rows.map((row) => {
       const authenticator: Partial<Pick<Authenticator, T>> = {};
       for (const field in fields) {
-        // Assume type conversion is already done by node-postgres
-        authenticator[field] = row[AUTHENTICATORS.fields[field]];
+        switch (field) {
+          case 'id':
+          case 'public_key':
+            // Convert from number[] to Uint8Array
+            // We know that we'll get Postgres integer[] as JavaScript number[]:
+            // https://github.com/brianc/node-pg-types/blob/master/lib/textParsers.js
+            authenticator[field] = new Uint8Array(row[AUTHENTICATORS.fields[field]]);
+            break;
+          default:
+            // Assume adequate type conversion is already done by node-postgres
+            authenticator[field] = row[AUTHENTICATORS.fields[field]];
+        }
       }
       return authenticator as Pick<Authenticator, T>;
     });
