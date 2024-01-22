@@ -25,23 +25,17 @@ export default async function generateAuthenticationOptions(userId: string) {
   }
 
   const userAuthenticators = await getAuthenticators(userId, ['id', 'transports', 'type']);
-  const textEncoder = new TextEncoder();
 
   const options = await simplewebauthn.generateAuthenticationOptions({
     rpID: RELYING_PARTY.id,
 
     // Users must use one of the authenticators they've already registered
-    allowCredentials: userAuthenticators.map((authenticator) => {
-      return {
-        ...authenticator,
-        id: textEncoder.encode(authenticator.id),
-      };
-    }),
+    allowCredentials: userAuthenticators,
 
     userVerification: 'preferred',
   });
 
-  setCurrentChallenge(userId, options.challenge);
+  await setCurrentChallenge(userId, options.challenge);
 
   return options;
 }
