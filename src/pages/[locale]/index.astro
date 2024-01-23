@@ -78,13 +78,6 @@ const mostRecentNewsItem = await getMostRecentNewsItem(locale);
     <a href={`${locale}/mailto:${contactDetails.generalEnquiries.emailAddress}`}>
       {contactDetails.generalEnquiries.emailAddress}
     </a>
-    <address>
-      Scots Language Society<br />
-       c/o 61 Cliffburn Road<br />
-       Arbroath<br />
-       Angus<br />
-       DD11 5BA<br />
-       United Kingdom<br />
-    </address>
+    <address set:html={contactDetails.generalEnquiries.address.join('<br />')} />
   </section>
 </Page>
