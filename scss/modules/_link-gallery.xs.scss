@@ -1,7 +1,7 @@
 .link-gallery {
   grid-auto-rows: calc(
     var(--gallery-row-image-height) +
-    var(--margin-block-sm) +
+    var(--spacing-block-sm) +
     var(--gallery-row-title-height)
   );
   --gallery-item-column-span: 2;

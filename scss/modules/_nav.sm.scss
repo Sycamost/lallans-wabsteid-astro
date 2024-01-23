@@ -9,7 +9,7 @@
 
     + li::before {
       content: '/';
-      margin-inline: var(--margin-inline-md);
+      margin-inline: var(--spacing-inline-md);
     }
   }
 }
