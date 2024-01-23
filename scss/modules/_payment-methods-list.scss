@@ -1,0 +1,8 @@
+.payment-methods-list {
+  list-style: none;
+
+  details[open] :last-child {
+    margin-block-end: var(--spacing-block-sm);
+  }
+}
+

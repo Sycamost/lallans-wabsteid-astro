@@ -16,18 +16,42 @@ const t = translate(locale);
 ---
 
 <Page title={t(tPage, { key: 'title' })}>
-  <section id="jyne">
+  <header>
     <h1 set:html={t(tPage, { key: 'title' })} />
+  </header>
 
+  <section>
     <h2 set:html={t(tPage, { key: 'hou-jyne' })} />
-    <p set:html={t(tPage, { key: 'hou-jyne-para-1' })} />
-    <p
-      set:html={t(tPage, {
-        key: 'hou-jyne-para-2',
-        membershipEmail: contactDetails.membershipSecretary.emailAddress,
-      })}
-    />
+    <p set:html={t(tPage, { key: 'hou-jyne-intro' })} />
 
+    <ul class="payment-methods-list">
+      <li>
+        <details>
+          <summary set:html={t(tPage, { key: 'hou-pey-by-bank-transfer-title' })} />
+          <p
+            set:html={t(tPage, {
+              key: 'hou-pey-by-bank-transfer-para',
+              emailAddress: contactDetails.membershipSecretary.emailAddress,
+            })}
+          />
+        </details>
+      </li>
+
+      <li>
+        <details>
+          <summary set:html={t(tPage, { key: 'hou-pey-by-cheque-title' })} />
+          <p
+            set:html={t(tPage, {
+              key: 'hou-pey-by-cheque-para',
+              address: contactDetails.membershipSecretary.address,
+            })}
+          />
+        </details>
+      </li>
+    </ul>
+  </section>
+
+  <section>
     <h2 set:html={t(tPage, { key: 'why-jyne' })} />
     <p set:html={t(tPage, { key: 'why-jyne-para-1' })} />
     <p set:html={t(tPage, { key: 'why-jyne-para-2' })} />

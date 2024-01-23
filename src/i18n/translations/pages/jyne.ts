@@ -52,7 +52,7 @@ const tPage = {
     sco: () => 'Hou can A jyne?',
     'en-GB': () => 'How can I join?',
   },
-  'hou-jyne-para-1': {
+  'hou-jyne-intro': {
     sco: () => `
       Fur individuals, memmership costs £20 per annum. Fur institutions, the stent is £25 per annum.
       Ye can pey by bank transfer or cheque.
@@ -62,21 +62,30 @@ const tPage = {
       You can pay by bank transfer or cheque.
     `,
   },
-  'hou-jyne-para-2': {
-    sco: ({ membershipEmail }: { membershipEmail: string }) => `
-      Fur tae become a memmer, simply get in titch wi us at
-      <a href="mailto:${membershipEmail}">${membershipEmail}</a>
-      an we’ll provide ye wi our bank details; or ye can jyne bi sendin us a cheque
-      made peyable til <b>The Scots Language Society</b>. See
-      <a href="#contact">Contact us</a>
-      fur our address.
+  'hou-pey-by-bank-transfer-title': {
+    sco: () => 'Bank transfer',
+    'en-GB': () => 'Bank transfer',
+  },
+  'hou-pey-by-bank-transfer-para': {
+    sco: ({ emailAddress }: { emailAddress: string }) => `
+      Send us an email at <a href="mailto:${emailAddress}">${emailAddress}</a> an we’ll send ye oor bank details.
     `,
-    'en-GB': ({ membershipEmail }: { membershipEmail: string }) => `
-      To become a member, simply get in touch with us at
-      <a href="mailto:${membershipEmail}">${membershipEmail}</a>
-      and we’ll provide you with our bank details; or you can join by sending us
-      a cheque made payable to <b>The Scots Language Society</b>. See
-      <a href="#contact">Contact us</a> for our address.
+    'en-GB': ({ emailAddress }: { emailAddress: string }) => `
+      Send us an email at <a href="mailto:${emailAddress}">${emailAddress}</a> and we’ll send you our bank details.
+    `,
+  },
+  'hou-pey-by-cheque-title': {
+    sco: () => 'Cheque',
+    'en-GB': () => 'Cheque',
+  },
+  'hou-pey-by-cheque-para': {
+    sco: ({ address }: { address: string[] }) => `
+      Mak out a cheque til <b>The Scots Language Society</b>, syne send it til us at the follaein address:
+      <address>${address.join('<br />')}</address>
+    `,
+    'en-GB': ({ address }: { address: string[] }) => `
+      Make out a cheque to <b>The Scots Language Society</b>, then send it to us at the following address:
+      <address>${address.join('<br />')}</address>
     `,
   },
 };
