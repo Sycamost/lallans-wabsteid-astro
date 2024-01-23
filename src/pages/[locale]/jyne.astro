@@ -1,0 +1,36 @@
+---
+import type Locale from '$types/Locale';
+
+import contactDetails from '$data/contactDetails';
+import Page from '$layouts/Page.astro';
+import localeStaticPaths from '$lib/localeStaticPaths';
+import translate from '$i18n/translate';
+import tPage from '$i18n/translations/pages/jyne';
+
+export async function getStaticPaths() {
+  return localeStaticPaths;
+}
+
+const locale = Astro.params.locale as Locale;
+const t = translate(locale);
+---
+
+<Page title={t(tPage, { key: 'title' })}>
+  <section id="jyne">
+    <h1 set:html={t(tPage, { key: 'title' })} />
+
+    <h2 set:html={t(tPage, { key: 'hou-jyne' })} />
+    <p set:html={t(tPage, { key: 'hou-jyne-para-1' })} />
+    <p
+      set:html={t(tPage, {
+        key: 'hou-jyne-para-2',
+        membershipEmail: contactDetails.membershipSecretary.emailAddress,
+      })}
+    />
+
+    <h2 set:html={t(tPage, { key: 'why-jyne' })} />
+    <p set:html={t(tPage, { key: 'why-jyne-para-1' })} />
+    <p set:html={t(tPage, { key: 'why-jyne-para-2' })} />
+    <p set:html={t(tPage, { key: 'why-jyne-para-3' })} />
+  </section>
+</Page>

@@ -4,6 +4,7 @@ import translate from '$i18n/translate';
 import tNews from '$i18n/translations/pages/news';
 import tFurthsettins from '$i18n/translations/pages/furthsettins';
 import tHame from '$i18n/translations/pages/home';
+import tJyne from '$i18n/translations/pages/jyne';
 
 const locale = getLocaleFromPathOrDefault(Astro.url.pathname);
 const t = translate(locale);
@@ -20,7 +21,7 @@ const t = translate(locale);
     <a class="btn" href={`/${locale}/furthsettins`}>{t(tFurthsettins, { key: 'title' })}</a>
   </li>
   <li>
-    <a class="btn" href={`/${locale}/#jyne`}>{t(tHame, { key: 'jyne' })}</a>
+    <a class="btn" href={`/${locale}/jyne`}>{t(tJyne, { key: 'title' })}</a>
   </li>
   <li>
     <a class="btn" href={`/${locale}/#contact`}>{t(tHame, { key: 'contact' })}</a>
