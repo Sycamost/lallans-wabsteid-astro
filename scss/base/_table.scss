@@ -1,0 +1,23 @@
+table {
+  border-collapse: collapse;
+  background-color: var(--background-color); // side-scrolling may be needed on narrow screens
+
+  caption {
+    font-style: italic;
+    font-size: var(--font-size-0);
+  }
+}
+
+thead, th {
+  border-block-end: var(--border-width) solid var(--text-color);
+}
+
+:is(th, td) {
+  padding-inline: var(--spacing-inline-sm);
+  padding-block: var(--spacing-block-sm);
+
+  + :is(th, td) {
+    border-inline-start: calc(var(--border-width) / 2) solid var(--text-color);
+  }
+}
+
