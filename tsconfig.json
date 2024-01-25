@@ -11,6 +11,7 @@
       "$layouts/*": ["./layouts/*"],
       "$lib/*": ["./lib/*"],
       "$pages/*": ["./pages/*"],
+      "$scripts/*": ["./scripts/*"],
       "$types/*": ["./types/*"]
     },
     "strictNullChecks": true

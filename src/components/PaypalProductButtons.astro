@@ -1,0 +1,26 @@
+---
+import env from '$lib/env';
+import type Price from '$types/Price';
+
+interface Props {
+  successPageUrl: string;
+  productDescription: string;
+  shortDescription: string;
+  totalPrice: Price;
+}
+
+const { successPageUrl, productDescription, shortDescription, totalPrice } = Astro.props;
+
+const PAYPAL_CLIENT_ID =
+  env.ENVIRONMENT === 'prod' ? env.PAYPAL_LIVE_CLIENT_ID : env.PAYPAL_SANDBOX_CLIENT_ID;
+---
+
+<paypal-product-buttons
+  paypal-client-id={PAYPAL_CLIENT_ID}
+  success-page-url={successPageUrl}
+  product-description={productDescription}
+  short-description={shortDescription}
+  total-price={totalPrice}
+>
+  Loading PayPal buttons…
+</paypal-product-buttons>

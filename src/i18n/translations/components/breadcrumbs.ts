@@ -22,6 +22,26 @@ const tBreadcrumbs = {
     sco: () => 'Scotsoun',
     'en-GB': () => 'Scotsoun',
   },
+  '/jyne/': {
+    sco: () => 'Jyne',
+    'en-GB': () => 'Join',
+  },
+  '/jyne/paypal/': {
+    sco: () => 'PayPal',
+    'en-GB': () => 'PayPal',
+  },
+  '/jyne/paypal/individual-uk/': {
+    sco: () => 'Individual (UK)',
+    'en-GB': () => 'Individual (UK)',
+  },
+  '/jyne/paypal/individual-non-uk/': {
+    sco: () => 'Individual (non-UK)',
+    'en-GB': () => 'Individual (non-UK)',
+  },
+  '/jyne/paypal/institution-uk/': {
+    sco: () => 'Institutional (UK)',
+    'en-GB': () => 'Institutional (UK)',
+  },
   '/news/': {
     sco: () => 'News',
     'en-GB': () => 'News',
