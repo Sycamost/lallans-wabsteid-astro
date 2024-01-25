@@ -1,0 +1,30 @@
+---
+import type Locale from '$types/Locale';
+import { type MembershipTypeSnakeCase } from '$enums/MembershipType';
+
+import Page from '$layouts/Page.astro';
+import { allMembershipTypesSnakeCase, snakeCaseToMembershipType } from '$enums/MembershipType';
+import localeStaticPaths from '$lib/localeStaticPaths';
+import translate from '$i18n/translate';
+import tJyne from '$i18n/translations/pages/jyne';
+
+export async function getStaticPaths() {
+  return allMembershipTypesSnakeCase.flatMap((membershipType) =>
+    localeStaticPaths.map((p) => ({ ...p, params: { ...p.params, membershipType } }))
+  );
+}
+
+const locale = Astro.params.locale as Locale;
+const t = translate(locale);
+
+const membershipTypeSnakeCase = Astro.params.membershipType as MembershipTypeSnakeCase;
+const membershipType = snakeCaseToMembershipType(membershipTypeSnakeCase);
+---
+
+<Page title={t(tJyne, { key: 'success' })}>
+  <section>
+    <h1>{t(tJyne, { key: 'success' })}</h1>
+
+    <p set:html={t(tJyne, { key: 'success-para', membershipType })} />
+  </section>
+</Page>

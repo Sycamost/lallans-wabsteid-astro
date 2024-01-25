@@ -1,0 +1,41 @@
+---
+import type Locale from '$types/Locale';
+import {
+  type MembershipTypeSnakeCase,
+  allMembershipTypesSnakeCase,
+  snakeCaseToMembershipType,
+} from '$enums/MembershipType';
+import { annualSubscriptionPrice } from '$data/subscriptionPrices';
+import Page from '$layouts/Page.astro';
+import PaypalProductButtons from '$components/PaypalProductButtons.astro';
+import localeStaticPaths from '$lib/localeStaticPaths';
+import translate from '$i18n/translate';
+import tJyne from '$i18n/translations/pages/jyne';
+
+export async function getStaticPaths() {
+  return allMembershipTypesSnakeCase.flatMap((membershipType) =>
+    localeStaticPaths.map((p) => ({ ...p, params: { ...p.params, membershipType } }))
+  );
+}
+
+const locale = Astro.params.locale as Locale;
+const t = translate(locale);
+
+const membershipType = Astro.params.membershipType as MembershipTypeSnakeCase;
+---
+
+<Page title={t(tJyne, { key: `membership-type-${membershipType}` })}>
+  <section>
+    <h1>{t(tJyne, { key: `membership-type-${membershipType}` })}</h1>
+
+    <p set:html={t(tJyne, { key: `membership-type-${membershipType}-para` })} />
+
+    <PaypalProductButtons
+      successPageUrl={`/${locale}/jyne/paypal/${membershipType}/success`}
+      productDescription={t(tJyne, { key: `membership-type-${membershipType}` })}
+      shortDescription="SLA 1y subscription"
+      totalPrice={annualSubscriptionPrice[snakeCaseToMembershipType(membershipType)]}
+    />
+    <script src="$scripts/wc/paypal-product-buttons"></script>
+  </section>
+</Page>

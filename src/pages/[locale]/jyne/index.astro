@@ -1,11 +1,14 @@
 ---
 import type Locale from '$types/Locale';
 
+import { annualSubscriptionPrice } from '$data/subscriptionPrices';
 import contactDetails from '$data/contactDetails';
 import Page from '$layouts/Page.astro';
 import localeStaticPaths from '$lib/localeStaticPaths';
 import translate from '$i18n/translate';
 import tPage from '$i18n/translations/pages/jyne';
+import tMembershipType from '$i18n/translations/enums/membershipType';
+import { allMembershipTypes } from '$enums/MembershipType';
 
 export async function getStaticPaths() {
   return localeStaticPaths;
@@ -24,7 +27,48 @@ const t = translate(locale);
     <h2 set:html={t(tPage, { key: 'hou-jyne' })} />
     <p set:html={t(tPage, { key: 'hou-jyne-intro' })} />
 
+    <table>
+      <caption>{t(tPage, { key: 'subscription-price-table-caption' })}</caption>
+      <thead>
+        <tr>
+          {
+            allMembershipTypes.map((membershipType) => (
+              <th scope="col">{t(tMembershipType, { key: membershipType })}</th>
+            ))
+          }
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          {
+            allMembershipTypes.map((membershipType) => (
+              <td>
+                {new Intl.NumberFormat('en-GB', {
+                  style: 'currency',
+                  currency: 'GBP',
+                  minimumFractionDigits: 2,
+                  maximumFractionDigits: 2,
+                }).format(annualSubscriptionPrice[membershipType])}
+              </td>
+            ))
+          }
+        </tr>
+      </tbody>
+    </table>
+
     <ul class="payment-methods-list">
+      <li>
+        <details>
+          <summary set:html={t(tPage, { key: 'hou-pey-by-paypal-title' })} />
+          <ul>
+            <li><a href={`/${locale}/jyne/paypal/individual-uk`}>Individual (UK)</a></li>
+            <li><a href={`/${locale}/jyne/paypal/individual-non-uk`}>Individual (non-UK)</a></li>
+            <li><a href={`/${locale}/jyne/paypal/institution-uk`}>Institutional (UK)</a></li>
+          </ul>
+        </details>
+      </li>
+
       <li>
         <details>
           <summary set:html={t(tPage, { key: 'hou-pey-by-bank-transfer-title' })} />

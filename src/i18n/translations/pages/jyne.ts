@@ -1,5 +1,10 @@
 import type { TranslationsDictionary } from '$types/TranslationsDictionary';
 
+import MembershipType from '$enums/MembershipType';
+import { annualSubscriptionPrice } from '$data/subscriptionPrices';
+import tMembershipType from '$i18n/translations/enums/membershipType';
+import translate from '$i18n/translate';
+
 const tPage = {
   title: {
     sco: () => 'Jyne',
@@ -54,12 +59,87 @@ const tPage = {
   },
   'hou-jyne-intro': {
     sco: () => `
-      Fur individuals, memmership costs £20 per annum. Fur institutions, the stent is £25 per annum.
-      Ye can pey by bank transfer or cheque.
+      For tae jyne, ye can pey by PayPal, bank transfer or cheque. The fee is
+      as ablo.
     `,
     'en-GB': () => `
-      For individuals, membership costs £20 per annum. For institutions, the fee is £25 per annum.
-      You can pay by bank transfer or cheque.
+      To join, you can pay by PayPal, bank transfer or cheque. The fee is as below.
+    `,
+  },
+  'subscription-price-table-caption': {
+    sco: () => 'Annual subscription price per membership type',
+    'en-GB': () => 'Annual subscription price per membership type',
+  },
+  'hou-pey-by-paypal-title': {
+    sco: () => 'PayPal',
+    'en-GB': () => 'PayPal',
+  },
+  'hou-pey-by-paypal-para': {
+    sco: () => 'Select a membership type',
+    'en-GB': () => 'Select a membership type',
+  },
+  'membership-type-individual-uk': {
+    sco: () => 'Ane year individual UK membership',
+    'en-GB': () => 'One year individual UK membership',
+  },
+  'membership-type-individual-uk-para': {
+    sco: () => `
+      Here, ye can pey for ane year’s annual subscription til the Scots Leid Associe
+      gin ye ar an individual and ye want yer copies o <i>Lallans</i> sent til
+      a UK address. This will cost
+      £${annualSubscriptionPrice[MembershipType.IndividualUk]}. Gin ye want
+      some ither kind o membership,
+      <a href="/sco/jyne/paypal">see the ither options</a>.
+    `,
+    'en-GB': () => `
+      Here, you can pay for one year’s annual subscription to the Scots Language
+      Society if you are an individual and you want your copies of <i>Lallans</i>
+      sent to a UK address. This will cost
+      £${annualSubscriptionPrice[MembershipType.IndividualNonUk]}. If you want
+      some other kind of membership,
+      <a href="/en-GB/jyne/paypal">see the other options</a>.
+    `,
+  },
+  'membership-type-individual-non-uk': {
+    sco: () => 'Ane year individual non-UK membership',
+    'en-GB': () => 'One year individual non-UK membership',
+  },
+  'membership-type-individual-non-uk-para': {
+    sco: () => `
+      Here, ye can pey for ane year’s annual subscription til the Scots Leid Associe
+      gin ye ar an individual an ye want yer copies o <i>Lallans</i> sent til
+      a non-UK address. This will cost
+      £${annualSubscriptionPrice[MembershipType.IndividualNonUk]}. Gin ye want
+      some ither kind o membership,
+      <a href="/sco/jyne/paypal">see the ither options</a>.
+    `,
+    'en-GB': () => `
+      Here, you can pay for one year’s annual subscription to the Scots Language
+      Society if you are an individual and you want your copies of <i>Lallans</i>
+      sent to a non-UK address. This will cost
+      £${annualSubscriptionPrice[MembershipType.IndividualNonUk]}. If you want
+      some other kind of membership,
+      <a href="/en-GB/jyne/paypal">see the other options</a>.
+    `,
+  },
+  'membership-type-institution-uk': {
+    sco: () => 'Ane year UK institutional membership',
+    'en-GB': () => 'One year UK institutional membership',
+  },
+  'membership-type-institution-uk-para': {
+    sco: () => `
+      Here, ye can pey for ane year’s annual subscription til the Scots Leid Associe
+      gin ye ar an institution. This will cost
+      £${annualSubscriptionPrice[MembershipType.InstitutionUk]}. Gin ye want
+      some ither kind o membership,
+      <a href="/sco/jyne/paypal">see the ither options</a>.
+    `,
+    'en-GB': () => `
+      Here, you can pay for one year’s annual subscription to the Scots
+      Language Society if you are an institution based in the UK. This will
+      cost £${annualSubscriptionPrice[MembershipType.InstitutionUk]}. If you
+      want some other kind of membership,
+      <a href="/en-GB/jyne/paypal">see the other options</a>.
     `,
   },
   'hou-pey-by-bank-transfer-title': {
@@ -86,6 +166,22 @@ const tPage = {
     'en-GB': ({ address }: { address: string[] }) => `
       Make out a cheque to <b>The Scots Language Society</b>, then send it to us at the following address:
       <address>${address.join('<br />')}</address>
+    `,
+  },
+  success: {
+    sco: () => 'Successfullie bocht membership',
+    'en-GB': () => 'Successfully bought membership',
+  },
+  'success-para': {
+    sco: ({ membershipType }: { membershipType: MembershipType }) => `
+      Ye hae successfullie bocht ane year’s
+      ${translate('sco')(tMembershipType, { key: membershipType })}
+      membership. We shuid be in contact wi ye some time shuin.
+    `,
+    'en-GB': ({ membershipType }: { membershipType: MembershipType }) => `
+      You have successfully bought one year’s
+      ${translate('en-GB')(tMembershipType, { key: membershipType })}
+      membership. We should be in contact with you some time soon.
     `,
   },
 };
