@@ -1,10 +1,10 @@
 .schedule:not(:first-child) {
-  margin-block-start: var(--margin-block-sm);
+  margin-block-start: var(--spacing-block-sm);
 }
 
 .schedule dt {
   font-weight: 700;
-  margin-block-start: var(--margin-block-sm);
+  margin-block-start: var(--spacing-block-sm);
   text-align: center;
   text-decoration: none;
 }

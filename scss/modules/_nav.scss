@@ -1,6 +1,6 @@
 .nav {
   & > :not(:last-child) {
-    margin-block: 0 var(--margin-block-sm);
+    margin-block: 0 var(--spacing-block-sm);
   }
 
   li {

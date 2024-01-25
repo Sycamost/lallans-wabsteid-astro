@@ -55,36 +55,11 @@ const mostRecentNewsItem = await getMostRecentNewsItem(locale);
     </Button>
   </section>
 
-  <section id="jyne">
-    <h2 set:html={t(tPage, { key: 'jyne' })} />
-
-    <h3 set:html={t(tPage, { key: 'why-jyne' })} />
-    <p set:html={t(tPage, { key: 'why-jyne-para-1' })} />
-    <p set:html={t(tPage, { key: 'why-jyne-para-2' })} />
-    <p set:html={t(tPage, { key: 'why-jyne-para-3' })} />
-
-    <h3 set:html={t(tPage, { key: 'hou-jyne' })} />
-    <p set:html={t(tPage, { key: 'hou-jyne-para-1' })} />
-    <p
-      set:html={t(tPage, {
-        key: 'hou-jyne-para-2',
-        membershipEmail: contactDetails.membershipSecretary.emailAddress,
-      })}
-    />
-  </section>
-
   <section id="contact">
     <h2 set:html={t(tPage, { key: 'contact' })} />
     <a href={`${locale}/mailto:${contactDetails.generalEnquiries.emailAddress}`}>
       {contactDetails.generalEnquiries.emailAddress}
     </a>
-    <address>
-      Scots Language Society<br />
-       c/o 61 Cliffburn Road<br />
-       Arbroath<br />
-       Angus<br />
-       DD11 5BA<br />
-       United Kingdom<br />
-    </address>
+    <address set:html={contactDetails.generalEnquiries.address.join('<br />')} />
   </section>
 </Page>

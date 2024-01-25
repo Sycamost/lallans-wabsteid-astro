@@ -1,23 +1,23 @@
-import type CommitteeRole from '$enums/CommitteeRole';
 import type Locale from '$types/Locale';
-import type { TranslationsDictionary, Translation } from '$types/TranslationsDictionary';
+import type {
+  TranslationsDictionary,
+  Translation,
+  LocalesTranslationHash,
+} from '$types/TranslationsDictionary';
 import { defaultLocale } from './locales';
 
 type TranslationsDictionaryWith<
-  Key extends string | CommitteeRole,
-  Params,
+  Key extends string | number,
+  ParamsHash extends object,
 > = TranslationsDictionary<{
-  [key in Key]: { [locale in typeof defaultLocale]: Translation<Params> } & {
-    [locale in Locale]?: Translation<Params>;
-  };
+  [key in Key]: LocalesTranslationHash<ParamsHash>;
 }>;
 
 export default function (locale: Locale) {
-  return function <
-    Key extends string,
-    Params,
-    Dict extends TranslationsDictionaryWith<Key, Params>,
-  >(dict: Dict, params: { key: Key } & { [Param in keyof Params]: string }) {
+  return function <Key extends string | number, ParamsHash extends object>(
+    dict: TranslationsDictionaryWith<Key, ParamsHash>,
+    params: { key: Key } & ParamsHash
+  ) {
     if (!(params.key in dict)) {
       throw new Error(`
         Could not find translation for key '${params.key}'. Available keys were:
@@ -26,7 +26,9 @@ export default function (locale: Locale) {
           .join(', ')}
       `);
     }
-    const translation = dict[params.key][locale] ?? dict[params.key][defaultLocale];
+    const localesTranslationHash: LocalesTranslationHash<ParamsHash> = dict[params.key];
+    const translation: Translation<ParamsHash> =
+      localesTranslationHash[locale] ?? localesTranslationHash[defaultLocale];
     return translation(params);
   };
 }
