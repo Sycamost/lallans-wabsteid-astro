@@ -8,7 +8,7 @@ const issue: LallansIssue = {
     width192: img192w,
     width274: img274w,
   },
-  issueName: 'Simmer 208',
+  issueName: 'Simmer 2008',
   price: '8.50',
   uploadDate: '2023-08-25',
   description: {
