@@ -1,19 +1,37 @@
 .link-gallery {
-  display: grid;
-  grid-template-columns: repeat(var(--grid-column-count), var(--grid-column-width));
-  gap: var(--grid-gutter-width);
   padding-block: var(--spacing-block-md);
+
   --gallery-item-column-span: 1;
   --gallery-row-image-height: 12rem;
   --gallery-row-title-height: fit-content;
-  text-align: center;
 
-  li {
-    list-style-type: none;
-    grid-column: span var(--gallery-item-column-span);
+  &:not(.link-gallery--splash-first) {
+    display: grid;
+    grid-template-columns: repeat(var(--grid-column-count), var(--grid-column-width));
+    gap: var(--grid-gutter-width);
+
+    li {
+      list-style-type: none;
+      grid-column: span var(--gallery-item-column-span);
+
+      :is(&.link-gallery__container, & .link-gallery__container) {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: var(--gallery-row-image-height) var(--gallery-row-title-height);
+        row-gap: var(--spacing-block-sm);
+      }
+
+      .link-gallery__title {
+        width: 100%;
+        height: min-content;
+        text-align: center;
+        margin-inline: var(--spacing-inline-xs);
+      }
+    }
   }
 
   img {
+    display: block;
     max-width: 50%;
     max-height: 100%;
     height: fit-content;
@@ -22,22 +40,33 @@
   }
 }
 
-.link-gallery__container {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: var(--gallery-row-image-height) var(--gallery-row-title-height);
-  row-gap: var(--spacing-block-sm);
-}
-
 .link-gallery--furthsettins img {
   box-sizing: border-box;
   border-radius: 50%;
   border: solid var(--border-width) var(--text-color);
 }
 
-.link-gallery__title {
-  width: 100%;
-  height: min-content;
-  text-align: center;
-  margin-inline: var(--spacing-inline-xs);
+.link-gallery--splash-first {
+  .link-gallery__container {
+    display: block;
+    width: fit-content;
+  }
+
+  li:first-of-type {
+    list-style-type: none;
+
+    :is(&.link-gallery__container, & .link-gallery__container) {
+      width: 100%;
+    }
+
+    .link-gallery__title {
+      text-align: center;
+    }
+  }
+
+  li + li {
+    margin-block-start: var(--spacing-block-lg);
+    margin-inline-start: 1em;
+  }
 }
+
