@@ -8,7 +8,7 @@ const issue: LallansIssue = {
     width192: img192w,
     width274: img274w,
   },
-  issueName: 'Hairst 200',
+  issueName: 'Hairst 2000',
   price: '7.50',
   uploadDate: '2023-08-25',
   description: {

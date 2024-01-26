@@ -10,19 +10,37 @@ const issues = (await getAllLallansIssues()).sort(issueNumberDescending);
 function issueNumberDescending(issue1: LallansIssue, issue2: LallansIssue) {
   return issue2.issueNumber - issue1.issueNumber;
 }
+
+const mostRecentIssue = issues[0];
+const allOtherIssues = issues.slice(1);
 ---
 
-<ul class="link-gallery">
+<ul class="link-gallery link-gallery--splash-first">
+  <li>
+    <a
+      class="link-gallery__container"
+      href={`/${locale}/furthsettins/lallans/${mostRecentIssue.issueNumber}`}
+    >
+      <Image src={mostRecentIssue.img.width192} alt="" />
+      <p class="link-gallery__title">
+        Lallans {mostRecentIssue.issueNumber}
+        <br />
+        <small>{mostRecentIssue.issueName}</small>
+      </p>
+    </a>
+  </li>
+
   {
-    issues.map(async (issue) => (
+    allOtherIssues.map((issue) => (
       <li>
         <a
           class="link-gallery__container"
           href={`/${locale}/furthsettins/lallans/${issue.issueNumber}`}
         >
-          <Image src={issue.img.width192} alt="" />
           <p class="link-gallery__title">
-            Lallans {issue.issueNumber} | {issue.issueName}
+            Lallans {issue.issueNumber}
+            <br />
+            <small>{issue.issueName}</small>
           </p>
         </a>
       </li>
