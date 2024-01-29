@@ -1,4 +1,5 @@
 import type {
+  AuthenticationResponseJSON,
   PublicKeyCredentialCreationOptionsJSON,
   RegistrationResponseJSON,
 } from '@simplewebauthn/typescript-types';
@@ -90,3 +91,42 @@ type VerifyRegistrationResponseParams = {
   displayName: string;
   registrationResponse: RegistrationResponseJSON;
 };
+
+export async function getAuthenticationOptions(params: GetAuthenticationOptionsParams) {
+  const queryString = new URLSearchParams(params).toString();
+  return await fetch(`${backendUrl}/auth/authentication?${queryString}`, {
+    method: 'GET',
+    headers: { 'Content-Type': 'application/json' },
+  });
+}
+
+type GetAuthenticationOptionsParams = {
+  userId: string;
+};
+
+export async function verifyAuthenticationResponse(params: VerifyAuthenticationResponseParams) {
+  return await fetch(`${backendUrl}/auth/authentication`, {
+    method: 'POST',
+    body: JSON.stringify(params),
+    headers: { 'Content-Type': 'application/json' },
+  });
+}
+
+type VerifyAuthenticationResponseParams = {
+  userId: string;
+  authenticationResponse: AuthenticationResponseJSON;
+};
+
+async function typeResponse<T>(response: Response): Promise<TypedResponse<T>> {
+  const typedResponse = {
+    ...response,
+    json: undefined,
+    body: (await response.json().catch(() => null)) as T,
+  };
+
+  delete typedResponse.json;
+
+  return typedResponse;
+}
+
+export type TypedResponse<T> = Omit<Response, 'body' | 'json'> & { body: T };
