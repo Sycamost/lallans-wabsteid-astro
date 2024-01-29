@@ -60,7 +60,9 @@ export async function getRegistrationOptions(
   // If last param ends with, e.g., `.com` as in an email address, the `.com`
   // will be interpreted as a file extension, and this will break everything.
   // Hack to avoid this bug.
-  const response = await fetch(`${backendUrl}/auth/registration?${queryString}&hack=toavoidbug`, {
+  const hackyQueryString = `${queryString}&hack=toavoidbug`;
+
+  const response = await fetch(`${backendUrl}/auth/registration?${hackyQueryString}`, {
     method: 'GET',
     headers: { 'Content-Type': 'application/json' },
   });
