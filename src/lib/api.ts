@@ -5,7 +5,9 @@ import type {
 
 const backendUrl = '/api';
 
-export async function captureOrder(orderId: string) {
+export async function captureOrder(
+  orderId: string
+): Promise<TypedResponse<CaptureOrderResponseBody>> {
   const body = JSON.stringify({
     id: orderId,
     isApproved: true,
@@ -15,19 +17,29 @@ export async function captureOrder(orderId: string) {
     'Content-Type': 'application/json',
   };
 
-  return await fetch(`${backendUrl}/payments/order`, {
+  const response = await fetch(`${backendUrl}/payments/order`, {
     method: 'PATCH',
     body,
     headers,
   });
+
+  return typeResponse(response);
 }
 
-export async function createOrder(params: CreateOrderParams) {
-  return await fetch(`${backendUrl}/payments/order`, {
+type CaptureOrderResponseBody = {
+  orderId: string;
+  paypalStatus: string;
+};
+
+export async function createOrder(
+  params: CreateOrderParams
+): Promise<TypedResponse<CreateOrderResponseBody>> {
+  const response = await fetch(`${backendUrl}/payments/order`, {
     method: 'POST',
     body: JSON.stringify(params),
     headers: { 'Content-Type': 'application/json' },
   });
+  return typeResponse(response);
 }
 
 type CreateOrderParams = {
@@ -36,15 +48,24 @@ type CreateOrderParams = {
   totalPrice: string;
 };
 
-export async function getRegistrationOptions(params: GetRegistrationOptionsParams) {
+type CreateOrderResponseBody = {
+  orderId: string;
+  approvalLink: string;
+};
+
+export async function getRegistrationOptions(
+  params: GetRegistrationOptionsParams
+): Promise<TypedResponse<GetRegistrationOptionsResponseBody>> {
   const queryString = new URLSearchParams(params).toString();
   // If last param ends with, e.g., `.com` as in an email address, the `.com`
   // will be interpreted as a file extension, and this will break everything.
   // Hack to avoid this bug.
-  return await fetch(`${backendUrl}/auth/registration?${queryString}&hack=toavoidbug`, {
+  const response = await fetch(`${backendUrl}/auth/registration?${queryString}&hack=toavoidbug`, {
     method: 'GET',
     headers: { 'Content-Type': 'application/json' },
   });
+
+  return typeResponse(response);
 }
 
 type GetRegistrationOptionsParams = {
@@ -52,7 +73,7 @@ type GetRegistrationOptionsParams = {
   displayName: string;
 };
 
-export type GetRegistrationOptionsResponseBody = PublicKeyCredentialCreationOptionsJSON;
+type GetRegistrationOptionsResponseBody = PublicKeyCredentialCreationOptionsJSON;
 
 export async function verifyRegistrationResponse(params: VerifyRegistrationResponseParams) {
   return await fetch(`${backendUrl}/auth/registration`, {

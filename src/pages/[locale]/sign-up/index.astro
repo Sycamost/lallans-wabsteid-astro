@@ -30,8 +30,6 @@ const t = translate(locale);
 </Page>
 
 <script>
-  import type { GetRegistrationOptionsResponseBody } from '$lib/api';
-
   import * as api from '$lib/api';
   import { startRegistration } from '@simplewebauthn/browser';
   import UserAlreadyExistsError from '$types/UserAlreadyExistsError';
@@ -154,7 +152,7 @@ const t = translate(locale);
     setIsFormDisabled(false);
   }
 
-  async function getRegistrationOptions(): Promise<GetRegistrationOptionsResponseBody> {
+  async function getRegistrationOptions() {
     const response = await api.getRegistrationOptions({
       displayName: displayNameInput.value,
       userId: emailInput.value,
@@ -171,12 +169,12 @@ const t = translate(locale);
       `);
     }
 
-    const body = await response.json();
+    const body = { response };
     if (!body) {
       return Promise.reject('Tried to get registration options on API, but got an empty reponse.');
     }
 
-    return body as GetRegistrationOptionsResponseBody;
+    return body;
   }
 
   async function verifyRegistrationResponse(
@@ -195,18 +193,17 @@ const t = translate(locale);
       `);
     }
 
-    const body = await response.json();
-    if (body === true) {
+    if (response.body === true) {
       return true;
     }
 
-    if (body === false) {
+    if (response.body === false) {
       return false;
     }
 
     return Promise.reject(`
       Tried to verify registration response on API. Expected response to be
-      'true' or 'false', but got: ${body}
+      'true' or 'false', but got: ${response.body}
     `);
   }
 </script>

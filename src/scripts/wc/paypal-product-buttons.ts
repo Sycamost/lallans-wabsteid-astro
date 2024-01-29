@@ -68,8 +68,7 @@ class PaypalProductButtons extends HTMLElement {
     return constructButtons({
       // This function is called to set up the transaction details without actually carrying it out
       async createOrder() {
-
-        let response: Response;
+        let response;
         try {
           response = await api.createOrder({ productDescription, shortDescription, totalPrice });
         } catch (err) {
@@ -83,7 +82,7 @@ class PaypalProductButtons extends HTMLElement {
           `);
         }
 
-        const { orderId, approvalLink } = await response.json();
+        const { orderId, approvalLink } = response.body;
         console.info(`
           Successfully created order with ID
           ${orderId}. Approval link: ${approvalLink}
@@ -93,7 +92,7 @@ class PaypalProductButtons extends HTMLElement {
 
       // This function is called after payment is confirmed
       async onApprove(data) {
-        let response: Response;
+        let response;
         try {
           response = await api.captureOrder(data.orderID);
         } catch (err) {
@@ -107,10 +106,10 @@ class PaypalProductButtons extends HTMLElement {
           `);
         }
 
-        const { orderId, requestStatus } = await response.json();
+        const { orderId, paypalStatus } = response.body;
         console.info(`
           Successfully captured order with ID ${orderId},
-          request status is ${requestStatus}.
+          request status is ${paypalStatus}.
         `);
 
         console.info(`Redirecting to confirmation page, ${successPageUrl}...`);
