@@ -39,3 +39,10 @@ a.btn {
   text-decoration: none;
 }
 
+:is(button, .btn):is(:disabled, [disabled]) {
+  color: var(--neutral-text-color);
+  background-color: var(--neutral-background-color);
+  border-color: var(--neutral-text-color);
+  cursor: initial;
+}
+
