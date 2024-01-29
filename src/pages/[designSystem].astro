@@ -1,0 +1,190 @@
+---
+import Page from '$layouts/Page.astro';
+import env from '$lib/env';
+
+export async function getStaticPaths() {
+  switch (env.ENVIRONMENT) {
+    case 'dev':
+      return [{ params: { designSystem: 'design-system' } }];
+    case 'prod':
+      return [];
+  }
+}
+---
+
+<Page title="Design system">
+  <section>
+    <h1>Heading level 1</h1>
+    <h2>Heading level 2</h2>
+    <h3>Heading level 3</h3>
+    <h4>Heading level 4</h4>
+    <h3>Heading level 3</h3>
+    <h4>Heading level 4</h4>
+    <h2>Heading level 2</h2>
+    <h3>Heading level 3</h3>
+    <h2>Heading level 2</h2>
+  </section>
+
+  <section>
+    <h1>Heading level 1</h1>
+    <p>
+      Minus architecto sed sint facere sint quam maxime unde. Vel commodi autem qui dolore et aut
+      aliquid. Perferendis aut nesciunt omnis est ea.
+    </p>
+    <p>
+      Est numquam sint consequatur culpa quo dolores. Aut eum aut non et est blanditiis tempore.
+      Enim voluptate accusamus id veniam.
+    </p>
+
+    <h2>Heading level 2</h2>
+    <p>
+      Ut voluptas eaque sunt soluta reiciendis. Voluptas impedit exercitationem magni veritatis ea
+      est. Vitae recusandae odit impedit dolor sit.
+    </p>
+    <p>
+      Aliquam velit ab nihil et. Qui architecto quos assumenda neque. Exercitationem tempore veniam
+      repellat aut suscipit aut est et.
+    </p>
+
+    <h3>Heading level 3</h3>
+    <p>
+      Minima nostrum eos voluptatem at sunt optio neque quia. Commodi quis omnis sit atque commodi
+      tempore iste neque. Qui rerum voluptas mollitia sint non. Inventore sed quidem sequi qui eum
+      est. Est id officiis in ipsam vero dolor. Veritatis odit quia qui esse illo officia et labore.
+    </p>
+    <p>
+      Minus architecto sed sint facere sint quam maxime unde. Vel commodi autem qui dolore et aut
+      aliquid. Perferendis aut nesciunt omnis est ea.
+    </p>
+
+    <h4>Heading level 4</h4>
+    <p>
+      Aliquam velit ab nihil et. Qui architecto quos assumenda neque. Exercitationem tempore veniam
+      repellat aut suscipit aut est et.
+    </p>
+    <p>
+      Ut voluptas eaque sunt soluta reiciendis. Voluptas impedit exercitationem magni veritatis ea
+      est. Vitae recusandae odit impedit dolor sit.
+    </p>
+
+    <h3>Heading level 3</h3>
+    <p>
+      Minima nostrum eos voluptatem at sunt optio neque quia. Commodi quis omnis sit atque commodi
+      tempore iste neque. Qui rerum voluptas mollitia sint non. Inventore sed quidem sequi qui eum
+      est. Est id officiis in ipsam vero dolor. Veritatis odit quia qui esse illo officia et labore.
+    </p>
+    <p>
+      Minus architecto sed sint facere sint quam maxime unde. Vel commodi autem qui dolore et aut
+      aliquid. Perferendis aut nesciunt omnis est ea.
+    </p>
+
+    <h4>Heading level 4</h4>
+    <p>
+      Aliquam velit ab nihil et. Qui architecto quos assumenda neque. Exercitationem tempore veniam
+      repellat aut suscipit aut est et.
+    </p>
+    <p>
+      Ut voluptas eaque sunt soluta reiciendis. Voluptas impedit exercitationem magni veritatis ea
+      est. Vitae recusandae odit impedit dolor sit.
+    </p>
+
+    <h2>Heading level 2</h2>
+    <p>
+      Ut voluptas eaque sunt soluta reiciendis. Voluptas impedit exercitationem magni veritatis ea
+      est. Vitae recusandae odit impedit dolor sit.
+    </p>
+    <p>
+      Aliquam velit ab nihil et. Qui architecto quos assumenda neque. Exercitationem tempore veniam
+      repellat aut suscipit aut est et.
+    </p>
+
+    <h3>Heading level 3</h3>
+    <p>
+      Minima nostrum eos voluptatem at sunt optio neque quia. Commodi quis omnis sit atque commodi
+      tempore iste neque. Qui rerum voluptas mollitia sint non. Inventore sed quidem sequi qui eum
+      est. Est id officiis in ipsam vero dolor. Veritatis odit quia qui esse illo officia et labore.
+    </p>
+    <p>
+      Minus architecto sed sint facere sint quam maxime unde. Vel commodi autem qui dolore et aut
+      aliquid. Perferendis aut nesciunt omnis est ea.
+    </p>
+
+    <h2>Heading level 2</h2>
+    <p>
+      Ut voluptas eaque sunt soluta reiciendis. Voluptas impedit exercitationem magni veritatis ea
+      est. Vitae recusandae odit impedit dolor sit.
+    </p>
+    <p>
+      Aliquam velit ab nihil et. Qui architecto quos assumenda neque. Exercitationem tempore veniam
+      repellat aut suscipit aut est et.
+    </p>
+  </section>
+
+  <section>
+    <h2>Lists</h2>
+
+    <h3>Unordered list</h3>
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>
+        Item 3
+        <ul>
+          <li>Item 3.1</li>
+          <li>Item 3.2</li>
+          <li>Item 3.3</li>
+        </ul>
+      </li>
+      <li>Item 4</li>
+    </ul>
+
+    <h3>Ordered list</h3>
+    <ol>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>
+        Item 3
+        <ol>
+          <li>Item 3.1</li>
+          <li>Item 3.2</li>
+          <li>Item 3.3</li>
+        </ol>
+      </li>
+      <li>Item 4</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Buttons</h2>
+
+    <section>
+      <h3>Light mode</h3>
+      <button type="button">Button</button>
+      <button type="submit">Submit</button>
+      <button type="button" disabled>Disabled button</button>
+      <button type="submit" disabled>Disabled submit</button>
+    </section>
+
+    <section class="dark">
+      <h3>Dark mode</h3>
+      <button type="button">Button</button>
+      <button type="submit">Submit</button>
+      <button type="button" disabled>Disabled button</button>
+      <button type="submit" disabled>Disabled submit</button>
+    </section>
+  </section>
+
+  <section>
+    <h2>Hyperlinks</h2>
+
+    <section>
+      <h3>Light mode</h3>
+      <a href="#">Hyperlink</a>
+    </section>
+
+    <section class="dark">
+      <h3>Dark mode</h3>
+      <a href="#">Hyperlink</a>
+    </section>
+  </section>
+</Page>
