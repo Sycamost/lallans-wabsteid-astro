@@ -2,13 +2,14 @@
 import Layout from './Layout.astro';
 
 interface Props {
+  noBreadcrumbs?: boolean;
   title: string;
 }
 
-const { title } = Astro.props;
+const { noBreadcrumbs, title } = Astro.props;
 ---
 
-<Layout title={title}>
+<Layout noBreadcrumbs={noBreadcrumbs} title={title}>
   <main id="main">
     <slot />
   </main>

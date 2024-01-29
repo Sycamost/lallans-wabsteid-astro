@@ -1,13 +1,11 @@
-:root {
+:is(
+  :root,
+  .dark,
+  main,
+  article,
+  :is(main, article) > section:not(:is(section, header) :is(section, header))
+) {
   color: var(--text-color);
   background-color: var(--background-color);
 }
 
-:is(main, article) {
-  color: var(--text-color);
-  background-color: var(--background-color);
-}
-
-:is(main, article) > section:not(:is(section, header) :is(section, header)) {
-  background-color: var(--background-color);
-}

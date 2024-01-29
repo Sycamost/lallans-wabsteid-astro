@@ -1,16 +1,5 @@
 @use '../values/colours' as colours;
 
-:root {
-  --text-color: #{colours.$primary-98};
-  --text-highlight-color: #{colours.$primary-10};
-  --background-color: #{colours.$primary-10};
-  --background-highlight-color: #{colours.$primary-90};
-  --special-text-color: #{colours.$secondary-90};
-  --special-text-highlight-color: #{colours.$secondary-10};
-  --neutral-text-color: #{colours.$neutral-50};
-  --neutral-background-color: #{colours.$neutral-30};
-}
-
 :is(main, article) {
   --text-color: #{colours.$primary-10};
   --text-highlight-color: #{colours.$primary-90};
@@ -22,6 +11,17 @@
   --neutral-background-color: #{colours.$neutral-95};
 }
 
-:is(main, article) > section:nth-child(even):not(:is(section, header) :is(section, header)) {
+:root, .dark {
+  --text-color: #{colours.$primary-98};
+  --text-highlight-color: #{colours.$primary-10};
+  --background-color: #{colours.$primary-10};
+  --background-highlight-color: #{colours.$primary-90};
+  --special-text-color: #{colours.$secondary-90};
+  --special-text-highlight-color: #{colours.$secondary-10};
+  --neutral-text-color: #{colours.$neutral-50};
+  --neutral-background-color: #{colours.$neutral-30};
+}
+
+:is(main, article) > section:nth-child(even):not(:is(section, header) :is(section, header)):not(.dark *) {
     --background-color: #{colours.$primary-95};
 }

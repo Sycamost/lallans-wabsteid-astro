@@ -5,7 +5,7 @@ This is the Scots Leid Associe website, implemented in [Astro](https://astro.bui
 ## Gettin yokit
 
 ```bash
-git clone https://github.com/Sycamost/lallans-wabsteid-astro.git \
+git clone https://github.com/joeacarstairs/lallans-wabsteid-astro.git \
   && cd lallans-wabsteid-astro \
   && npm install \
   && npm run dev
@@ -35,14 +35,14 @@ git clone https://github.com/Sycamost/lallans-wabsteid-astro.git \
 2. Make a suitably named branch on your fork.
 3. Make your desired changes (see sections below for common cases).
 4. Commit and push them on your branch.
-5. Make a Pull Request to merge your changes into `Sycamost/deployment-staging`.
+5. Make a Pull Request to merge your changes into `joeacarstairs/deployment-staging`.
 6. A code owner (probably the Scots Language Society Webmaster) will review your Pull Request, ask
-   for any necessary changes, and when satisfied, merge it into `Sycamost/deployment-staging`. (This will
-   update the [staging deployment](#cicd) on
+   for any necessary changes, and when satisfied, merge it into `joeacarstairs/deployment-staging`.
+   (This will update the [staging deployment](#cicd) on
    [staging.scotsleidassocie.org](https://staging.scotsleidassocie.org).)
-7. Code owners will merge `Sycamost/deployment-staging` into `Sycamost/deployment-production` at their discretion.
-   (This will update the production deployment on
-   [scotsleidassocie.org](https://scotsleidassocie.org).)
+7. Code owners will merge `joeacarstairs/deployment-staging` into
+   `joeacarstairs/deployment-production` at their discretion. (This will update the production
+   deployment on [scotsleidassocie.org](https://scotsleidassocie.org).)
 
 ### Coding style
 
@@ -148,6 +148,6 @@ To update production, you'll want to first merge your changes into `deployment-s
 Pull Request and getting it approved and merged. Once you've done that, given it five minutes to
 deploy, and you've checked that everything looks good on
 [staging.scotsleidassocie.org](https://staging.scotsleidassocie.org),
-[make a Pull Request to merge deployment-staging into deployment-production](https://github.com/Sycamost/lallans-wabsteid-astro/compare/deployment-production...deployment-staging).
+[make a Pull Request to merge deployment-staging into deployment-production](https://github.com/joeacarstairs/lallans-wabsteid-astro/compare/deployment-production...deployment-staging).
 Once that Pull Request is approved by a code owner, merge it in and it should update production in
 under five minutes.

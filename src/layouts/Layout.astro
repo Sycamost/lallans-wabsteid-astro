@@ -10,9 +10,10 @@ import type Locale from '$types/Locale';
 
 interface Props {
   title: string;
+  noBreadcrumbs?: boolean;
 }
 
-const { title } = Astro.props;
+const { noBreadcrumbs, title } = Astro.props;
 const locale = getLocaleFromPathOrDefault(Astro.url.pathname);
 const t = translate(locale);
 
@@ -55,7 +56,7 @@ function qualifiedLocalisedPath(newLocale: Locale) {
   </head>
   <body id="top">
     <a class="btn skip-to-content" href="#main">Skip to content</a>
-    <Navbar />
+    <Navbar noBreadcrumbs={noBreadcrumbs} />
     <slot />
     <Footer />
   </body>
