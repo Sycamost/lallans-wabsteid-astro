@@ -6,30 +6,24 @@ const tPage = {
     'en-GB': () => 'Home',
   },
   submit: {
-    sco: () => 'Sang\u00adschaw apen for submeissions',
-    'en-GB': () => 'Sang\u00adschaw open for submissions',
+    sco: () => 'Lallans 104 apen for sub\u00admeissions',
+    'en-GB': () => 'Lallans 104 open for sub\u00admissions',
   },
   'submit-para-1': {
     sco: () => `
-      We ar acceptin submeissions til our annual Scots scrievin competeition,
-      the Sangschaw, until the 31st o Januar 2024.
+      We ar acceptin submeissions til Lallans 104.
     `,
     'en-GB': () => `
-      We are accepting submissions to our annual Scots writing competition, the
-      Sangschaw, until the 31st of January 2024.
+      We are accepting submissions to Lallans 104.
     `,
   },
   'submit-para-2': {
     sco: () => `
-      Aince ye’ve read the submeission criteria in
-      <a href="/sco/news/2023-12-10-eiks-31"><i>Eiks an Ens</i> 31</a>, send
-      your submeissions til
+      Send us your cuttie tales, poesie and drama til
       <a href="mailto:lallans@hotmail.co.uk">lallans@hotmail.co.uk</a>.
     `,
     'en-GB': () => `
-      Once you’ve read the submission criteria in
-      <a href="/en-GB/news/2023-12-10-eiks-31"><i>Eiks an Ens</i> 31</a>, send
-      your submissions to
+      Send us your short stories, poetry and drama to
       <a href="mailto:lallans@hotmail.co.uk">lallans@hotmail.co.uk</a>.
     `,
   },
@@ -41,6 +35,14 @@ const tPage = {
     'en-GB': () => `
       We look forward to having your submission, whether you’ve been
       submitting for years or you’re a first-time writer!
+    `,
+  },
+  'sangschaw-closed': {
+    sco: () => `
+      This year’s Sangschaw competeition closed on the 31st o Januar 2024.
+    `,
+    'en-GB': () => `
+      This year’s Sangschaw competition closed on the 31st of January 2024.
     `,
   },
   news: {
