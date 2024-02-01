@@ -41,7 +41,7 @@ const tPage = {
     sco: () => `
       This year’s Sangschaw competeition closed on the 31st o Januar 2024.
     `,
-    'en-GB': `
+    'en-GB': () => `
       This year’s Sangschaw competition closed on the 31st of January 2024.
     `,
   },
