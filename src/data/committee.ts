@@ -147,8 +147,8 @@ const committee: CommitteeMember[] = [
         mining community he trowes that ‘the Scots leid is for aabody’ and
         “gin ye tint your leid ye tint your sel’. Aa Scots leid has a feir in
         Lallans.  William can be contacted at
-        <a href="mailto:w.hershaw678@btinternet">
-          w.hershaw678@btinternet
+        <a href="mailto:w.hershaw678@btinternet.com">
+          w.hershaw678@btinternet.com
         </a>.
       `,
       'en-GB': `
@@ -166,8 +166,8 @@ const committee: CommitteeMember[] = [
         community, he believes that ‘the Scots language is for everyone’ and
         “if you lose your language you lose your self.’ All Scots language can
         give it a shot in Lallans. William can be contacted at
-        <a href="mailto:w.hershaw678@btinternet">
-          w.hershaw678@btinternet
+        <a href="mailto:w.hershaw678@btinternet.com">
+          w.hershaw678@btinternet.com
         </a>.
       `,
     },
