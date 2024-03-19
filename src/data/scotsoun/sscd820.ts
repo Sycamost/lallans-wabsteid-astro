@@ -5,7 +5,7 @@ const cd: Scotsoun = {
   img: {
     width192: img192w,
   },
-  title: 'Let the thochts gae roamin',
+  title: 'A vision o ma ain countree',
   longName: 'A vision o ma ain countree – Let the thochts gae roamin',
   author: 'various',
   cdCount: 1,
