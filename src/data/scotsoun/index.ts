@@ -83,6 +83,7 @@ export const getScotsoun: ScotsounGetterTable = {
   '814': async () => (await import('./sscd814')).default,
   '815': async () => (await import('./sscd815')).default,
   '816': async () => (await import('./sscd816')).default,
+  '820': async () => (await import('./sscd820')).default,
   M150: async () => (await import('./sscdM150')).default,
   U1: async () => (await import('./sscdU1')).default,
 };
