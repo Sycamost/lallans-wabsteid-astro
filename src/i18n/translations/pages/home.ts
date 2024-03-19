@@ -6,15 +6,15 @@ const tPage = {
     'en-GB': () => 'Home',
   },
   submit: {
-    sco: () => 'Lallans 104 apen for sub\u00admeissions',
-    'en-GB': () => 'Lallans 104 open for sub\u00admissions',
+    sco: () => 'Lallans 105 apen for sub\u00admeissions',
+    'en-GB': () => 'Lallans 105 open for sub\u00admissions',
   },
   'submit-para-1': {
     sco: () => `
-      We ar acceptin submeissions til Lallans 104.
+      We ar acceptin submeissions til Lallans 105.
     `,
     'en-GB': () => `
-      We are accepting submissions to Lallans 104.
+      We are accepting submissions to Lallans 105.
     `,
   },
   'submit-para-2': {
