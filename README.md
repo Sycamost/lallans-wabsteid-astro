@@ -71,11 +71,10 @@ Follow this guidance alongside the [general guidance](#general-guidance).
 1. Add the issue number to `src/types/LallansIssueNumber.d.ts`.
 2. Add the original issue cover photo as `src/images/lallans/issueXYZ.jpg`, where `XYZ` is the issue
    number. Most of the examples are `.jpg`, but the file type isn't important.
-3. Make copies of the cover image that are scaled to 192 and 274 pixels wide. Name them
-   `issueXYZ-192w.jpg` and `issueXYZ-274w.jpg` respectively.
+3. Make a copy of the cover image that is scaled to 192 pixels wide. Name it `issueXYZ-192w.jpg`.
 4. Copy one of the existing Lallans issues in `src/data/lallans` and name the copy `issueXYZ.ts`.
-5. Edit the file you just made with the new issue's information, including the locations of the
-   correctly scaled cover images that you just made.
+5. Edit the file you just made with the new issue's information, including the location of the
+   correctly scaled cover image that you just made.
 6. Import that data file into the Lallans data index file, `src/data/lallans/index.ts`.
 7. Check that everything's working: the issue should appear at the top on the Lallans page,
    `/furthsettins/lallans`, and the issue information should appear at `/furthsettins/lallans/XYZ`.
