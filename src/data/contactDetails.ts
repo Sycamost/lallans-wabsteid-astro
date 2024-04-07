@@ -1,5 +1,6 @@
 export default {
   membershipSecretary: {
+    displayName: 'Membership Secretary',
     emailAddress: 'lallans@hotmail.co.uk',
     address: [
       'Scots Language Society',
@@ -11,6 +12,7 @@ export default {
     ],
   },
   generalEnquiries: {
+    displayName: 'General enquiries',
     emailAddress: 'lallans@hotmail.co.uk',
     address: [
       'Scots Language Society',

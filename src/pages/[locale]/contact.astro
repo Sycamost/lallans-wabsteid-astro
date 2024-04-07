@@ -1,0 +1,35 @@
+---
+import Page from '$layouts/Page.astro';
+import localeStaticPaths from '$lib/localeStaticPaths';
+import translate from '$i18n/translate';
+import tContact from '$i18n/translations/pages/contact';
+import type Locale from '$types/Locale';
+
+export async function getStaticPaths() {
+  return localeStaticPaths;
+}
+
+const locale = Astro.params.locale as Locale;
+const t = translate(locale);
+---
+
+<Page title={(t(tContact, { key: 'title' }))}>
+  <h1>{ t(tContact, { key: 'title' }) }</h1>
+
+  <h2>{ t(tContact, { key: 'submit-enquiry-online' }) }</h2>
+  <form method="post" action="/api/contact-form">
+    <label for="name">{ t(tContact, { key: 'name-label' }) }</label>
+    <input id="name" type="text" name="name" required />
+
+    <label for="email">{ t(tContact, { key: 'email-label' }) }</label>
+    <input id="email" type="email" name="email" required />
+
+    <label for="subject">{ t(tContact, { key: 'subject-label' }) }</label>
+    <input id="subject" type="text" name="subject" required />
+
+    <label for="message">{ t(tContact, { key: 'message-body-label' }) }</label>
+    <textarea id="message" name="message" rows="3" cols="40" />
+
+    <button type="submit">{ t(tContact, { key: 'submit-button' }) }</button>
+  </form>
+</Page>
