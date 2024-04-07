@@ -3,6 +3,7 @@ npm-debug.log*
 .env
 .env.production
 .DS_Store
+.helix
 .vscode
 dist/
 .astro/
