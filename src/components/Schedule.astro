@@ -10,8 +10,8 @@ const { entries } = Astro.props;
   {
     entries.map((entry) => (
       <>
-        <dt>{entry.time}</dt>
-        <dd>{entry.description}</dd>
+        <dt set:html={entry.time} />
+        <dd set:html={entry.description} />
       </>
     ))
   }
