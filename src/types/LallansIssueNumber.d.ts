@@ -69,6 +69,7 @@ type LallansIssueNumber =
   | 99
   | 100
   | 101
-  | 102;
+  | 102
+  | 104;
 
 export default LallansIssueNumber;
