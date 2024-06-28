@@ -35,13 +35,13 @@ git clone https://github.com/joeacarstairs/lallans-wabsteid-astro.git \
 2. Make a suitably named branch on your fork.
 3. Make your desired changes (see sections below for common cases).
 4. Commit and push them on your branch.
-5. Make a Pull Request to merge your changes into `joeacarstairs/deployment-staging`.
+5. Make a Pull Request to merge your changes into `joeacarstairs/staging`.
 6. A code owner (probably the Scots Language Society Webmaster) will review your Pull Request, ask
-   for any necessary changes, and when satisfied, merge it into `joeacarstairs/deployment-staging`.
+   for any necessary changes, and when satisfied, merge it into `joeacarstairs/staging`.
    (This will update the [staging deployment](#cicd) on
    [staging.scotsleidassocie.org](https://staging.scotsleidassocie.org).)
-7. Code owners will merge `joeacarstairs/deployment-staging` into
-   `joeacarstairs/deployment-production` at their discretion. (This will update the production
+7. Code owners will merge `joeacarstairs/staging` into
+   `joeacarstairs/production` at their discretion. (This will update the production
    deployment on [scotsleidassocie.org](https://scotsleidassocie.org).)
 
 ### Coding style
@@ -140,13 +140,13 @@ just need to make commits to the repo to see them deployed automagically.
 Ideally, we should check everything's working on deployment before everyone on the internet starts
 looking at it. For that reason, we have a staging deployment at
 [staging.scotsleidassocie.org](https://staging.scotsleidassocie.org). To update the staging
-deployment, simply commit to `deployment-staging` by making a Pull Request and getting it approved
+deployment, simply commit to `staging` by making a Pull Request and getting it approved
 by a code owner and then merged.
 
-To update production, you'll want to first merge your changes into `deployment-staging` by making a
+To update production, you'll want to first merge your changes into `staging` by making a
 Pull Request and getting it approved and merged. Once you've done that, given it five minutes to
 deploy, and you've checked that everything looks good on
 [staging.scotsleidassocie.org](https://staging.scotsleidassocie.org),
-[make a Pull Request to merge deployment-staging into deployment-production](https://github.com/joeacarstairs/lallans-wabsteid-astro/compare/deployment-production...deployment-staging).
+[make a Pull Request to merge staging into production](https://github.com/joeacarstairs/lallans-wabsteid-astro/compare/production...staging).
 Once that Pull Request is approved by a code owner, merge it in and it should update production in
 under five minutes.
