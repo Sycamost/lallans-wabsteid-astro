@@ -148,10 +148,16 @@ const tPage = {
   },
   'hou-pey-by-bank-transfer-para': {
     sco: ({ emailAddress }: { emailAddress: string }) => `
-      Send us an email at <a href="mailto:${emailAddress}">${emailAddress}</a> an we’ll send ye oor bank details.
+      To pay by bank transfer, please send £20 to the following bank details,
+      and include your name and the word 'STENT' in the reference. You may
+      need to shorten your name to fit in the reference. For example, 'J BLOGGS
+      STENT'.
     `,
     'en-GB': ({ emailAddress }: { emailAddress: string }) => `
-      Send us an email at <a href="mailto:${emailAddress}">${emailAddress}</a> and we’ll send you our bank details.
+      For tae pey by bank transfer, pleise send £20 til the follaein bank
+      details, and include your name and the wird 'STENT' in the reference. You
+      micht hae tae shorten your name for tae fit it intil the reference. For
+      ensaumple, 'J BLOGGS STENT'.
     `,
   },
   'hou-pey-by-cheque-title': {
