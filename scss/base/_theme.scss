@@ -1,11 +1,10 @@
 :is(
-  :root,
-  .dark,
-  main,
-  article,
-  :is(main, article) > section:not(:is(section, header) :is(section, header))
-) {
+    :root,
+    .dark,
+    main,
+    article,
+    :is(main, article) > section:not(:is(section, header) :is(section, header))
+  ) {
   color: var(--text-color);
   background-color: var(--background-color);
 }
-

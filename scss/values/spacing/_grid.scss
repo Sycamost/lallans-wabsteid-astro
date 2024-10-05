@@ -54,10 +54,6 @@
   * module you'd end up with a circular dependency.
   */
 @function er-to-absolute($length-er, $breakpoint: initial) {
-  $absolute-per-er: calc(
-    total-width-absolute($breakpoint)
-    / total-width-er($breakpoint)
-  );
+  $absolute-per-er: calc(total-width-absolute($breakpoint) / total-width-er($breakpoint));
   @return calc($length-er * $absolute-per-er);
 }
-

@@ -4,9 +4,7 @@
 
   &:not(.link-gallery--splash-first) {
     grid-auto-rows: calc(
-      var(--gallery-row-image-height) +
-      var(--spacing-block-sm) +
-      var(--gallery-row-title-height)
+      var(--gallery-row-image-height) + var(--spacing-block-sm) + var(--gallery-row-title-height)
     );
 
     .link-gallery__title {
@@ -43,4 +41,3 @@
     text-align: start;
   }
 }
-

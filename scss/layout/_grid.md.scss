@@ -1,8 +1,8 @@
 :is(
-  header,
-  footer,
-  nav,
-  :is(main, article) > section:not(:is(section, header) :is(section, header))
-) {
+    header,
+    footer,
+    nav,
+    :is(main, article) > section:not(:is(section, header) :is(section, header))
+  ) {
   padding-inline: var(--grid-padding);
 }
