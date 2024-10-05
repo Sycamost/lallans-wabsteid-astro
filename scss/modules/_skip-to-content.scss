@@ -3,7 +3,9 @@
   left: var(--grid-padding);
   top: -10rem;
   opacity: 0;
-  transition: top 300ms, opacity 300ms;
+  transition:
+    top 300ms,
+    opacity 300ms;
 }
 
 .skip-to-content:is(:focus, :focus-visible, :focus-within) {

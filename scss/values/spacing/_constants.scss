@@ -8,7 +8,7 @@ $grid-padding-er: (
   'md': 16,
   'sm': 12,
   'xs': 4,
-  'initial': 1
+  'initial': 1,
 );
 
 $grid-column-count: (
@@ -18,7 +18,7 @@ $grid-column-count: (
   'md': 8,
   'sm': 8,
   'xs': 4,
-  'initial': 1
+  'initial': 1,
 );
 
 $grid-prose-column-count: (
@@ -28,7 +28,7 @@ $grid-prose-column-count: (
   'md': 8,
   'sm': 8,
   'xs': 4,
-  'initial': 1
+  'initial': 1,
 );
 
 $grid-padding-er: (
@@ -38,12 +38,20 @@ $grid-padding-er: (
   'md': 16,
   'sm': 12,
   'xs': 4,
-  'initial': 1
+  'initial': 1,
 );
 
 $spacing-factor: (
-  'inline': (lg: 12, md: 6, sm: 3),
-  'block': (lg: 16, md: 10, sm: 5)
+  'inline': (
+    lg: 12,
+    md: 6,
+    sm: 3,
+  ),
+  'block': (
+    lg: 16,
+    md: 10,
+    sm: 5,
+  ),
 );
 
 $grid-min-total-width-absolute: (
@@ -53,6 +61,5 @@ $grid-min-total-width-absolute: (
   'md': 48rem,
   'sm': 30rem,
   'xs': 100vw,
-  'initial': 100vw
+  'initial': 100vw,
 );
-

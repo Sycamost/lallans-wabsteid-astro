@@ -78,6 +78,7 @@ export const getLallansIssue: LallansIssueGetterTable = {
   100: async () => (await import('./issue100')).default,
   101: async () => (await import('./issue101')).default,
   102: async () => (await import('./issue102')).default,
+  103: async () => (await import('./issue103')).default,
   104: async () => (await import('./issue104')).default,
 };
 

@@ -9,24 +9,18 @@
   * - direction: inline, block
   */
 @function spacing($direction, $size, $breakpoint: initial) {
-  $factor: map.get(
-    map.get(constants.$spacing-factor, $direction),
-    $size
-  );
+  $factor: map.get(map.get(constants.$spacing-factor, $direction), $size);
 
   @if list.index([xxl xl lg md sm], ($breakpoint)) {
     @return grid.er-to-absolute($factor, $breakpoint);
-  }
-  @else if $breakpoint == xs {
+  } @else if $breakpoint == xs {
     @return clamp(
       spacing($direction, $size, initial),
       grid.er-to-absolute($factor, xs),
       spacing($direction, $size, sm)
     );
-  }
-  @else if $breakpoint == initial {
+  } @else if $breakpoint == initial {
     @return calc($factor * 0.0625rem);
   }
   @error "Invalid breakpoint: #{$breakpoint}";
 }
-

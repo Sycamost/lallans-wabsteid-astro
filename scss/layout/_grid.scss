@@ -1,9 +1,9 @@
 :is(
-  header,
-  footer,
-  nav,
-  :is(main, article) > section:not(:is(section, header) :is(section, header))
-):not(.section--full-width) {
+    header,
+    footer,
+    nav,
+    :is(main, article) > section:not(:is(section, header) :is(section, header))
+  ):not(.section--full-width) {
   padding-inline: calc(var(--grid-padding) + 0.5 * (100vw - var(--grid-total-width)));
 }
 

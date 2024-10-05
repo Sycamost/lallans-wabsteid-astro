@@ -8,7 +8,8 @@ table {
   }
 }
 
-thead, th {
+thead,
+th {
   border-block-end: var(--border-width) solid var(--text-color);
 }
 
@@ -20,4 +21,3 @@ thead, th {
     border-inline-start: calc(var(--border-width) / 2) solid var(--text-color);
   }
 }
-

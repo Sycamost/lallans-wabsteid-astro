@@ -3,12 +3,36 @@
 @use '../../values/spacing' as spacing-values;
 
 @mixin spacing($breakpoint: initial) {
-  --spacing-inline-lg: #{spacing-values.spacing($direction: inline, $size: lg, $breakpoint: $breakpoint)};
-  --spacing-inline-md: #{spacing-values.spacing($direction: inline, $size: md, $breakpoint: $breakpoint)};
-  --spacing-inline-sm: #{spacing-values.spacing($direction: inline, $size: sm, $breakpoint: $breakpoint)};
-  --spacing-block-lg: #{spacing-values.spacing($direction: block, $size: lg, $breakpoint: $breakpoint)};
-  --spacing-block-md: #{spacing-values.spacing($direction: block, $size: md, $breakpoint: $breakpoint)};
-  --spacing-block-sm: #{spacing-values.spacing($direction: block, $size: sm, $breakpoint: $breakpoint)};
+  --spacing-inline-lg: #{spacing-values.spacing(
+      $direction: inline,
+      $size: lg,
+      $breakpoint: $breakpoint
+    )};
+  --spacing-inline-md: #{spacing-values.spacing(
+      $direction: inline,
+      $size: md,
+      $breakpoint: $breakpoint
+    )};
+  --spacing-inline-sm: #{spacing-values.spacing(
+      $direction: inline,
+      $size: sm,
+      $breakpoint: $breakpoint
+    )};
+  --spacing-block-lg: #{spacing-values.spacing(
+      $direction: block,
+      $size: lg,
+      $breakpoint: $breakpoint
+    )};
+  --spacing-block-md: #{spacing-values.spacing(
+      $direction: block,
+      $size: md,
+      $breakpoint: $breakpoint
+    )};
+  --spacing-block-sm: #{spacing-values.spacing(
+      $direction: block,
+      $size: sm,
+      $breakpoint: $breakpoint
+    )};
 }
 
 @mixin grid($breakpoint: initial) {

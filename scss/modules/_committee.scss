@@ -7,14 +7,15 @@
   border-top-width: var(--border-width);
   border-top-style: solid;
   border-image: linear-gradient(
-    to right,
-    transparent 0%,
-    transparent 19.1%,
-    var(--text-color) 19.1%,
-    var(--text-color) 80.9%,
-    transparent 80.9%,
-    transparent 100%
-  ) 1;
+      to right,
+      transparent 0%,
+      transparent 19.1%,
+      var(--text-color) 19.1%,
+      var(--text-color) 80.9%,
+      transparent 80.9%,
+      transparent 100%
+    )
+    1;
   margin-block-start: var(--spacing-block-md);
   padding-block-start: var(--spacing-block-md);
 }
@@ -34,4 +35,3 @@
   display: block;
   font-weight: lighter;
 }
-
