@@ -4,9 +4,6 @@ import localeStaticPaths from '$lib/localeStaticPaths';
 import translate from '$i18n/translate';
 import tPage from '$i18n/translations/pages/home';
 import type Locale from '$types/Locale';
-import { getMostRecentNewsItem } from '$lib/newsUtils';
-import contactDetails from '$data/contactDetails';
-import NewsIndex from '$components/NewsIndex/NewsIndex.astro';
 import Button from '$components/Button.astro';
 import CommitteeList from '$components/CommitteeList/CommitteeList.astro';
 
@@ -16,33 +13,9 @@ export async function getStaticPaths() {
 
 const locale = Astro.params.locale as Locale;
 const t = translate(locale);
-const mostRecentNewsItem = await getMostRecentNewsItem(locale);
 ---
 
 <Page title={t(tPage, { key: 'title' })}>
-  <!--
-    Lallans 105 is leukin fair full the nou. Ance Lallans 105 is out we'll
-    stert encouragin submeissions for 106.
-
-    <section>
-      <h2 set:html={t(tPage, { key: 'submit' })} />
-      <p set:html={t(tPage, { key: 'submit-para-1' })} />
-      <p set:html={t(tPage, { key: 'submit-para-2' })} />
-      <p set:html={t(tPage, { key: 'submit-para-3' })} />
-    </section>
-  -->
-  <section>
-    <h2 class="grid-span-6" set:html={t(tPage, { key: 'news' })} />
-    <NewsIndex newsItems={mostRecentNewsItem ? [mostRecentNewsItem] : []} headingLevel="h3" />
-    {
-      mostRecentNewsItem && (
-        <Button classNames="grid-span-3 grid-prose-end" href={`/${locale}/news`}>
-          {t(tPage, { key: 'aw-news' })} ▶
-        </Button>
-      )
-    }
-  </section>
-
   <section id="about">
     <h2 set:html={t(tPage, { key: 'about-us' })} />
     <p set:html={t(tPage, { key: 'about-us-para-1' })} />
@@ -58,13 +31,5 @@ const mostRecentNewsItem = await getMostRecentNewsItem(locale);
     <Button classNames="grid-span-3 grid-prose-end" href={`/${locale}/furthsettins`}>
       {t(tPage, { key: 'aw-furthsettins' })} ▶
     </Button>
-  </section>
-
-  <section id="contact">
-    <h2 set:html={t(tPage, { key: 'contact' })} />
-    <a href={`${locale}/mailto:${contactDetails.generalEnquiries.emailAddress}`}>
-      {contactDetails.generalEnquiries.emailAddress}
-    </a>
-    <address set:html={contactDetails.generalEnquiries.address.join('<br />')} />
   </section>
 </Page>

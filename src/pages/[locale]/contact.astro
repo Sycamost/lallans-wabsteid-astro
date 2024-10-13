@@ -2,9 +2,9 @@
 import Page from '$layouts/Page.astro';
 import localeStaticPaths from '$lib/localeStaticPaths';
 import translate from '$i18n/translate';
-import tPage from '$i18n/translations/pages/lallansGallery';
+import tPage from '$i18n/translations/pages/contact';
 import type Locale from '$types/Locale';
-import LallansIssuesGallery from '$components/LallansIssuesGallery.astro';
+import contactDetails from '$data/contactDetails';
 
 export async function getStaticPaths() {
   return localeStaticPaths;
@@ -17,7 +17,9 @@ const t = translate(locale);
 <Page title={t(tPage, { key: 'title' })}>
   <section>
     <h1>{t(tPage, { key: 'title' })}</h1>
-    <p set:html={t(tPage, { key: 'about-lallans' })} />
-    <LallansIssuesGallery />
+    <a href={`${locale}/mailto:${contactDetails.generalEnquiries.emailAddress}`}>
+      {contactDetails.generalEnquiries.emailAddress}
+    </a>
+    <address set:html={contactDetails.generalEnquiries.address.join('<br />')} />
   </section>
 </Page>
