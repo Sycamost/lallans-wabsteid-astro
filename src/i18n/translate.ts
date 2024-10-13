@@ -14,10 +14,11 @@ type TranslationsDictionaryWith<
 }>;
 
 export default function (locale: Locale) {
-  return function <Key extends string | number, ParamsHash extends object>(
-    dict: TranslationsDictionaryWith<Key, ParamsHash>,
-    params: { key: Key } & ParamsHash
-  ) {
+  return function <
+    Key extends string | number,
+    ParamsHash extends object,
+    Dict extends TranslationsDictionaryWith<Key, ParamsHash>,
+  >(dict: Dict, params: { key: Key } & ParamsHash) {
     if (!(params.key in dict)) {
       throw new Error(`
         Could not find translation for key '${params.key}'. Available keys were:

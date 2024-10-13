@@ -5,54 +5,6 @@ const tPage = {
     sco: () => 'Hame',
     'en-GB': () => 'Home',
   },
-  submit: {
-    sco: () => 'Lallans 105 apen for sub\u00admeissions',
-    'en-GB': () => 'Lallans 105 open for sub\u00admissions',
-  },
-  'submit-para-1': {
-    sco: () => `
-      We ar acceptin submeissions til Lallans 105.
-    `,
-    'en-GB': () => `
-      We are accepting submissions to Lallans 105.
-    `,
-  },
-  'submit-para-2': {
-    sco: () => `
-      Send us your cuttie tales, poesie and drama til
-      <a href="mailto:lallans@hotmail.co.uk">lallans@hotmail.co.uk</a>.
-    `,
-    'en-GB': () => `
-      Send us your short stories, poetry and drama to
-      <a href="mailto:lallans@hotmail.co.uk">lallans@hotmail.co.uk</a>.
-    `,
-  },
-  'submit-para-3': {
-    sco: () => `
-      We luik forrit tae haein your submeission, whither you’ve been submittin
-      for years or you’re a first-time writer!
-    `,
-    'en-GB': () => `
-      We look forward to having your submission, whether you’ve been
-      submitting for years or you’re a first-time writer!
-    `,
-  },
-  'sangschaw-closed': {
-    sco: () => `
-      This year’s Sangschaw competeition closed on the 31st o Januar 2024.
-    `,
-    'en-GB': () => `
-      This year’s Sangschaw competition closed on the 31st of January 2024.
-    `,
-  },
-  news: {
-    sco: () => 'Recent News',
-    'en-GB': () => 'Recent News',
-  },
-  'aw-news': {
-    sco: () => 'Aw news',
-    'en-GB': () => 'All news',
-  },
   'about-us': {
     sco: () => 'Aboot us',
     'en-GB': () => 'About us',
@@ -84,7 +36,7 @@ const tPage = {
     `,
   },
   'about-us-para-3': {
-    sco: () => `      
+    sco: () => `
       Mairfortaken, we hae annual Collogues, whaur we ingaither oor memmers
       an hear talks on Scots-leid cultur an hear Sangschaw winners readin
       their nain wark.
@@ -120,10 +72,6 @@ const tPage = {
   'aw-furthsettins': {
     sco: () => 'Aw furthsettins',
     'en-GB': () => 'All publications',
-  },
-  contact: {
-    sco: () => 'Contact',
-    'en-GB': () => 'Contact',
   },
 };
 

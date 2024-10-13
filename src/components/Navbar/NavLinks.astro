@@ -1,10 +1,11 @@
 ---
 import { getLocaleFromPathOrDefault } from '$lib/getLocaleFromPath';
 import translate from '$i18n/translate';
+import tContact from '$i18n/translations/pages/contact';
 import tNews from '$i18n/translations/pages/news';
 import tFurthsettins from '$i18n/translations/pages/furthsettins';
-import tHame from '$i18n/translations/pages/home';
 import tJyne from '$i18n/translations/pages/jyne';
+import tSubmit from '$i18n/translations/pages/submit';
 
 const locale = getLocaleFromPathOrDefault(Astro.url.pathname);
 const t = translate(locale);
@@ -15,7 +16,7 @@ const t = translate(locale);
     <a class="btn" href={`/${locale}/news`}>{t(tNews, { key: 'title' })}</a>
   </li>
   <li>
-    <a class="btn" href={`/${locale}/#about`}>{t(tHame, { key: 'about-us' })}</a>
+    <a class="btn" href={`/${locale}/submit`}>{t(tSubmit, { key: 'title' })}</a>
   </li>
   <li>
     <a class="btn" href={`/${locale}/furthsettins`}>{t(tFurthsettins, { key: 'title' })}</a>
@@ -24,6 +25,6 @@ const t = translate(locale);
     <a class="btn" href={`/${locale}/jyne`}>{t(tJyne, { key: 'title' })}</a>
   </li>
   <li>
-    <a class="btn" href={`/${locale}/#contact`}>{t(tHame, { key: 'contact' })}</a>
+    <a class="btn" href={`/${locale}/contact`}>{t(tContact, { key: 'title' })}</a>
   </li>
 </ul>
