@@ -5,6 +5,24 @@ const tPage = {
     sco: () => 'Hame',
     'en-GB': () => 'Home',
   },
+  sangschaw: {
+    sco: () => 'Sangschaw open for entries',
+    'en-GB': () => 'Sangschaw open for entries',
+  },
+  'sangschaw-para-1': {
+    sco: () => `
+      Our annual scrievin competition, the Sangschaw, is open for entries until
+      the 31st o Januar. See our
+      <a href="/sco/news/2024-11-12-sangschaw-2025">Sangschaw announcement</a>
+      for details.
+    `,
+    'en-GB': () => `
+      Our annual writing competition, the Sangschaw, is open for entries until
+      the 31st of January. See our
+      <a href="/en-GB/news/2024-11-12-sangschaw-2025">Sangschaw announcement</a>
+      for details.
+    `,
+  },
   'about-us': {
     sco: () => 'Aboot us',
     'en-GB': () => 'About us',
