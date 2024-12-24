@@ -1,6 +1,6 @@
 ---
 import Article from '$layouts/Article.astro';
-import { getCollection } from 'astro:content';
+import { getCollection, render } from 'astro:content';
 import { getLocale, getSlug } from '$lib/newsUtils';
 
 export async function getStaticPaths() {
@@ -14,7 +14,7 @@ export async function getStaticPaths() {
 }
 
 const { entry } = Astro.props;
-const { Content } = await entry.render();
+const { Content } = await render(entry);
 ---
 
 <Article title={entry.data.title}>
