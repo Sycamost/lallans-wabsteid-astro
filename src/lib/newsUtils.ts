@@ -25,7 +25,7 @@ export function getHref(newsItem: CollectionEntry<'news'>) {
 export function getSlug(newsItem: CollectionEntry<'news'>) {
   const toLowerCase = (s: string) => s.toLowerCase();
   const matchLocales = new RegExp(`(${locales.map(toLowerCase).join('|')})/`);
-  return newsItem.slug.replace(matchLocales, '');
+  return newsItem.id.replace(matchLocales, '');
 }
 
 export function isNewsItemInLocale(newsItem: CollectionEntry<'news'>, locale: Locale) {

@@ -20,16 +20,16 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@astrojs/mdx": "^1.1.0",
-    "@astrojs/rss": "^3.0.0",
-    "@astrojs/sitemap": "^3.0.0",
+    "@astrojs/mdx": "^4.0.3",
+    "@astrojs/rss": "^4.0.10",
+    "@astrojs/sitemap": "^3.2.1",
     "@paypal/paypal-js": "^6.0.1",
-    "astro": "^3.2.2",
+    "astro": "^5.1.1",
     "csso-cli": "^4.0.2",
     "dotenv": "^16.3.1",
     "sass": "^1.69.3",
     "typescript": "^5.2.2",
-    "vercel": "^37.6.1"
+    "vercel": "^39.2.2"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^6.2.1",
