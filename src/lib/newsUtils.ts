@@ -1,6 +1,7 @@
 import locales from '$i18n/locales';
 import type Locale from '$types/Locale';
 import { getCollection, type CollectionEntry } from 'astro:content';
+import { correctLocaleCasing } from './correctLocaleCasing';
 
 export async function getMostRecentNewsItem(locale: Locale) {
   const allNews = await getCollection('news');
@@ -14,7 +15,8 @@ export async function getMostRecentNewsItem(locale: Locale) {
 
 export function getLocale(newsItem: CollectionEntry<'news'>) {
   const srcPath = newsItem.id;
-  return srcPath.slice(0, srcPath.indexOf('/'));
+  const localeInUnknownCase = srcPath.slice(0, srcPath.indexOf('/'));
+  return correctLocaleCasing(localeInUnknownCase);
 }
 
 export function getHref(newsItem: CollectionEntry<'news'>) {
@@ -46,7 +48,7 @@ export function isBefore(item1: CollectionEntry<'news'>, item2: CollectionEntry<
 }
 
 export function getDate(newsItem: CollectionEntry<'news'>) {
-  const matchDate = new RegExp(`(${locales.join('|')})/(\\d\\d\\d\\d-\\d\\d-\\d\\d)`);
+  const matchDate = new RegExp(`(${locales.join('|')})/(\\d\\d\\d\\d-\\d\\d-\\d\\d)`, 'i');
   const date = newsItem.id.match(matchDate)?.[2];
   return date ? new Date(date) : null;
 }

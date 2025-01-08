@@ -1,13 +1,14 @@
 import locales, { defaultLocale } from '$i18n/locales';
 import type Locale from '$types/Locale';
+import { correctLocaleCasing } from './correctLocaleCasing';
 
 export function getLocaleFromPath(path: string): Locale | null {
-  const regex = new RegExp(`^/(${locales.join('|')})`);
+  const regex = new RegExp(`^/(${locales.join('|')})`, 'i');
   const match = path.match(regex)?.[1];
   if (!match) {
     return null;
   }
-  return match as Locale;
+  return correctLocaleCasing(match) as Locale;
 }
 
 export function getLocaleFromPathOrDefault(path: string): Locale {
