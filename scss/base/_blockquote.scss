@@ -1,0 +1,6 @@
+blockquote {
+  margin-inline: 0;
+  margin-block-start: var(--spacing-block-sm);
+  padding-inline-start: var(--spacing-inline-lg);
+  border-inline-start: 2px solid var(--special-text-color);
+}
